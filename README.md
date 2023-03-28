@@ -2,6 +2,12 @@
 Control Aqara devices in Homeassistant with post request
 
 
+
+How to:
+https://github.com/sdavides/AqaraPOST-Homeassistant/files/11093401/Aqara.Post.Request.pdf
+
+
+
 Install WebRTC
 https://github.com/AlexxIT/WebRTC
 
