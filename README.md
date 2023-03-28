@@ -1,7 +1,8 @@
 # AqaraPOST-Homeassistant
 Control Aqara devices in Homeassistant with post request
 
-
+Goal:
+Copy post request "Aqara Home" app in HomeAssistant
 
 How to:
 https://github.com/sdavides/AqaraPOST-Homeassistant/files/11093401/Aqara.Post.Request.pdf
@@ -18,7 +19,6 @@ https://github.com/AlexxIT/go2rtc
 
 Install Burp
 https://github.com/SNGWN/Burp-Suite
-Android info( https://portswigger.net/burp/documentation/desktop/mobile/config-android-device )
 
 
 Aqara mod network.apk
