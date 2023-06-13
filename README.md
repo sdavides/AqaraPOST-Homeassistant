@@ -22,7 +22,7 @@ https://github.com/SNGWN/Burp-Suite
 
 
 Aqara mod network.apk
-NodeRed example flow
+NodeRed example flow for Aqara Cam G3
 script bash example
 
 https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing
