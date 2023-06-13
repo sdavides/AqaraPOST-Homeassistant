@@ -21,7 +21,7 @@ Install Burp
 https://github.com/SNGWN/Burp-Suite
 
 
-Aqara mod network.apk
+Aqara mod network.apk - 
 NodeRed example flow for Aqara Cam G3
 script bash example
 
