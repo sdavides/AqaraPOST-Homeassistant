@@ -123,7 +123,7 @@
             { "property": "subDeviceCount", "value": "payload.result.data.14.value", "valueType": "msg" },
             { "property": "sceneCount", "value": "payload.result.data.15.value", "valueType": "msg" },
             { "property": "firmwareVersion", "value": "payload.result.data.18.value", "valueType": "msg" },
-            { "property": "volume", "value": "payload.result.data.21.value", "valueType": "msg" },
+            { "property": "volume", "value": "payload.result.data.24.value", "valueType": "msg" },
             { "property": "Memory SD free", "value": "payload.result.data.71.value.freesize", "valueType": "msg" },
             { "property": "Memory SD size", "value": "payload.result.data.71.value.totalsize", "valueType": "msg" },
             { "property": "Last checked", "value": "lastcheck", "valueType": "msg" }
