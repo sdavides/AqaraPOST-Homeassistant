@@ -28,7 +28,7 @@ Set proxy ip on Android Phone wifi with BurpSuite software
 
 ---
 
-- Your value from BurpSuite on “config" node in to NodeRed:
+- Find your value from BurpSuite, replace into “config" node in to NodeRed:
 
 appid	(XXXXXXAPPIDXXXXXXXXXXX)
 
