@@ -11,6 +11,9 @@ Palette "node-red-contrib-config" for NodeRed
 
 Access internet from HomeAssistant server (for aqara URL https)
 
+Aqara mod network.apk
+https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing
+
 ---
 
 - Your value from BurpSuite on “config" node in to NodeRed:
