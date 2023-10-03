@@ -24,7 +24,7 @@ Install “Aqara Home” mod network on Android Phone
 
 Install your certificate BurpSuite on Android Phone
 
-Set proxy ip on Android Phone wifi with BurpSuite software
+Set proxy on Android Phone wifi with IP PC BurpSuite
 
 ---
 
