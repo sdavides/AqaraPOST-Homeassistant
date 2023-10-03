@@ -55,7 +55,9 @@ lumi1.54ef443a120c (example for Aqara G3 EU)
 
 - Trick for Hub G3:
 
-Alarm function -> HomeKit device
+Alarm function ->
+
+HomeKit device
 
 Warning: the port change every reboot of device. 
 scan and find with nmap, replace in to \config\.storage\core\.config_entries 
