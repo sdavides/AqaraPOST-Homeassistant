@@ -14,10 +14,9 @@ Palette "node-red-contrib-config" for NodeRed
 
 Access internet from HomeAssistant server (for aqara URL https)
 
-Aqara mod network.apk
-https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing
-
 Aqara 4.0.2_mod_network.apk or Aqara 3.0.6_mod_network.apk
+
+( https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing )
 
 ---
 
