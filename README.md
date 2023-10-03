@@ -1,5 +1,8 @@
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
+
   this flow was developed for Aqara Hub G3
+
+---
 
 - Requirement:
 
