@@ -20,7 +20,7 @@ https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=shari
 
 Install BurpSuite https://github.com/SNGWN/Burp-Suite
 
-Install “Aqara Home” mod network on Android Phone
+Install “Aqara Home” mod network apk on Android Phone
 
 Install your certificate BurpSuite on Android Phone
 
