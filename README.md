@@ -1,8 +1,7 @@
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
--
 
-Requirement:
+- Requirement:
 
 NodeRed on HomeAssistant
 
@@ -12,7 +11,7 @@ Access internet from HomeAssistant (for aqara URL https)
 
 ---
 
-Your value from BurpSuite on “config node”:
+- Your value from BurpSuite on “config node”:
 
 appid	(XXXXXXAPPIDXXXXXXXXXXX)
 
@@ -26,7 +25,7 @@ lumi1.54ef443a120c (example for Aqara G3 EU)
 
 ---
 
-Requirement for BurpSuite:
+- Requirement for BurpSuite:
 
 Install BurpSuite https://github.com/SNGWN/Burp-Suite
 
