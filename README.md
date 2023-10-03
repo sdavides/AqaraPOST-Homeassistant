@@ -1,31 +1,19 @@
-# AqaraPOST-Homeassistant
-Control Aqara devices in Homeassistant with post request
+Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
-Goal:
-Copy post request "Aqara Home" app in HomeAssistant
+Requirement:
+NodeRed on HomeAssistant
+Palette "node-red-contrib-config" for NodeRed
+Access internet from HomeAssistant (for aqara URL https)
 
-How to:
-https://github.com/sdavides/AqaraPOST-Homeassistant/files/11093401/Aqara.Post.Request.pdf
+Your value from BurpSuite on “config node”:
+appid	(XXXXXXAPPIDXXXXXXXXXXX)
+userid	(XXXXXXUSERID.USERIDXXXXXXXXXXX)
+token	(XXXXXXTOKENXXXXXXXXXXX)
+aqara_url	(example EU = rpc-ger.aqara.com )
+lumi1.54ef443a120c (example for Aqara G3 EU)
 
-
-
-Install WebRTC
-https://github.com/AlexxIT/WebRTC
-
-
-Install go2RTC
-https://github.com/AlexxIT/go2rtc
-
-
-Install Burp
-https://github.com/SNGWN/Burp-Suite
-
-
-Aqara mod network.apk - 
-NodeRed example flow for Aqara Cam G3
-script bash example
-
-https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing
-
-
-Note for NodeRed install palette "node-red-contrib-config"
+Requirement for BurpSuite:
+Install BurpSuite https://github.com/SNGWN/Burp-Suite
+Install “Aqara Home” mod network on Android Phone
+Install your certificate BurpSuite on Android Phone
+Set proxy ip on Android Phone wifi with BurpSuite software
