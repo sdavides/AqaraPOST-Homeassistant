@@ -5,9 +5,9 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
 NodeRed on HomeAssistant
 
-Palette "node-red-contrib-config" for NodeRed
+NodeRed Companion on HomeAssistant
 
-NodeRed Companion
+Palette "node-red-contrib-config" for NodeRed
 
 Access internet from HomeAssistant (for aqara URL https)
 
