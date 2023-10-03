@@ -58,11 +58,11 @@ lumi1.54ef443a120c (example for Aqara G3 EU)
 Alarm function -> HomeKit device
 
 Warning: the port change every reboot of device. 
-scan and find with nmap, replace in to \config\.storage\core.config_entries 
+scan and find with nmap, replace in to \config\.storage\core\.config_entries 
 
 Live video ->
 
-go2RTC with WebRTC
+go2RTC with WebRTC ( required HomeKit connected )
 
 https://github.com/AlexxIT/go2rtc
 
