@@ -11,7 +11,7 @@ Access internet from HomeAssistant (for aqara URL https)
 
 ---
 
-- Your value from BurpSuite on “config node”:
+- Your value from BurpSuite on “config" node in to NodeRed:
 
 appid	(XXXXXXAPPIDXXXXXXXXXXX)
 
