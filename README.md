@@ -32,7 +32,7 @@ Set proxy on Android Phone wifi with IP PC BurpSuite
 
 ---
 
-- Find your value from BurpSuite, replace into “config" node in to NodeRed:
+- Find your value from BurpSuite, replace into “config" node into NodeRed:
 
 appid	(XXXXXXAPPIDXXXXXXXXXXX)
 
