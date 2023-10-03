@@ -61,7 +61,7 @@ HomeKit device
 
 Warning: the port change every reboot of device. 
 
-Scan and find with nmap, replace port into "\config\.storage\core\.config_entries"
+Scan and find with nmap, replace port into "\config\ .storage\core\ .config_entries"
 
 Live video ->
 
