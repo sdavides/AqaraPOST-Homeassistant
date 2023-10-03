@@ -7,6 +7,8 @@ NodeRed on HomeAssistant
 
 Palette "node-red-contrib-config" for NodeRed
 
+NodeRed Companion
+
 Access internet from HomeAssistant (for aqara URL https)
 
 ---
