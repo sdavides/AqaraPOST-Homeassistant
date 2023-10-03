@@ -16,6 +16,18 @@ https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=shari
 
 ---
 
+- Requirement for BurpSuite:
+
+Install BurpSuite https://github.com/SNGWN/Burp-Suite
+
+Install “Aqara Home” mod network on Android Phone
+
+Install your certificate BurpSuite on Android Phone
+
+Set proxy ip on Android Phone wifi with BurpSuite software
+
+---
+
 - Your value from BurpSuite on “config" node in to NodeRed:
 
 appid	(XXXXXXAPPIDXXXXXXXXXXX)
@@ -27,18 +39,6 @@ token	(XXXXXXTOKENXXXXXXXXXXX)
 aqara_url	(example EU = rpc-ger.aqara.com )
 
 lumi1.54ef443a120c (example for Aqara G3 EU)
-
----
-
-- Requirement for BurpSuite:
-
-Install BurpSuite https://github.com/SNGWN/Burp-Suite
-
-Install “Aqara Home” mod network on Android Phone
-
-Install your certificate BurpSuite on Android Phone
-
-Set proxy ip on Android Phone wifi with BurpSuite software
 
 ---
 
