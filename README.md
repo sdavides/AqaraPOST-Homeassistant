@@ -60,7 +60,8 @@ Alarm function ->
 HomeKit device
 
 Warning: the port change every reboot of device. 
-scan and find with nmap, replace in to \config\.storage\core\.config_entries 
+
+Scan and find with nmap, replace port in to \config\.storage\core\.config_entries 
 
 Live video ->
 
