@@ -20,7 +20,7 @@ Aqara 4.0.2_mod_network.apk or Aqara 3.0.6_mod_network.apk
 
 ---
 
-- Requirement for BurpSuite:
+- Requirement for find your data on BurpSuite software:
 
 Install BurpSuite https://github.com/SNGWN/Burp-Suite
 
