@@ -51,3 +51,20 @@ lumi1.54ef443a120c (example for Aqara G3 EU)
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/92e05aa3-8dd3-4257-9c3b-ccc84f4e65d8)
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/316750b5-7ddb-4539-a2b8-c157d262215c)
 
+---
+
+- Trick for Hub G3:
+
+Alarm function -> HomeKit device
+
+Warning: the port change every reboot of device. 
+scan and find with nmap, replace in to \config\.storage\core.config_entries 
+
+Live video ->
+
+go2RTC with WebRTC
+https://github.com/AlexxIT/go2rtc
+https://github.com/AlexxIT/WebRTC
+
+
+
