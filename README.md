@@ -34,6 +34,8 @@ Set proxy on Android Phone wifi with IP PC BurpSuite
 
 - Find your value from BurpSuite, replace into “config" node into NodeRed:
 
+- https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf
+
 appid	(XXXXXXAPPIDXXXXXXXXXXX)
 
 userid	(XXXXXXUSERID.USERIDXXXXXXXXXXX)
