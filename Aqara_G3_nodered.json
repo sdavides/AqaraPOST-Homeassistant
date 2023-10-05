@@ -3679,7 +3679,7 @@
         ],
         "x": 870,
         "y": 380,
-        "wires": [["47a3431fff37b63f", "1a48d2bad2200036"]]
+        "wires": [["47a3431fff37b63f"]]
     },
     {
         "id": "601e92c7450ba559",
@@ -3702,7 +3702,7 @@
         "type": "function",
         "z": "e629d6c87e56cb6d",
         "name": "Set UserID global variable",
-        "func": "if (msg.payload.message === 'Success'){\n    var userid = msg.payload.result.userId;\n    global.set(\"userid\", userid);\n}\nelse\n{\n    msg.payload.result.userId = \"error UsedID\";\n}\n\nreturn msg;",
+        "func": "if (msg.payload.message === 'Success'){\n    var userid = msg.payload.result.userId\n    global.set(\"userid\", userid)\n}\nelse\n{\n    msg.payload.result.userId = \"check fault\"\n}\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3711,7 +3711,7 @@
         "libs": [],
         "x": 910,
         "y": 420,
-        "wires": [[]]
+        "wires": [["04f663a4459f5a98"]]
     },
     { "id": "2e5c3bbb0e121b8a", "type": "comment", "z": "e629d6c87e56cb6d", "name": "UserID autoconfig", "info": "UserID autoconfig\n\nInsert manual UserID \ninto config node if not work", "x": 890, "y": 260, "wires": [] },
     {
@@ -3736,10 +3736,10 @@
         "name": "Aqara UserID",
         "entityConfig": "f7c98402dc71fd74",
         "version": 0,
-        "state": "payload.result.userId",
-        "stateType": "msg",
+        "state": "Aqara UserID",
+        "stateType": "str",
         "attributes": [
-            { "property": "UserID", "value": "payload.result.userId", "valueType": "msg" },
+            { "property": "UserID", "value": "msg.payload.result.userId", "valueType": "msg" },
             { "property": "registerTime", "value": "payload.result.registerTime", "valueType": "msg" },
             { "property": "nickName", "value": "payload.result.nickName", "valueType": "msg" },
             { "property": "facebookId", "value": "payload.result.facebookId", "valueType": "msg" },
@@ -3751,22 +3751,6 @@
         "x": 880,
         "y": 540,
         "wires": [[]]
-    },
-    {
-        "id": "1a48d2bad2200036",
-        "type": "function",
-        "z": "e629d6c87e56cb6d",
-        "name": "Check UserID",
-        "func": "if (msg.payload.message === 'Success'){\n    msg.payload.check = \"Check Ok\"\n}\nelse\n{\n    msg.payload.check = \"Check fault\"\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 860,
-        "y": 500,
-        "wires": [["04f663a4459f5a98"]]
     },
     {
         "id": "caa960a76b56a309",
