@@ -36,7 +36,7 @@ Set proxy on Android Phone wifi with IP PC BurpSuite
 
 - https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf
 
-appid	(XXXXXXAPPIDXXXXXXXXXXX)
+appid	(XXXXXXAPPIDXXXXXXXXXXX)  (autoconfig "userid" value, enter manual if not work)
 
 userid	(XXXXXXUSERID.USERIDXXXXXXXXXXX)
 
@@ -45,8 +45,6 @@ token	(XXXXXXTOKENXXXXXXXXXXX)
 aqara_url	(example EU = rpc-ger.aqara.com )
 
 lumi1.54ef443a120c (example for Aqara G3 EU)
-
-( 5/10/203 add autoconfig "userid" value, enter manual if not work)
 
 ---
 
