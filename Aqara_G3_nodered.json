@@ -1383,7 +1383,7 @@
         "name": "Config",
         "properties": [
             { "p": "token", "pt": "global", "to": "XXXXXXTOKENXXXXXXXXXXX", "tot": "str" },
-            { "p": "appid", "pt": "global", "to": "444c476ef7135e53330f46e7", "tot": "str" },
+            { "p": "appid", "pt": "global", "to": "XXXXXXAPPIDXXXXXXXXXXX", "tot": "str" },
             { "p": "aqara_url", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
             { "p": "subjectId", "pt": "global", "to": "lumi1.54ef443a120c", "tot": "str" },
             { "p": "country", "pt": "global", "to": "it-IT", "tot": "str" },
