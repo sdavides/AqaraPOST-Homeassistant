@@ -45,6 +45,7 @@ aqara_url	(example EU = rpc-ger.aqara.com )
 lumi1.54ef443a120c (example for Aqara G3 EU)
 
 ( 5/10/203 add autoconfig userid, enter manual if not work)
+
 ---
 
 - Result
