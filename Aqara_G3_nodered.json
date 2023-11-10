@@ -19,16 +19,16 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1890,
+        "x": 1850,
         "y": 620,
-        "wires": [["07e802557484f6ee"]]
+        "wires": [["40896fecd2a7247e"]]
     },
     {
         "id": "773c99c14ba4562f",
         "type": "function",
         "z": "e629d6c87e56cb6d",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/res/query\"\n\nmsg.payload = {\n    \"data\": [\n        {\n            \"options\": [\"ptz_cruise_enable\", \"pets_track_enable\", \"humans_track_enable\", \"gesture_detect_enable\", \"mdtrigger_enable\", \"soundtrigger_enable\", \"human_detect_enable\", \"face_detect_enable\", \"pets_detect_enable\", \"set_video\"],\n            \"subjectId\": subjectId\n        }\n    ]\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/res/direct/query\"\n\nmsg.payload = {\n    \"attrs\": [\"ptz_cruise_enable\", \"pets_track_enable\", \"humans_track_enable\", \"gesture_detect_enable\", \"mdtrigger_enable\", \"soundtrigger_enable\", \"human_detect_enable\", \"face_detect_enable\", \"pets_detect_enable\", \"set_video\",\n        \"sdcard_status\"\n    ],\n    \"did\": subjectId\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -49,21 +49,23 @@
         "state": "Camera G3 config",
         "stateType": "str",
         "attributes": [
-            { "property": "Motion detect", "value": "msg.payload.mdtrigger_enable.value", "valueType": "msg" },
-            { "property": "Face detect", "value": "payload.face_detect_enable.value", "valueType": "msg" },
-            { "property": "Pets detect", "value": "payload.pets_detect_enable.value", "valueType": "msg" },
-            { "property": "Human detect", "value": "payload.human_detect_enable.value", "valueType": "msg" },
-            { "property": "Humans track", "value": "payload.humans_track_enable.value", "valueType": "msg" },
-            { "property": "sound trigger", "value": "payload.soundtrigger_enable.value", "valueType": "msg" },
-            { "property": "ptz cruise", "value": "payload.ptz_cruise_enable.value", "valueType": "msg" },
-            { "property": "Gesture detect", "value": "payload.gesture_detect_enable.value", "valueType": "msg" },
-            { "property": "Pets track", "value": "payload.pets_track_enable.value", "valueType": "msg" },
-            { "property": "Video active", "value": "payload.set_video.value", "valueType": "msg" },
-            { "property": "last chechek", "value": "lastcheck", "valueType": "msg" }
+            { "property": "Motion detect", "value": "payload.result.mdtrigger_enable", "valueType": "msg" },
+            { "property": "Face detect", "value": "payload.result.face_detect_enable", "valueType": "msg" },
+            { "property": "Pets detect", "value": "payload.result.pets_detect_enable", "valueType": "msg" },
+            { "property": "Human detect", "value": "payload.result.human_detect_enable", "valueType": "msg" },
+            { "property": "Humans track", "value": "payload.result.humans_track_enable", "valueType": "msg" },
+            { "property": "sound trigger", "value": "payload.soundtrigger_enable", "valueType": "msg" },
+            { "property": "ptz cruise", "value": "payload.result.ptz_cruise_enable", "valueType": "msg" },
+            { "property": "Gesture detect", "value": "payload.result.gesture_detect_enable", "valueType": "msg" },
+            { "property": "Pets track", "value": "payload.result.pets_track_enable", "valueType": "msg" },
+            { "property": "Video active", "value": "payload.result.set_video", "valueType": "msg" },
+            { "property": "sd_freesize", "value": "payload.result.sdcard_status.freesize", "valueType": "msg" },
+            { "property": "sd_totalsize", "value": "payload.result.sdcard_status.totalsize", "valueType": "msg" },
+            { "property": "last cheched", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 630,
+        "x": 890,
         "y": 780,
         "wires": [["94dd240d1c9e443f"]]
     },
@@ -530,16 +532,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.mdtrigger_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.mdtrigger_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.mdtrigger_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.mdtrigger_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2190,
-        "y": 580,
+        "x": 2150,
+        "y": 460,
         "wires": [["970e566b297e7e99"]]
     },
     {
@@ -548,16 +550,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.face_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.face_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.face_detect_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.face_detect_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2190,
-        "y": 620,
+        "x": 2150,
+        "y": 500,
         "wires": [["6742a83ba0e523d7"]]
     },
     {
@@ -566,16 +568,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.pets_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.pets_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.pets_detect_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.pets_detect_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2190,
-        "y": 660,
+        "x": 2150,
+        "y": 540,
         "wires": [["bd1fb0d0a1bd0a72"]]
     },
     {
@@ -584,16 +586,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.human_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.human_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.human_detect_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.human_detect_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2190,
-        "y": 700,
+        "x": 2150,
+        "y": 580,
         "wires": [["faca4093295d5d5d"]]
     },
     {
@@ -602,16 +604,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.humans_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.humans_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.humans_track_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.humans_track_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2190,
-        "y": 740,
+        "x": 2150,
+        "y": 620,
         "wires": [["194c511d66f309a3"]]
     },
     {
@@ -620,16 +622,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.soundtrigger_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.soundtrigger_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.soundtrigger_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.soundtrigger_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 580,
+        "x": 2430,
+        "y": 460,
         "wires": [["a1e1eaa3c1f20370"]]
     },
     {
@@ -638,16 +640,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.ptz_cruise_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.ptz_cruise_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.ptz_cruise_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.ptz_cruise_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 620,
+        "x": 2430,
+        "y": 500,
         "wires": [["48593f0bf7da9a03"]]
     },
     {
@@ -656,16 +658,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.pets_track_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.pets_track_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 660,
+        "x": 2430,
+        "y": 540,
         "wires": [["389eebc53590434a"]]
     },
     {
@@ -674,16 +676,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.gesture_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.gesture_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.gesture_detect_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.gesture_detect_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 700,
+        "x": 2430,
+        "y": 580,
         "wires": [["36969f63470e2f19"]]
     },
     {
@@ -692,16 +694,16 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.pets_track_enable", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.pets_track_enable", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 740,
+        "x": 2430,
+        "y": 620,
         "wires": [["bfea592382228f73"]]
     },
     {
@@ -739,7 +741,7 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.set_video.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.set_video", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
@@ -771,6 +773,7 @@
         "name": "parameter",
         "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"data\": { \"set_video\": 1 },\n    \"subjectId\": subjectId\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -784,7 +787,7 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.humans_track_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.humans_track_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
@@ -874,13 +877,13 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.pets_track_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.pets_track_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 490,
+        "x": 470,
         "y": 1120,
         "wires": [["52dcd880283937d0", "0fbf4808ed405efb"]]
     },
@@ -975,7 +978,7 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.face_detect_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.face_detect_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
@@ -1042,7 +1045,7 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.gesture_detect_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.gesture_detect_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
@@ -1109,13 +1112,13 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "msg.payload.mdtrigger_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.mdtrigger_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 500,
+        "x": 490,
         "y": 1440,
         "wires": [["bfd323d1cdf6bd86", "26e2e006f0f731e3"]]
     },
@@ -1175,7 +1178,7 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.soundtrigger_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.soundtrigger_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
@@ -1240,7 +1243,7 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.human_detect_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.human_detect_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
@@ -1314,8 +1317,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 1210,
-        "y": 860,
+        "x": 1390,
+        "y": 800,
         "wires": [["2a6e832be7ef719c"]]
     },
     {
@@ -1430,7 +1433,7 @@
         "type": "change",
         "z": "e629d6c87e56cb6d",
         "name": "",
-        "rules": [{ "t": "move", "p": "payload.pets_detect_enable.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "rules": [{ "t": "move", "p": "payload.result.pets_detect_enable", "pt": "msg", "to": "enable", "tot": "msg" }],
         "action": "",
         "property": "",
         "from": "",
@@ -3742,34 +3745,19 @@
         "z": "e629d6c87e56cb6d",
         "name": "change resourceId",
         "rules": [
-            { "t": "change", "p": "payload.set_video.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.set_video.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+            { "t": "change", "p": "payload.result.set_video", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.result.set_video", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
         ],
         "action": "",
         "property": "",
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2470,
-        "y": 780,
-        "wires": [["5a95353a03e1c9ad"]]
+        "x": 2430,
+        "y": 660,
+        "wires": [["1405cbbaf56f92d2"]]
     },
-    {
-        "id": "07e802557484f6ee",
-        "type": "function",
-        "z": "e629d6c87e56cb6d",
-        "name": "change dataKey = friendly-resource",
-        "func": "if (msg.payload.result[0].attr === 'mdtrigger_enable'){\n    msg.payload.mdtrigger_enable = msg.payload.result[0];\n}\nif (msg.payload.result[1].attr === 'face_detect_enable'){\n    msg.payload.face_detect_enable = msg.payload.result[1];\n}\nif (msg.payload.result[2].attr === 'pets_detect_enable'){\n    msg.payload.pets_detect_enable = msg.payload.result[2];\n}\nif (msg.payload.result[3].attr === 'human_detect_enable'){\n    msg.payload.human_detect_enable = msg.payload.result[3];\n}\nif (msg.payload.result[4].attr === 'humans_track_enable'){\n    msg.payload.humans_track_enable = msg.payload.result[4];\n}\nif (msg.payload.result[5].attr === 'soundtrigger_enable'){\n    msg.payload.soundtrigger_enable = msg.payload.result[5];\n}\nif (msg.payload.result[6].attr === 'ptz_cruise_enable'){\n    msg.payload.ptz_cruise_enable = msg.payload.result[6];\n}\nif (msg.payload.result[7].attr === 'gesture_detect_enable'){\n    msg.payload.gesture_detect_enable = msg.payload.result[7];\n}\nif (msg.payload.result[8].attr === 'pets_track_enable'){\n    msg.payload.pets_track_enable = msg.payload.result[8];\n}\nif (msg.payload.result[9].attr === 'set_video'){\n    msg.payload.set_video = msg.payload.result[9];\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2230,
-        "y": 520,
-        "wires": [["40896fecd2a7247e"]]
-    },
+    { "id": "1405cbbaf56f92d2", "type": "json", "z": "e629d6c87e56cb6d", "name": "", "property": "payload.result.sdcard_status", "action": "obj", "pretty": false, "x": 2390, "y": 700, "wires": [["5a95353a03e1c9ad"]] },
     {
         "id": "caa960a76b56a309",
         "type": "ha-entity-config",
