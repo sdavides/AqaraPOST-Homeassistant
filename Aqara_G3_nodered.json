@@ -28,7 +28,7 @@
         "type": "function",
         "z": "e629d6c87e56cb6d",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/res/direct/query\"\n\nmsg.payload = {\n    \"attrs\": [\"ptz_cruise_enable\", \"pets_track_enable\", \"humans_track_enable\", \"gesture_detect_enable\", \"mdtrigger_enable\", \"soundtrigger_enable\", \"human_detect_enable\", \"face_detect_enable\", \"pets_detect_enable\", \"set_video\",\n        \"sdcard_status\"\n    ],\n    \"did\": subjectId\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/res/direct/query\"\n\nmsg.payload = {\n    \"attrs\": [\"ptz_cruise_enable\", \"pets_track_enable\", \"humans_track_enable\", \"gesture_detect_enable\", \"mdtrigger_enable\", \"soundtrigger_enable\", \"human_detect_enable\", \"face_detect_enable\", \"pets_detect_enable\", \"set_video\",\n        \"sdcard_status\",\"alarm_status\",\"system_volume\",\"alarm_bell_index\",\"device_night_tip_light\",\"cloud_small_video\",\"alarm_bell_volume\"\n    ],\n    \"did\": subjectId\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -61,6 +61,11 @@
             { "property": "Video active", "value": "payload.result.set_video", "valueType": "msg" },
             { "property": "sd_freesize", "value": "payload.result.sdcard_status.freesize", "valueType": "msg" },
             { "property": "sd_totalsize", "value": "payload.result.sdcard_status.totalsize", "valueType": "msg" },
+            { "property": "alarm_status", "value": "payload.result.alarm_status", "valueType": "msg" },
+            { "property": "system_volume", "value": "payload.result.system_volume", "valueType": "msg" },
+            { "property": "alarm_bell_index", "value": "payload.result.alarm_bell_index", "valueType": "msg" },
+            { "property": "alarm_bell_volume", "value": "payload.result.alarm_bell_volume", "valueType": "msg" },
+            { "property": "device_night_tip_light", "value": "payload.result.device_night_tip_light", "valueType": "msg" },
             { "property": "last cheched", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
@@ -135,6 +140,10 @@
             { "property": "Timestamp", "value": "payload.timestamp.value", "valueType": "msg" },
             { "property": "Gesture Need Face", "value": "payload.gestneedface.value", "valueType": "msg" },
             { "property": "Sensitivity Motion", "value": "payload.sensitivity.value", "valueType": "msg" },
+            { "property": "face_dect freq sec.", "value": "payload.face_freq.value", "valueType": "msg" },
+            { "property": "human_dect freq sec.", "value": "payload.human_freq.value", "valueType": "msg" },
+            { "property": "catdog_dect freq sec.", "value": "payload.catdog_freq.value", "valueType": "msg" },
+            { "property": "motion_dect freq sec.", "value": "payload.motion_freq.value", "valueType": "msg" },
             { "property": "Last checked", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
@@ -171,7 +180,6 @@
         "y": 680,
         "wires": [["2a6e832be7ef719c"]]
     },
-    { "id": "068c39a0572d02b0", "type": "json", "z": "e629d6c87e56cb6d", "name": "", "property": "payload.result.data.67.value", "action": "", "pretty": true, "x": 1430, "y": 2800, "wires": [["f02db167318d794d"]] },
     {
         "id": "da656c216af6c39c",
         "type": "ha-sensor",
@@ -614,7 +622,7 @@
         "reg": false,
         "x": 2150,
         "y": 620,
-        "wires": [["194c511d66f309a3"]]
+        "wires": [["eca7798aea28d7da"]]
     },
     {
         "id": "194c511d66f309a3",
@@ -1495,7 +1503,7 @@
         "wires": [["f2e484f38974c48b"], ["053dace9e2318c21"]]
     },
     { "id": "f02db167318d794d", "type": "json", "z": "e629d6c87e56cb6d", "name": "", "property": "payload.sdmemory.value", "action": "obj", "pretty": false, "x": 1430, "y": 2840, "wires": [["ecace35d9c9b1fee", "c4a186d2c85db900"]] },
-    { "id": "87d86b53120c6bfb", "type": "json", "z": "e629d6c87e56cb6d", "name": "", "property": "payload.rete.value", "action": "obj", "pretty": false, "x": 1430, "y": 2760, "wires": [["068c39a0572d02b0"]] },
+    { "id": "87d86b53120c6bfb", "type": "json", "z": "e629d6c87e56cb6d", "name": "", "property": "payload.rete.value", "action": "obj", "pretty": false, "x": 1430, "y": 2760, "wires": [["f02db167318d794d"]] },
     {
         "id": "8943cfa8829303e1",
         "type": "function",
@@ -2125,7 +2133,7 @@
         "type": "function",
         "z": "e629d6c87e56cb6d",
         "name": "change dataKey = friendly-resource",
-        "func": "if (msg.payload.result.data[8].dataKey === 'deviceName'){\n    msg.payload.devicename = msg.payload.result.data[8];\n}\nif (msg.payload.result.data[43].dataKey === '4.63.85') {\n    msg.payload.muteaudio = msg.payload.result.data[43];\n}\nif (msg.payload.result.data[50].dataKey === '4.76.85') {\n    msg.payload.frame = msg.payload.result.data[50];\n}\nif (msg.payload.result.data[11].dataKey === '14.4.85') {\n    msg.payload.timestamp = msg.payload.result.data[11];\n}\nif (msg.payload.result.data[45].dataKey === '14.104.85') {\n    msg.payload.sensitivity = msg.payload.result.data[45];\n}\nif (msg.payload.result.data[53].dataKey === '4.48.85') {\n    msg.payload.gestneedface = msg.payload.result.data[53];\n}\nif (msg.payload.result.data[49].dataKey === '14.67.85') {\n    msg.payload.rete = msg.payload.result.data[49];\n}\nif (msg.payload.result.data[9].dataKey === 'deviceId') {\n    msg.payload.deviceid = msg.payload.result.data[9];\n}\nif (msg.payload.result.data[74].dataKey === '13.25.85') {\n    msg.payload.sdmemory = msg.payload.result.data[74];\n}\nif (msg.payload.result.data[15].dataKey === 'subDeviceCount') {\n    msg.payload.subdevicecount = msg.payload.result.data[15];\n}\nif (msg.payload.result.data[16].dataKey === 'sceneCount') {\n    msg.payload.scenecount = msg.payload.result.data[16];\n}\nif (msg.payload.result.data[19].dataKey === 'firmwareVersion') {\n    msg.payload.firmwareversion = msg.payload.result.data[19];\n}\nif (msg.payload.result.data[25].dataKey === '14.11.85') {\n    msg.payload.volume = msg.payload.result.data[25];\n}\nreturn msg;",
+        "func": "if (msg.payload.result.data[8].dataKey === 'deviceName'){\n    msg.payload.devicename = msg.payload.result.data[8];\n}\nif (msg.payload.result.data[43].dataKey === '4.63.85') {\n    msg.payload.muteaudio = msg.payload.result.data[43];\n}\nif (msg.payload.result.data[50].dataKey === '4.76.85') {\n    msg.payload.frame = msg.payload.result.data[50];\n}\nif (msg.payload.result.data[11].dataKey === '14.4.85') {\n    msg.payload.timestamp = msg.payload.result.data[11];\n}\nif (msg.payload.result.data[45].dataKey === '14.104.85') {\n    msg.payload.sensitivity = msg.payload.result.data[45];\n}\nif (msg.payload.result.data[53].dataKey === '4.48.85') {\n    msg.payload.gestneedface = msg.payload.result.data[53];\n}\nif (msg.payload.result.data[49].dataKey === '14.67.85') {\n    msg.payload.rete = msg.payload.result.data[49];\n}\nif (msg.payload.result.data[9].dataKey === 'deviceId') {\n    msg.payload.deviceid = msg.payload.result.data[9];\n}\nif (msg.payload.result.data[74].dataKey === '13.25.85') {\n    msg.payload.sdmemory = msg.payload.result.data[74];\n}\nif (msg.payload.result.data[15].dataKey === 'subDeviceCount') {\n    msg.payload.subdevicecount = msg.payload.result.data[15];\n}\nif (msg.payload.result.data[16].dataKey === 'sceneCount') {\n    msg.payload.scenecount = msg.payload.result.data[16];\n}\nif (msg.payload.result.data[19].dataKey === 'firmwareVersion') {\n    msg.payload.firmwareversion = msg.payload.result.data[19];\n}\nif (msg.payload.result.data[25].dataKey === '14.11.85') {\n    msg.payload.volume = msg.payload.result.data[25];\n}\nif (msg.payload.result.data[59].dataKey === '14.110.85') {\n    msg.payload.face_freq = msg.payload.result.data[59];\n}\nif (msg.payload.result.data[62].dataKey === '14.114.85') {\n    msg.payload.human_freq = msg.payload.result.data[62];\n}\nif (msg.payload.result.data[22].dataKey === '14.116.85') {\n    msg.payload.catdog_freq = msg.payload.result.data[22];\n}\nif (msg.payload.result.data[29].dataKey === '14.105.85') {\n    msg.payload.motion_freq = msg.payload.result.data[29];\n}\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3758,6 +3766,42 @@
         "wires": [["1405cbbaf56f92d2"]]
     },
     { "id": "1405cbbaf56f92d2", "type": "json", "z": "e629d6c87e56cb6d", "name": "", "property": "payload.result.sdcard_status", "action": "obj", "pretty": false, "x": 2390, "y": 700, "wires": [["5a95353a03e1c9ad"]] },
+    {
+        "id": "eca7798aea28d7da",
+        "type": "change",
+        "z": "e629d6c87e56cb6d",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.result.alarm_status", "pt": "msg", "from": "1", "fromt": "str", "to": "armed", "tot": "str" },
+            { "t": "change", "p": "payload.result.alarm_status", "pt": "msg", "from": "0", "fromt": "str", "to": "disarmed", "tot": "str" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2150,
+        "y": 660,
+        "wires": [["e7d6f7c2bd347c86"]]
+    },
+    {
+        "id": "e7d6f7c2bd347c86",
+        "type": "change",
+        "z": "e629d6c87e56cb6d",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.result.device_night_tip_light", "pt": "msg", "from": "1", "fromt": "str", "to": "on", "tot": "str" },
+            { "t": "change", "p": "payload.result.device_night_tip_light", "pt": "msg", "from": "0", "fromt": "str", "to": "off", "tot": "str" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2150,
+        "y": 700,
+        "wires": [["194c511d66f309a3"]]
+    },
     {
         "id": "caa960a76b56a309",
         "type": "ha-entity-config",
