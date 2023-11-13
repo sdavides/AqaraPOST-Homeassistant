@@ -1,6 +1,6 @@
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
--  this flow is example and was developed for Aqara Hub G3 camera
+-  this flow is example and was developed for Aqara Hub G3 camera (CH-H03 lumi.camera.gwpgl1)
 
 ---
 
