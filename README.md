@@ -53,6 +53,8 @@ lumi1.54ef443a120c (example for Aqara G3 EU)
 
 ---
 
+---
+
 - Trick for Hub G3:
 
 Alarm function ->
