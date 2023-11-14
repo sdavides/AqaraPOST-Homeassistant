@@ -20,7 +20,7 @@ Aqara 4.0.2_mod_network.apk or Aqara 3.0.6_mod_network.apk
 
 - Requirement for find your data on BurpSuite software:
 
-Install BurpSuite https://github.com/SNGWN/Burp-Suite
+Install BurpSuite Software PC
 
 Install “Aqara Home” mod network apk on Android Phone
 
