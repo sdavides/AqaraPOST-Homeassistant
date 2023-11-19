@@ -16,9 +16,9 @@ userid	(XXXXXXUSERID.USERIDXXXXXXXXXXX)    (autoconfig "userid" value, enter man
 
 token	(XXXXXXTOKENXXXXXXXXXXX)
 
-aqara_url	(example EU = rpc-ger.aqara.com )
+aqara_url	( example EU = rpc-ger.aqara.com )
 
-lumi1.XXXXXXXXXXXX ( lumi1.MACADDRESS)
+lumi1.XXXXXXXXXXXX ( lumi1.MACADDRESS )
 
 ---
 
