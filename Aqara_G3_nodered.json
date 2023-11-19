@@ -3948,7 +3948,7 @@
             { "p": "token", "pt": "global", "to": "XXXXXXTOKENXXXXXXXXXXX", "tot": "str" },
             { "p": "appid", "pt": "global", "to": "XXXXXXAPPIDXXXXXXXXXXX", "tot": "str" },
             { "p": "aqara_url", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
-            { "p": "subjectId", "pt": "global", "to": "lumi1.54ef443a120c", "tot": "str" },
+            { "p": "subjectId", "pt": "global", "to": "lumi1.XXXXXXXXXXXX", "tot": "str" },
             { "p": "country", "pt": "global", "to": "it-IT", "tot": "str" },
             { "p": "userid", "pt": "global", "to": "enter manual if not work autoconfig", "tot": "str" }
         ],
