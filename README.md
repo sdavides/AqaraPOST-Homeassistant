@@ -24,17 +24,11 @@ lumi1.XXXXXXXXXXXX ( lumi1.MACADDRESS )
 
 - Requirement for find your data on BurpSuite software:
 
-Install BurpSuite Software PC
+BurpSuite Software PC
 
-Install “Aqara Home” mod network apk on Android Phone
-
-Aqara 4.0.2_mod_network.apk or Aqara 3.0.6_mod_network.apk
+“Aqara Home” mod network apk on Android Phone
 
 ( https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing )
-
-Install your certificate BurpSuite on Android Phone
-
-Set proxy on Android Phone wifi with IP PC BurpSuite
 
 ---
 
