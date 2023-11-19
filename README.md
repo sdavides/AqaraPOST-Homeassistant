@@ -6,8 +6,6 @@ note:  this flow is example and was developed for Aqara Hub G3 camera (CH-H03 lu
 
 ---
 
-- Requirement appid - userid - token
-
 Find your value from BurpSuite, replace your value:
 
 - https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf
