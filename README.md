@@ -79,13 +79,14 @@ Note: access internet from HomeAssistant server (for aqara URL https)
 
 Alarm function ->
 
-HomeKit device
+  HomeKit device
 
-Warning: the port change every reboot of device. 
+  Warning: the port change every reboot of device. 
 
-Scan and find with nmap, replace port into "/config/.storage/core.config_entries"
+  Scan and find with nmap, replace port into "/config/.storage/core.config_entries"
 
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/000112ab-1acf-4f88-b634-024df5a6c554)
+
 
 
 Live video ->
