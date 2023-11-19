@@ -1,0 +1,342 @@
+####### START RESTFUL_AQARA_G3
+#
+#   Replace Clientid - Userid - Token - Appid - subjectId
+#
+# START sensors
+rest:
+    resource: https://rpc-ger.aqara.com/app/v1.0/lumi/res/query
+    method: POST
+    scan_interval: 15
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data":[{"options":["ptz_cruise_enable", "pets_track_enable", "humans_track_enable", "gesture_detect_enable", "mdtrigger_enable", "soundtrigger_enable", "human_detect_enable", "face_detect_enable", "pets_detect_enable", "set_video","sdcard_status","alarm_status","system_volume","alarm_bell_index","device_night_tip_light","cloud_small_video","alarm_bell_volume","device_wifi_rssi"],"subjectId":"lumi1.XXXXXXXXXXXX"}]}'
+    sensor:
+      - name: aqara_g3_mdtrigger_enable
+        value_template: "{{ value_json.result[0].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[0]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_pets_detect_enable
+        value_template: "{{ value_json.result[1].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[1]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_cloud_small_video
+        value_template: "{{ value_json.result[2].value }}"
+        json_attributes_path: "$.[2]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_ptz_cruise_enable
+        value_template: "{{ value_json.result[3].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[3]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp         
+      - name: aqara_g3_alarm_bell_index
+        value_template: "{{ value_json.result[4].value }}"
+        json_attributes_path: "$.[4]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp 
+      - name: aqara_g3_alarm_bell_volume
+        value_template: "{{ value_json.result[5].value }}"
+        json_attributes_path: "$.[5]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp 
+      - name: aqara_g3_gesture_detect_enable
+        value_template: "{{ value_json.result[6].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[6]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp 
+      - name: aqara_g3_pets_track_enable
+        value_template: "{{ value_json.result[7].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[7]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp 
+      - name: aqara_g3_set_video
+        value_template: "{{ value_json.result[8].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[8]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp 
+      - name: aqara_g3_device_wifi_rssi
+        value_template: "{{ value_json.result[9].value }}"
+        json_attributes_path: "$.[9]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_face_detect_enable
+        value_template: "{{ value_json.result[10].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[10]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_alarm_status
+        value_template: "{{ value_json.result[11].value | replace ('1','triggered')| replace ('0','no alarm') }}"
+        json_attributes_path: "$.[11]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_human_detect_enable
+        value_template: "{{ value_json.result[12].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[12]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_humans_track_enable
+        value_template: "{{ value_json.result[13].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[13]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_soundtrigger_enable
+        value_template: "{{ value_json.result[14].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[14]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_system_volume
+        value_template: "{{ value_json.result[15].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[15]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+      - name: aqara_g3_device_night_tip_light
+        value_template: "{{ value_json.result[16].value | replace ('1','on') | replace ('0','off') }}"
+        json_attributes_path: "$.[16]" 
+        json_attributes:
+            - attr 
+            - value
+            - subjectId
+            - timeStamp
+#
+#
+####### END sensors
+
+
+####### START switch
+#
+#
+switch:  
+####### START switch humans_track_enable  
+  - platform: template
+    switches:
+      aqara_g3_humans_track_enable:
+        value_template: "{{ states.sensor.aqara_g3_humans_track_enable.state }}"
+        turn_on:
+          service: rest_command.aqara_g3_humans_track_enable_on
+          target:
+            entity_id: switch.aqara_g3_humans_track_enable
+        turn_off:
+          service: rest_command.aqara_g3_humans_track_enable_off
+          target:
+            entity_id: switch.aqara_g3_humans_track_enable
+####### END switch humans_track_enable
+####### START switch set_video			
+  - platform: template
+    switches:
+      aqara_g3_set_video:
+        value_template: "{{ states.sensor.aqara_g3_set_video.state }}"
+        turn_on:
+          service: rest_command.aqara_g3_set_video_on
+          target:
+            entity_id: switch.aqara_g3_set_video
+        turn_off:
+          service: rest_command.aqara_g3_set_video_off
+          target:
+            entity_id: switch.aqara_g3_set_video
+####### END switch set_video
+#
+#
+####### END switch
+
+
+
+####### START button
+#
+#
+template:
+  - button:
+####### START button aqara_g3_indicator_light_on
+    - name: "aqara_g3_indicator_light_on"
+      press:
+        service: rest_command.aqara_g3_indicator_light_on
+        target:
+          entity_id: button.aqara_g3_indicator_light_on
+####### END button aqara_g3_indicator_light_on
+####### START button aqara_g3_indicator_light_off
+    - name: "aqara_g3_indicator_light_off"
+      press:
+        service: rest_command.aqara_g3_indicator_light_off
+        target:
+          entity_id: button.aqara_g3_indicator_light_off
+####### END button aqara_g3_indicator_light_on
+####### START button aqara_g3_timestamp_box_on       
+  - button:
+    - name: "aqara_g3_timestamp_box_on"
+      press:
+        service: rest_command.aqara_g3_timestamp_box_on
+        target:
+          entity_id: button.aqara_g3_timestamp_box_on
+####### END button aqara_g3_timestamp_box_on   
+####### START button aqara_g3_timestamp_box_off
+    - name: "aqara_g3_timestamp_box_off"
+      press:
+        service: rest_command.aqara_g3_timestamp_box_off
+        target:
+          entity_id: button.aqara_g3_timestamp_box_off 
+####### END button aqara_g3_timestamp_box_on
+#
+#
+####### END button
+
+
+
+####### START rest_command
+#   Replace Clientid - Userid - Token - Appid - subjectId
+#
+rest_command:
+####### START rest_command aqara_g3_indicator_light_on          
+  aqara_g3_indicator_light_on:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "14.21.85":"5162041" }, "options": "", "subjectId": "lumi1.XXXXXXXXXXXX", "version":"6.29", "viewId": "viewId=detail"}'
+####### END rest_command aqara_g3_indicator_light_on  
+####### START rest_command aqara_g3_indicator_light_off
+  aqara_g3_indicator_light_off:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "14.21.85":"2212920" }, "options": "", "subjectId": "lumi1.XXXXXXXXXXXX", "version":"6.29", "viewId": "viewId=detail"}'
+####### END rest_command aqara_g3_indicator_light_off
+####### START rest_command aqara_g3_timestamp_box_on
+  aqara_g3_timestamp_box_on:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "14.4.85":"1" }, "subjectId": "lumi1.XXXXXXXXXXXX"}'
+####### END rest_command aqara_g3_timestamp_box_on
+####### START rest_command aqara_g3_timestamp_box_off
+  aqara_g3_timestamp_box_off:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "14.4.85":"0" }, "subjectId": "lumi1.XXXXXXXXXXXX"}'
+####### END rest_command aqara_g3_timestamp_box_off   
+####### START rest_command aqara_g3_humans_track_enable_on   
+  aqara_g3_humans_track_enable_on:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "humans_track_enable": 1 }, "subjectId": "lumi1.XXXXXXXXXXXX"}'
+####### END rest_command aqara_g3_humans_track_enable_on
+####### START rest_command aqara_g3_humans_track_enable_off
+  aqara_g3_humans_track_enable_off:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "humans_track_enable": 0 }, "subjectId": "lumi1.XXXXXXXXXXXX"}'
+####### END rest_command aqara_g3_humans_track_enable_off	
+####### START rest_command aqara_g3_set_video_on
+  aqara_g3_set_video_on:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "set_video": 1 }, "subjectId": "lumi1.XXXXXXXXXXXX"}'
+####### END rest_command aqara_g3_set_video_on
+####### START rest_command aqara_g3_set_video_off
+  aqara_g3_set_video_off:
+    url: https://rpc-ger.aqara.com/app/v1.0/lumi/res/write
+    method: POST
+    headers:
+        Sys-Type: 1
+        Appid: XXXXXXAPPIDXXXXXXXXXXX
+        Userid: XXXXXXUSERID.USERIDXXXXXXXXXXX
+        Token: XXXXXXTOKENXXXXXXXXXXX
+        Content-Type: application/json; charset=utf-8
+    payload: '{"data": { "set_video": 0 }, "subjectId": "lumi1.XXXXXXXXXXXX"}'
+####### END rest_command aqara_g3_set_video_off
+#
+####### END rest_command
+#
+#
+#
+####### END RESTFUL_AQARA_G3
