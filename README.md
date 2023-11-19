@@ -64,6 +64,8 @@ Note: access internet from HomeAssistant server (for aqara URL https)
 
 ---
 
+---
+
 - Result
 
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/92e05aa3-8dd3-4257-9c3b-ccc84f4e65d8)
