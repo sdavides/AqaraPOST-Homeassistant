@@ -6,7 +6,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
 - Requirement appid - userid - token
 
-- Find your value from BurpSuite, replace your value:
+Find your value from BurpSuite, replace your value:
 
 - https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf
 
