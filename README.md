@@ -38,27 +38,27 @@ Set proxy on Android Phone wifi with IP PC BurpSuite
 
 ---
 
-- Method 1 RestFul:
+- Method 1 RestFul (without NodeRed):
 
-- 1. Replace value Aqara_G3_without_nodered.txt
+  1. Replace value Aqara_G3_without_nodered.txt
 
-- 2. Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
+  2. Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
 
-- 3. Restart HomeAssistant
+  3. Restart HomeAssistant
 
 ---
 
 - Method 2 NodeRed:
 
-- 1. Install NodeRed on HomeAssistant (with "node-red-contrib-config" palette)
+  1. Install NodeRed on HomeAssistant (with "node-red-contrib-config" palette)
 
-- 2. Install NodeRed Companion on HomeAssistant
+  2. Install NodeRed Companion on HomeAssistant
 
-- 3. Import flow Aqara_G3_nodered.json
+  3. Import flow Aqara_G3_nodered.json
 
-- 4. Replace value "config" node
+  4. Replace value "config" node
 
-- 4. Deploy 
+  5. Deploy 
 
 Note: access internet from HomeAssistant server (for aqara URL https)
 
