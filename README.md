@@ -48,7 +48,7 @@ Set proxy on Android Phone wifi with IP PC BurpSuite
 
 ---
 
-- Method 2 NodeRed:
+- Method 2 NodeRed (recommended):
 
   1. Install NodeRed on HomeAssistant (with "node-red-contrib-config" palette)
 
