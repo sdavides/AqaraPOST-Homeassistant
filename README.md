@@ -1,6 +1,8 @@
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
--  this flow is example and was developed for Aqara Hub G3 camera (CH-H03 lumi.camera.gwpgl1)
+- Requirement appid - userid - token value
+
+note:  this flow is example and was developed for Aqara Hub G3 camera (CH-H03 lumi.camera.gwpgl1)
 
 ---
 
