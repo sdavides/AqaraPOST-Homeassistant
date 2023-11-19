@@ -4,33 +4,9 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
 ---
 
-- Requirement:
+- Requirement appid - userid - token
 
-NodeRed on HomeAssistant (with "node-red-contrib-config" palette)
-
-NodeRed Companion on HomeAssistant
-
-Access internet from HomeAssistant server (for aqara URL https)
-
-Aqara 4.0.2_mod_network.apk or Aqara 3.0.6_mod_network.apk
-
-( https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing )
-
----
-
-- Requirement for find your data on BurpSuite software:
-
-Install BurpSuite Software PC
-
-Install “Aqara Home” mod network apk on Android Phone
-
-Install your certificate BurpSuite on Android Phone
-
-Set proxy on Android Phone wifi with IP PC BurpSuite
-
----
-
-- Find your value from BurpSuite, replace into “config" node into NodeRed:
+- Find your value from BurpSuite, replace your value:
 
 - https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf
 
@@ -42,7 +18,49 @@ token	(XXXXXXTOKENXXXXXXXXXXX)
 
 aqara_url	(example EU = rpc-ger.aqara.com )
 
-lumi1.54ef443a120c (example for Aqara G3 EU)
+lumi1.XXXXXXXXXXXX ( lumi1.<MACADDRESS>)
+
+---
+
+- Requirement for find your data on BurpSuite software:
+
+Install BurpSuite Software PC
+
+Install “Aqara Home” mod network apk on Android Phone
+
+Aqara 4.0.2_mod_network.apk or Aqara 3.0.6_mod_network.apk
+
+( https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing )
+
+Install your certificate BurpSuite on Android Phone
+
+Set proxy on Android Phone wifi with IP PC BurpSuite
+
+---
+
+- Method 1 RestFul:
+
+- 1. Replace value Aqara_G3_without_nodered.txt
+
+- 2. Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
+
+- 3. Restart HomeAssistant
+
+---
+
+- Method 2 NodeRed:
+
+- 1. Install NodeRed on HomeAssistant (with "node-red-contrib-config" palette)
+
+- 2. Install NodeRed Companion on HomeAssistant
+
+- 3. Import flow Aqara_G3_nodered.json
+
+- 4. Replace value "config" node
+
+- 4. Deploy 
+
+Note: access internet from HomeAssistant server (for aqara URL https)
 
 ---
 
@@ -75,6 +93,3 @@ go2RTC with WebRTC ( required HomeKit connected )
 https://github.com/AlexxIT/go2rtc
 
 https://github.com/AlexxIT/WebRTC
-
-
-
