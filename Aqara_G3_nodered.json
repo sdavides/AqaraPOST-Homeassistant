@@ -166,8 +166,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1820,
-        "y": 4820,
+        "x": 1810,
+        "y": 4960,
         "wires": [[]]
     },
     {
@@ -180,8 +180,8 @@
         "outputs": 1,
         "entityConfig": "f06687f218d98283",
         "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
-        "x": 530,
-        "y": 4860,
+        "x": 520,
+        "y": 5000,
         "wires": [["563be78256d81737"]]
     },
     {
@@ -195,8 +195,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 820,
-        "y": 5100,
+        "x": 810,
+        "y": 5240,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -218,8 +218,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1560,
-        "y": 5320,
+        "x": 1550,
+        "y": 5460,
         "wires": [[]]
     },
     {
@@ -232,8 +232,8 @@
         "outputs": 1,
         "entityConfig": "b701ed2f018edd62",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 520,
-        "y": 5140,
+        "x": 510,
+        "y": 5280,
         "wires": [["d36bcf0d90120e50", "415841359ea92499"]]
     },
     {
@@ -247,8 +247,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 5180,
+        "x": 750,
+        "y": 5320,
         "wires": [["c757c77e7be05140"]]
     },
     {
@@ -268,8 +268,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 920,
-        "y": 5180,
+        "x": 910,
+        "y": 5320,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -283,8 +283,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 5240,
+        "x": 770,
+        "y": 5380,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -298,8 +298,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 5300,
+        "x": 750,
+        "y": 5440,
         "wires": [["cf58828162d272b1"]]
     },
     {
@@ -319,8 +319,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 940,
-        "y": 5300,
+        "x": 930,
+        "y": 5440,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -333,8 +333,8 @@
         "outputs": 1,
         "entityConfig": "70aa54156c09f0e6",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 530,
-        "y": 5260,
+        "x": 520,
+        "y": 5400,
         "wires": [["f4ad08462b16f28a", "0cc22832567c6d14"]]
     },
     {
@@ -348,8 +348,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 5380,
+        "x": 770,
+        "y": 5520,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -363,8 +363,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 5440,
+        "x": 750,
+        "y": 5580,
         "wires": [["2727a31ddf6f5a6f"]]
     },
     {
@@ -384,8 +384,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 940,
-        "y": 5420,
+        "x": 930,
+        "y": 5560,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -398,8 +398,8 @@
         "outputs": 1,
         "entityConfig": "5442975eabeb27d2",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 520,
-        "y": 5400,
+        "x": 510,
+        "y": 5540,
         "wires": [["94b6b536b7028a9c", "fb53226b0dec205f"]]
     },
     {
@@ -413,8 +413,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 5520,
+        "x": 770,
+        "y": 5660,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -428,8 +428,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 760,
-        "y": 5560,
+        "x": 750,
+        "y": 5700,
         "wires": [["3b31421926df9d5f"]]
     },
     {
@@ -449,8 +449,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 980,
-        "y": 5540,
+        "x": 970,
+        "y": 5680,
         "wires": [["515ac5d461f870a9"]]
     },
     {
@@ -463,8 +463,8 @@
         "outputs": 1,
         "entityConfig": "358e648e3998b2a4",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 530,
-        "y": 5520,
+        "x": 520,
+        "y": 5660,
         "wires": [["5f0d391bb3e5eb40", "e8c950746b655808"]]
     },
     {
@@ -2151,7 +2151,7 @@
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
         "x": 1290,
-        "y": 4620,
+        "y": 4680,
         "wires": [["904f8890539fe3dc"]]
     },
     {
@@ -2183,7 +2183,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1610,
-        "y": 4620,
+        "y": 4680,
         "wires": [[]]
     },
     {
@@ -2197,10 +2197,10 @@
         "entityConfig": "dd4077143e565cbe",
         "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
         "x": 520,
-        "y": 4640,
+        "y": 4700,
         "wires": [["d9077ea571ac30c0"]]
     },
-    { "id": "d48c1f78bbc97bbc", "type": "comment", "z": "9d6db0d6fac28dd6", "name": "Delete/Add Face", "info": "Delete/Add Face", "x": 1580, "y": 4580, "wires": [] },
+    { "id": "d48c1f78bbc97bbc", "type": "comment", "z": "9d6db0d6fac28dd6", "name": "Delete/Add Face", "info": "Delete/Add Face", "x": 1580, "y": 4640, "wires": [] },
     {
         "id": "978783e03425e078",
         "type": "function",
@@ -2214,7 +2214,7 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 4560,
+        "y": 4620,
         "wires": [["67dd632adac16056"]]
     },
     {
@@ -2229,7 +2229,7 @@
         "onceDelay": "40",
         "topic": "",
         "x": 510,
-        "y": 4580,
+        "y": 4640,
         "wires": [["d9077ea571ac30c0"]]
     },
     {
@@ -2245,7 +2245,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 4640,
+        "y": 4700,
         "wires": [["978783e03425e078"]]
     },
     {
@@ -2287,8 +2287,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 2590,
-        "y": 5320,
+        "x": 2580,
+        "y": 5460,
         "wires": [[]]
     },
     {
@@ -2301,8 +2301,8 @@
         "outputs": 1,
         "entityConfig": "5a7499966593d12c",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2000,
-        "y": 5200,
+        "x": 1990,
+        "y": 5340,
         "wires": [["cf446e6c90e8919c"]]
     },
     {
@@ -2317,8 +2317,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 5200,
+        "x": 2240,
+        "y": 5340,
         "wires": [["f46463af4635e1c2"]]
     },
     {
@@ -2331,8 +2331,8 @@
         "outputs": 1,
         "entityConfig": "f4c623b28c9d06ef",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2010,
-        "y": 5260,
+        "x": 2000,
+        "y": 5400,
         "wires": [["42255beee5f6552b"]]
     },
     {
@@ -2345,8 +2345,8 @@
         "outputs": 1,
         "entityConfig": "fa43a635a96a9ca9",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2010,
-        "y": 5320,
+        "x": 2000,
+        "y": 5460,
         "wires": [["bffb97d898bb1b45"]]
     },
     {
@@ -2359,8 +2359,8 @@
         "outputs": 1,
         "entityConfig": "af31515f6d84fa05",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2010,
-        "y": 5380,
+        "x": 2000,
+        "y": 5520,
         "wires": [["786e81768c67d693"]]
     },
     {
@@ -2373,8 +2373,8 @@
         "outputs": 1,
         "entityConfig": "9ec51de383db5e90",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2000,
-        "y": 5440,
+        "x": 1990,
+        "y": 5580,
         "wires": [["411fc103f4f379ec"]]
     },
     {
@@ -2389,8 +2389,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 5260,
+        "x": 2240,
+        "y": 5400,
         "wires": [["f46463af4635e1c2"]]
     },
     {
@@ -2405,8 +2405,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 5320,
+        "x": 2240,
+        "y": 5460,
         "wires": [["f46463af4635e1c2"]]
     },
     {
@@ -2421,8 +2421,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 5380,
+        "x": 2240,
+        "y": 5520,
         "wires": [["f46463af4635e1c2"]]
     },
     {
@@ -2437,8 +2437,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2250,
-        "y": 5440,
+        "x": 2240,
+        "y": 5580,
         "wires": [["f46463af4635e1c2"]]
     },
     {
@@ -2485,8 +2485,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1320,
-        "y": 5320,
+        "x": 1310,
+        "y": 5460,
         "wires": [["ba2fcf29ddc4caa5"]]
     },
     {
@@ -3460,8 +3460,8 @@
         "once": true,
         "onceDelay": "50",
         "topic": "",
-        "x": 520,
-        "y": 4780,
+        "x": 510,
+        "y": 4920,
         "wires": [["563be78256d81737"]]
     },
     { "id": "3a6593812872eb05", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1420, "y": 2160, "wires": [["5a597dba003aefb9"]] },
@@ -3484,8 +3484,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1060,
-        "y": 4820,
+        "x": 1050,
+        "y": 4960,
         "wires": [["d7427d1ee40c87dc"]]
     },
     {
@@ -3499,8 +3499,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 780,
-        "y": 4860,
+        "x": 770,
+        "y": 5000,
         "wires": [["52c2c84e78e634aa"]]
     },
     {
@@ -3515,8 +3515,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 800,
-        "y": 4780,
+        "x": 790,
+        "y": 4920,
         "wires": [["af365f156372b226"]]
     },
     {
@@ -3530,8 +3530,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1560,
-        "y": 4820,
+        "x": 1550,
+        "y": 4960,
         "wires": [["c3d4b1d0ec430462"]]
     },
     {
@@ -3545,11 +3545,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1320,
-        "y": 4780,
+        "x": 1310,
+        "y": 4920,
         "wires": [["efdff0d9902af401"]]
     },
-    { "id": "efdff0d9902af401", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1300, "y": 4820, "wires": [["01d9548d441377b9"]] },
+    { "id": "efdff0d9902af401", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1290, "y": 4960, "wires": [["01d9548d441377b9"]] },
     {
         "id": "cb548c84d20491b4",
         "type": "http request",
@@ -3831,7 +3831,7 @@
         "libs": [],
         "x": 2350,
         "y": 2860,
-        "wires": [["197a1b5d01553ef1"]]
+        "wires": [["02c0e9bd54787225"]]
     },
     {
         "id": "cce18169a7355fd3",
@@ -4002,6 +4002,27 @@
         "wires": [["fe7a26716c58afa8"]]
     },
     { "id": "31d657e4fb7149b7", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "payload.rec_mode.value", "action": "", "pretty": false, "x": 1470, "y": 2820, "wires": [["ce044cb4b5c54de3"]] },
+    {
+        "id": "02c0e9bd54787225",
+        "type": "change",
+        "z": "9d6db0d6fac28dd6",
+        "name": "REC mode",
+        "rules": [
+            { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "0", "fromt": "num", "to": "Stop", "tot": "str" },
+            { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": " 1", "fromt": "num", "to": "Continuous", "tot": "str" },
+            { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "2", "fromt": "num", "to": "Event", "tot": "str" },
+            { "t": "change", "p": "payload.rec_mode.value.cover", "pt": "msg", "from": "0", "fromt": "num", "to": "false", "tot": "bool" },
+            { "t": "change", "p": "payload.rec_mode.value.cover", "pt": "msg", "from": "1", "fromt": "num", "to": "true", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2350,
+        "y": 2900,
+        "wires": [["197a1b5d01553ef1"]]
+    },
     {
         "id": "caa960a76b56a309",
         "type": "ha-entity-config",
