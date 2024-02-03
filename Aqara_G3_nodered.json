@@ -4009,7 +4009,7 @@
         "name": "REC mode",
         "rules": [
             { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "0", "fromt": "num", "to": "Stop", "tot": "str" },
-            { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": " 1", "fromt": "num", "to": "Continuous", "tot": "str" },
+            { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "1", "fromt": "num", "to": "Continuous", "tot": "str" },
             { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "2", "fromt": "num", "to": "Event", "tot": "str" },
             { "t": "change", "p": "payload.rec_mode.value.cover", "pt": "msg", "from": "0", "fromt": "num", "to": "false", "tot": "bool" },
             { "t": "change", "p": "payload.rec_mode.value.cover", "pt": "msg", "from": "1", "fromt": "num", "to": "true", "tot": "bool" }
