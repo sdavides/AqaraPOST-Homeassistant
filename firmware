@@ -1,0 +1,13 @@
+Offline Update firmware 
+
+2024/02/26
+https://cdn.aqara.com/cdn/opencloud-product/mainland/product-firmware/prd/lumi.camera.gwpgl1/20240226101707_lumi.camera.gwpgl1_AIOT_V4.1.0_0005.0008_20240222_2689da.bin
+
+1. Unzip (use 7z to extract the firmware bin)
+2. Copy 'rootfs.bin' 'linux.bin' 'ControlBridge.bin' to sdcard which is using FAT32 format.
+3. Power Off G3.
+4. Insert the sdcard to G3.
+5. Press the front button of G3.
+6. Power on G3.
+7. Wait three seconds and release the button.
+8. If the LED is turned to RED, it starts to flash.
