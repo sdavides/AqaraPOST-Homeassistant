@@ -1389,19 +1389,6 @@
         "wires": [["ca12b42e9606f495"], ["f0a348a6fff21dc7"]]
     },
     {
-        "id": "f35a0d4a6b10a52a",
-        "type": "json",
-        "z": "9d6db0d6fac28dd6",
-        "name": "",
-        "property": "payload.sdmemory.value",
-        "action": "obj",
-        "pretty": false,
-        "x": 1470,
-        "y": 2900,
-        "wires": [["b0e6ba877d163361", "73d422efd597069c", "b515b1d8fdc9d9ef", "79181f916b7bae27", "c87dd2595ff1a9d7"]]
-    },
-    { "id": "ce044cb4b5c54de3", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "payload.rete.value", "action": "obj", "pretty": false, "x": 1470, "y": 2860, "wires": [["f35a0d4a6b10a52a"]] },
-    {
         "id": "bc3b1e5b4d556e88",
         "type": "function",
         "z": "9d6db0d6fac28dd6",
@@ -2024,22 +2011,6 @@
         "x": 1370,
         "y": 3440,
         "wires": [["a55777abc3f462dc"], ["6687ae53d762f02f"]]
-    },
-    {
-        "id": "35c7beb75d18f75b",
-        "type": "function",
-        "z": "9d6db0d6fac28dd6",
-        "name": "change dataKey = friendly-resource",
-        "func": "if (msg.payload.result.data[8].dataKey === 'deviceName'){\n    msg.payload.devicename = msg.payload.result.data[8];\n}\nif (msg.payload.result.data[43].dataKey === '4.63.85') {\n    msg.payload.muteaudio = msg.payload.result.data[43];\n}\nif (msg.payload.result.data[50].dataKey === '4.76.85') {\n    msg.payload.frame = msg.payload.result.data[50];\n}\nif (msg.payload.result.data[11].dataKey === '14.4.85') {\n    msg.payload.timestamp = msg.payload.result.data[11];\n}\nif (msg.payload.result.data[45].dataKey === '14.104.85') {\n    msg.payload.sensitivity = msg.payload.result.data[45];\n}\nif (msg.payload.result.data[53].dataKey === '4.48.85') {\n    msg.payload.gestneedface = msg.payload.result.data[53];\n}\nif (msg.payload.result.data[49].dataKey === '14.67.85') {\n    msg.payload.rete = msg.payload.result.data[49];\n}\nif (msg.payload.result.data[9].dataKey === 'deviceId') {\n    msg.payload.deviceid = msg.payload.result.data[9];\n}\nif (msg.payload.result.data[74].dataKey === '13.25.85') {\n    msg.payload.sdmemory = msg.payload.result.data[74];\n}\nif (msg.payload.result.data[15].dataKey === 'subDeviceCount') {\n    msg.payload.subdevicecount = msg.payload.result.data[15];\n}\nif (msg.payload.result.data[16].dataKey === 'sceneCount') {\n    msg.payload.scenecount = msg.payload.result.data[16];\n}\nif (msg.payload.result.data[19].dataKey === 'firmwareVersion') {\n    msg.payload.firmwareversion = msg.payload.result.data[19];\n}\nif (msg.payload.result.data[25].dataKey === '14.11.85') {\n    msg.payload.volume = msg.payload.result.data[25];\n}\nif (msg.payload.result.data[59].dataKey === '14.110.85') {\n    msg.payload.face_freq = msg.payload.result.data[59];\n}\nif (msg.payload.result.data[62].dataKey === '14.114.85') {\n    msg.payload.human_freq = msg.payload.result.data[62];\n}\nif (msg.payload.result.data[22].dataKey === '14.116.85') {\n    msg.payload.catdog_freq = msg.payload.result.data[22];\n}\nif (msg.payload.result.data[29].dataKey === '14.105.85') {\n    msg.payload.motion_freq = msg.payload.result.data[29];\n}\nif (msg.payload.result.data[40].dataKey === '14.73.85') {\n    msg.payload.night_video = msg.payload.result.data[40];\n}\nif (msg.payload.result.data[7].dataKey === '14.140.85') {\n    msg.payload.sensivity_suond = msg.payload.result.data[7];\n}\nif (msg.payload.result.data[27].dataKey === '14.108.85') {\n    msg.payload.suond_freq = msg.payload.result.data[27];\n}\nif (msg.payload.result.data[14].dataKey === '14.20.85') {\n    msg.payload.rec_mode = msg.payload.result.data[14];\n}\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1130,
-        "y": 2860,
-        "wires": [["31d657e4fb7149b7"]]
     },
     {
         "id": "60537fbc21823aa0",
@@ -3932,7 +3903,7 @@
             { "p": "token", "pt": "global", "to": "XXXXXXTOKENXXXXXXXXXXX", "tot": "str" },
             { "p": "appid", "pt": "global", "to": "XXXXXXAPPIDXXXXXXXXXXX", "tot": "str" },
             { "p": "aqara_url", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
-            { "p": "subjectId", "pt": "global", "to": "lumi1.XXXXXXXXXXXX", "tot": "str" },
+            { "p": "subjectId", "pt": "global", "to": "lumi1.54ef443a120c", "tot": "str" },
             { "p": "country", "pt": "global", "to": "it-IT", "tot": "str" },
             { "p": "userid", "pt": "global", "to": "enter manual if not work autoconfig", "tot": "str" }
         ],
@@ -4001,7 +3972,6 @@
         "y": 4400,
         "wires": [["fe7a26716c58afa8"]]
     },
-    { "id": "31d657e4fb7149b7", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "payload.rec_mode.value", "action": "", "pretty": false, "x": 1470, "y": 2820, "wires": [["ce044cb4b5c54de3"]] },
     {
         "id": "02c0e9bd54787225",
         "type": "change",
@@ -4009,10 +3979,10 @@
         "name": "REC mode",
         "rules": [
             { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "0", "fromt": "num", "to": "Stop", "tot": "str" },
-            { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "1", "fromt": "num", "to": "Continuous", "tot": "str" },
             { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "2", "fromt": "num", "to": "Event", "tot": "str" },
             { "t": "change", "p": "payload.rec_mode.value.cover", "pt": "msg", "from": "0", "fromt": "num", "to": "false", "tot": "bool" },
-            { "t": "change", "p": "payload.rec_mode.value.cover", "pt": "msg", "from": "1", "fromt": "num", "to": "true", "tot": "bool" }
+            { "t": "change", "p": "payload.rec_mode.value.cover", "pt": "msg", "from": "1", "fromt": "num", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.rec_mode.value.mode", "pt": "msg", "from": "1", "fromt": "num", "to": "Continuous", "tot": "str" }
         ],
         "action": "",
         "property": "",
@@ -4022,6 +3992,150 @@
         "x": 2350,
         "y": 2900,
         "wires": [["197a1b5d01553ef1"]]
+    },
+    {
+        "id": "16d3ab5eecfc271a",
+        "type": "http request",
+        "z": "9d6db0d6fac28dd6",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
+            { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
+        ],
+        "x": 1550,
+        "y": 6000,
+        "wires": [["5d7b7e5f0bc17bb2"]]
+    },
+    {
+        "id": "3226979b14dc7fc0",
+        "type": "function",
+        "z": "9d6db0d6fac28dd6",
+        "name": "parameter",
+        "func": "var token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/res/query/by/resourceId\"\n\nmsg.payload = { \"data\": [{ \"options\": [msg.resourceID], \"subjectId\": \"lumi1.54ef443a120c\" }] };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 6000,
+        "wires": [["16d3ab5eecfc271a"]]
+    },
+    {
+        "id": "8fd52f360844c566",
+        "type": "ha-text",
+        "z": "9d6db0d6fac28dd6",
+        "name": "Camera G3 resourceID query",
+        "version": 1,
+        "debugenabled": false,
+        "inputs": 0,
+        "outputs": 1,
+        "entityConfig": "75f4089d6ffc17c5",
+        "mode": "listen",
+        "value": "payload",
+        "valueType": "msg",
+        "outputProperties": [
+            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "value" },
+            { "property": "previousValue", "propertyType": "msg", "value": "", "valueType": "previousValue" }
+        ],
+        "x": 540,
+        "y": 5960,
+        "wires": [["6d5e0f8dbb93f0a8"]]
+    },
+    {
+        "id": "6d5e0f8dbb93f0a8",
+        "type": "change",
+        "z": "9d6db0d6fac28dd6",
+        "name": "",
+        "rules": [{ "t": "move", "p": "payload", "pt": "msg", "to": "resourceID", "tot": "msg" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 850,
+        "y": 6000,
+        "wires": [["3226979b14dc7fc0"]]
+    },
+    {
+        "id": "5d7b7e5f0bc17bb2",
+        "type": "ha-sensor",
+        "z": "9d6db0d6fac28dd6",
+        "name": "Camera G3 resourceID query",
+        "entityConfig": "8dc8dba8a0545f86",
+        "version": 0,
+        "state": "Camera G3 resourceID query",
+        "stateType": "str",
+        "attributes": [
+            { "property": "resourceId resp", "value": "payload.result[0].resourceId", "valueType": "msg" },
+            { "property": "value", "value": "payload.result[0].value", "valueType": "msg" },
+            { "property": "timeStamp", "value": "payload.result[0].timeStamp", "valueType": "msg" },
+            { "property": "message", "value": "payload.message", "valueType": "msg" },
+            { "property": "full resp", "value": "payload", "valueType": "msg" },
+            { "property": "resourceId query", "value": "resourceID", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 1890,
+        "y": 6000,
+        "wires": [[]]
+    },
+    {
+        "id": "35c7beb75d18f75b",
+        "type": "function",
+        "z": "9d6db0d6fac28dd6",
+        "name": "change dataKey = friendly-resource",
+        "func": "if (msg.payload.result.data[8].dataKey === '14.140.85') {\n    msg.payload.sensivity_suond = msg.payload.result.data[8];\n} else {\n    msg.payload.sensivity_suond = 'errore';\n}\n\nif (msg.payload.result.data[9].dataKey === 'deviceName'){\n    msg.payload.devicename = msg.payload.result.data[9];\n} else {\n    msg.payload.devicename = 'errore';\n}\n\nif (msg.payload.result.data[10].dataKey === 'deviceId') {\n    msg.payload.deviceid = msg.payload.result.data[10];\n} else {\n    msg.payload.deviceid = 'errore';\n}\n\nif (msg.payload.result.data[13].dataKey === '14.4.85') {\n    msg.payload.timestamp = msg.payload.result.data[13];\n} else {\n    msg.payload.timestamp = 'errore';\n}\n\nif (msg.payload.result.data[16].dataKey === '14.20.85') {\n    msg.payload.rec_mode = msg.payload.result.data[16];\n} else {\n    msg.payload.rec_mode = 'errore';\n}\n\nif (msg.payload.result.data[17].dataKey === 'subDeviceCount') {\n    msg.payload.subdevicecount = msg.payload.result.data[17];\n} else {\n    msg.payload.subdevicecount = 'errore';\n}\n\nif (msg.payload.result.data[19].dataKey === 'sceneCount') {\n    msg.payload.scenecount = msg.payload.result.data[19];\n} else {\n    msg.payload.scenecount = 'errore';\n}\n\nif (msg.payload.result.data[22].dataKey === 'firmwareVersion') {\n    msg.payload.firmwareversion = msg.payload.result.data[22];\n} else {\n    msg.payload.firmwareversion = 'errore';\n}\n\nif (msg.payload.result.data[25].dataKey === '14.116.85') {\n    msg.payload.catdog_freq = msg.payload.result.data[25];\n} else {\n    msg.payload.catdog_freq = 'errore';\n}\n\nif (msg.payload.result.data[29].dataKey === '14.11.85') {\n    msg.payload.volume = msg.payload.result.data[29];\n} else {\n    msg.payload.volume = 'errore';\n}\n\nif (msg.payload.result.data[31].dataKey === '14.108.85') {\n    msg.payload.suond_freq = msg.payload.result.data[31];\n} else {\n    msg.payload.suond_freq = 'errore';\n}\n\nif (msg.payload.result.data[33].dataKey === '14.105.85') {\n    msg.payload.motion_freq = msg.payload.result.data[33];\n} else {\n    msg.payload.motion_freq = 'errore';\n}\n\nif (msg.payload.result.data[44].dataKey === '14.73.85') {\n    msg.payload.night_video = msg.payload.result.data[44];\n} else {\n    msg.payload.night_video = 'errore';\n}\n\nif (msg.payload.result.data[47].dataKey === '4.63.85') {\n    msg.payload.muteaudio = msg.payload.result.data[47];\n} else {\n    msg.payload.muteaudio = 'errore';\n}\n\nif (msg.payload.result.data[50].dataKey === '14.104.85') {\n    msg.payload.sensitivity = msg.payload.result.data[50];\n} else {\n    msg.payload.sensitivity = 'errore';\n}\n\nif (msg.payload.result.data[55].dataKey === '4.76.85') {\n    msg.payload.frame = msg.payload.result.data[55];\n} else {\n    msg.payload.frame = 'errore';\n}\n\nif (msg.payload.result.data[58].dataKey === '4.48.85') {\n    msg.payload.gestneedface = msg.payload.result.data[58];\n} else {\n    msg.payload.gestneedface = 'errore';\n}\n\nif (msg.payload.result.data[54].dataKey === '14.67.85') {\n    msg.payload.rete = msg.payload.result.data[54];\n} else {\n    msg.payload.rete = 'errore';\n}\n\nif (msg.payload.result.data[81].dataKey === '13.25.85') {\n    msg.payload.sdmemory = msg.payload.result.data[81];\n} else {\n    msg.payload.sdmemory = 'errore';\n}\n\nif (msg.payload.result.data[65].dataKey === '14.110.85') {\n    msg.payload.face_freq = msg.payload.result.data[65];\n} else {\n    msg.payload.face_freq = 'errore';\n}\n\nif (msg.payload.result.data[68].dataKey === '14.114.85') {\n    msg.payload.human_freq = msg.payload.result.data[68];\n} else {\n    msg.payload.human_freq = 'errore';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 2860,
+        "wires": [["31d657e4fb7149b7"]]
+    },
+    { "id": "31d657e4fb7149b7", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "payload.rec_mode.value", "action": "", "pretty": false, "x": 1470, "y": 2820, "wires": [["ce044cb4b5c54de3"]] },
+    { "id": "ce044cb4b5c54de3", "type": "json", "z": "9d6db0d6fac28dd6", "name": "", "property": "payload.rete.value", "action": "obj", "pretty": false, "x": 1470, "y": 2860, "wires": [["f35a0d4a6b10a52a"]] },
+    {
+        "id": "f35a0d4a6b10a52a",
+        "type": "json",
+        "z": "9d6db0d6fac28dd6",
+        "name": "",
+        "property": "payload.sdmemory.value",
+        "action": "obj",
+        "pretty": false,
+        "x": 1470,
+        "y": 2900,
+        "wires": [["73d422efd597069c", "b515b1d8fdc9d9ef", "79181f916b7bae27", "c87dd2595ff1a9d7", "b0e6ba877d163361"]]
+    },
+    {
+        "id": "918bc99a332e6448",
+        "type": "debug",
+        "z": "9d6db0d6fac28dd6",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 3060,
+        "y": 2120,
+        "wires": []
     },
     {
         "id": "caa960a76b56a309",
@@ -4939,6 +5053,47 @@
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "75f4089d6ffc17c5",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 resourceID query",
+        "version": "6",
+        "entityType": "text",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 resourceID query" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "mode", "value": "text" },
+            { "property": "min_length", "value": "" },
+            { "property": "max_length", "value": "" },
+            { "property": "pattern", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "8dc8dba8a0545f86",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 resourceID query",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 resourceID query" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
         ],
         "resend": false,
         "debugEnabled": false
