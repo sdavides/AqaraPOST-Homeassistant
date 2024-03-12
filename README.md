@@ -115,3 +115,8 @@ hack G3:
 - card with webrtc-camera url: rtsp://192.168.1.52:8554/360p /720p /1080p /1296p
   
 
+or you can see user and pass from agetprop sys.camera_rtsp_url command from telnet:
+user=26
+pass=83
+(change every boot)
+~ # agetprop sys.camera_rtsp_url {"360p":"rtsp:\/\/26:83@192.168.1.4:8554\/360p","720p":"rtsp:\/\/26:83@192.168.1.4:8554\/720p","1080p":"rtsp:\/\/26:83@192.168.1.4:8554\/1080p","1296p":"rtsp:\/\/26:83@192.168.1.4:8554\/1296p"}
