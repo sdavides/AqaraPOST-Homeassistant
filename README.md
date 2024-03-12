@@ -94,13 +94,21 @@ https://github.com/AlexxIT/WebRTC
 
 Update:
 After many problems the best solution for live video:
+
 hack G3:
+
 - open telnet
+  
 - add post_init.sh:
+  
   #delete auth rtsp
+  
   sleep 40
+  
   killall -9 rtsp
+  
   rtsp >/dev/null 2>&1 &
+  
 
 - card with webrtc-camera url: rtsp://192.168.1.52:8554/360p /720p /1080p /1296p
   
