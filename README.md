@@ -82,6 +82,7 @@ Alarm function ->
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/000112ab-1acf-4f88-b634-024df5a6c554)
 
 
+-
 
 
 Live video ->
