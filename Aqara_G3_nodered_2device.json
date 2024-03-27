@@ -3300,6 +3300,7 @@
             { "property": "triggerSubjectId", "value": "payload.result.resultList.0.triggerSubjectId", "valueType": "msg" },
             { "property": "date", "value": "date", "valueType": "msg" },
             { "property": "time", "value": "time", "valueType": "msg" },
+            { "property": "triggerTime", "value": "finaldate", "valueType": "msg" },
             { "property": "Last checked", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
@@ -3977,8 +3978,9 @@
         "type": "function",
         "z": "0fe55a7cf17db73e",
         "name": "timeConvert",
-        "func": "var country = global.get(\"country_2\");\nvar timeStamp = msg.timeStamp\nvar date = new Date(timeStamp).toLocaleDateString(country)\nvar time = new Date(timeStamp).toLocaleTimeString(country)\nvar time = time.slice(0, -3);\nvar finaldate = time + \" \" + date \n\nmsg.date = date;\nmsg.time = time;\n\nreturn msg;",
+        "func": "var country = global.get(\"country_2\");\nvar timeStamp = msg.timeStamp\nvar date = new Date(timeStamp).toLocaleDateString(country)\nvar time = new Date(timeStamp).toLocaleTimeString(country)\nvar finaldate = time + \" \" + date \nvar time = time.slice(0, -3);\n\nmsg.date = date;\nmsg.time = time;\nmsg.finaldate = finaldate;\n\nreturn msg;",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
