@@ -1,4 +1,4 @@
-Generate your flow nodered whith value:
+Generate flow json whith your values:
 
 
 command FOR first DEVICE:
