@@ -3532,7 +3532,7 @@
         "type": "function",
         "z": "c8fb03409a04d6cd",
         "name": "Set UserID global variable",
-        "func": "if (msg.payload.message === 'Success'){\n    var userid = msg.payload.result.userId\n    global.set(\"userid\", userid)\n}\nelse\n{\n    msg.payload.result.userId = \"check fault\"\n}\n\nreturn msg;",
+        "func": "var userid = global.get(\"userid\");\n\nif (msg.payload.message === 'Success'){\n    var userid = msg.payload.result.userId\n    global.set(\"userid\", userid)\n} else {\nmsg.payload.result.userId = \"check failed, insert manual into configuration node\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
