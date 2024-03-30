@@ -1,0 +1,8 @@
+Generate your flow nodered whith value:
+
+
+command FOR first DEVICE:
+wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-Homeassistant.sh --output-document=/tmp/AqaraPOST-Homeassistant.sh && chmod +x /tmp/AqaraPOST-Homeassistant.sh && /tmp/AqaraPOST-Homeassistant.sh
+
+command FOR second DEVICE:
+wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-Homeassistant_2device.sh --output-document=/tmp/AqaraPOST-Homeassistant.sh && chmod +x /tmp/AqaraPOST-Homeassistant.sh && /tmp/AqaraPOST-Homeassistant.sh
