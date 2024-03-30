@@ -6,11 +6,12 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 	* this flow is example and was developed for Aqara Hub G3 camera
 
 ## Requirement ##
-* Your value from post request Aqara app:
+* Your value from POST Request Aqara app:
   * appid  ( XXXXXXAPPIDXXXXXXXXXXX )
   * token ( XXXXXXTOKENXXXXXXXXXXX )
   * subjectId ( lumi1.XXXXXXXXXXXX ) usually MAC-ADDRESS
-  * aqara url ( rpc-ger.aqara.com ) Host:
+  * aqara url ( rpc-ger.aqara.com ) Host
+    
 	* timezone ( it-IT ) -> es-ES/en-UK/de-DE/it-IT/pt-PT/es-ES
 	* userid ( automatic, enter manual if not work )
 	
