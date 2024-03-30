@@ -1,128 +1,42 @@
+#  AqaraPOST-Homeassistant #
+
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
-- Requirement appid - userid - token value
+  * note: 
+	* this flow is example and was developed for Aqara Hub G3 camera
 
-note:  this flow is example and was developed for Aqara Hub G3 camera (CH-H03 lumi.camera.gwpgl1)
+## Requirement ##
+* Your value from post request Aqara app:
+  * appid  ( XXXXXXAPPIDXXXXXXXXXXX )
+  * token ( XXXXXXTOKENXXXXXXXXXXX )
+  * aqara url ( rpc-ger.aqara.com )
+	* timezone ( it-IT ) -> es-ES/en-UK/de-DE/it-IT/pt-PT/es-ES
+	* userid ( automatic, enter manual if not work )
+	
+## Method ##
+* Method 1 NodeRed (recommended):
+	* Import flow Aqara_G3_nodered.json 
+	* Replace your value "config" node 
+	* Deploy
+		* note: you can use the script to generate your NoderRed json
+		* [generatejson](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README)
+	
+* Method 2 RestFul (without NodeRed):
+	* Replace your value Aqara_G3_without_nodered.txt
+	* Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
+	* Restart HomeAssistant
 
----
+ 
+## Find your Value ##
+* Use BurpSuite or similar:
+	* Follow [BurpSuite Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf)
+	* Download [AqaraAPP mod](https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing)
+ 
+## Why? ##
+I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the homekit connection I only have the alarm function.
 
-Find your value from BurpSuite, replace your value:
+## Install OK ##
+![0](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/54a22cd1-fdf8-4dc3-b2d4-a0e03d269cb4)
+![1](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/d6ebd1e4-707e-47f2-a473-ab88b3cc0126)
+![2](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/104c9fda-c435-4929-9183-ef9f8456bf23)
 
-- https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf
-
-appid	(XXXXXXAPPIDXXXXXXXXXXX)
-
-userid	(XXXXXXUSERID.USERIDXXXXXXXXXXX)    (autoconfig "userid" value, enter manual if not work)
-
-token	(XXXXXXTOKENXXXXXXXXXXX)
-
-aqara_url	( example EU = rpc-ger.aqara.com )
-
-lumi1.XXXXXXXXXXXX ( lumi1.MACADDRESS )
-
----
-
-- Requirement for find your data on BurpSuite software:
-
-BurpSuite Software PC
-
-“Aqara Home” mod network apk on Android Phone
-
-( https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing )
-
----
-
-- Method 1 RestFul (without NodeRed):
-
-  1. Replace value Aqara_G3_without_nodered.txt
-
-  2. Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
-
-  3. Restart HomeAssistant
-
----
-
-- Method 2 NodeRed (recommended):
-
-  1. Install NodeRed on HomeAssistant (with "node-red-contrib-config" palette)
-
-  2. Install NodeRed Companion on HomeAssistant
-
-  3. Import flow Aqara_G3_nodered.json
-
-  4. Replace value "config" node
-
-  5. Deploy 
-
-Note: access internet from HomeAssistant server (for aqara URL https)
-
----
-
----
-
-- Result
-
-![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/92e05aa3-8dd3-4257-9c3b-ccc84f4e65d8)
-![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/316750b5-7ddb-4539-a2b8-c157d262215c)
-
----
-
----
-
-- Trick for Hub G3:
-
-Alarm function ->
-
-  HomeKit device
-
-  Warning: the port change every reboot of device. 
-
-  Scan and find with nmap, replace port into "/config/.storage/core.config_entries"
-
-![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/000112ab-1acf-4f88-b634-024df5a6c554)
-
-
--
-
-
-Live video ->
-
-go2RTC with WebRTC ( required HomeKit connected )
-
-https://github.com/AlexxIT/go2rtc
-
-https://github.com/AlexxIT/WebRTC
-
-
-Update:
-After many problems the best solution for live video:
-
-hack G3:
-
-- open telnet
-  
-- add post_init.sh:
-  
-  #delete auth rtsp
-  
-  sleep 40
-  
-  killall -9 rtsp
-  
-  rtsp >/dev/null 2>&1 &
-  
-
-- card with webrtc-camera url: rtsp://192.168.1.52:8554/360p /720p /1080p /1296p
-  
-
-or you can see user and pass from agetprop sys.camera_rtsp_url command from telnet:
-
-user=26
-
-pass=83
-
-(change every boot)
-
-~ # agetprop sys.camera_rtsp_url 
-
-{"360p":"rtsp:\/\/26:83@192.168.1.4:8554\/360p","720p":"rtsp:\/\/26:83@192.168.1.4:8554\/720p","1080p":"rtsp:\/\/26:83@192.168.1.4:8554\/1080p","1296p":"rtsp:\/\/26:83@192.168.1.4:8554\/1296p"}
