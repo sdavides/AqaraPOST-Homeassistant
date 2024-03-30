@@ -61,3 +61,4 @@ echo "echo #" >> /tmp/Aqara_G3_nodered.sh
 
 sleep 1
 rm -rf /tmp/Aqara_G3_nodered.sh*
+rm -rf /tmp/AqaraPOST-Homeassistant*
