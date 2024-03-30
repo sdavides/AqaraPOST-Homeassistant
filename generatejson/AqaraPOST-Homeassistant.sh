@@ -43,7 +43,7 @@ echo "#"
 echo "#"
 echo "#"
 echo "#"
-echo "echo download template" > /tmp/Aqara_G3_nodered.sh
+echo "echo download last template" > /tmp/Aqara_G3_nodered.sh
 echo "rm -rf /tmp/*Aqara_G3_nodered.json* && wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_G3_nodered.json --output-document=/tmp/tmp_Aqara_G3_nodered.json" >> /tmp/Aqara_G3_nodered.sh
 echo "echo download complete" >> /tmp/Aqara_G3_nodered.sh
 echo "echo insert value" >> /tmp/Aqara_G3_nodered.sh
