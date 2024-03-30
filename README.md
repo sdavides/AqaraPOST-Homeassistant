@@ -40,3 +40,27 @@ I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the 
 ![1](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/d6ebd1e4-707e-47f2-a473-ab88b3cc0126)
 ![2](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/104c9fda-c435-4929-9183-ef9f8456bf23)
 
+---
+
+## TIPS Hub G3 ##
+* HomeKit for alarm function:
+    * The port change every reboot of device
+    * Scan and find with nmap, replace port into "/config/.storage/core.config_entries"
+
+![4](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f26c6a0c-6b96-4c41-b0ce-50332f542e87)
+
+---
+
+* Live video:
+   * hack G3:
+     * open telnet [aQRootG3](https://github.com/Wh1terat/aQRootG3)
+     * Firmware mod [firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3)
+       * add post_init.sh: "killall -9 rtsp && rtsp >/dev/null 2>&1 &"
+       
+or you can see rtsp user/pass (change every boot)
+
+from telnet command "# agetprop sys.camera_rtsp_url"  
+
+rtsp://192.168.1.52:8554/360p /720p /1080p /1296p
+
+rtsp://USER:PASS@192.168.1.52:8554/360p /720p /1080p /1296p
