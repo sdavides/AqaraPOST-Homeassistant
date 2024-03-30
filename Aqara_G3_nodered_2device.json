@@ -1045,7 +1045,7 @@
         "type": "function",
         "z": "0fe55a7cf17db73e",
         "name": "Set UserID global variable",
-        "func": "if (msg.payload.message === 'Success'){\n    var userid = msg.payload.result.userId\n    global.set(\"userid_2\", userid)\n}\nelse\n{\n    msg.payload.result.userId = \"check fault\"\n}\n\nreturn msg;",
+        "func": "var userid_2 = global.get(\"userid_2\");\n\nif (msg.payload.message === 'Success'){\n    var userid_2 = msg.payload.result.userId\n    global.set(\"userid_2\", userid_2)\n} else {\nmsg.payload.result.userId = \"check failed, insert manual into configuration node\";\n}\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1093,7 +1093,7 @@
         "outputProperties": [],
         "x": 880,
         "y": 520,
-        "wires": [[]]
+        "wires": [["a2dfd4be588b6c7e"]]
     },
     {
         "id": "3932ec6c98b0311a",
@@ -4120,6 +4120,23 @@
         "x": 1510,
         "y": 2660,
         "wires": [["8904e56140ba6140"]]
+    },
+    {
+        "id": "a2dfd4be588b6c7e",
+        "type": "debug",
+        "z": "0fe55a7cf17db73e",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "msg.payload.result.userId",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 520,
+        "wires": []
     },
     {
         "id": "6d177956b76ceb75",
