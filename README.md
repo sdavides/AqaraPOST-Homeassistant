@@ -59,7 +59,10 @@ I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the 
        
 or you can see rtsp user/pass (change every boot)
 
-from telnet command "# agetprop sys.camera_rtsp_url"  
+from telnet command:
+```bash
+agetprop sys.camera_rtsp_url
+```
 
 rtsp://192.168.1.52:8554/360p /720p /1080p /1296p
 
