@@ -64,3 +64,13 @@ from telnet command "# agetprop sys.camera_rtsp_url"
 rtsp://192.168.1.52:8554/360p /720p /1080p /1296p
 
 rtsp://USER:PASS@192.168.1.52:8554/360p /720p /1080p /1296p
+
+---
+
+## See also ##
+
+[go2rtc (required HomeKit connected)](https://github.com/AlexxIT/go2rtc)
+     
+[WebRTC](https://github.com/AlexxIT/WebRTC)
+
+[AqaraCameraHubfw](https://github.com/niceboygithub/AqaraCameraHubfw)
