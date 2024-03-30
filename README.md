@@ -9,7 +9,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 * Your value from post request Aqara app:
   * appid  ( XXXXXXAPPIDXXXXXXXXXXX )
   * token ( XXXXXXTOKENXXXXXXXXXXX )
-  * subjectId ( lumi1.XXXXXXXXXXXX )
+  * subjectId ( lumi1.XXXXXXXXXXXX ) usually MAC-ADDRESS
   * aqara url ( rpc-ger.aqara.com )
 	* timezone ( it-IT ) -> es-ES/en-UK/de-DE/it-IT/pt-PT/es-ES
 	* userid ( automatic, enter manual if not work )
