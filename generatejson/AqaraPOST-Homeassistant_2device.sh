@@ -52,13 +52,9 @@ echo "echo insert complete" >> /tmp/Aqara_G3_nodered.sh
 
 chmod +x /tmp/Aqara_G3_nodered.sh
 
-echo "rm -rf /tmp/*tmp_Aqara_G3_nodered.json; rm -rf /tmp/*Aqara_G3_nodered.sh" >> /tmp/Aqara_G3_nodered.sh
 echo "echo #" >> /tmp/Aqara_G3_nodered.sh
 echo "echo complete, save path /tmp/Aqara_G3_nodered_2device.json" >> /tmp/Aqara_G3_nodered.sh
 echo "echo #" >> /tmp/Aqara_G3_nodered.sh
+echo "rm -rf /tmp/*tmp_Aqara_G3_nodered.json; rm -rf /tmp/*Aqara_G3_nodered.sh ; rm -rf /tmp/AqaraPOST-Homeassistant* " >> /tmp/Aqara_G3_nodered.sh
 
 /tmp/Aqara_G3_nodered.sh
-
-sleep 1
-rm -rf /tmp/Aqara_G3_nodered.sh*
-rm -rf /tmp/AqaraPOST-Homeassistant*
