@@ -28,7 +28,7 @@
         "type": "function",
         "z": "c8fb03409a04d6cd",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/res/query\"\n\nmsg.payload = {\n    \"data\": [\n        {\n            \"options\": [\"ptz_cruise_enable\", \"pets_track_enable\", \"humans_track_enable\", \"gesture_detect_enable\", \"mdtrigger_enable\", \"soundtrigger_enable\", \"human_detect_enable\", \"face_detect_enable\", \"pets_detect_enable\", \"set_video\",\"sdcard_status\",\"alarm_status\",\"system_volume\",\"alarm_bell_index\",\"device_night_tip_light\",\"cloud_small_video\",\"alarm_bell_volume\",\"device_wifi_rssi\"],\n            \"subjectId\": subjectId\n        }\n    ]\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/res/query\"\n\nmsg.payload = {\n    \"data\": [\n        {\n            \"options\": [\"ptz_cruise_enable\", \"pets_track_enable\", \"humans_track_enable\", \"gesture_detect_enable\", \"mdtrigger_enable\", \"soundtrigger_enable\", \"human_detect_enable\", \"face_detect_enable\", \"pets_detect_enable\", \"set_video\", \"sdcard_status\", \"alarm_status\", \"system_volume\", \"alarm_bell_index\", \"device_night_tip_light\", \"cloud_small_video\", \"alarm_bell_volume\", \"device_wifi_rssi\", \"gateway_deletion_setting\"],\n            \"subjectId\": subjectId\n        }\n    ]\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -68,13 +68,14 @@
             { "property": "sd free size", "value": "payload.sdcard_status.value.freesize", "valueType": "msg" },
             { "property": "sd total size", "value": "payload.sdcard_status.value.totalsize", "valueType": "msg" },
             { "property": "wifi_rssi", "value": "payload.device_wifi_rssi.value", "valueType": "msg" },
+            { "property": "gateway_deletion_prevention", "value": "payload.gateway_deletion_setting.value", "valueType": "msg" },
             { "property": "last checked", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 690,
         "y": 840,
-        "wires": [["5d9ee2550da1efb7", "608ac17b41fd4dd5", "25d449c6401aa3e1", "827c1cad87ba385e", "b685746af43c7427", "258f8d023c410f9d", "769a6922e8514366", "3c2cd5e8d830ecbb", "a032657cb590d345"]]
+        "wires": [["5d9ee2550da1efb7", "608ac17b41fd4dd5", "25d449c6401aa3e1", "827c1cad87ba385e", "b685746af43c7427", "258f8d023c410f9d", "769a6922e8514366", "3c2cd5e8d830ecbb", "a032657cb590d345", "d20772a9aef31be1"]]
     },
     {
         "id": "1a6367e143ad0190",
@@ -168,7 +169,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1810,
-        "y": 4960,
+        "y": 5300,
         "wires": [[]]
     },
     {
@@ -182,7 +183,7 @@
         "entityConfig": "f06687f218d98283",
         "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
         "x": 520,
-        "y": 5000,
+        "y": 5340,
         "wires": [["8a5d6a091c37c12d"]]
     },
     {
@@ -197,7 +198,7 @@
         "finalize": "",
         "libs": [],
         "x": 810,
-        "y": 5240,
+        "y": 5580,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -220,7 +221,7 @@
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
         "x": 1550,
-        "y": 5460,
+        "y": 5800,
         "wires": [[]]
     },
     {
@@ -234,7 +235,7 @@
         "entityConfig": "b701ed2f018edd62",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 510,
-        "y": 5280,
+        "y": 5620,
         "wires": [["58563549bf29622f", "9e542bcef891be7e"]]
     },
     {
@@ -249,7 +250,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 5320,
+        "y": 5660,
         "wires": [["afc369333cec3bf7"]]
     },
     {
@@ -270,7 +271,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 910,
-        "y": 5320,
+        "y": 5660,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -285,7 +286,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 5380,
+        "y": 5720,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -300,7 +301,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 5440,
+        "y": 5780,
         "wires": [["0763fd0f3b52cdd0"]]
     },
     {
@@ -321,7 +322,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 930,
-        "y": 5440,
+        "y": 5780,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -335,7 +336,7 @@
         "entityConfig": "70aa54156c09f0e6",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 520,
-        "y": 5400,
+        "y": 5740,
         "wires": [["7de6ce3b9a13d108", "9c0c2244f1c66a5b"]]
     },
     {
@@ -350,7 +351,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 5520,
+        "y": 5860,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -358,14 +359,15 @@
         "type": "function",
         "z": "c8fb03409a04d6cd",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"up_always\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"stop\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 5580,
+        "y": 5920,
         "wires": [["297327a315313b21"]]
     },
     {
@@ -386,7 +388,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 930,
-        "y": 5560,
+        "y": 5900,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -400,7 +402,7 @@
         "entityConfig": "5442975eabeb27d2",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 510,
-        "y": 5540,
+        "y": 5880,
         "wires": [["7edd81c46d7c1521", "84bd61d817cd40c2"]]
     },
     {
@@ -415,7 +417,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 5660,
+        "y": 6000,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -430,7 +432,7 @@
         "finalize": "",
         "libs": [],
         "x": 750,
-        "y": 5700,
+        "y": 6040,
         "wires": [["5e76d98556df1471"]]
     },
     {
@@ -451,7 +453,7 @@
         "allowrate": false,
         "outputs": 1,
         "x": 970,
-        "y": 5680,
+        "y": 6020,
         "wires": [["c7ba96a4bda694a6"]]
     },
     {
@@ -465,7 +467,7 @@
         "entityConfig": "358e648e3998b2a4",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 520,
-        "y": 5660,
+        "y": 6000,
         "wires": [["d166250753358567", "d37d21861d110628"]]
     },
     {
@@ -482,186 +484,6 @@
         "x": 1330,
         "y": 620,
         "wires": [["377fef4062197ade"]]
-    },
-    {
-        "id": "0b504d153d63c57a",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.mdtrigger_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.mdtrigger_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2190,
-        "y": 580,
-        "wires": [["993f56d68ad726af"]]
-    },
-    {
-        "id": "993f56d68ad726af",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.face_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.face_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2190,
-        "y": 620,
-        "wires": [["56a1fddbed9571bd"]]
-    },
-    {
-        "id": "56a1fddbed9571bd",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.pets_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.pets_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2190,
-        "y": 660,
-        "wires": [["2af7bd9768e3fc60"]]
-    },
-    {
-        "id": "2af7bd9768e3fc60",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.human_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.human_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2190,
-        "y": 700,
-        "wires": [["500dc1a39f912f2f"]]
-    },
-    {
-        "id": "500dc1a39f912f2f",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.humans_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.humans_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2190,
-        "y": 740,
-        "wires": [["efed582c5bcb0a23"]]
-    },
-    {
-        "id": "efed582c5bcb0a23",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.soundtrigger_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.soundtrigger_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2470,
-        "y": 500,
-        "wires": [["82b94fa5f0b242e1"]]
-    },
-    {
-        "id": "e5d9eb360aa0d642",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.ptz_cruise_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.ptz_cruise_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2470,
-        "y": 580,
-        "wires": [["e2730d78123be130"]]
-    },
-    {
-        "id": "e2730d78123be130",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2470,
-        "y": 620,
-        "wires": [["2529987ca39feb7e"]]
-    },
-    {
-        "id": "2529987ca39feb7e",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.gesture_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.gesture_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2470,
-        "y": 660,
-        "wires": [["88377f036a2544b7"]]
-    },
-    {
-        "id": "88377f036a2544b7",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2470,
-        "y": 700,
-        "wires": [["e8c926d91dd91d89"]]
     },
     {
         "id": "cb87f16593441c3e",
@@ -1727,7 +1549,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3860,
+        "y": 4200,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -1741,7 +1563,7 @@
         "entityConfig": "9df37a3c91d4cb39",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1340,
-        "y": 3860,
+        "y": 4200,
         "wires": [["3f6cacbce632d0c5"]]
     },
     {
@@ -1756,7 +1578,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3920,
+        "y": 4260,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -1770,7 +1592,7 @@
         "entityConfig": "0cde09574fa445fe",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1330,
-        "y": 3920,
+        "y": 4260,
         "wires": [["4ff929bc06739358"]]
     },
     {
@@ -1784,7 +1606,7 @@
         "entityConfig": "dcbfd635f7c47e23",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1360,
-        "y": 3980,
+        "y": 4320,
         "wires": [["1b2217cc7b5590d0"]]
     },
     {
@@ -1799,7 +1621,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3980,
+        "y": 4320,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -1814,7 +1636,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4040,
+        "y": 4380,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -1829,7 +1651,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4100,
+        "y": 4440,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -1843,7 +1665,7 @@
         "entityConfig": "f65571ba66813e5f",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1360,
-        "y": 4040,
+        "y": 4380,
         "wires": [["1426b78e00538ef2"]]
     },
     {
@@ -1857,7 +1679,7 @@
         "entityConfig": "e915442e641c1695",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1360,
-        "y": 4100,
+        "y": 4440,
         "wires": [["6f61bfcb60d85810"]]
     },
     {
@@ -2011,7 +1833,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3800,
+        "y": 4140,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -2027,7 +1849,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3740,
+        "y": 4080,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -2043,7 +1865,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3680,
+        "y": 4020,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -2057,7 +1879,7 @@
         "entityConfig": "b2aa94becf1228dc",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 3680,
+        "y": 4020,
         "wires": [["01beeff8c6da522e"]]
     },
     {
@@ -2071,7 +1893,7 @@
         "entityConfig": "fde24e20cc725570",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1380,
-        "y": 3740,
+        "y": 4080,
         "wires": [["008e853313b11509"]]
     },
     {
@@ -2085,7 +1907,7 @@
         "entityConfig": "d9b09bcabe7e1886",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 3800,
+        "y": 4140,
         "wires": [["b3ef58955a649680"]]
     },
     {
@@ -2108,7 +1930,7 @@
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
         "x": 1290,
-        "y": 4680,
+        "y": 5020,
         "wires": [["42e64a71fb7fde29"]]
     },
     {
@@ -2132,7 +1954,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1610,
-        "y": 4680,
+        "y": 5020,
         "wires": [[]]
     },
     {
@@ -2146,10 +1968,10 @@
         "entityConfig": "dd4077143e565cbe",
         "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
         "x": 520,
-        "y": 4700,
+        "y": 5040,
         "wires": [["bf5855bc5716d545"]]
     },
-    { "id": "340a0f3424237171", "type": "comment", "z": "c8fb03409a04d6cd", "name": "Delete/Add Face", "info": "Delete/Add Face", "x": 1580, "y": 4640, "wires": [] },
+    { "id": "340a0f3424237171", "type": "comment", "z": "c8fb03409a04d6cd", "name": "Delete/Add Face", "info": "Delete/Add Face", "x": 1580, "y": 4980, "wires": [] },
     {
         "id": "653acc242c6657a7",
         "type": "function",
@@ -2163,7 +1985,7 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 4620,
+        "y": 4960,
         "wires": [["4f73930cc7c9d033"]]
     },
     {
@@ -2178,7 +2000,7 @@
         "onceDelay": "40",
         "topic": "",
         "x": 510,
-        "y": 4640,
+        "y": 4980,
         "wires": [["bf5855bc5716d545"]]
     },
     {
@@ -2194,7 +2016,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 4700,
+        "y": 5040,
         "wires": [["653acc242c6657a7"]]
     },
     {
@@ -2237,7 +2059,7 @@
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
         "x": 2580,
-        "y": 5460,
+        "y": 5800,
         "wires": [[]]
     },
     {
@@ -2251,7 +2073,7 @@
         "entityConfig": "5a7499966593d12c",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1990,
-        "y": 5340,
+        "y": 5680,
         "wires": [["8b887b020e5cc475"]]
     },
     {
@@ -2267,7 +2089,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 5340,
+        "y": 5680,
         "wires": [["eb641d9c733cc64e"]]
     },
     {
@@ -2281,7 +2103,7 @@
         "entityConfig": "f4c623b28c9d06ef",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 2000,
-        "y": 5400,
+        "y": 5740,
         "wires": [["955b9caff4b5d333"]]
     },
     {
@@ -2295,7 +2117,7 @@
         "entityConfig": "fa43a635a96a9ca9",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 2000,
-        "y": 5460,
+        "y": 5800,
         "wires": [["b359772dd0448c60"]]
     },
     {
@@ -2309,7 +2131,7 @@
         "entityConfig": "af31515f6d84fa05",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 2000,
-        "y": 5520,
+        "y": 5860,
         "wires": [["a85843ee52b83573"]]
     },
     {
@@ -2323,7 +2145,7 @@
         "entityConfig": "9ec51de383db5e90",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1990,
-        "y": 5580,
+        "y": 5920,
         "wires": [["62709e462fca38de"]]
     },
     {
@@ -2339,7 +2161,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 5400,
+        "y": 5740,
         "wires": [["eb641d9c733cc64e"]]
     },
     {
@@ -2355,7 +2177,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 5460,
+        "y": 5800,
         "wires": [["eb641d9c733cc64e"]]
     },
     {
@@ -2371,7 +2193,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 5520,
+        "y": 5860,
         "wires": [["eb641d9c733cc64e"]]
     },
     {
@@ -2387,7 +2209,7 @@
         "finalize": "",
         "libs": [],
         "x": 2240,
-        "y": 5580,
+        "y": 5920,
         "wires": [["eb641d9c733cc64e"]]
     },
     {
@@ -2435,7 +2257,7 @@
         "finalize": "",
         "libs": [],
         "x": 1310,
-        "y": 5460,
+        "y": 5800,
         "wires": [["6f8fd1c0a96b4da4"]]
     },
     {
@@ -3398,7 +3220,7 @@
         "onceDelay": "50",
         "topic": "",
         "x": 510,
-        "y": 4920,
+        "y": 5260,
         "wires": [["8a5d6a091c37c12d"]]
     },
     { "id": "944d96de2d7bf3f0", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1420, "y": 2160, "wires": [["71dfc177b84aed91"]] },
@@ -3422,7 +3244,7 @@
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
         "x": 1050,
-        "y": 4960,
+        "y": 5300,
         "wires": [["555e0d492a1f3db7"]]
     },
     {
@@ -3437,7 +3259,7 @@
         "finalize": "",
         "libs": [],
         "x": 770,
-        "y": 5000,
+        "y": 5340,
         "wires": [["6b9547081f7b546e"]]
     },
     {
@@ -3453,7 +3275,7 @@
         "finalize": "",
         "libs": [],
         "x": 790,
-        "y": 4920,
+        "y": 5260,
         "wires": [["2aed45bea6fe305f"]]
     },
     {
@@ -3469,7 +3291,7 @@
         "finalize": "",
         "libs": [],
         "x": 1550,
-        "y": 4960,
+        "y": 5300,
         "wires": [["57b40803b7c77e6a"]]
     },
     {
@@ -3484,10 +3306,10 @@
         "to": "",
         "reg": false,
         "x": 1310,
-        "y": 4920,
+        "y": 5260,
         "wires": [["5fcffee058f89368"]]
     },
-    { "id": "5fcffee058f89368", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1290, "y": 4960, "wires": [["33d84ebca45fe941"]] },
+    { "id": "5fcffee058f89368", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1290, "y": 5300, "wires": [["33d84ebca45fe941"]] },
     {
         "id": "e0845eceb75c2818",
         "type": "http request",
@@ -3582,43 +3404,7 @@
         "y": 520,
         "wires": [[]]
     },
-    {
-        "id": "e8c926d91dd91d89",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.set_video.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.set_video.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2470,
-        "y": 740,
-        "wires": [["2330b3271e96d226"]]
-    },
     { "id": "2330b3271e96d226", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "payload.sdcard_status.value", "action": "obj", "pretty": false, "x": 2430, "y": 820, "wires": [["619651f33282f03a"]] },
-    {
-        "id": "82b94fa5f0b242e1",
-        "type": "change",
-        "z": "c8fb03409a04d6cd",
-        "name": "change resourceId",
-        "rules": [
-            { "t": "change", "p": "payload.device_night_tip_light.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
-            { "t": "change", "p": "payload.device_night_tip_light.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
-        ],
-        "action": "",
-        "property": "",
-        "from": "",
-        "to": "",
-        "reg": false,
-        "x": 2470,
-        "y": 540,
-        "wires": [["e5d9eb360aa0d642"]]
-    },
     {
         "id": "aa5a7409b0a945d2",
         "type": "ha-sensor",
@@ -3655,12 +3441,16 @@
             { "property": "rec mode", "value": "payload.rec_mode.value.mode", "valueType": "msg" },
             { "property": "rec loop", "value": "payload.rec_mode.value.cover", "valueType": "msg" },
             { "property": "rec muteaudio", "value": "msg.payload.muteaudio.value", "valueType": "msg" },
+            { "property": "Ark Mode", "value": "payload.ark_mode.value", "valueType": "msg" },
+            { "property": "Automatic Unlocking", "value": "payload.automatic_unlocking.value", "valueType": "msg" },
+            { "property": "PTZpoweroff memory", "value": "payload.poweroff_memory.value", "valueType": "msg" },
+            { "property": "Offline Notification", "value": "payload.device_offline_notif.value", "valueType": "msg" },
             { "property": "Last checked", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 2620,
-        "y": 2860,
+        "x": 2900,
+        "y": 2840,
         "wires": [[]]
     },
     {
@@ -3676,7 +3466,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3560,
+        "y": 3900,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -3692,7 +3482,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 3620,
+        "y": 3960,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -3706,7 +3496,7 @@
         "entityConfig": "26edcd0dfb295293",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1360,
-        "y": 3560,
+        "y": 3900,
         "wires": [["2a9c9a3cf5bc2f19"]]
     },
     {
@@ -3720,7 +3510,7 @@
         "entityConfig": "28bcb38e88f42aba",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 3620,
+        "y": 3960,
         "wires": [["748d612a7c6abbac"]]
     },
     {
@@ -3768,7 +3558,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4280,
+        "y": 4620,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -3784,7 +3574,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4220,
+        "y": 4560,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -3800,7 +3590,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4160,
+        "y": 4500,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -3814,7 +3604,7 @@
         "entityConfig": "566934f5fc65521d",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1380,
-        "y": 4220,
+        "y": 4560,
         "wires": [["de72d52c2e03e32b"]]
     },
     {
@@ -3828,7 +3618,7 @@
         "entityConfig": "79d9ec54be8ab5f6",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 4160,
+        "y": 4500,
         "wires": [["d69e0e5545eb7974"]]
     },
     {
@@ -3842,7 +3632,7 @@
         "entityConfig": "979e2582d2ed01b4",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 4280,
+        "y": 4620,
         "wires": [["e37d8d6fc5150e70"]]
     },
     {
@@ -3858,7 +3648,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4340,
+        "y": 4680,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -3872,7 +3662,7 @@
         "entityConfig": "6e2eea0d929e6983",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1330,
-        "y": 4340,
+        "y": 4680,
         "wires": [["8fdba8af8e591105"]]
     },
     {
@@ -3888,7 +3678,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4400,
+        "y": 4740,
         "wires": [["d74e3391e51868d8"]]
     },
     {
@@ -3902,7 +3692,7 @@
         "entityConfig": "82af46d4f5b029b3",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1360,
-        "y": 4400,
+        "y": 4740,
         "wires": [["8d7a02e2d7713af8"]]
     },
     {
@@ -3924,7 +3714,7 @@
         "reg": false,
         "x": 2350,
         "y": 2900,
-        "wires": [["aa5a7409b0a945d2"]]
+        "wires": [["3e720c1e35eaf099"]]
     },
     {
         "id": "882f2e7145dc83ab",
@@ -3946,7 +3736,7 @@
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
         "x": 1550,
-        "y": 6000,
+        "y": 6340,
         "wires": [["462800147b6001a7"]]
     },
     {
@@ -3962,7 +3752,7 @@
         "finalize": "",
         "libs": [],
         "x": 1190,
-        "y": 6000,
+        "y": 6340,
         "wires": [["882f2e7145dc83ab"]]
     },
     {
@@ -3983,7 +3773,7 @@
             { "property": "previousValue", "propertyType": "msg", "value": "", "valueType": "previousValue" }
         ],
         "x": 540,
-        "y": 5960,
+        "y": 6300,
         "wires": [["37fc9afc9b66e9a1"]]
     },
     {
@@ -3998,7 +3788,7 @@
         "to": "",
         "reg": false,
         "x": 850,
-        "y": 6000,
+        "y": 6340,
         "wires": [["fe5c5cdf251fa01e"]]
     },
     {
@@ -4021,7 +3811,7 @@
         "inputOverride": "allow",
         "outputProperties": [],
         "x": 1890,
-        "y": 6000,
+        "y": 6340,
         "wires": [[]]
     },
     { "id": "b7ab6e9dcd568328", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "payload.rec_mode.value", "action": "", "pretty": false, "x": 1450, "y": 2820, "wires": [["71e67b19aea98b67"]] },
@@ -4036,7 +3826,7 @@
         "pretty": false,
         "x": 1470,
         "y": 2900,
-        "wires": [["854316d4a3478a31", "6f1d2dc0cadc6c34", "0b45189b200d5873", "07d4fd20eb765213", "32565e2dcaf9e3d2"]]
+        "wires": [["854316d4a3478a31", "6f1d2dc0cadc6c34", "0b45189b200d5873", "07d4fd20eb765213", "32565e2dcaf9e3d2", "5f28af30c80410b8", "038e3f7b7962cb34", "e2640d2eb2190c36", "cb7b5ae61efd6883"]]
     },
     {
         "id": "2773877f48d434c6",
@@ -4071,23 +3861,7 @@
         "y": 2840,
         "wires": [["85d448314ec7924f"]]
     },
-    { "id": "55d2ba82ad0468ac", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "payload", "action": "", "pretty": false, "x": 2150, "y": 500, "wires": [["0b504d153d63c57a"]] },
-    {
-        "id": "23929fafe9c63066",
-        "type": "function",
-        "z": "c8fb03409a04d6cd",
-        "name": "catch array id [17] > json with name=id",
-        "func": "var payload0 = JSON.stringify(msg.payload.result[0]);\nvar attr0 = JSON.stringify(msg.payload.result[0].attr);\n\nvar payload1 = JSON.stringify(msg.payload.result[1]);\nvar attr1 = JSON.stringify(msg.payload.result[1].attr);\n\nvar payload2 = JSON.stringify(msg.payload.result[2]);\nvar attr2 = JSON.stringify(msg.payload.result[2].attr);\n\nvar payload3 = JSON.stringify(msg.payload.result[3]);\nvar attr3 = JSON.stringify(msg.payload.result[3].attr);\n\nvar payload4 = JSON.stringify(msg.payload.result[4]);\nvar attr4 = JSON.stringify(msg.payload.result[4].attr);\n\nvar payload5 = JSON.stringify(msg.payload.result[5]);\nvar attr5 = JSON.stringify(msg.payload.result[5].attr);\n\nvar payload6 = JSON.stringify(msg.payload.result[6]);\nvar attr6 = JSON.stringify(msg.payload.result[6].attr);\n\nvar payload7 = JSON.stringify(msg.payload.result[7]);\nvar attr7 = JSON.stringify(msg.payload.result[7].attr);\n\nvar payload8 = JSON.stringify(msg.payload.result[8]);\nvar attr8 = JSON.stringify(msg.payload.result[8].attr);\n\nvar payload9 = JSON.stringify(msg.payload.result[9]);\nvar attr9 = JSON.stringify(msg.payload.result[9].attr);\n\nvar payload10 = JSON.stringify(msg.payload.result[10]);\nvar attr10 = JSON.stringify(msg.payload.result[10].attr);\n\nvar payload11 = JSON.stringify(msg.payload.result[11]);\nvar attr11 = JSON.stringify(msg.payload.result[11].attr);\n\nvar payload12 = JSON.stringify(msg.payload.result[12]);\nvar attr12 = JSON.stringify(msg.payload.result[12].attr);\n\nvar payload13 = JSON.stringify(msg.payload.result[13]);\nvar attr13 = JSON.stringify(msg.payload.result[13].attr);\n\nvar payload14 = JSON.stringify(msg.payload.result[14]);\nvar attr14 = JSON.stringify(msg.payload.result[14].attr);\n\nvar payload15 = JSON.stringify(msg.payload.result[15]);\nvar attr15 = JSON.stringify(msg.payload.result[15].attr);\n\nvar payload16 = JSON.stringify(msg.payload.result[16]);\nvar attr16 = JSON.stringify(msg.payload.result[16].attr);\n\nvar payload17 = JSON.stringify(msg.payload.result[17]);\nvar attr17 = JSON.stringify(msg.payload.result[17].attr);\n\nmsg.payload = '{' + attr0 + ' : ' + payload0 + ','\n    + attr1 + ' : ' + payload1 + ','\n    + attr2 + ' : ' + payload2 + ','\n\t+ attr3 + ' : ' + payload3 + ','\n\t+ attr4 + ' : ' + payload4 + ','\n\t+ attr5 + ' : ' + payload5 + ','\n\t+ attr6 + ' : ' + payload6 + ','\n    + attr7 + ' : ' + payload7 + ','\n\t+ attr8 + ' : ' + payload8 + ','\n\t+ attr9 + ' : ' + payload9 + ','\n\t+ attr10 + ' : ' + payload10 + ',' \n\t+ attr11 + ' : ' + payload11 + ',' \n    + attr12 + ' : ' + payload12 + ',' \n\t+ attr13 + ' : ' + payload13 + ',' \n\t+ attr14 + ' : ' + payload14 + ',' \n\t+ attr15 + ' : ' + payload15 + ',' \n    + attr16 + ' : ' + payload16 + ',' \n\t+ attr17 + ' : ' + payload17 + '}';\n\t\nreturn msg;\n",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1950,
-        "y": 420,
-        "wires": [["55d2ba82ad0468ac"]]
-    },
+    { "id": "55d2ba82ad0468ac", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "payload", "action": "", "pretty": false, "x": 2190, "y": 360, "wires": [["0b504d153d63c57a"]] },
     { "id": "02cfbf04da675e66", "type": "json", "z": "c8fb03409a04d6cd", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1330, "y": 2680, "wires": [["2d95b272d36a4035"]] },
     {
         "id": "ae18e63045939321",
@@ -4110,7 +3884,7 @@
         "type": "function",
         "z": "c8fb03409a04d6cd",
         "name": "change id > name",
-        "func": "\nmsg.payload.sensivity_suond = msg.payload[\"14.140.85\"];    \nmsg.payload.rec_mode = msg.payload[\"14.20.85\"];\nmsg.payload.catdog_freq = msg.payload[\"14.116.85\"];    \nmsg.payload.volume = msg.payload[\"14.11.85\"];    \nmsg.payload.suond_freq = msg.payload[\"14.108.85\"];\nmsg.payload.motion_freq = msg.payload[\"14.105.85\"];\nmsg.payload.night_video = msg.payload[\"14.73.85\"];    \nmsg.payload.sensitivity = msg.payload[\"14.104.85\"];    \nmsg.payload.frame = msg.payload[\"4.76.85\"];    \nmsg.payload.gestneedface = msg.payload[\"4.48.85\"];\nmsg.payload.rete = msg.payload[\"14.67.85\"];    \nmsg.payload.sdmemory = msg.payload[\"13.25.85\"];    \nmsg.payload.face_freq = msg.payload[\"14.110.85\"];\nmsg.payload.human_freq = msg.payload[\"14.114.85\"];\nmsg.payload.muteaudio = msg.payload[\"4.63.85\"];\nmsg.payload.timestamp = msg.payload[\"14.4.85\"];\n\nreturn msg;",
+        "func": "\nmsg.payload.sensivity_suond = msg.payload[\"14.140.85\"];    \nmsg.payload.rec_mode = msg.payload[\"14.20.85\"];\nmsg.payload.catdog_freq = msg.payload[\"14.116.85\"];    \nmsg.payload.volume = msg.payload[\"14.11.85\"];    \nmsg.payload.suond_freq = msg.payload[\"14.108.85\"];\nmsg.payload.motion_freq = msg.payload[\"14.105.85\"];\nmsg.payload.night_video = msg.payload[\"14.73.85\"];    \nmsg.payload.sensitivity = msg.payload[\"14.104.85\"];    \nmsg.payload.frame = msg.payload[\"4.76.85\"];    \nmsg.payload.gestneedface = msg.payload[\"4.48.85\"];\nmsg.payload.rete = msg.payload[\"14.67.85\"];    \nmsg.payload.sdmemory = msg.payload[\"13.25.85\"];    \nmsg.payload.face_freq = msg.payload[\"14.110.85\"];\nmsg.payload.human_freq = msg.payload[\"14.114.85\"];\nmsg.payload.muteaudio = msg.payload[\"4.63.85\"];\nmsg.payload.timestamp = msg.payload[\"14.4.85\"];\nmsg.payload.ark_mode = msg.payload[\"8.0.2327\"];\nmsg.payload.automatic_unlocking = msg.payload[\"8.0.2161\"];\nmsg.payload.poweroff_memory = msg.payload[\"14.86.85\"];\nmsg.payload.device_offline_notif = msg.payload[\"4.89.85\"]\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4120,6 +3894,849 @@
         "x": 1510,
         "y": 2680,
         "wires": [["b7ab6e9dcd568328"]]
+    },
+    {
+        "id": "d20772a9aef31be1",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "",
+        "rules": [{ "t": "move", "p": "payload.gateway_deletion_setting.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 530,
+        "y": 1780,
+        "wires": [["b6d89697a591ec92"]]
+    },
+    {
+        "id": "85f1048902fe2482",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"data\": { \"gateway_deletion_setting\": 1 },\n    \"subjectId\": subjectId\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 1780,
+        "wires": [["cac2261d8e0f5d17"]]
+    },
+    {
+        "id": "1dbbb8082c3827b6",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"data\": { \"gateway_deletion_setting\": 0 },\n    \"subjectId\": subjectId\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1570,
+        "y": 1820,
+        "wires": [["cac2261d8e0f5d17"]]
+    },
+    {
+        "id": "b6d89697a591ec92",
+        "type": "ha-switch",
+        "z": "c8fb03409a04d6cd",
+        "name": "Camera G3 Gateway Deletion Prevention",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "abb764f23f32a75d",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
+            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+        ],
+        "x": 920,
+        "y": 1780,
+        "wires": [["85f1048902fe2482"], ["1dbbb8082c3827b6"]]
+    },
+    {
+        "id": "dd988801805ec350",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"4.89.85\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3500,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "9ed9da38ca601ef8",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"4.89.85\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3540,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "11d6e11201f253b6",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"8.0.2161\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.29\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3700,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "e94d8d1bd0667ef5",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"8.0.2161\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.29\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3740,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "95a4ada2d8538993",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.86.85\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.29\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3800,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "ed3047a6f63ffb76",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.86.85\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3840,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "5720d2418f755305",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "",
+        "rules": [{ "t": "move", "p": "payload.device_offline_notif.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 3540,
+        "wires": [["032ddcb224b5c7cc"]]
+    },
+    {
+        "id": "5f28af30c80410b8",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.device_offline_notif.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.device_offline_notif.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 3540,
+        "wires": [["5720d2418f755305"]]
+    },
+    {
+        "id": "bed67faea18a60eb",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "",
+        "rules": [{ "t": "move", "p": "payload.ark_mode.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 920,
+        "y": 3640,
+        "wires": [["115e71117f242168"]]
+    },
+    {
+        "id": "038e3f7b7962cb34",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.ark_mode.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.ark_mode.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 3640,
+        "wires": [["bed67faea18a60eb"]]
+    },
+    {
+        "id": "222d976a11b16d1c",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "",
+        "rules": [{ "t": "move", "p": "payload.automatic_unlocking.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 960,
+        "y": 3740,
+        "wires": [["7dda5ffbeb61fde2"]]
+    },
+    {
+        "id": "e2640d2eb2190c36",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.automatic_unlocking.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.automatic_unlocking.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 3740,
+        "wires": [["222d976a11b16d1c"]]
+    },
+    {
+        "id": "2c7ebc709202de18",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "",
+        "rules": [{ "t": "move", "p": "payload.poweroff_memory.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 950,
+        "y": 3840,
+        "wires": [["5db4edacd9c45b25"]]
+    },
+    {
+        "id": "cb7b5ae61efd6883",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.poweroff_memory.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.poweroff_memory.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 3840,
+        "wires": [["2c7ebc709202de18"]]
+    },
+    {
+        "id": "032ddcb224b5c7cc",
+        "type": "ha-switch",
+        "z": "c8fb03409a04d6cd",
+        "name": "Camera G3 Device Offline Notification",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "012e33fe328386c0",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
+            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+        ],
+        "x": 1390,
+        "y": 3540,
+        "wires": [["dd988801805ec350"], ["9ed9da38ca601ef8"]]
+    },
+    {
+        "id": "115e71117f242168",
+        "type": "ha-switch",
+        "z": "c8fb03409a04d6cd",
+        "name": "Camera G3 Ark Mode",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "817673824a135f57",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
+            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+        ],
+        "x": 1340,
+        "y": 3640,
+        "wires": [["7ce7688e22746eab"], ["6e2add16779e092e"]]
+    },
+    {
+        "id": "7dda5ffbeb61fde2",
+        "type": "ha-switch",
+        "z": "c8fb03409a04d6cd",
+        "name": "Camera G3 Automatic Unlocking",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "b081b61d92bdb83f",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
+            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+        ],
+        "x": 1370,
+        "y": 3740,
+        "wires": [["11d6e11201f253b6"], ["e94d8d1bd0667ef5"]]
+    },
+    {
+        "id": "7ce7688e22746eab",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"8.0.2327\": 1 }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.35\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3600,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "6e2add16779e092e",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"8.0.2327\": 0 }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.35\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 3640,
+        "wires": [["d74e3391e51868d8"]]
+    },
+    {
+        "id": "5db4edacd9c45b25",
+        "type": "ha-switch",
+        "z": "c8fb03409a04d6cd",
+        "name": "Camera G3 Power-off ptz-memory",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "0684aa616a027c94",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
+            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+        ],
+        "x": 1380,
+        "y": 3840,
+        "wires": [["95a4ada2d8538993"], ["ed3047a6f63ffb76"]]
+    },
+    {
+        "id": "3e720c1e35eaf099",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "ARK mode",
+        "rules": [
+            { "t": "change", "p": "payload.ark_mode.value", "pt": "msg", "from": "1", "fromt": "num", "to": "Enable", "tot": "str" },
+            { "t": "change", "p": "payload.ark_mode.value", "pt": "msg", "from": "0", "fromt": "num", "to": "Disable", "tot": "str" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2610,
+        "y": 2820,
+        "wires": [["59531d5183bf7143"]]
+    },
+    {
+        "id": "59531d5183bf7143",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "Automatic Unlocking",
+        "rules": [
+            { "t": "change", "p": "payload.automatic_unlocking.value", "pt": "msg", "from": "1", "fromt": "num", "to": "Enable", "tot": "str" },
+            { "t": "change", "p": "payload.automatic_unlocking.value", "pt": "msg", "from": "0", "fromt": "num", "to": "Disable", "tot": "str" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2640,
+        "y": 2860,
+        "wires": [["3c1f6e03679f8b3a"]]
+    },
+    {
+        "id": "3c1f6e03679f8b3a",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "Poweroff Memory PTZ",
+        "rules": [
+            { "t": "change", "p": "payload.poweroff_memory.value", "pt": "msg", "from": "1", "fromt": "num", "to": "Enable", "tot": "str" },
+            { "t": "change", "p": "payload.poweroff_memory.value", "pt": "msg", "from": "0", "fromt": "num", "to": "Disable", "tot": "str" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2640,
+        "y": 2900,
+        "wires": [["9356719773a6c67c"]]
+    },
+    {
+        "id": "9356719773a6c67c",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "Device Offline Notif",
+        "rules": [
+            { "t": "change", "p": "payload.device_offline_notif.value", "pt": "msg", "from": "1", "fromt": "num", "to": "Enable", "tot": "str" },
+            { "t": "change", "p": "payload.device_offline_notif.value", "pt": "msg", "from": "0", "fromt": "num", "to": "Disable", "tot": "str" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2910,
+        "y": 2800,
+        "wires": [["aa5a7409b0a945d2"]]
+    },
+    {
+        "id": "56fac4546fdf4502",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "parameter",
+        "func": "var token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/app/position/device/query\"\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 6640,
+        "wires": [["465aef5ccce5c87f"]]
+    },
+    {
+        "id": "c693f508bfbd48dd",
+        "type": "ha-button",
+        "z": "c8fb03409a04d6cd",
+        "name": "Aqara My Device",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "9adf51b40e6de6c2",
+        "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
+        "x": 560,
+        "y": 6640,
+        "wires": [["56fac4546fdf4502"]]
+    },
+    {
+        "id": "2674c38a37ee30f1",
+        "type": "inject",
+        "z": "c8fb03409a04d6cd",
+        "name": "Autostart on boot +60s",
+        "props": [{ "p": "lastchecked", "v": "", "vt": "date" }],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "60",
+        "topic": "",
+        "x": 570,
+        "y": 6580,
+        "wires": [["56fac4546fdf4502"]]
+    },
+    {
+        "id": "1555b8abf755d5f6",
+        "type": "ha-sensor",
+        "z": "c8fb03409a04d6cd",
+        "name": "Aqara MyDevice",
+        "entityConfig": "a70146834a643d17",
+        "version": 0,
+        "state": "Aqara MyDevice",
+        "stateType": "str",
+        "attributes": [
+            { "property": "did", "value": "msg.payload.mylumi.did", "valueType": "msg" },
+            { "property": "deviceName", "value": "msg.payload.mylumi.deviceName", "valueType": "msg" },
+            { "property": "originalName", "value": "msg.payload.mylumi.originalName", "valueType": "msg" },
+            { "property": "model", "value": "msg.payload.mylumi.model", "valueType": "msg" },
+            { "property": "supportHomeKit", "value": "payload.mylumi.supportHomeKit", "valueType": "msg" },
+            { "property": "state", "value": "payload.mylumi.state", "valueType": "msg" },
+            { "property": "positionName", "value": "payload.mylumi.positionName", "valueType": "msg" },
+            { "property": "firmwareVersion", "value": "payload.mylumi.firmwareVersion", "valueType": "msg" },
+            { "property": "real1", "value": "payload.mylumi.real1", "valueType": "msg" },
+            { "property": "real2", "value": "payload.mylumi.real2", "valueType": "msg" },
+            { "property": "positionId", "value": "payload.mylumi.positionId", "valueType": "msg" },
+            { "property": "lowBatteryFlag", "value": "payload.mylumi.lowBatteryFlag", "valueType": "msg" },
+            { "property": "categoryNames", "value": "payload.mylumi.categoryNames", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 2160,
+        "y": 6640,
+        "wires": [[]]
+    },
+    {
+        "id": "465aef5ccce5c87f",
+        "type": "http request",
+        "z": "c8fb03409a04d6cd",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
+            { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
+        ],
+        "x": 1490,
+        "y": 6640,
+        "wires": [["d2f3194ecdb8b065"]]
+    },
+    {
+        "id": "e8c926d91dd91d89",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.set_video.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.set_video.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2470,
+        "y": 740,
+        "wires": [["6bc72e749177f671"]]
+    },
+    {
+        "id": "6bc72e749177f671",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.gateway_deletion_setting.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.gateway_deletion_setting.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2690,
+        "y": 740,
+        "wires": [["2330b3271e96d226"]]
+    },
+    {
+        "id": "88377f036a2544b7",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2470,
+        "y": 700,
+        "wires": [["e8c926d91dd91d89"]]
+    },
+    {
+        "id": "2529987ca39feb7e",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.gesture_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.gesture_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2470,
+        "y": 660,
+        "wires": [["88377f036a2544b7"]]
+    },
+    {
+        "id": "e2730d78123be130",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.pets_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2470,
+        "y": 620,
+        "wires": [["2529987ca39feb7e"]]
+    },
+    {
+        "id": "e5d9eb360aa0d642",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.ptz_cruise_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.ptz_cruise_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2470,
+        "y": 580,
+        "wires": [["e2730d78123be130"]]
+    },
+    {
+        "id": "82b94fa5f0b242e1",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.device_night_tip_light.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.device_night_tip_light.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2470,
+        "y": 540,
+        "wires": [["e5d9eb360aa0d642"]]
+    },
+    {
+        "id": "efed582c5bcb0a23",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.soundtrigger_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.soundtrigger_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2470,
+        "y": 500,
+        "wires": [["82b94fa5f0b242e1"]]
+    },
+    {
+        "id": "500dc1a39f912f2f",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.humans_track_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.humans_track_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2190,
+        "y": 740,
+        "wires": [["efed582c5bcb0a23"]]
+    },
+    {
+        "id": "2af7bd9768e3fc60",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.human_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.human_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2190,
+        "y": 700,
+        "wires": [["500dc1a39f912f2f"]]
+    },
+    {
+        "id": "56a1fddbed9571bd",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.pets_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.pets_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2190,
+        "y": 660,
+        "wires": [["2af7bd9768e3fc60"]]
+    },
+    {
+        "id": "993f56d68ad726af",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.face_detect_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.face_detect_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2190,
+        "y": 620,
+        "wires": [["56a1fddbed9571bd"]]
+    },
+    {
+        "id": "0b504d153d63c57a",
+        "type": "change",
+        "z": "c8fb03409a04d6cd",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.mdtrigger_enable.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.mdtrigger_enable.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 2190,
+        "y": 580,
+        "wires": [["993f56d68ad726af"]]
+    },
+    {
+        "id": "23929fafe9c63066",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "catch array id [19] > json with name=id",
+        "func": "var payload0 = JSON.stringify(msg.payload.result[0]);\nvar attr0 = JSON.stringify(msg.payload.result[0].attr);\n\nvar payload1 = JSON.stringify(msg.payload.result[1]);\nvar attr1 = JSON.stringify(msg.payload.result[1].attr);\n\nvar payload2 = JSON.stringify(msg.payload.result[2]);\nvar attr2 = JSON.stringify(msg.payload.result[2].attr);\n\nvar payload3 = JSON.stringify(msg.payload.result[3]);\nvar attr3 = JSON.stringify(msg.payload.result[3].attr);\n\nvar payload4 = JSON.stringify(msg.payload.result[4]);\nvar attr4 = JSON.stringify(msg.payload.result[4].attr);\n\nvar payload5 = JSON.stringify(msg.payload.result[5]);\nvar attr5 = JSON.stringify(msg.payload.result[5].attr);\n\nvar payload6 = JSON.stringify(msg.payload.result[6]);\nvar attr6 = JSON.stringify(msg.payload.result[6].attr);\n\nvar payload7 = JSON.stringify(msg.payload.result[7]);\nvar attr7 = JSON.stringify(msg.payload.result[7].attr);\n\nvar payload8 = JSON.stringify(msg.payload.result[8]);\nvar attr8 = JSON.stringify(msg.payload.result[8].attr);\n\nvar payload9 = JSON.stringify(msg.payload.result[9]);\nvar attr9 = JSON.stringify(msg.payload.result[9].attr);\n\nvar payload10 = JSON.stringify(msg.payload.result[10]);\nvar attr10 = JSON.stringify(msg.payload.result[10].attr);\n\nvar payload11 = JSON.stringify(msg.payload.result[11]);\nvar attr11 = JSON.stringify(msg.payload.result[11].attr);\n\nvar payload12 = JSON.stringify(msg.payload.result[12]);\nvar attr12 = JSON.stringify(msg.payload.result[12].attr);\n\nvar payload13 = JSON.stringify(msg.payload.result[13]);\nvar attr13 = JSON.stringify(msg.payload.result[13].attr);\n\nvar payload14 = JSON.stringify(msg.payload.result[14]);\nvar attr14 = JSON.stringify(msg.payload.result[14].attr);\n\nvar payload15 = JSON.stringify(msg.payload.result[15]);\nvar attr15 = JSON.stringify(msg.payload.result[15].attr);\n\nvar payload16 = JSON.stringify(msg.payload.result[16]);\nvar attr16 = JSON.stringify(msg.payload.result[16].attr);\n\nvar payload17 = JSON.stringify(msg.payload.result[17]);\nvar attr17 = JSON.stringify(msg.payload.result[17].attr);\n\nvar payload18 = JSON.stringify(msg.payload.result[18]);\nvar attr18 = JSON.stringify(msg.payload.result[18].attr);\n\nmsg.payload = '{' + attr0 + ' : ' + payload0 + ','\n    + attr1 + ' : ' + payload1 + ','\n    + attr2 + ' : ' + payload2 + ','\n\t+ attr3 + ' : ' + payload3 + ','\n\t+ attr4 + ' : ' + payload4 + ','\n\t+ attr5 + ' : ' + payload5 + ','\n\t+ attr6 + ' : ' + payload6 + ','\n    + attr7 + ' : ' + payload7 + ','\n\t+ attr8 + ' : ' + payload8 + ','\n\t+ attr9 + ' : ' + payload9 + ','\n\t+ attr10 + ' : ' + payload10 + ',' \n\t+ attr11 + ' : ' + payload11 + ',' \n    + attr12 + ' : ' + payload12 + ',' \n\t+ attr13 + ' : ' + payload13 + ',' \n\t+ attr14 + ' : ' + payload14 + ',' \n\t+ attr15 + ' : ' + payload15 + ',' \n    + attr16 + ' : ' + payload16 + ',' \n\t+ attr17 + ' : ' + payload17 + ','\n\t+ attr18 + ' : ' + payload18 + '}';\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1930,
+        "y": 400,
+        "wires": [["55d2ba82ad0468ac"]]
+    },
+    {
+        "id": "d2f3194ecdb8b065",
+        "type": "function",
+        "z": "c8fb03409a04d6cd",
+        "name": "search did subjectId - loop",
+        "func": "var i;\nvar array = msg.payload.result.devices\nvar subjectId = global.get(\"subjectId\");\n\nfor (i = 0; i < array.length; i++) {\n    if (msg.payload.result.devices[i].did === subjectId )\n        msg.payload.mylumi = msg.payload.result.devices[i];\n    node.send(msg);\n}\nreturn;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1860,
+        "y": 6640,
+        "wires": [["1555b8abf755d5f6"]]
     },
     {
         "id": "caa960a76b56a309",
@@ -5072,6 +5689,134 @@
         "entityType": "sensor",
         "haConfig": [
             { "property": "name", "value": "Camera G3 resourceID query" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "abb764f23f32a75d",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Gateway Deletion Prevention",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Gateway Deletion Prevention" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "012e33fe328386c0",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Device Offline Notification",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Device Offline Notification" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "817673824a135f57",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Ark Mode",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Ark Mode" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "b081b61d92bdb83f",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Automatic Unlocking",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Automatic Unlocking" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "0684aa616a027c94",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Power-off ptz-memory",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Power-off ptz-memory" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "9adf51b40e6de6c2",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Aqara My Device",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Aqara My Device" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "a70146834a643d17",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Aqara MyDevice",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Aqara MyDevice" },
             { "property": "icon", "value": "" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
