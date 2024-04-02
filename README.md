@@ -37,6 +37,14 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 ## Why? ##
 I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the homekit connection I only have the alarm function.
 
+## Update flow ##
+
+for a successful update of the existing flow without changing the entities in HomeAssistant, follow the steps:
+  * import new json
+  * delete old flow (complete flow card)
+  * deploy  
+!! do not deploy without deleting the old !!
+
 ## Install OK ##
 ![0](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/54a22cd1-fdf8-4dc3-b2d4-a0e03d269cb4)
 ![1](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/d6ebd1e4-707e-47f2-a473-ab88b3cc0126)
