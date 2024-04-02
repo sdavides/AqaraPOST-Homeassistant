@@ -41,7 +41,13 @@ I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the 
 
 for a successful update of the existing flow without changing the entities in HomeAssistant, follow the steps:
   * import new json
+    
+    ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/75ce29e0-e829-417c-bd2c-0db5ced8199a)
+
   * delete old flow (complete flow card)
+
+![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/b7db7bc7-5a7a-4fc9-bd1b-1899e8977b5a)
+
   * deploy  
 !! do not deploy without deleting the old !!
 
