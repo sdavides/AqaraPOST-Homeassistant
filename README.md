@@ -12,7 +12,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
   * subjectId ( lumi1.XXXXXXXXXXXX ) usually MAC-ADDRESS
   * aqara url ( rpc-ger.aqara.com ) Host
     
-	* timezone ( it-IT ) -> es-ES/en-UK/de-DE/it-IT/pt-PT
+	* timezone ( it-IT ) -> es-ES/en-UK/de-DE/it-IT/pt-PT...
 	* userid ( automatic, enter manual if not work )
 	
 ## Method ##
