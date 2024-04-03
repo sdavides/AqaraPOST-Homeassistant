@@ -29,10 +29,10 @@ read -p 'APPID XXXXXXAPPIDXXXXXXXXXXX: ' NEWAPPID
 echo "#"
 echo "#"
 echo "# Insert your aqara_url example: rpc-ger.aqara.com"
+curl -s https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/list_aqara_url.txt
 read -p 'URL aqara: ' aqara_url
 echo "#"
 echo "#"
-curl -s https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/list_aqara_url.txt
 
 echo "# Insert your country for timeformat example: es-ES/en-UK/de-DE/it-IT/pt-PT/en-US..."
 read -p 'timezone: ' TIMEZONE
