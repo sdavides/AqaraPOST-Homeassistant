@@ -34,7 +34,7 @@ read -p 'URL aqara: ' aqara_url
 echo "#"
 echo "#"
 
-echo "# Insert your country for timeformat example: es-ES/en-UK/de-DE/it-IT/pt-PT/es-ES"
+echo "# Insert your country for timeformat example: es-ES/en-UK/de-DE/it-IT/pt-PT/en-US..."
 read -p 'timezone: ' TIMEZONE
 echo "#"
 echo "#"
