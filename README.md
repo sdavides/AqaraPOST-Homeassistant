@@ -60,8 +60,11 @@ for a successful update of the existing flow without changing the entities in Ho
 
 ## TIPS Hub G3 ##
 * HomeKit for alarm function:
-    * The port change every reboot of device
-    * Scan and find with nmap, replace port into "/config/.storage/core.config_entries"
+    * autodiscovery, insert qrcode number
+    
+     ( port change every reboot of device, scan and find with nmap
+
+     replace port into "/config/.storage/core.config_entries" )
 
 ![4](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f26c6a0c-6b96-4c41-b0ce-50332f542e87)
 
