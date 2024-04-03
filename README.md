@@ -32,7 +32,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 ## Find your Value ##
 * Use BurpSuite or similar:
 	* Follow [BurpSuite Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf)
-	* Download [AqaraHome Android mod](https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing)
+	* Download [AqaraHome apk mod](https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing)
  
 ## Why? ##
 I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the homekit connection I only have the alarm function.
