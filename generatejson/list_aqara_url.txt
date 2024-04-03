@@ -1,6 +1,19 @@
-aiot-rpc.ankasa.cn
-aiot-rpc-usa.aqara.com
-rpc-ger.aqara.com
-rpc-ru.aqara.com
-rpc-au.aqara.com
-rpc-kr.aqara.com
+"aiot-rpc.ankasa.cn" code: CN
+"aiot-rpc-usa.aqara.com" code: US HMT OTHER
+"rpc-ger.aqara.com" code: EU AF
+"rpc-ru.aqara.com" code: RU
+"rpc-au.aqara.com" code: AU ME
+"rpc-kr.aqara.com" code: KR JP
+
+"Mainland China",
+"United States",
+"Europe",
+"Russia",
+"Oceania",
+"Southeast Asia",
+"Hong Kong; Macao; Taiwan (China）",
+"South Korea",
+"Japan",
+"Middle East",
+"Africa",
+"Other",
