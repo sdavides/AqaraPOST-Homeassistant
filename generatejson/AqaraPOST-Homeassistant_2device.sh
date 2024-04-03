@@ -14,17 +14,17 @@ echo "# Replace your value XXXXXXTOKENXXXXXXXXXXX lumi1.XXXXXXXXXXXX: XXXXXXAPPI
 echo "#"
 echo "#"
 
-echo "# Insert your token example: XXXXXXTOKENXXXXXXXXXXX"
+echo "# Insert your token example: ab12c3d4e5f6g7h8i9l10m11n12ooab12c3d4e5f"
 read -p 'TOKEN : ' NEWTOKEN
 echo "#"
 echo "#"
 
-echo "# Insert your lumi1 example: lumi1.XXXXXXXXXXXX"
+echo "# Insert your lumi1 example: lumi1.mac0a1b2c3d4"
 read -p 'MAC lumi1.XXXXXXXXXXXX: ' NEWLUMI1
 echo "#"
 echo "#"
 
-echo "# Insert your appid example: XXXXXXAPPIDXXXXXXXXXXX"
+echo "# Insert your appid example: ab12c3d4e5f6g7h8i9l10m11"
 read -p 'APPID XXXXXXAPPIDXXXXXXXXXXX: ' NEWAPPID
 echo "#"
 curl -s https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/list_aqara_url.txt
@@ -33,7 +33,7 @@ read -p 'URL aqara: ' aqara_url
 echo "#"
 echo "#"
 
-echo "# Insert your country for timeformat example: es-ES/en-UK/de-DE/it-IT/pt-PT/en-US..."
+echo "# Insert your country for timeformat example: it-IT ( es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...)"
 read -p 'timezone: ' TIMEZONE
 echo "#"
 echo "#"
