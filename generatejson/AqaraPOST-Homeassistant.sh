@@ -28,8 +28,8 @@ echo "# Insert your appid example: XXXXXXAPPIDXXXXXXXXXXX"
 read -p 'APPID XXXXXXAPPIDXXXXXXXXXXX: ' NEWAPPID
 echo "#"
 echo "#"
-echo "# Insert your aqara_url example: rpc-ger.aqara.com"
 curl -s https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/list_aqara_url.txt
+echo "# Insert your aqara_url example: rpc-ger.aqara.com"
 read -p 'URL aqara: ' aqara_url
 echo "#"
 echo "#"
