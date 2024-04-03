@@ -1,4 +1,6 @@
 #  
+#    [aqara_url available]
+#
 # "aiot-rpc.ankasa.cn" code: CN
 # "aiot-rpc-usa.aqara.com" code: US HMT OTHER
 # "rpc-ger.aqara.com" code: EU AF
@@ -6,6 +8,7 @@
 # "rpc-au.aqara.com" code: AU ME
 # "rpc-kr.aqara.com" code: KR JP
 # 
-# "Mainland China", "United States", "Europe","Russia","Oceania","Southeast Asia","Hong Kong; Macao; Taiwan (China）","South Korea","Japan","Middle East","Africa","Other",
+# "Mainland China", "United States", "Europe","Russia","Oceania","Southeast Asia"
+# "Hong Kong; Macao; Taiwan (China）","South Korea","Japan","Middle East","Africa","Other",
 #
 #
