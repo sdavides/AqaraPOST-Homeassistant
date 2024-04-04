@@ -53,7 +53,7 @@ for a successful update of the existing flow without changing the entities in Ho
 
 ## Install OK ##
 ![0](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/54a22cd1-fdf8-4dc3-b2d4-a0e03d269cb4)
-![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/bec5bd8b-24fd-4eea-8fa9-120e89da6f2d)
+![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/a36eb9e9-8a0c-480c-82db-3def3f8d51a9)
 
 
 ---
