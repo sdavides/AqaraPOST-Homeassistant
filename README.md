@@ -71,7 +71,7 @@ for a successful update of the existing flow without changing the entities in Ho
 ---
 
 * Live video:
-   * hack G3:
+   * hack G3 (delete authentication rtsp):
      * open telnet [aQRootG3](https://github.com/Wh1terat/aQRootG3)
      * Firmware mod [firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3)
        * add post_init.sh: "killall -9 rtsp && rtsp >/dev/null 2>&1 &"
