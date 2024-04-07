@@ -33,6 +33,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 * Use BurpSuite or ZAP or similar:
 	* Follow [BurpSuite Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf)
  	* Follow [ZAP Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/ZAP%20Guide.pdf)
+         * [free dowload](https://www.zaproxy.org/download)
 	* Download [AqaraHome apk mod](https://drive.google.com/file/d/1Wfn_ynyCGvPwldjbbNGvZmYBKj5csuMy/view?usp=sharing)
  
 ## Why? ##
