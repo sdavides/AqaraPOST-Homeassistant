@@ -98,3 +98,7 @@ rtsp://USER:PASS@192.168.1.52:8554/360p (/720p /1080p /1296p)
 [WebRTC](https://github.com/AlexxIT/WebRTC) Card RTSP 
 
 [AqaraCameraHubfw](https://github.com/niceboygithub/AqaraCameraHubfw) HACK 
+
+[m3u8-HLS-Homeassistant](https://github.com/sdavides/m3u8-HLS-Homeassistant/)
+
+[EPGItaly-Homeassistant](https://github.com/sdavides/EPGItaly-Homeassistant/)
