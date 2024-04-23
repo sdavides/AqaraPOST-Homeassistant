@@ -60,6 +60,25 @@ for a successful update of the existing flow without changing the entities in Ho
 
 ---
 
+## Update data ##
+* add automation every 1 minute:
+
+	  
+		description: Update Aqara G3
+		mode: single
+		trigger:
+ 		 - platform: time_pattern
+ 		   minutes: /1
+		condition: []
+		action:
+		  - service: button.press
+		    metadata: {}
+		    data: {}
+		    target:
+		      entity_id: button.camera_g3_log
+	  
+---
+
 ## TIPS Hub G3 ##
 * HomeKit for alarm function:
     * autodiscovery, insert qrcode number
