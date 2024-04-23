@@ -103,6 +103,8 @@ from telnet command:
 ```bash
 agetprop sys.camera_rtsp_url
 ```
+![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f4a401f3-f9f0-4fd3-a9f8-ea8605c8bba9)
+
 
 rtsp://192.168.1.52:8554/360p (/720p /1080p /1296p)
 
