@@ -96,8 +96,9 @@ for a successful update of the existing flow without changing the entities in Ho
      * Manual downgrade firmware [3.3.4](https://github.com/niceboygithub/AqaraCameraHubfw/blob/main/stock/G3) (post_init.sh enable)
      * Open telnet QR method [aQRootG3](https://github.com/Wh1terat/aQRootG3) (create post_init.sh)
      * Manual update firmware [3.3.9](https://github.com/niceboygithub/AqaraCameraHubfw/blob/main/stock/G3) (post_init.sh enable)
-     * Update last firmware from command [custom firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3#flash-g3-custom-firmware-method) (hack done)
-     * add post_init.sh (delete rtsp auth)
+     * Update last firmware from command [custom firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3#flash-g3-custom-firmware-method)
+         * hack done! (post_init.sh enable)
+     * Add /data/scripts/post_init.sh from telnet
         ```
 		killall -9 rtsp && rtsp >/dev/null 2>&1 &
 		```
