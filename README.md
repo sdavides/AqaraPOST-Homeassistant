@@ -93,10 +93,14 @@ for a successful update of the existing flow without changing the entities in Ho
 
 * Live video:
    * hack G3 (delete authentication rtsp):
-     * open telnet [aQRootG3](https://github.com/Wh1terat/aQRootG3)
-     * Firmware mod [firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3)
-       * add post_init.sh: "killall -9 rtsp && rtsp >/dev/null 2>&1 &"
-       
+     * Manual downgrade firmware [3.3.4](https://github.com/niceboygithub/AqaraCameraHubfw/blob/main/stock/G3) (post_init.sh enable)
+     * Open telnet QR method [aQRootG3](https://github.com/Wh1terat/aQRootG3) (create post_init.sh)
+     * Manual update firmware [3.3.9](https://github.com/niceboygithub/AqaraCameraHubfw/blob/main/stock/G3) (post_init.sh enable)
+     * Update last firmware from command [firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3) (hack done)
+     * add post_init.sh (delete rtsp auth)
+        ```
+		killall -9 rtsp && rtsp >/dev/null 2>&1 &
+		```
 or you can see rtsp user/pass (change every boot)
 
 from telnet command:
