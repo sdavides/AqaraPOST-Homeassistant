@@ -106,7 +106,7 @@ or you can see rtsp user/pass (change every boot)
 
 from telnet command:
 ```bash
-agetprop sys.camera_rtsp_url
+agetprop sys.camera_rtsp_url  # agetprop full (list all prop.)
 ```
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f4a401f3-f9f0-4fd3-a9f8-ea8605c8bba9)
 
