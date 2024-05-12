@@ -44,7 +44,7 @@ This is the beauty of it: no modifications to the device are necessary.
 
 You can delete AqaraHome_mod app it without logging out, otherwise the token values ​​​​are expired.
 
-AqaraHome apk mod includes acceptance of the user-installed certificate, (to see the http requests in burp)
+AqaraHome apk mod includes acceptance of the user-installed certificate, (to see the http requests in burp).
 
 
 ## Install OK ##
@@ -120,9 +120,9 @@ for a successful update of the existing flow without changing the entities in Ho
 	  	![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f4a401f3-f9f0-4fd3-a9f8-ea8605c8bba9)
 
 
-	 	 rtsp://192.168.1.52:8554/360p (/720p /1080p /1296p)
+	 	 rtsp://192.168.1.4:8554/360p (/720p /1080p /1296p)
 
-	 	 rtsp://USER:PASS@192.168.1.52:8554/360p (/720p /1080p /1296p)
+	 	 rtsp://USER:PASS@192.168.1.4:8554/360p (/720p /1080p /1296p)
 
 ---
 
