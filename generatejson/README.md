@@ -1,4 +1,4 @@
-Generate flow json whith your values:
+Generate flow json with your values:
 
 #### command for first device: ####
 ```bash
