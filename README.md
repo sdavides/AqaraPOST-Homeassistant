@@ -48,6 +48,8 @@ AqaraHome apk mod includes acceptance of the user-installed certificate, (to see
 
 
 ## Install OK ##
+![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/a7c093f9-c383-451d-b452-828d5d4b03af)
+
 ![319800579-a36eb9e9-8a0c-480c-82db-3def3f8d51a9](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/2ea10616-0af3-4a10-84f7-d5cebd9b0435)
 
 
