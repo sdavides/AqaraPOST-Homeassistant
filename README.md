@@ -70,9 +70,9 @@ AqaraHome apk mod includes acceptance of the user-installed certificate, (to see
 		    target:
 		      entity_id: button.camera_g3_log
 	  
-or change inject node:
+	or change inject node:
 
-![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/ebf6ebad-bdb0-427e-add6-d8a3dcb8caa6)
+	![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/ebf6ebad-bdb0-427e-add6-d8a3dcb8caa6)
 
 ## Update flow ##
 
@@ -83,7 +83,7 @@ for a successful update of the existing flow without changing the entities in Ho
 
   * delete old flow (complete flow card)
 
-![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/b7db7bc7-5a7a-4fc9-bd1b-1899e8977b5a)
+    ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/b7db7bc7-5a7a-4fc9-bd1b-1899e8977b5a)
 
   * deploy  
 !! do not deploy without deleting the old !!
@@ -92,13 +92,23 @@ for a successful update of the existing flow without changing the entities in Ho
 ---
 
 ## TIPS Hub G3 ##
-* HomeKit for alarm function:
+
+* Turns the camera into an NGINX-cgi PHP server and much more...:
+    * [AqaraG3-armv7-binary](https://github.com/sdavides/AqaraG3-armv7-binary)
+      
+      ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/555c0f99-d010-4323-b365-070d26e4ad7f)
+
+ 
+---
+
+* HomeKit alarm function HomeAssistant:
     * autodiscovery, insert qrcode number
     
-  (port change every reboot of device, find with nmap
-  replace into "/config/.storage/core.config_entries")
+  		port change every reboot of device, replace into 
+  
+  		"/config/.storage/core.config_entries"
 
-  ![4](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f26c6a0c-6b96-4c41-b0ce-50332f542e87)
+  		![4](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f26c6a0c-6b96-4c41-b0ce-50332f542e87)
 
 ---
 
@@ -130,12 +140,14 @@ for a successful update of the existing flow without changing the entities in Ho
 
 ## See also ##
 
+[AqaraG3-armv7-binary](https://github.com/sdavides/AqaraG3-armv7-binary) AqaraG3 extra command
+
 [go2rtc](https://github.com/AlexxIT/go2rtc) RTSP Proxy (HomeKit supported)
      
 [WebRTC](https://github.com/AlexxIT/WebRTC) Card RTSP 
 
 [AqaraCameraHubfw](https://github.com/niceboygithub/AqaraCameraHubfw) HACK 
 
-[m3u8-HLS-Homeassistant](https://github.com/sdavides/m3u8-HLS-Homeassistant/)
+[m3u8-HLS-Homeassistant](https://github.com/sdavides/m3u8-HLS-Homeassistant)
 
-[EPGItaly-Homeassistant](https://github.com/sdavides/EPGItaly-Homeassistant/)
+[EPGItaly-Homeassistant](https://github.com/sdavides/EPGItaly-Homeassistant)
