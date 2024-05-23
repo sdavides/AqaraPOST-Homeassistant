@@ -1,2 +1,0 @@
-apk/Aqara[[:space:]]3.0.6_mod_network.apk filter=lfs diff=lfs merge=lfs -text
-apk/Aqara[[:space:]]4.0.2_mod_network.apk filter=lfs diff=lfs merge=lfs -text
