@@ -30,6 +30,12 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
  
 ## Find your Value ##
+* Python script:
+
+	from [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)'s python script
+	you can find your values ​​from your username and password Aqara account
+	 * [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/generatejson#generate-token-from-username-and-password)
+
 * Use BurpSuite or ZAP or similar:
 	* Follow [BurpSuite Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf)
  	* Follow [ZAP Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/ZAP%20Guide.pdf)
