@@ -146,6 +146,12 @@ for a successful update of the existing flow without changing the entities in Ho
 
 ---
 
+## Support me ##
+
+**ko-fi.com** https://ko-fi.com/davide70304
+
+---
+
 ## See also ##
 
 [AqaraG3-armv7-binary](https://github.com/sdavides/AqaraG3-armv7-binary) AqaraG3 extra command
