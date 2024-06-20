@@ -14,10 +14,10 @@ print ('\n #### Token Generator AqaraPost ####')
 print ('\n #### This is an automatic script to generate token for Node Red json HomeAssistant ####')
 print (' #### for the Aqara Account, read on https://github.com/sdavides/AqaraPOST-Homeassistant ####')
 print ('\n')
+print ('#### Request info login: #### \n')
 username = input("Enter your username: [example@example.com] \n")
 password = input("Enter your password: [password] \n")
 area = input("Enter your area: [EU],[CN],[RU],[USA],[KR],[OTHER]\n")
-print ('\n #### Request info: #### \n')
 
 class pyAqara():
     areas = {
@@ -119,9 +119,10 @@ class pyAqara():
                 "password": self.encrypt_password(password)
         }
         req = self.request('POST', f'{self.server}/app/v1.0/lumi/user/login', json=payload)
+        #DEBUG
         #print(dump.dump_all(req).decode("utf-8"))
-        print(json.dumps(req.json(), indent=4, sort_keys=True))
-        print ('\n #### End Request #### \n')
+        #print(json.dumps(req.json(), indent=4, sort_keys=True))
+        print ('#### End Request #### \n')
         res = req.json()
         if res['code'] == 0:
             self._userid = res['result']['userId']
@@ -183,13 +184,20 @@ class pyAqara():
 aqara = pyAqara((area))
 
 if aqara.login(username, password):
+    print ('\n')
+
+    print ('#### request post-login success ####')
     #params = {'firmwareVersion': '3.3.2', 'model': 'lumi.camera.gwpagl01'}
     #params = {'firmwareVersion': '0.0.0_0021', 'model': 'lumi.airrtc.agl001'}
     #params = {'firmwareVersion': '1.0.24', 'model': 'lumi.vibration.agl01'}
-    #req = self.request('GET', f'{aqara.server}/app/v1.0/lumi/user/desensitize/info', params='')
-    #print(json.dumps(req.json(), indent=4, sort_keys=True))
+
+    # device query
+    print ('\n #### device query ####')
+    req = aqara.request('GET', f'{aqara.server}/app/v1.0/lumi/app/position/device/query', params='')
+    print(json.dumps(req.json(), indent=4, sort_keys=True))
     #print(dump.dump_all(req).decode("utf-8"))
 
+    print ('\n #### END script ####')
     print ('\n')
 else:
     print('Login Failed!')
