@@ -16,7 +16,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
   * userid ( automatic, enter manual if not work )
 	
 ## Method ##
-* Method 1 NodeRed (recommended):
+* Method 1 NodeRed (recommended, required NodeCompanion):
 	* Import flow Aqara_G3_nodered.json 
 	* Replace your value "config" node 
 	* Deploy
