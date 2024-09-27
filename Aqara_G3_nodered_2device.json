@@ -1,5 +1,5 @@
 [
-    { "id": "bfe87444c19f0530", "type": "tab", "label": "Aqara Cam G3_2", "disabled": true, "info": "", "env": [] },
+    { "id": "bfe87444c19f0530", "type": "tab", "label": "Aqara Cam G3_2", "disabled": false, "info": "", "env": [] },
     {
         "id": "99667eb56ccd16f7",
         "type": "http request",
@@ -3861,7 +3861,6 @@
         "y": 2840,
         "wires": [["43b25d6998a53006"]]
     },
-    { "id": "4307e952a39584ae", "type": "json", "z": "bfe87444c19f0530", "name": "", "property": "payload", "action": "", "pretty": false, "x": 2190, "y": 360, "wires": [["f8f0e3745ad7699f"]] },
     { "id": "b856c588169fb3b6", "type": "json", "z": "bfe87444c19f0530", "name": "", "property": "payload", "action": "", "pretty": false, "x": 1330, "y": 2680, "wires": [["f94dc95e4c017813"]] },
     {
         "id": "0aad89a6a92a0d39",
@@ -4718,9 +4717,9 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1920,
-        "y": 400,
-        "wires": [["4307e952a39584ae"]]
+        "x": 2020,
+        "y": 460,
+        "wires": [["2f585a9d161c12c8"]]
     },
     {
         "id": "2f9d863073d234ba",
@@ -4791,6 +4790,22 @@
         "x": 2170,
         "y": 6520,
         "wires": [["659baf7577fe44b6"]]
+    },
+    {
+        "id": "2f585a9d161c12c8",
+        "type": "function",
+        "z": "bfe87444c19f0530",
+        "name": "Fix alarm_bell - sdcard not found",
+        "func": "if (msg.payload.alarm_bell_index === undefined ) {\n    msg.payload.alarm_bell_index = '0';\n} \nif (msg.payload.alarm_bell_volume === undefined ) {\n    msg.payload.alarm_bell_volume = '0';\n} \nif (msg.payload.sdcard_status === undefined ) {\n    msg.payload.sdcard_status = '0';\n} \n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2120,
+        "y": 520,
+        "wires": [["f8f0e3745ad7699f"]]
     },
     {
         "id": "caa960a76b56a309",
