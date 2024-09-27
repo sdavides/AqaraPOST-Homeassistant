@@ -114,7 +114,7 @@
         "libs": [],
         "x": 990,
         "y": 2800,
-        "wires": [["db74e5ce0dd2209a", "c311162e5a2e5205"]]
+        "wires": [["db74e5ce0dd2209a"]]
     },
     {
         "id": "24ceb8a610a364ad",
@@ -3391,7 +3391,7 @@
         "state": "Aqara UserID_2",
         "stateType": "str",
         "attributes": [
-            { "property": "UserID", "value": "msg.payload.result.userId_2", "valueType": "msg" },
+            { "property": "UserID", "value": "msg.payload.result.userId", "valueType": "msg" },
             { "property": "registerTime", "value": "payload.result.registerTime", "valueType": "msg" },
             { "property": "nickName", "value": "payload.result.nickName", "valueType": "msg" },
             { "property": "facebookId", "value": "payload.result.facebookId", "valueType": "msg" },
@@ -3402,7 +3402,7 @@
         "outputProperties": [],
         "x": 880,
         "y": 520,
-        "wires": [["2d40e82966aa7b54"]]
+        "wires": [[]]
     },
     { "id": "432d26c57e2fe1d6", "type": "json", "z": "ec0e4d6e518769f5", "name": "", "property": "payload.sdcard_status.value", "action": "obj", "pretty": false, "x": 2430, "y": 820, "wires": [["7e15ecc00b2be966"]] },
     {
@@ -4798,62 +4798,13 @@
             { "p": "token_2", "pt": "global", "to": "XXXXXXTOKENXXXXXXXXXXX", "tot": "str" },
             { "p": "appid_2", "pt": "global", "to": "XXXXXXAPPIDXXXXXXXXXXX", "tot": "str" },
             { "p": "aqara_url_2", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
-            { "p": "subjectId_2", "pt": "global", "to": "lumi1.XXXXXXXXXXXX", "tot": "str" },
+            { "p": "subjectId_2", "pt": "global", "to": "lumi1.XXXXXXXXXXXX ", "tot": "str" },
             { "p": "country_2", "pt": "global", "to": "it-IT", "tot": "str" },
             { "p": "userid_2", "pt": "global", "to": "enter manual if not work autoconfig", "tot": "str" }
         ],
         "active": true,
         "x": 850,
         "y": 160,
-        "wires": []
-    },
-    {
-        "id": "a2d0fc7ac9272550",
-        "type": "debug",
-        "z": "ec0e4d6e518769f5",
-        "name": "debug 10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 800,
-        "y": 5180,
-        "wires": []
-    },
-    {
-        "id": "c311162e5a2e5205",
-        "type": "debug",
-        "z": "ec0e4d6e518769f5",
-        "name": "debug 11",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "true",
-        "targetType": "full",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1100,
-        "y": 2740,
-        "wires": []
-    },
-    {
-        "id": "2d40e82966aa7b54",
-        "type": "debug",
-        "z": "ec0e4d6e518769f5",
-        "name": "debug 12",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "false",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1120,
-        "y": 500,
         "wires": []
     },
     {
