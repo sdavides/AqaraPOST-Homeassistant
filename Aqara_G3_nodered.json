@@ -98,7 +98,7 @@
         ],
         "x": 1190,
         "y": 2800,
-        "wires": [["951c9f76e309b8c8"]]
+        "wires": [["52496090956e4c36"]]
     },
     {
         "id": "1d3deb91301ca9b9",
@@ -3855,8 +3855,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1510,
-        "y": 2680,
+        "x": 1410,
+        "y": 2720,
         "wires": [["d270d3c93f8315ab"]]
     },
     {
@@ -4757,22 +4757,6 @@
         "wires": [["ce3c7e4fb293668a"]]
     },
     {
-        "id": "951c9f76e309b8c8",
-        "type": "function",
-        "z": "b2d9bb3951202511",
-        "name": "catch array id [81] > json with name=id",
-        "func": "\nvar name0 = msg.payload.result.data[0].dataKey\nmsg.payload [name0] = msg.payload.result.data[0]\n\nvar name1 = msg.payload.result.data[1].dataKey\nmsg.payload [name1] = msg.payload.result.data[1]\n\nvar name2 = msg.payload.result.data[2].dataKey\nmsg.payload [name2] = msg.payload.result.data[2]\n\nvar name3 = msg.payload.result.data[3].dataKey\nmsg.payload [name3] = msg.payload.result.data[3]\n\nvar name4 = msg.payload.result.data[4].dataKey\nmsg.payload [name4] = msg.payload.result.data[4]\n\nvar name5 = msg.payload.result.data[5].dataKey\nmsg.payload [name5] = msg.payload.result.data[5]\n\nvar name6 = msg.payload.result.data[6].dataKey\nmsg.payload [name6] = msg.payload.result.data[6]\n\nvar name7 = msg.payload.result.data[7].dataKey\nmsg.payload [name7] = msg.payload.result.data[7]\n\nvar name8 = msg.payload.result.data[8].dataKey\nmsg.payload [name8] = msg.payload.result.data[8]\n\nvar name9 = msg.payload.result.data[9].dataKey\nmsg.payload [name9] = msg.payload.result.data[9]\n\nvar name10 = msg.payload.result.data[10].dataKey\nmsg.payload [name10] = msg.payload.result.data[10]\n\nvar name11 = msg.payload.result.data[11].dataKey\nmsg.payload [name11] = msg.payload.result.data[11]\n\nvar name12 = msg.payload.result.data[12].dataKey\nmsg.payload [name12] = msg.payload.result.data[12]\n\nvar name13 = msg.payload.result.data[13].dataKey\nmsg.payload [name13] = msg.payload.result.data[13]\n\nvar name14 = msg.payload.result.data[14].dataKey\nmsg.payload [name14] = msg.payload.result.data[14]\n\nvar name15 = msg.payload.result.data[15].dataKey\nmsg.payload [name15] = msg.payload.result.data[15]\n\nvar name16 = msg.payload.result.data[16].dataKey\nmsg.payload [name16] = msg.payload.result.data[16]\n\nvar name17 = msg.payload.result.data[17].dataKey\nmsg.payload [name17] = msg.payload.result.data[17]\n\nvar name18 = msg.payload.result.data[18].dataKey\nmsg.payload [name18] = msg.payload.result.data[18]\n\nvar name19 = msg.payload.result.data[19].dataKey\nmsg.payload [name19] = msg.payload.result.data[19]\n\nvar name20 = msg.payload.result.data[20].dataKey\nmsg.payload [name20] = msg.payload.result.data[20]\n\nvar name21 = msg.payload.result.data[21].dataKey\nmsg.payload [name21] = msg.payload.result.data[21]\n\nvar name22 = msg.payload.result.data[22].dataKey\nmsg.payload [name22] = msg.payload.result.data[22]\n\nvar name23 = msg.payload.result.data[23].dataKey\nmsg.payload [name23] = msg.payload.result.data[23]\n\nvar name24 = msg.payload.result.data[24].dataKey\nmsg.payload [name24] = msg.payload.result.data[24]\n\nvar name25 = msg.payload.result.data[25].dataKey\nmsg.payload [name25] = msg.payload.result.data[25]\n\nvar name26 = msg.payload.result.data[26].dataKey\nmsg.payload [name26] = msg.payload.result.data[26]\n\nvar name27 = msg.payload.result.data[27].dataKey\nmsg.payload [name27] = msg.payload.result.data[27]\n\nvar name28 = msg.payload.result.data[28].dataKey\nmsg.payload [name28] = msg.payload.result.data[28]\n\nvar name29 = msg.payload.result.data[29].dataKey\nmsg.payload [name29] = msg.payload.result.data[29]\n\nvar name30 = msg.payload.result.data[30].dataKey\nmsg.payload [name30] = msg.payload.result.data[30]\n\nvar name31 = msg.payload.result.data[31].dataKey\nmsg.payload [name31] = msg.payload.result.data[31]\n\nvar name32 = msg.payload.result.data[32].dataKey\nmsg.payload [name32] = msg.payload.result.data[32]\n\nvar name33 = msg.payload.result.data[33].dataKey\nmsg.payload [name33] = msg.payload.result.data[33]\n\nvar name34 = msg.payload.result.data[34].dataKey\nmsg.payload [name34] = msg.payload.result.data[34]\n\nvar name35 = msg.payload.result.data[35].dataKey\nmsg.payload [name35] = msg.payload.result.data[35]\n\nvar name36 = msg.payload.result.data[36].dataKey\nmsg.payload [name36] = msg.payload.result.data[36]\n\nvar name37 = msg.payload.result.data[37].dataKey\nmsg.payload [name37] = msg.payload.result.data[37]\n\nvar name38 = msg.payload.result.data[38].dataKey\nmsg.payload [name38] = msg.payload.result.data[38]\n\nvar name39 = msg.payload.result.data[39].dataKey\nmsg.payload [name39] = msg.payload.result.data[39]\n\nvar name40 = msg.payload.result.data[40].dataKey\nmsg.payload [name40] = msg.payload.result.data[40]\n\nvar name41 = msg.payload.result.data[41].dataKey\nmsg.payload [name41] = msg.payload.result.data[41]\n\nvar name42 = msg.payload.result.data[42].dataKey\nmsg.payload [name42] = msg.payload.result.data[42]\n\nvar name43 = msg.payload.result.data[43].dataKey\nmsg.payload [name43] = msg.payload.result.data[43]\n\nvar name44 = msg.payload.result.data[44].dataKey\nmsg.payload [name44] = msg.payload.result.data[44]\n\nvar name45 = msg.payload.result.data[45].dataKey\nmsg.payload [name45] = msg.payload.result.data[45]\n\nvar name46 = msg.payload.result.data[46].dataKey\nmsg.payload [name46] = msg.payload.result.data[46]\n\nvar name47 = msg.payload.result.data[47].dataKey\nmsg.payload [name47] = msg.payload.result.data[47]\n\nvar name48 = msg.payload.result.data[48].dataKey\nmsg.payload [name48] = msg.payload.result.data[48]\n\nvar name49 = msg.payload.result.data[49].dataKey\nmsg.payload [name49] = msg.payload.result.data[49]\n\nvar name50 = msg.payload.result.data[50].dataKey\nmsg.payload [name50] = msg.payload.result.data[50]\n\nvar name51 = msg.payload.result.data[51].dataKey\nmsg.payload [name51] = msg.payload.result.data[51]\n\nvar name52 = msg.payload.result.data[52].dataKey\nmsg.payload [name52] = msg.payload.result.data[52]\n\nvar name53 = msg.payload.result.data[53].dataKey\nmsg.payload [name53] = msg.payload.result.data[53]\n\nvar name54 = msg.payload.result.data[54].dataKey\nmsg.payload [name54] = msg.payload.result.data[54]\n\nvar name55 = msg.payload.result.data[55].dataKey\nmsg.payload [name55] = msg.payload.result.data[55]\n\nvar name56 = msg.payload.result.data[56].dataKey\nmsg.payload [name56] = msg.payload.result.data[56]\n\nvar name57 = msg.payload.result.data[57].dataKey\nmsg.payload [name57] = msg.payload.result.data[57]\n\nvar name58 = msg.payload.result.data[58].dataKey\nmsg.payload [name58] = msg.payload.result.data[58]\n\nvar name59 = msg.payload.result.data[59].dataKey\nmsg.payload [name59] = msg.payload.result.data[59]\n\nvar name60 = msg.payload.result.data[60].dataKey\nmsg.payload [name60] = msg.payload.result.data[60]\n\nvar name61 = msg.payload.result.data[61].dataKey\nmsg.payload [name61] = msg.payload.result.data[61]\n\nvar name62 = msg.payload.result.data[62].dataKey\nmsg.payload [name62] = msg.payload.result.data[62]\n\nvar name63 = msg.payload.result.data[63].dataKey\nmsg.payload [name63] = msg.payload.result.data[63]\n\nvar name64 = msg.payload.result.data[64].dataKey\nmsg.payload [name64] = msg.payload.result.data[64]\n\nvar name65 = msg.payload.result.data[65].dataKey\nmsg.payload [name65] = msg.payload.result.data[65]\n\nvar name66 = msg.payload.result.data[66].dataKey\nmsg.payload [name66] = msg.payload.result.data[66]\n\nvar name67 = msg.payload.result.data[67].dataKey\nmsg.payload [name67] = msg.payload.result.data[67]\n\nvar name68 = msg.payload.result.data[68].dataKey\nmsg.payload [name68] = msg.payload.result.data[68]\n\nvar name69 = msg.payload.result.data[69].dataKey\nmsg.payload [name69] = msg.payload.result.data[69]\n\nvar name60 = msg.payload.result.data[70].dataKey\nmsg.payload [name60] = msg.payload.result.data[70]\n\nvar name71 = msg.payload.result.data[71].dataKey\nmsg.payload [name71] = msg.payload.result.data[71]\n\nvar name72 = msg.payload.result.data[72].dataKey\nmsg.payload [name72] = msg.payload.result.data[72]\n\nvar name73 = msg.payload.result.data[73].dataKey\nmsg.payload [name73] = msg.payload.result.data[73]\n\nvar name74 = msg.payload.result.data[74].dataKey\nmsg.payload [name74] = msg.payload.result.data[74]\n\nvar name75 = msg.payload.result.data[75].dataKey\nmsg.payload [name75] = msg.payload.result.data[75]\n\nvar name76 = msg.payload.result.data[76].dataKey\nmsg.payload [name76] = msg.payload.result.data[76]\n\nvar name77 = msg.payload.result.data[77].dataKey\nmsg.payload [name77] = msg.payload.result.data[77]\n\nvar name78 = msg.payload.result.data[78].dataKey\nmsg.payload [name78] = msg.payload.result.data[78]\n\nvar name79 = msg.payload.result.data[79].dataKey\nmsg.payload [name79] = msg.payload.result.data[79]\n\nvar name80 = msg.payload.result.data[80].dataKey\nmsg.payload [name80] = msg.payload.result.data[80]\n\n\n    node.send(msg);\n\nreturn;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1230,
-        "y": 2620,
-        "wires": [["f625a616a23d9f9d"]]
-    },
-    {
         "id": "ce3c7e4fb293668a",
         "type": "function",
         "z": "b2d9bb3951202511",
@@ -4805,6 +4789,22 @@
         "x": 850,
         "y": 160,
         "wires": []
+    },
+    {
+        "id": "52496090956e4c36",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "catch array id > json with name=id",
+        "func": "const resultLength = msg.payload.result.data.length; \n\nfor (let i = 0; i < resultLength; i++) {\n    let attrName = msg.payload.result.data[i].dataKey;\n    let attrtime = msg.payload.result.data[i].time    \n    let attrValue = msg.payload.result.data[i].value;\n    msg.payload[attrName] = { dataKey : attrName,time : attrtime, value : attrValue };\n}\n\nnode.send(msg);\n\nreturn;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1100,
+        "y": 2720,
+        "wires": [["f625a616a23d9f9d"]]
     },
     {
         "id": "c7ab1b7d9b84a156",
