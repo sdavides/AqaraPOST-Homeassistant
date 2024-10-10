@@ -10,14 +10,27 @@ from Crypto.Cipher import PKCS1_v1_5
 from base64 import b64encode
 from requests_toolbelt.utils import dump
 
+import sys
+
+
 print ('\n #### Token Generator AqaraPost ####')
 print ('\n #### This is an automatic script to generate token for Node Red json HomeAssistant ####')
 print (' #### for the Aqara Account, read on https://github.com/sdavides/AqaraPOST-Homeassistant ####')
 print ('\n')
 print ('#### Request info login: #### \n')
+
 username = input("Enter your username: [example@example.com] \n")
 password = input("Enter your password: [password] \n")
 area = input("Enter your area: [EU],[CN],[RU],[USA],[KR],[OTHER]\n")
+
+
+if username == '' :
+        username = sys.argv[1]
+if password == '' :
+        password = sys.argv[2]
+if area == '' :
+        area = sys.argv[3]
+
 
 class pyAqara():
     areas = {
@@ -128,14 +141,14 @@ class pyAqara():
             self._userid = res['result']['userId']
             self._token = res['result']['token']
             print ('\n #### Account info: #### \n')
-            print ('\n Token:')
-            print (self._token)
-            print ('\n Server:')
-            print ((self.server).replace('https://',''))
-            print ('\n AppID:')
-            print (self.appid)
-            print ('\n UserID:')
-            print (self._userid)
+            print ('\n Token:' + ' ' + self._token )
+							   
+								
+            print ('\n Server:' + ' ' + (self.server).replace('https://','') )
+            print ('\n AppID:' + ' ' + self.appid )
+							  
+            print ('\n UserID:' + ' ' + self._userid )
+								
             return True
         return False
 
