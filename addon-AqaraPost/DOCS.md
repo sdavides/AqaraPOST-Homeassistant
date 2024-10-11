@@ -1,19 +1,18 @@
+# AqaraPost_[Node-RED] addon HomeAssistant
 
+  AqaraPost_[Node-RED] - NodeRed mod for AqaraPost-Homeassistant.
 
+  *Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera.*
 
-# Home Assistant Community Add-on: AqaraPost_[Node-RED]
+## Requires
+Node-Companion ( install from HACS )
+Username/Password Aqara Home app
+MAC address Camera G3
 
-
-AqaraPost_[Node-RED] - NodeRed mod for AqaraPost-Homeassistant.
-
-Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera
 
 ## Installation
 
-Install Node-Companion
-
-Insert username and password Aqara account app
-
-Verify values into "config" node
+Add custom component remote repository:
+"https://github.com/sdavides/AqaraPOST-Homeassistant/"
 
 
