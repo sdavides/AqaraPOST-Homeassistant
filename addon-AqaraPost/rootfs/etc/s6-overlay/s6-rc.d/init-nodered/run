@@ -1,0 +1,105 @@
+#!/command/with-contenv bashio
+# shellcheck shell=bash
+# ==============================================================================
+# Home Assistant Community Add-on: Node-RED
+# Configures Node-RED before running
+# ==============================================================================
+declare port
+
+
+
+if  bashio::fs.file_exists '/config/flows.json'; then
+    bashio::log.info "flows.json already exist"
+else
+	#Install python for token generator aqara
+	bashio::log.info "......."
+	bashio::log.info "Install python3/pycryptodome for token generator Aqara ..."
+	apk add python3 && apk add py3-pip && pip install requests && pip install pycryptodome && pip install requests-toolbelt  && bashio::log.info "Install python3/pycryptodome complete"|| bashio::log.info "install python3 error"
+	bashio::log.info "......."
+	
+	#AqaraPost
+	bashio::log.info "......."
+	bashio::log.info "Starting AqaraPost-Homeassistant download flow ..."
+	bashio::log.info "Download flow Aqara G3 Camera from GitHub"
+	rm -rf /config/* && bashio::log.info "/config/flows.json not found, clean all and reset flow" || bashio::log.info "......."
+	touch /etc/node-red/flows.json || bashio::log.info "...."
+	wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_G3_nodered.json --output-document=/etc/node-red/flows.json && bashio::log.info "Download AqaraPost json complete..." || bashio::log.info "Error download AqaraPost flow json"
+	bashio::log.info "......."
+	bashio::log.info "End AqaraPost-Homeassistant download flow ..."
+		
+	
+	bashio::log.info "......."
+	bashio::log.info "Starting AqaraPost-Homeassistant tokenGenerator ..."
+	wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-tokenGenerator.py --output-document=/tmp/AqaraPOST-tokenGenerator.py  && chmod +x /tmp/AqaraPOST-tokenGenerator.py && ( echo $(bashio::config 'usernameAqara') ; echo $(bashio::config 'passwordAqara'); echo $(bashio::config 'serverAqara') )  | /tmp/AqaraPOST-tokenGenerator.py > /tmp/AqaraPOST-tokenGenerator.json || bashio::log.info "error......."
+	cat /tmp/AqaraPOST-tokenGenerator.json | grep Token: | sed 's/Token://' > /tmp/AqaraPOST-tokenGenerator.token || bashio::log.info "error Token ......."
+	cat /tmp/AqaraPOST-tokenGenerator.json | grep AppID: | sed 's/AppID://' > /tmp/AqaraPOST-tokenGenerator.appid || bashio::log.info "error AppID ......."
+	cat /tmp/AqaraPOST-tokenGenerator.json | grep Server: | sed 's/Server://' > /tmp/AqaraPOST-tokenGenerator.server || bashio::log.info "error Server ......."
+	
+	
+	
+	bashio::log.info "Insert value ..."
+	wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-Homeassistant.sh --output-document=/tmp/AqaraPOST-Homeassistant.sh || bashio::log.info "error download AqaraPOST-Homeassistant.sh ......."
+	chmod +x /tmp/AqaraPOST-Homeassistant.sh || bashio::log.info "error AqaraPOST-Homeassistant.sh chmod ......."
+	( echo $(cat /tmp/AqaraPOST-tokenGenerator.token) ; echo $(bashio::config 'lumi1Aqara'); echo $(cat /tmp/AqaraPOST-tokenGenerator.appid) ; echo $(cat /tmp/AqaraPOST-tokenGenerator.server) ; echo $(bashio::config 'timezoneAqara') ) | /tmp/AqaraPOST-Homeassistant.sh|| bashio::log.info "error AqaraPOST-Homeassistant.sh ......."
+	dos2unix /tmp/Aqara_G3_nodered.json
+	mv /tmp/Aqara_G3_nodered.json /etc/node-red/flows.json &&  bashio::log.info "import flow with value OK! > /etc/node-red/flows.json = complete" ||  bashio::log.info "copy AqaraPost flow > /etc/node-red/flows.json = error"
+	bashio::log.info "End AqaraPost-Homeassistant json value ..." 
+	bashio::log.info "......."
+	bashio::log.info "......."
+	
+	
+fi
+
+
+
+# Migrate add-on data from the Home Assistant config folder,
+# to the add-on configuration folder.
+if ! bashio::fs.file_exists '/config/settings.js' \
+    && bashio::fs.file_exists '/homeassistant/node-red/settings.js'; then
+    shopt -s dotglob
+    mv /homeassistant/node-red/* /config/ \
+        || bashio::exit.nok "Failed to migrate Node-RED configuration"
+fi
+
+# Ensure configuration exists
+if ! bashio::fs.file_exists '/config/settings.js'; then
+    mkdir -p /config/nodes \
+        || bashio::exit.nok "Failed to create node-red configuration directory"
+
+    # Copy in template files
+    cp /etc/node-red/flows.json /config/
+    cp /etc/node-red/settings.js /config/
+
+    # Create random flow id
+    id=$(node -e "console.log((1+Math.random()*4294967295).toString(16));")
+    sed -i "s/%%ID%%/${id}/" "/config/flows.json"
+fi
+
+# Pass in port & SSL settings
+port=$(bashio::addon.port 80)
+sed -i "s/%%PORT%%/${port:-80}/" "/opt/node_modules/node-red-dashboard/nodes/ui_base.html"
+if ! bashio::var.has_value "${port}"; then
+    bashio::log.warning
+    bashio::log.warning "Direct access mode is disabled, Node-RED Dashboard"
+    bashio::log.warning "will not work!"
+    bashio::log.warning
+    bashio::log.warning "Please assign a port in the Network section of this"
+    bashio::log.warning "add-on configuration."
+    bashio::log.warning
+fi
+
+if bashio::config.true 'ssl'; then
+    sed -i "s/%%SSL%%/true/" "/opt/node_modules/node-red-dashboard/nodes/ui_base.html"
+else
+    sed -i "s/%%SSL%%/false/" "/opt/node_modules/node-red-dashboard/nodes/ui_base.html"
+fi
+
+# Ensures conflicting Node-RED packages are absent
+cd /config || bashio::exit.nok "Could not change directory to Node-RED"
+if bashio::fs.file_exists "/config/package.json"; then
+    npm uninstall \
+        node-red-contrib-home-assistant \
+        node-red-contrib-home-assistant-llat \
+        node-red-contrib-home-assistant-ws \
+            || bashio::log.warning "Failed un-installing conflicting packages"
+fi
