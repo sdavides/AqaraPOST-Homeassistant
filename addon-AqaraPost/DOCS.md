@@ -6,7 +6,9 @@
 
 ## Requires
 Node-Companion ( install from HACS )
+
 Username/Password Aqara Home app
+
 MAC address Camera G3
 
 
