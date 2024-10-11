@@ -5,7 +5,7 @@
   *Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera.*
 
 ## Requires
-Node-Companion ( install from HACS )
+NodeRed-Companion ( install from HACS )
 
 Username/Password Aqara Home app
 
