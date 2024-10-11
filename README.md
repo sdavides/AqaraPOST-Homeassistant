@@ -1,3 +1,20 @@
+----
+----
+
+#  AqaraPOST-Homeassistant addon #
+
+![images](https://github.com/user-attachments/assets/5a658414-ff3d-4546-a655-fbd2f124e968)
+
+Add-on HomeAssistant with automatic config script!!
+
+   * only Username/Password Aqara required
+
+     * [Add-on](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
+  
+----
+
+----
+
 #  AqaraPOST-Homeassistant #
 
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
