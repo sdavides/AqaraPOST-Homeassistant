@@ -9,7 +9,7 @@ Add-on HomeAssistant with automatic config script!!
 
    * only Username/Password Aqara required
 
-     * [Add-on](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
+     * [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
   
 ----
 
