@@ -16,7 +16,7 @@ arch:
   - amd64
   - armv7
 ports:
-  80/tcp: 1880
+  80/tcp: 1881
 ports_description:
   80/tcp: Web interface
 hassio_api: true
