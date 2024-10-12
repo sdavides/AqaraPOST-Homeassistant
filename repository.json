@@ -2,6 +2,5 @@
   "name": "AqaraPost_[NodeRed]",
   "udev": true,
   "url": "https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost",
-  "exclude": "generatejson",
   "maintainer": "sdavides"
 }
