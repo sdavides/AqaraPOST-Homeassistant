@@ -15,7 +15,7 @@ MAC address Camera G3
 ## Installation
 
 Add custom component remote repository:
-"https://github.com/sdavides/AqaraPOST-Homeassistant/"
+"https://github.com/sdavides/AqaraPOST-Homeassistant"
 
 
    ![immagine](https://github.com/user-attachments/assets/1f100850-d7db-40ca-a036-97254154b408)
