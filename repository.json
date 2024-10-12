@@ -3,5 +3,4 @@
   "udev": true,
   "url": "https://github.com/sdavides/AqaraPOST-Homeassistant/",
   "maintainer": "sdavides"
-  "exclude": "/apk"
 }
