@@ -2,5 +2,16 @@
   "name": "AqaraPost_[NodeRed]",
   "udev": true,
   "url": "https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost",
+      "exclude": [
+        "apk",
+        "generatejson",
+        "manual update firmware G3",
+        "ZAP Guide.pdf",
+        "Burp Suite Guide.pdf",
+        "README.md",
+        "Aqara_G3_nodered.json",
+        "Aqara_G3_nodered_2device.json",
+        "Aqara_G3_without_nodered.txt"
+      ]
   "maintainer": "sdavides"
 }
