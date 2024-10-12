@@ -43,6 +43,7 @@ else
 	( echo $(cat /tmp/AqaraPOST-tokenGenerator.token) ; echo $(bashio::config 'lumi1Aqara'); echo $(cat /tmp/AqaraPOST-tokenGenerator.appid) ; echo $(cat /tmp/AqaraPOST-tokenGenerator.server) ; echo $(bashio::config 'timezoneAqara') ) | /tmp/AqaraPOST-Homeassistant.sh|| bashio::log.info "error AqaraPOST-Homeassistant.sh ......."
 	dos2unix /tmp/Aqara_G3_nodered.json
 	mv /tmp/Aqara_G3_nodered.json /etc/node-red/flows.json &&  bashio::log.info "import flow with value OK! > /etc/node-red/flows.json = complete" ||  bashio::log.info "copy AqaraPost flow > /etc/node-red/flows.json = error"
+        rm -rf /tmp/AqaraPOST*
 	bashio::log.info "End AqaraPost-Homeassistant json value ..." 
 	bashio::log.info "......."
 	bashio::log.info "......."
