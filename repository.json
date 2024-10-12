@@ -2,6 +2,6 @@
   "name": "AqaraPost_[NodeRed]",
   "udev": true,
   "url": "https://github.com/sdavides/AqaraPOST-Homeassistant",
-   "exclude": "generatejson",
+  "exclude": "generatejson",
   "maintainer": "sdavides"
 }
