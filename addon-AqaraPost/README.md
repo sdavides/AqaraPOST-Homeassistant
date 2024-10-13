@@ -30,7 +30,7 @@ Add custom component remote repository:
 
   * Delete "flow.json"
     
-    * ( usually into "/addon_configs/797fde71_nodered/" from SAMBA )
+    * ( usually into "/addon_configs/797fde71_nodered_aqara/" from SAMBA )
 
   * Update config
 
