@@ -16,9 +16,9 @@ arch:
   - amd64
   - armv7
 ports:
-  80/tcp: 1881
+  80/tcp: 
 ports_description:
-  80/tcp: Web interface
+  80/tcp: Web interface Nginx external port
 hassio_api: true
 hassio_role: manager
 homeassistant_api: true
