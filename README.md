@@ -140,7 +140,7 @@ for a successful update of the existing flow without changing the entities in Ho
   		![4](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f26c6a0c-6b96-4c41-b0ce-50332f542e87)
 
 ---
-
+  ----  (04/11/2024) before ver. 4.1.9_0026.0013   ----
 * Live video:
    * hack G3 (delete authentication rtsp):
      * Manual downgrade firmware [3.3.4](https://github.com/niceboygithub/AqaraCameraHubfw/blob/main/stock/G3) (post_init.sh enable)
