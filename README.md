@@ -177,12 +177,14 @@ for a successful update of the existing flow without changing the entities in Ho
 
 [AqaraG3-armv7-binary](https://github.com/sdavides/AqaraG3-armv7-binary) AqaraG3 extra command
 
+[AqaraCameraHubfw](https://github.com/niceboygithub/AqaraCameraHubfw) HACK 
+
+[m3u8-HLS-Homeassistant](https://github.com/sdavides/m3u8-HLS-Homeassistant) Player m3u,mpd,mp4 playlist
+
+[NginxReverse-Homeassistant](https://github.com/sdavides/NginxReverse-Homeassistant) ReverseProxy on HA
+
 [go2rtc](https://github.com/AlexxIT/go2rtc) RTSP Proxy (HomeKit supported)
      
 [WebRTC](https://github.com/AlexxIT/WebRTC) Card RTSP 
-
-[AqaraCameraHubfw](https://github.com/niceboygithub/AqaraCameraHubfw) HACK 
-
-[m3u8-HLS-Homeassistant](https://github.com/sdavides/m3u8-HLS-Homeassistant)
 
 [EPGItaly-Homeassistant](https://github.com/sdavides/EPGItaly-Homeassistant)
