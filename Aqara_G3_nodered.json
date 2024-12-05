@@ -4761,7 +4761,7 @@
         "type": "function",
         "z": "b2d9bb3951202511",
         "name": "Fix alarm_bell - sdcard not found",
-        "func": "if (msg.payload.alarm_bell_index === undefined ) {\n    msg.payload.alarm_bell_index = '0';\n} \nif (msg.payload.alarm_bell_volume === undefined ) {\n    msg.payload.alarm_bell_volume = '0';\n} \nif (msg.payload.sdcard_status === undefined ) {\n    msg.payload.sdcard_status = '0';\n} \n\nreturn msg;",
+        "func": "if (msg.payload.alarm_bell_index === undefined ) {\n    msg.payload.alarm_bell_index = '0';\n} \nif (msg.payload.alarm_bell_volume === undefined ) {\n    msg.payload.alarm_bell_volume = '0';\n} \nif (msg.payload.sdcard_status === undefined ) {\n    msg.payload.sdcard_status = '0';\n} \nif (msg.payload.mdtrigger_enable === undefined ) {\n    msg.payload.mdtrigger_enable = '0';\n} \nif (msg.payload.soundtrigger_enable === undefined ) {\n    msg.payload.soundtrigger_enable = '0';\n} \nif (msg.payload.cloud_small_video === undefined ) {\n    msg.payload.cloud_small_video = '0';\n}  \nif (msg.payload.alarm_status === undefined ) {\n    msg.payload.alarm_status = '0';\n} \nif (msg.payload.device_night_tip_light === undefined ) {\n    msg.payload.device_night_tip_light = '0';\n} \n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
