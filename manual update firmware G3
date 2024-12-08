@@ -1,13 +1,5 @@
 Offline Update firmware g3 lumi.camera.gwpgl1
 
-2024/04/01
-https://cdn.aqara.com/cdn/opencloud-product/mainland/product-firmware/prd/lumi.camera.gwpgl1/20240401115539_lumi.camera.gwpgl1_model_2.1.1.bin
-2024/03/29
-https://cdn.aqara.com/cdn/opencloud-product/mainland/product-firmware/prd/lumi.camera.gwpgl1/20240329142209_lumi.camera.gwpgl1_AIOT_V4.1.0_0011.0008_20240327_919d11.bin
-2024/02/26
-https://cdn.aqara.com/cdn/opencloud-product/mainland/product-firmware/prd/lumi.camera.gwpgl1/20240226101707_lumi.camera.gwpgl1_AIOT_V4.1.0_0005.0008_20240222_2689da.bin
-
-
 1. Unzip (use 7z to extract the firmware bin)
 2. Copy 'rootfs.bin' 'linux.bin' 'ControlBridge.bin' to sdcard which is using FAT32 format.
 3. Power Off G3.
