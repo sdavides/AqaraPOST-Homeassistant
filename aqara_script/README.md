@@ -20,5 +20,18 @@ configuration.yaml
       aqara_g3_telnet_json: /config/aqara_script/getprop_aqara.sh
       aqara_g3_rtsp_json: /config/aqara_script/rtsp_aqara.sh
 
+
+    command_line:
+      - sensor:
+          name: aqara_rtsp
+          command: "/config/aqara_script/rtsp_aqara.sh"
+          value_template: "{{ value_json['720p'] }}"
+          json_attributes:
+            - 360p
+            - 720p
+            - 1080p
+            - 1296p
+
+
 ## Requirement ##
 telnet enable on G3 cam
