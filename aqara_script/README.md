@@ -1,7 +1,7 @@
 ## Aqara G3 script ##
 * Download folder "aqara_script" on "/config" :
-  * run shell command on HA
   * change IP cam 192.168.x.x (telnet)
+  * run shell command on HA
     
     result:
 
