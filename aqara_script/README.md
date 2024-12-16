@@ -24,7 +24,7 @@ configuration.yaml
     command_line:
       - sensor:
           name: aqara_rtsp
-          command: "/config/aqara_script/rtsp_aqara.sh"
+          command: "cat /config/aqara_script/rtsp_aqara.js"
           value_template: "{{ value_json['720p'] }}"
           json_attributes:
             - 360p
