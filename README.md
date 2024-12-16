@@ -188,8 +188,8 @@ for a successful update of the existing flow without changing the entities in Ho
 command_line:
   - sensor:
       name: aqara_test
-      command: "apk -q add inetutils-telnet && ( sleep 3; printf 'root\n'; sleep 1; printf 'clear\n'; sleep 1; printf 'date\n'; sleep 1; ) | telnet 192.168.1.4 | sed '1,8d'"
-      value_template: "{{ value | replace ('#','') | replace ('~','')  }}"
+      command: "apk -q add inetutils-telnet && ( sleep 3; printf 'root\n'; sleep 1; printf 'clear\n'; sleep 1; printf 'date\n'; sleep 1; ) | telnet 192.168.1.4 | sed '1,8d' | sed '$d'"
+      value_template: "{{ value }}"
 ```
 
  ![immagine](https://github.com/user-attachments/assets/1712abb3-1867-47ff-b352-063665389d68)
