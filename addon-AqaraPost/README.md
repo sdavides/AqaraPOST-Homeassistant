@@ -5,11 +5,11 @@
   *Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera.*
 
 ## Requires
-NodeRed-Companion ( install from HACS )
+NodeRed-Companion *( install from HACS )*
 
-Username/Password Aqara Home app
+Username/Password Aqara account
 
-MAC address Camera G3
+MAC address Camera G3 *( lumi1-XXXXXX )*
 
 
 ## Installation
@@ -41,4 +41,7 @@ Add custom component remote repository:
   * Verify value into "config" node
     
     ![immagine](https://github.com/user-attachments/assets/ab2c21f0-0a85-4398-9d29-bfe4e29df13c)
+
+    ![immagine](https://github.com/user-attachments/assets/c48aaefd-cd6c-45d9-b927-bd6129b839af)
+
 
