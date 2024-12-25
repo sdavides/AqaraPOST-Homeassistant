@@ -24,10 +24,4 @@ card_mod:
       0)!important;}  ha-markdown.no-header   { padding-top: 5px !important;}
       ha-markdown   { padding: 0px 0px 0px !important; }  ha-card  {
       border-radius: 10px 10px 0px 0px ; border-width: 1px; border-color:
-      black;   {% set
-      state=states('binary_sensor.camera_hub_g3_120c_motion_sensor') %} {% set
-      state2=states('binary_sensor.ip_camera_cell_motion_detection') %}  {% set
-      state3=states('binary_sensor.porta') %} {% if state=='on'  %}   
-      border-width: 2px; border-color: orange; {% elif state2=='on' %}   
-      border-width: 2px; border-color: orange; {% elif state3=='on' %}   
-      border-width: 2px; border-color: orange;   {% else %}  {% endif %} }
+      black;  
