@@ -23,5 +23,5 @@ card_mod:
       .ptz-move   {margin-top: 60px; background-color: rgba(0, 0, 0,
       0)!important;}  ha-markdown.no-header   { padding-top: 5px !important;}
       ha-markdown   { padding: 0px 0px 0px !important; }  ha-card  {
-      border-radius: 10px 10px 0px 0px ; border-width: 1px; border-color:
+      border-radius: 5px 5px 5px 5px ; border-width: 1px; border-color:
       black;  
