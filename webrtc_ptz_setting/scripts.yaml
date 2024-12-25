@@ -1,0 +1,37 @@
+left_camera_aqara:
+  alias: left_camera_aqara
+  sequence:
+    service: button.press
+    data: {}
+    target:
+      entity_id: button.camera_g3_ptz_left
+  mode: single
+right_camera_aqara:
+  alias: right_camera_aqara
+  sequence:
+    service: button.press
+    data: {}
+    target:
+      entity_id: button.camera_g3_ptz_right
+  mode: single
+up_camera_aqara:
+  alias: up_camera_aqara
+  sequence:
+    service: button.press
+    data: {}
+    target:
+      entity_id: button.camera_g3_ptz_up
+  mode: single
+down_camera_aqara:
+  alias: down_camera_aqara
+  sequence:
+    service: button.press
+    data: {}
+    target:
+      entity_id: button.camera_g3_ptz_down
+  mode: single
+aqara_ptz_cam:
+  sequence:
+  - service: '{% if direction == "left" %} script.left_camera_aqara {% elif direction
+      == "right" %} script.right_camera_aqara {% elif direction == "up" %} script.up_camera_aqara
+      {% elif direction == "down" %} script.down_camera_aqara {% endif %}'
