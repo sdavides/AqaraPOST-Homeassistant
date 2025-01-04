@@ -4,6 +4,8 @@
 
   *Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera.*
 
+05/01/2025 🚨 Drop support for ARMv7 ([#2016](https://github.com/hassio-addons/addon-node-red/pull/2016))
+
 ## Requires
 NodeRed-Companion *( install from HACS )*
 
