@@ -17,6 +17,7 @@ MAC address Camera G3 *( lumi1.XXXXXX )*
 ## Installation
 
 Add custom component remote repository:
+
 "https://github.com/sdavides/AqaraPOST-Homeassistant"
 
 
@@ -30,7 +31,7 @@ Add custom component remote repository:
 
 ## Update/Apply new config
 
-  * Delete "flow.json"
+  * Delete file "flow.json"
     
     * ( usually into "/addon_configs/797fde71_nodered_aqara/" from SAMBA )
 
