@@ -29,8 +29,8 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
   * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-ADDRESS*
   * aqara url ( rpc-ger.aqara.com ) *host*
     * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
-  * timezone ( it-IT ) -> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...
-  * userid ( automatic, enter manual if not work )
+  * timezone ( it-IT ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
+  * userid *( automatic, enter manual if not work )*
 	
 ## Method ##
 * Method 1 NodeRed (recommended, required NodeCompanion):
@@ -75,7 +75,7 @@ You can delete AqaraHome_mod app it without logging out, otherwise the token val
 AqaraHome apk mod includes acceptance of the user-installed certificate, (to see the http requests in burp).
 
 
-## Install OK ##
+## Install ##
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/a7c093f9-c383-451d-b452-828d5d4b03af)
 
 ![319800579-a36eb9e9-8a0c-480c-82db-3def3f8d51a9](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/2ea10616-0af3-4a10-84f7-d5cebd9b0435)
@@ -147,7 +147,7 @@ for a successful update of the existing flow without changing the entities in Ho
      * Manual update firmware [3.3.9](https://github.com/niceboygithub/AqaraCameraHubfw/blob/main/stock/G3) (post_init.sh enable)
      * Update last firmware from command [custom firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3#flash-g3-custom-firmware-method)
          * hack done! (post_init.sh enable)
-     * *vi /data/scripts/post_init.sh* *( from telnet )*
+     * Add *vi /data/scripts/post_init.sh* *( from telnet )*
         ```
 		killall -9 rtsp && rtsp >/dev/null 2>&1 &
 		```
