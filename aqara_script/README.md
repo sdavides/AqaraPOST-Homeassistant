@@ -8,15 +8,15 @@ telnet enable on G3 cam
   * change IP cam 192.168.x.x (telnet)
   * run shell command on HA
     
-    result:
-
-       /config/aqara_script/getprop_aqara.js
-    
-      * full properties
-
-       /config/aqara_script/rtsp_aqara.js
-    
-       * rtsp url with password
+  result json:
+   * full properties
+    ```
+     /config/aqara_script/getprop_aqara.js
+    ```
+   * rtsp url with password
+    ```
+     /config/aqara_script/rtsp_aqara.js
+    ```
 
 configuration.yaml:
 
