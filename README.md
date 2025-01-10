@@ -147,7 +147,7 @@ for a successful update of the existing flow without changing the entities in Ho
      * Manual update firmware [3.3.9](https://github.com/niceboygithub/AqaraCameraHubfw/blob/main/stock/G3) (post_init.sh enable)
      * Update last firmware from command [custom firmware](https://github.com/niceboygithub/AqaraCameraHubfw/tree/main/modified/G3#flash-g3-custom-firmware-method)
          * hack done! (post_init.sh enable)
-     * Add /data/scripts/post_init.sh from telnet
+     * *vi /data/scripts/post_init.sh* *( from telnet )*
         ```
 		killall -9 rtsp && rtsp >/dev/null 2>&1 &
 		```
