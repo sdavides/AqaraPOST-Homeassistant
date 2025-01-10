@@ -2,7 +2,7 @@
 name: AqaraPost_[Node-RED]
 version: dev
 slug: nodered_aqara
-description: AqaraPost_[Node-RED] - NodeRed mod for AqaraPost-Homeassistant
+description: NodeRed mod for AqaraPost-Homeassistant
 url: https://github.com/sdavides/AqaraPOST-Homeassistant
 codenotary: codenotary@frenck.dev
 ingress: true
