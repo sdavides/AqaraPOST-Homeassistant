@@ -1,7 +1,7 @@
 #  
 #    [aqara_url available]
 #
-# "aiot-rpc.ankasa.cn" code: CN
+# "aiot-rpc.aqara.cn" code: CN   ##  or .ankasa.cn 
 # "aiot-rpc-usa.aqara.com" code: US HMT OTHER
 # "rpc-ger.aqara.com" code: EU AF
 # "rpc-ru.aqara.com" code: RU
