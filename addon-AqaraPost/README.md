@@ -11,7 +11,7 @@ NodeRed-Companion *( install from HACS )*
 
 Username/Password Aqara account
 
-MAC address Camera G3 *( lumi1-XXXXXX )*
+MAC address Camera G3 *( lumi1.XXXXXX )*
 
 
 ## Installation
