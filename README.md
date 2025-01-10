@@ -19,7 +19,7 @@ Add-on HomeAssistant with automatic config scripts!!
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
   * note: 
-	* this flow is example and was developed for Aqara Hub G3 camera
+	* this flow is example and was developed for Aqara Hub G3 camera *( lumi1.xxxx )*
   		* for Aquara FP2 see [Darafei Praliaskouski page](https://www.patreon.com/posts/connecting-fp2-107200167)
 
 ## Requirement ##
@@ -50,13 +50,13 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 	* Restart HomeAssistant
    
 ## Find your Value ##
-* Python script:
+* Method 1 Python script:
 
 	from [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)'s python script
 	you can find your values ​​from your username and password Aqara account
 	 * [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/generatejson#generate-token-from-username-and-password)
 
-* Use BurpSuite or ZAP or similar:
+* Method 2 Use BurpSuite or ZAP or similar:
 	* Follow [BurpSuite Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf)
  	* Follow [ZAP Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/ZAP%20Guide.pdf)
          * [free dowload](https://www.zaproxy.org/download)
