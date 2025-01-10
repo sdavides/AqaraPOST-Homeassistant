@@ -21,7 +21,7 @@ print ('#### Request info login: #### \n')
 
 username = input("Enter your username: [example@example.com] \n")
 password = input("Enter your password: [password] \n")
-area = input("Enter your area: [EU],[CN],[RU],[USA],[KR],[OTHER]\n")
+area = input("Enter your area: [EU],[CN],[US],[HMT],[OTHER],[AF],[RU],[AU],[ME],[KR],[JP]\n")
 
 
 if username == '' :
