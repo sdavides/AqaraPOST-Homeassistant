@@ -73,22 +73,22 @@ class pyAqara():
             "server" : "https://aiot-rpc-usa.aqara.com",
             "appid": "444c476ef7135e53330f46e7",
             "appkey": "NULL"
-        }
+        },
         "US": {
             "server" : "https://aiot-rpc-usa.aqara.com",
             "appid": "444c476ef7135e53330f46e7",
             "appkey": "NULL"
-        }
+        },
         "HMT": {
             "server" : "https://aiot-rpc-usa.aqara.com",
             "appid": "444c476ef7135e53330f46e7",
             "appkey": "NULL"
-        }
+        },
         "AU": {
             "server" : "https://rpc-au.aqara.com",
             "appid": "444c476ef7135e53330f46e7",
             "appkey": "NULL"
-        }
+        },
         "ME": {
             "server" : "https://rpc-au.aqara.com",
             "appid": "444c476ef7135e53330f46e7",
