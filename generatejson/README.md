@@ -16,8 +16,7 @@ wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/
 
 #### Generate token from username and password ####
 
-from [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)'s python script
-you can find your values ​​from your username and password Aqara account
+thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)
 
 #### command for generate token: ####
   * requirement: 
