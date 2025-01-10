@@ -1,4 +1,9 @@
-## Aqara G3 script ##
+# Aqara G3 script #
+
+## Requirement ##
+telnet enable on G3 cam
+
+## Install ##
 * Download folder "aqara_script" on "/config" :
   * change IP cam 192.168.x.x (telnet)
   * run shell command on HA
@@ -13,7 +18,7 @@
     
        * rtsp url with password
 
-configuration.yaml
+configuration.yaml:
 
     shell_command:
       recording_cam_aqara_on: /config/aqara_script/recording_cam_aqara_on.sh
@@ -32,6 +37,3 @@ configuration.yaml
             - 720p
             - 1080p
             - 1296p
-
-## Requirement ##
-telnet enable on G3 cam
