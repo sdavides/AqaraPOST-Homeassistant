@@ -168,8 +168,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1810,
-        "y": 5300,
+        "x": 1830,
+        "y": 5960,
         "wires": [[]]
     },
     {
@@ -182,8 +182,8 @@
         "outputs": 1,
         "entityConfig": "f06687f218d98283",
         "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
-        "x": 520,
-        "y": 5340,
+        "x": 540,
+        "y": 6000,
         "wires": [["9f23eebe3933b526"]]
     },
     {
@@ -197,8 +197,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 810,
-        "y": 5580,
+        "x": 830,
+        "y": 6240,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -220,8 +220,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1550,
-        "y": 5800,
+        "x": 1570,
+        "y": 6460,
         "wires": [[]]
     },
     {
@@ -234,8 +234,8 @@
         "outputs": 1,
         "entityConfig": "b701ed2f018edd62",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 510,
-        "y": 5620,
+        "x": 530,
+        "y": 6280,
         "wires": [["f58a7ca944245e68", "e0f8047eb9325394"]]
     },
     {
@@ -249,8 +249,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 5660,
+        "x": 770,
+        "y": 6320,
         "wires": [["fcdf1fa82d36e243"]]
     },
     {
@@ -270,8 +270,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 910,
-        "y": 5660,
+        "x": 930,
+        "y": 6320,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -285,8 +285,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 5720,
+        "x": 790,
+        "y": 6380,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -300,8 +300,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 5780,
+        "x": 770,
+        "y": 6440,
         "wires": [["a0384f014ba10f81"]]
     },
     {
@@ -321,8 +321,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 930,
-        "y": 5780,
+        "x": 950,
+        "y": 6440,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -335,8 +335,8 @@
         "outputs": 1,
         "entityConfig": "70aa54156c09f0e6",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 520,
-        "y": 5740,
+        "x": 540,
+        "y": 6400,
         "wires": [["6f3a8aee1d61de7d", "c26de3bf3c30d2c9"]]
     },
     {
@@ -350,8 +350,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 5860,
+        "x": 790,
+        "y": 6520,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -366,8 +366,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 5920,
+        "x": 770,
+        "y": 6580,
         "wires": [["11c5d09aa9151e10"]]
     },
     {
@@ -387,8 +387,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 930,
-        "y": 5900,
+        "x": 950,
+        "y": 6560,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -401,8 +401,8 @@
         "outputs": 1,
         "entityConfig": "5442975eabeb27d2",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 510,
-        "y": 5880,
+        "x": 530,
+        "y": 6540,
         "wires": [["2c209630912e36a8", "137cea89f1976018"]]
     },
     {
@@ -416,8 +416,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 6000,
+        "x": 790,
+        "y": 6660,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -431,8 +431,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 750,
-        "y": 6040,
+        "x": 770,
+        "y": 6700,
         "wires": [["9af2ddbd1dacfad0"]]
     },
     {
@@ -452,8 +452,8 @@
         "drop": false,
         "allowrate": false,
         "outputs": 1,
-        "x": 970,
-        "y": 6020,
+        "x": 990,
+        "y": 6680,
         "wires": [["6888bdcaca822b60"]]
     },
     {
@@ -466,8 +466,8 @@
         "outputs": 1,
         "entityConfig": "358e648e3998b2a4",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 520,
-        "y": 6000,
+        "x": 540,
+        "y": 6660,
         "wires": [["d16a276747011a50", "9fdd08fedb401809"]]
     },
     {
@@ -1210,7 +1210,7 @@
         "libs": [],
         "x": 1760,
         "y": 2880,
-        "wires": [["8e7fe1f9d8a691ac"]]
+        "wires": [["e41391cae948a409"]]
     },
     {
         "id": "8e7fe1f9d8a691ac",
@@ -1224,8 +1224,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2030,
-        "y": 2800,
+        "x": 2010,
+        "y": 2840,
         "wires": [["8de5e31b6bf244ee"]]
     },
     {
@@ -1257,7 +1257,7 @@
         "finalize": "",
         "libs": [],
         "x": 2030,
-        "y": 2840,
+        "y": 2880,
         "wires": [["739f243ee5f8497b"]]
     },
     {
@@ -1273,8 +1273,8 @@
         "finalize": "",
         "libs": [],
         "x": 2030,
-        "y": 2880,
-        "wires": [["0ca6b803ada10b30"]]
+        "y": 2920,
+        "wires": [["57d3c1ceb0772884"]]
     },
     {
         "id": "cea7d2527871263b",
@@ -1929,8 +1929,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1290,
-        "y": 5020,
+        "x": 1310,
+        "y": 5680,
         "wires": [["66bd92d1b4b334b4"]]
     },
     {
@@ -1953,8 +1953,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1610,
-        "y": 5020,
+        "x": 1630,
+        "y": 5680,
         "wires": [[]]
     },
     {
@@ -1967,11 +1967,11 @@
         "outputs": 1,
         "entityConfig": "dd4077143e565cbe",
         "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
-        "x": 520,
-        "y": 5040,
+        "x": 540,
+        "y": 5700,
         "wires": [["cf5e84f9efdce718"]]
     },
-    { "id": "3f7ab0d1969b6d4e", "type": "comment", "z": "b2d9bb3951202511", "name": "Delete/Add Face", "info": "Delete/Add Face", "x": 1580, "y": 4980, "wires": [] },
+    { "id": "3f7ab0d1969b6d4e", "type": "comment", "z": "b2d9bb3951202511", "name": "Delete/Add Face", "info": "Delete/Add Face", "x": 1600, "y": 5640, "wires": [] },
     {
         "id": "293915894369c6d4",
         "type": "function",
@@ -1984,8 +1984,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 4960,
+        "x": 810,
+        "y": 5620,
         "wires": [["4826f7d8b715ad7d"]]
     },
     {
@@ -1999,8 +1999,8 @@
         "once": true,
         "onceDelay": "40",
         "topic": "",
-        "x": 510,
-        "y": 4980,
+        "x": 530,
+        "y": 5640,
         "wires": [["cf5e84f9efdce718"]]
     },
     {
@@ -2015,8 +2015,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 5040,
+        "x": 790,
+        "y": 5700,
         "wires": [["293915894369c6d4"]]
     },
     {
@@ -2058,8 +2058,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 2580,
-        "y": 5800,
+        "x": 2600,
+        "y": 6460,
         "wires": [[]]
     },
     {
@@ -2072,8 +2072,8 @@
         "outputs": 1,
         "entityConfig": "5a7499966593d12c",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 1990,
-        "y": 5680,
+        "x": 2010,
+        "y": 6340,
         "wires": [["f9e88f1a447b9921"]]
     },
     {
@@ -2088,8 +2088,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2240,
-        "y": 5680,
+        "x": 2260,
+        "y": 6340,
         "wires": [["3e8d05d68cfdb785"]]
     },
     {
@@ -2102,8 +2102,8 @@
         "outputs": 1,
         "entityConfig": "f4c623b28c9d06ef",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2000,
-        "y": 5740,
+        "x": 2020,
+        "y": 6400,
         "wires": [["3229db987ff1defb"]]
     },
     {
@@ -2116,8 +2116,8 @@
         "outputs": 1,
         "entityConfig": "fa43a635a96a9ca9",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2000,
-        "y": 5800,
+        "x": 2020,
+        "y": 6460,
         "wires": [["161dc7026969ab55"]]
     },
     {
@@ -2130,8 +2130,8 @@
         "outputs": 1,
         "entityConfig": "af31515f6d84fa05",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 2000,
-        "y": 5860,
+        "x": 2020,
+        "y": 6520,
         "wires": [["c5d171b45b2981be"]]
     },
     {
@@ -2144,8 +2144,8 @@
         "outputs": 1,
         "entityConfig": "9ec51de383db5e90",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 1990,
-        "y": 5920,
+        "x": 2010,
+        "y": 6580,
         "wires": [["16634f1f9df9cc00"]]
     },
     {
@@ -2160,8 +2160,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2240,
-        "y": 5740,
+        "x": 2260,
+        "y": 6400,
         "wires": [["3e8d05d68cfdb785"]]
     },
     {
@@ -2176,8 +2176,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2240,
-        "y": 5800,
+        "x": 2260,
+        "y": 6460,
         "wires": [["3e8d05d68cfdb785"]]
     },
     {
@@ -2192,8 +2192,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2240,
-        "y": 5860,
+        "x": 2260,
+        "y": 6520,
         "wires": [["3e8d05d68cfdb785"]]
     },
     {
@@ -2208,8 +2208,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2240,
-        "y": 5920,
+        "x": 2260,
+        "y": 6580,
         "wires": [["3e8d05d68cfdb785"]]
     },
     {
@@ -2256,8 +2256,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1310,
-        "y": 5800,
+        "x": 1330,
+        "y": 6460,
         "wires": [["cb9807be3d714df0"]]
     },
     {
@@ -3219,8 +3219,8 @@
         "once": true,
         "onceDelay": "50",
         "topic": "",
-        "x": 510,
-        "y": 5260,
+        "x": 530,
+        "y": 5920,
         "wires": [["9f23eebe3933b526"]]
     },
     { "id": "d71f2a739ca90233", "type": "json", "z": "b2d9bb3951202511", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1420, "y": 2160, "wires": [["32e864e5b4cb4cb2"]] },
@@ -3243,8 +3243,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1050,
-        "y": 5300,
+        "x": 1070,
+        "y": 5960,
         "wires": [["96d7620992fc9293"]]
     },
     {
@@ -3258,8 +3258,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 770,
-        "y": 5340,
+        "x": 790,
+        "y": 6000,
         "wires": [["c59363da4a2ae04a"]]
     },
     {
@@ -3274,8 +3274,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 790,
-        "y": 5260,
+        "x": 810,
+        "y": 5920,
         "wires": [["5d1c165df0449fbe"]]
     },
     {
@@ -3290,8 +3290,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1550,
-        "y": 5300,
+        "x": 1570,
+        "y": 5960,
         "wires": [["325cd93a17d62dd0"]]
     },
     {
@@ -3305,11 +3305,11 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 1310,
-        "y": 5260,
+        "x": 1330,
+        "y": 5920,
         "wires": [["8b6fe087d1457f98"]]
     },
-    { "id": "8b6fe087d1457f98", "type": "json", "z": "b2d9bb3951202511", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1290, "y": 5300, "wires": [["0af7cba402114219"]] },
+    { "id": "8b6fe087d1457f98", "type": "json", "z": "b2d9bb3951202511", "name": "", "property": "timeStamp", "action": "obj", "pretty": false, "x": 1310, "y": 5960, "wires": [["0af7cba402114219"]] },
     {
         "id": "f4a1f12f9f816522",
         "type": "http request",
@@ -3445,6 +3445,10 @@
             { "property": "Automatic Unlocking", "value": "payload.automatic_unlocking.value", "valueType": "msg" },
             { "property": "PTZpoweroff memory", "value": "payload.poweroff_memory.value", "valueType": "msg" },
             { "property": "Offline Notification", "value": "payload.device_offline_notif.value", "valueType": "msg" },
+            { "property": "Sensitivity Face", "value": "payload.face_sens.value", "valueType": "msg" },
+            { "property": "Sensitivity Human", "value": "payload.human_sens.value", "valueType": "msg" },
+            { "property": "Sensitivity Cat_Dog", "value": "payload.catdog_sens.value", "valueType": "msg" },
+            { "property": "Hand gesture", "value": "payload.one_both_hand.value", "valueType": "msg" },
             { "property": "Last checked", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
@@ -3526,7 +3530,7 @@
         "finalize": "",
         "libs": [],
         "x": 2330,
-        "y": 2820,
+        "y": 2860,
         "wires": [["70d5adaecd0fd2b7"]]
     },
     {
@@ -3542,7 +3546,7 @@
         "finalize": "",
         "libs": [],
         "x": 2350,
-        "y": 2860,
+        "y": 2900,
         "wires": [["57924fc3ae088885"]]
     },
     {
@@ -3713,7 +3717,7 @@
         "to": "",
         "reg": false,
         "x": 2350,
-        "y": 2900,
+        "y": 2940,
         "wires": [["7f97a0af6af7ea5a"]]
     },
     {
@@ -3735,8 +3739,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1550,
-        "y": 6340,
+        "x": 1570,
+        "y": 7000,
         "wires": [["7d204ea44382e8ac"]]
     },
     {
@@ -3751,8 +3755,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1190,
-        "y": 6340,
+        "x": 1210,
+        "y": 7000,
         "wires": [["87cb72c1d0db0f7b"]]
     },
     {
@@ -3772,8 +3776,8 @@
             { "property": "payload", "propertyType": "msg", "value": "", "valueType": "value" },
             { "property": "previousValue", "propertyType": "msg", "value": "", "valueType": "previousValue" }
         ],
-        "x": 540,
-        "y": 6300,
+        "x": 560,
+        "y": 6960,
         "wires": [["323f2ef9b417cdc1"]]
     },
     {
@@ -3787,8 +3791,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 850,
-        "y": 6340,
+        "x": 870,
+        "y": 7000,
         "wires": [["5238d3f45c4fe833"]]
     },
     {
@@ -3810,11 +3814,11 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 1890,
-        "y": 6340,
+        "x": 1910,
+        "y": 7000,
         "wires": [[]]
     },
-    { "id": "d270d3c93f8315ab", "type": "json", "z": "b2d9bb3951202511", "name": "", "property": "payload.rec_mode.value", "action": "", "pretty": false, "x": 1450, "y": 2820, "wires": [["4d65804095cbb82d"]] },
+    { "id": "d270d3c93f8315ab", "type": "json", "z": "b2d9bb3951202511", "name": "", "property": "payload.rec_mode.value", "action": "", "pretty": false, "x": 1470, "y": 2820, "wires": [["4d65804095cbb82d"]] },
     { "id": "4d65804095cbb82d", "type": "json", "z": "b2d9bb3951202511", "name": "", "property": "payload.rete.value", "action": "obj", "pretty": false, "x": 1470, "y": 2860, "wires": [["abd14bc76d6f9781"]] },
     {
         "id": "abd14bc76d6f9781",
@@ -3848,7 +3852,7 @@
         "type": "function",
         "z": "b2d9bb3951202511",
         "name": "change id > name",
-        "func": "\nmsg.payload.sensivity_suond = msg.payload[\"14.140.85\"];    \nmsg.payload.rec_mode = msg.payload[\"14.20.85\"];\nmsg.payload.catdog_freq = msg.payload[\"14.116.85\"];    \nmsg.payload.volume = msg.payload[\"14.11.85\"];    \nmsg.payload.suond_freq = msg.payload[\"14.108.85\"];\nmsg.payload.motion_freq = msg.payload[\"14.105.85\"];\nmsg.payload.night_video = msg.payload[\"14.73.85\"];    \nmsg.payload.sensitivity = msg.payload[\"14.104.85\"];    \nmsg.payload.frame = msg.payload[\"4.76.85\"];    \nmsg.payload.gestneedface = msg.payload[\"4.48.85\"];\nmsg.payload.rete = msg.payload[\"14.67.85\"];    \nmsg.payload.sdmemory = msg.payload[\"13.25.85\"];    \nmsg.payload.face_freq = msg.payload[\"14.110.85\"];\nmsg.payload.human_freq = msg.payload[\"14.114.85\"];\nmsg.payload.muteaudio = msg.payload[\"4.63.85\"];\nmsg.payload.timestamp = msg.payload[\"14.4.85\"];\nmsg.payload.ark_mode = msg.payload[\"8.0.2327\"];\nmsg.payload.automatic_unlocking = msg.payload[\"8.0.2161\"];\nmsg.payload.poweroff_memory = msg.payload[\"14.86.85\"];\nmsg.payload.device_offline_notif = msg.payload[\"4.89.85\"]\nreturn msg;",
+        "func": "\nmsg.payload.sensivity_suond = msg.payload[\"14.140.85\"];    \nmsg.payload.rec_mode = msg.payload[\"14.20.85\"];\nmsg.payload.catdog_freq = msg.payload[\"14.116.85\"];    \nmsg.payload.volume = msg.payload[\"14.11.85\"];    \nmsg.payload.suond_freq = msg.payload[\"14.108.85\"];\nmsg.payload.motion_freq = msg.payload[\"14.105.85\"];\nmsg.payload.night_video = msg.payload[\"14.73.85\"];    \nmsg.payload.sensitivity = msg.payload[\"14.104.85\"];    \nmsg.payload.frame = msg.payload[\"4.76.85\"];    \nmsg.payload.gestneedface = msg.payload[\"4.48.85\"];\nmsg.payload.rete = msg.payload[\"14.67.85\"];    \nmsg.payload.sdmemory = msg.payload[\"13.25.85\"];    \nmsg.payload.face_freq = msg.payload[\"14.110.85\"];\nmsg.payload.human_freq = msg.payload[\"14.114.85\"];\nmsg.payload.muteaudio = msg.payload[\"4.63.85\"];\nmsg.payload.timestamp = msg.payload[\"14.4.85\"];\nmsg.payload.ark_mode = msg.payload[\"8.0.2327\"];\nmsg.payload.automatic_unlocking = msg.payload[\"8.0.2161\"];\nmsg.payload.poweroff_memory = msg.payload[\"14.86.85\"];\nmsg.payload.device_offline_notif = msg.payload[\"4.89.85\"];\nmsg.payload.face_sens = msg.payload[\"14.141.85\"];\nmsg.payload.human_sens = msg.payload[\"14.136.85\"];\nmsg.payload.catdog_sens = msg.payload[\"14.137.85\"];\nmsg.payload.one_both_hand = msg.payload[\"4.75.85\"];\nreturn msg;",
         "outputs": 1,
         "timeout": 0,
         "noerr": 0,
@@ -4350,8 +4354,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1070,
-        "y": 6640,
+        "x": 1090,
+        "y": 7300,
         "wires": [["976d1bde89b04577"]]
     },
     {
@@ -4364,8 +4368,8 @@
         "outputs": 1,
         "entityConfig": "1150d03f53e41fcd",
         "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
-        "x": 560,
-        "y": 6640,
+        "x": 580,
+        "y": 7300,
         "wires": [["d47c18f5d29c0849"]]
     },
     {
@@ -4379,8 +4383,8 @@
         "once": true,
         "onceDelay": "60",
         "topic": "",
-        "x": 570,
-        "y": 6580,
+        "x": 590,
+        "y": 7240,
         "wires": [["d47c18f5d29c0849"]]
     },
     {
@@ -4409,8 +4413,8 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 2440,
-        "y": 6640,
+        "x": 2460,
+        "y": 7300,
         "wires": [[]]
     },
     {
@@ -4432,8 +4436,8 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1490,
-        "y": 6640,
+        "x": 1510,
+        "y": 7300,
         "wires": [["57cda18a37208e6e"]]
     },
     {
@@ -4682,8 +4686,8 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1860,
-        "y": 6640,
+        "x": 1880,
+        "y": 7300,
         "wires": [["06186fea6083f3fc"]]
     },
     {
@@ -4700,8 +4704,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2150,
-        "y": 6580,
+        "x": 2170,
+        "y": 7240,
         "wires": [["93ff8a32d60895e9"]]
     },
     {
@@ -4718,8 +4722,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2090,
-        "y": 6640,
+        "x": 2110,
+        "y": 7300,
         "wires": [["8787aa51474c31f2"]]
     },
     {
@@ -4736,8 +4740,8 @@
         "from": "",
         "to": "",
         "reg": false,
-        "x": 2170,
-        "y": 6520,
+        "x": 2190,
+        "y": 7180,
         "wires": [["12b2d685a0ba55d5"]]
     },
     {
@@ -4760,15 +4764,15 @@
         "id": "ce3c7e4fb293668a",
         "type": "function",
         "z": "b2d9bb3951202511",
-        "name": "Fix alarm_bell - sdcard not found",
-        "func": "if (msg.payload.alarm_bell_index === undefined ) {\n    msg.payload.alarm_bell_index = '0';\n} \nif (msg.payload.alarm_bell_volume === undefined ) {\n    msg.payload.alarm_bell_volume = '0';\n} \nif (msg.payload.sdcard_status === undefined ) {\n    msg.payload.sdcard_status = '0';\n} \nif (msg.payload.mdtrigger_enable === undefined ) {\n    msg.payload.mdtrigger_enable = '0';\n} \nif (msg.payload.soundtrigger_enable === undefined ) {\n    msg.payload.soundtrigger_enable = '0';\n} \nif (msg.payload.cloud_small_video === undefined ) {\n    msg.payload.cloud_small_video = '0';\n}  \nif (msg.payload.alarm_status === undefined ) {\n    msg.payload.alarm_status = '0';\n} \nif (msg.payload.device_night_tip_light === undefined ) {\n    msg.payload.device_night_tip_light = '0';\n} \n\nreturn msg;",
+        "name": "Fix not found",
+        "func": "if (msg.payload.mdtrigger_enable === undefined) {\n    msg.payload.mdtrigger_enable = 'n.d';\n}\nif (msg.payload.face_detect_enable === undefined) {\n    msg.payload.face_detect_enable = 'n.d.';\n}\nif (msg.payload.pets_detect_enable === undefined) {\n    msg.payload.pets_detect_enable = 'n.d.';\n}\nif (msg.payload.human_detect_enable === undefined) {\n    msg.payload.human_detect_enable = 'n.d';\n}\nif (msg.payload.humans_track_enable === undefined) {\n    msg.payload.humans_track_enable = 'n.d.';\n}\nif (msg.payload.soundtrigger_enable === undefined) {\n    msg.payload.soundtrigger_enable = 'n.d.';\n}\nif (msg.payload.ptz_cruise_enable === undefined) {\n    msg.payload.ptz_cruise_enable = 'n.d';\n}\nif (msg.payload.gesture_detect_enable === undefined) {\n    msg.payload.gesture_detect_enable = 'n.d.';\n}\nif (msg.payload.pets_track_enable === undefined) {\n    msg.payload.pets_track_enable = 'n.d.';\n}\nif (msg.payload.set_video === undefined) {\n    msg.payload.set_video = 'n.d';\n}\nif (msg.payload.cloud_small_video === undefined) {\n    msg.payload.cloud_small_video = 'n.d.';\n}\nif (msg.payload.alarm_bell_index === undefined) {\n    msg.payload.alarm_bell_index = 'n.d.';\n}\n\nif (msg.payload.alarm_bell_volume === undefined) {\n    msg.payload.alarm_bell_volume = 'n.d';\n}\nif (msg.payload.alarm_status === undefined) {\n    msg.payload.alarm_status = 'n.d.';\n}\nif (msg.payload.system_volume === undefined) {\n    msg.payload.system_volume = 'n.d.';\n}\nif (msg.payload.device_night_tip_light === undefined) {\n    msg.payload.device_night_tip_light = 'n.d';\n}\nif (msg.payload.sdcard_status === undefined) {\n    msg.payload.sdcard_status = 'n.d.';\n}\nif (msg.payload.device_wifi_rssi === undefined) {\n    msg.payload.device_wifi_rssi = 'n.d.';\n}\nif (msg.payload.gateway_deletion_setting === undefined) {\n    msg.payload.gateway_deletion_setting = 'n.d';\n} \n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 2120,
+        "x": 2050,
         "y": 520,
         "wires": [["6fe7bc683ac2da95"]]
     },
@@ -4805,6 +4809,400 @@
         "x": 1100,
         "y": 2720,
         "wires": [["f625a616a23d9f9d"]]
+    },
+    {
+        "id": "f261d8c8560a29f7",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "Sensitivity Face",
+        "func": "if (msg.payload.face_sens.value === '0') {\n    msg.payload.face_sens.value = 'Low';\n}\nif (msg.payload.face_sens.value === '1') {\n    msg.payload.face_sens.value = 'Medium';\n}\nif (msg.payload.face_sens.value === '2') {\n    msg.payload.face_sens.value = 'Hight';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2340,
+        "y": 2820,
+        "wires": [["0ca6b803ada10b30"]]
+    },
+    {
+        "id": "e41391cae948a409",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "Sensitivity Human",
+        "func": "if (msg.payload.human_sens.value === '0') {\n    msg.payload.human_sens.value = 'Low';\n}\nif (msg.payload.human_sens.value === '1') {\n    msg.payload.human_sens.value = 'Medium';\n}\nif (msg.payload.human_sens.value === '2') {\n    msg.payload.human_sens.value = 'Hight';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1770,
+        "y": 2920,
+        "wires": [["669271b0132ee226"]]
+    },
+    {
+        "id": "669271b0132ee226",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "Sensitivity catDog",
+        "func": "if (msg.payload.catdog_sens.value === '0') {\n    msg.payload.catdog_sens.value = 'Low';\n}\nif (msg.payload.catdog_sens.value === '1') {\n    msg.payload.catdog_sens.value = 'Medium';\n}\nif (msg.payload.catdog_sens.value === '2') {\n    msg.payload.catdog_sens.value = 'Hight';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2030,
+        "y": 2800,
+        "wires": [["8e7fe1f9d8a691ac"]]
+    },
+    {
+        "id": "57d3c1ceb0772884",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "One Both Hand",
+        "func": "if (msg.payload.one_both_hand.value === '0') {\n    msg.payload.one_both_hand.value = 'One';\n}\nif (msg.payload.one_both_hand.value === '1') {\n    msg.payload.one_both_hand.value = 'Both';\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2340,
+        "y": 2780,
+        "wires": [["f261d8c8560a29f7"]]
+    },
+    {
+        "id": "e677eb3e264b670c",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.136.85\":\"2\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 4920,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "aa0e0ddb35c6204c",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.136.85\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 4860,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "4d9503c5d259d3f3",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.136.85\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 4800,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "d59401c00c65046d",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor Human low",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "d5ab64e53b8163f7",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1370,
+        "y": 4800,
+        "wires": [["4d9503c5d259d3f3"]]
+    },
+    {
+        "id": "455f285bccd6981b",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor Human medium",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "6dadbea9ca61834c",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1380,
+        "y": 4860,
+        "wires": [["aa0e0ddb35c6204c"]]
+    },
+    {
+        "id": "6e6e6e1aa1c87957",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor Human hight",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "4c3d62122224b84c",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1370,
+        "y": 4920,
+        "wires": [["e677eb3e264b670c"]]
+    },
+    {
+        "id": "caf15befbc1feaa1",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.137.85\":\"2\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 5100,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "39e5671b7f023621",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.137.85\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 5040,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "10ae2003c2028183",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.137.85\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 4980,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "88668ed41681dc5e",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor CatDog low",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "a25b5a55edbcc4f2",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1370,
+        "y": 4980,
+        "wires": [["10ae2003c2028183"]]
+    },
+    {
+        "id": "669bd910c3cdfcb3",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor CatDog medium",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "228c5e3056e292f1",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1380,
+        "y": 5040,
+        "wires": [["39e5671b7f023621"]]
+    },
+    {
+        "id": "0fe852f8d0204b4c",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor CatDog hight",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "f27671fab4c06268",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1370,
+        "y": 5100,
+        "wires": [["caf15befbc1feaa1"]]
+    },
+    {
+        "id": "d33530d91399970b",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.141.85\":\"2\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 5280,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "37745992e63d6282",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.141.85\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 5220,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "16a3815272b726c7",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"14.141.85\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 5160,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "82576ab6f9398dc1",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor Face low",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "1befc5e95925ec9e",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1360,
+        "y": 5160,
+        "wires": [["16a3815272b726c7"]]
+    },
+    {
+        "id": "9e2729a0f5bb63c7",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor Face medium",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "081835a55d4c5c02",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1380,
+        "y": 5220,
+        "wires": [["37745992e63d6282"]]
+    },
+    {
+        "id": "cc1954c843265f67",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Sensor Face hight",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "dab294ec05d85f91",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1370,
+        "y": 5280,
+        "wires": [["d33530d91399970b"]]
+    },
+    {
+        "id": "a504df4e6e687aad",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"4.75.85\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 5400,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "862eb9c8392cb2b6",
+        "type": "function",
+        "z": "b2d9bb3951202511",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nmsg.payload = {\n    \"data\": { \"4.75.85\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.50\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 5340,
+        "wires": [["50f3d584c4c56780"]]
+    },
+    {
+        "id": "7d8a09cb657ce8dc",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Hand One",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "ef447d411542b9cf",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1340,
+        "y": 5340,
+        "wires": [["862eb9c8392cb2b6"]]
+    },
+    {
+        "id": "b1dd28262cca4d40",
+        "type": "ha-button",
+        "z": "b2d9bb3951202511",
+        "name": "Camera G3 Hand Both",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "6d07c69eefcec9e7",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1340,
+        "y": 5400,
+        "wires": [["a504df4e6e687aad"]]
     },
     {
         "id": "c7ab1b7d9b84a156",
@@ -5893,6 +6291,204 @@
             { "property": "device_class", "value": "" },
             { "property": "unit_of_measurement", "value": "" },
             { "property": "state_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "d5ab64e53b8163f7",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor Human low",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor Human low" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "6dadbea9ca61834c",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor Human medium",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor Human medium" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "4c3d62122224b84c",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor Human hight",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor Human hight" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "a25b5a55edbcc4f2",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor CatDog low",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor CatDog low" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "228c5e3056e292f1",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor CatDog medium",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor CatDog medium" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "f27671fab4c06268",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor CatDog hight",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor CatDog hight" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "1befc5e95925ec9e",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor Face low",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor Face low" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "081835a55d4c5c02",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor Face medium",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor Face medium" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "dab294ec05d85f91",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Sensor Face hight",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Sensor Face hight" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "ef447d411542b9cf",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Hand One",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Hand One" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "6d07c69eefcec9e7",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 Hand Both",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 Hand Both" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
         ],
         "resend": false,
         "debugEnabled": false
