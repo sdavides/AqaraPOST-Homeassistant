@@ -133,10 +133,12 @@ for a successful update of the existing flow without changing the entities in Ho
 * HomeKit alarm function HomeAssistant:
     * autodiscovery, insert qrcode number
     
-  		port change every reboot of device, replace into 
-  
-  		"/config/.storage/core.config_entries"
+  		port change every reboot of device
 
+      from telnet command:
+	  	```bash
+	  	netstat -anp|grep ha_master |grep ::: |awk '{print substr($4,1)}' | sed 's/::://'
+	  	```
   		![4](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f26c6a0c-6b96-4c41-b0ce-50332f542e87)
 
 ---
