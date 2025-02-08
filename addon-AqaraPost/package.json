@@ -12,11 +12,11 @@
   "dependencies": {
     "bcryptjs": "2.4.3",
     "js-yaml": "4.1.0",
-    "node-red": "4.0.3",
-    "node-red-contrib-home-assistant-websocket": "0.73.0",
+    "node-red": "4.0.8",
+    "node-red-contrib-home-assistant-websocket": "0.75.0",
     "node-red-contrib-config": "1.2.1",
     "node-red-dashboard": "3.6.5",
-    "@node-red-contrib-themes/theme-collection": "4.0.10",
+    "@node-red-contrib-themes/theme-collection": "4.0.11",
     "line-by-line": "0.1.6",
     "source-map-support": "0.5.21"
   },
