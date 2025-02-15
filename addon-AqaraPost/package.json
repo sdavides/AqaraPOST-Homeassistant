@@ -12,7 +12,7 @@
   "dependencies": {
     "bcryptjs": "2.4.3",
     "js-yaml": "4.1.0",
-    "node-red": "4.0.8",
+    "node-red": "4.0.9",
     "node-red-contrib-home-assistant-websocket": "0.75.0",
     "node-red-contrib-config": "1.2.1",
     "node-red-dashboard": "3.6.5",
