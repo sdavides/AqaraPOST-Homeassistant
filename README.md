@@ -8,7 +8,6 @@ Add-on HomeAssistant with automatic config scripts!!
  
  * [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
 
-05/01/2025 🚨 Drop support for ARMv7 ([#2016](https://github.com/hassio-addons/addon-node-red/pull/2016))
 
 ----
 
