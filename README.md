@@ -19,7 +19,8 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
   * note: 
 	* this flow is example and was developed for Aqara Hub G3 camera *( lumi1.xxxx )*
-  		* for Aquara FP2 see [Darafei Praliaskouski page](https://www.patreon.com/posts/connecting-fp2-107200167)
+  		* for FP2 Sensor import [Aqara_FP2_nodered.json](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Aqara_FP2_nodered.json) 
+  		* or without NodeRed (few functions) see [Darafei Praliaskouski page](https://www.patreon.com/posts/connecting-fp2-107200167)
 
 ## Requirement ##
 * Your value from POST Request Aqara app:
