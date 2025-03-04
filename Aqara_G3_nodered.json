@@ -1934,9 +1934,9 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 1270,
-        "y": 5540,
-        "wires": [["734dd015c917356c"]]
+        "x": 1050,
+        "y": 5500,
+        "wires": [["8430f48b5511a47c"]]
     },
     {
         "id": "734dd015c917356c",
@@ -3297,7 +3297,7 @@
         "libs": [],
         "x": 1530,
         "y": 5820,
-        "wires": [["a376cdc96b87473e"]]
+        "wires": [["07188a933236c3ae"]]
     },
     {
         "id": "7670f5fb47d74c74",
@@ -3906,9 +3906,9 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 1410,
+        "x": 1450,
         "y": 2720,
-        "wires": [["dc2ad2915bf891e0"]]
+        "wires": [["38dbe76317028b9c"]]
     },
     {
         "id": "e36d61c6e325b760",
@@ -4855,7 +4855,7 @@
         "libs": [],
         "x": 1100,
         "y": 2720,
-        "wires": [["d3fe52264b3a0f2d"]]
+        "wires": [["dc2ad2915bf891e0"]]
     },
     {
         "id": "23581272791ee8a1",
@@ -5250,22 +5250,6 @@
         "x": 2320,
         "y": 5300,
         "wires": [["88d9c183bc2d912a"]]
-    },
-    {
-        "id": "dc2ad2915bf891e0",
-        "type": "function",
-        "z": "95f0a9b0b9102f70",
-        "name": "Fix not found",
-        "func": "if (msg.payload[\"4.151.85\"] === undefined) {\n    msg.payload[\"4.151.85\"] = 'n.d';\n}\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1490,
-        "y": 2780,
-        "wires": [["38dbe76317028b9c"]]
     },
     {
         "id": "537931c47ab2b97d",
@@ -6434,6 +6418,54 @@
         "x": 1910,
         "y": 4480,
         "wires": [["f71aa3409a8454c1"]]
+    },
+    {
+        "id": "8430f48b5511a47c",
+        "type": "function",
+        "z": "95f0a9b0b9102f70",
+        "name": "Fix not found",
+        "func": " if (!msg.payload.result || msg.payload.result === '' ) {\n    msg.payload.result = 'n.d';\n}\nif (!msg.payload.result[1]) {\n    msg.payload.result[1] = 'n.d';\n}\nif (!msg.payload.result[2]) {\n    msg.payload.result[2] = 'n.d';\n}\n\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1290,
+        "y": 5480,
+        "wires": [["734dd015c917356c"]]
+    },
+    {
+        "id": "07188a933236c3ae",
+        "type": "function",
+        "z": "95f0a9b0b9102f70",
+        "name": "Fix not found",
+        "func": "if (!msg.payload.result || msg.payload.result === '') {\n    msg.payload.result = {}; // Inizializza come oggetto se non esiste o è una stringa vuota\n}\n\nif (!msg.payload.result.resultList || !Array.isArray(msg.payload.result.resultList)) {\n    msg.payload.result.resultList = []; // Inizializza come array se non esiste o non è un array\n}\n\nif (!msg.payload.result.resultList[0]) {\n    msg.payload.result.resultList[0] = {}; // Se il primo elemento non esiste, lo inizializza come oggetto\n}\n\nif (!msg.payload.result.resultList[0].linkageName) {\n    msg.payload.result.resultList[0].linkageName = 'n.d.'; // Se linkageName non esiste, assegna 'n.d'\n}\n\nreturn msg;\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1630,
+        "y": 5760,
+        "wires": [["a376cdc96b87473e"]]
+    },
+    {
+        "id": "dc2ad2915bf891e0",
+        "type": "function",
+        "z": "95f0a9b0b9102f70",
+        "name": "Fix not found",
+        "func": "if (msg.payload[\"14.119.85\"] === undefined) {\n    msg.payload[\"14.119.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.10.85\"] === undefined) {\n    msg.payload[\"14.10.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.59.85\"] === undefined) {\n    msg.payload[\"4.59.85\"] = 'n.d.';\n}\nif (msg.payload[\"13.201.85\"] === undefined) {\n    msg.payload[\"13.201.85\"] = 'n.d.';\n}\nif (msg.payload[\"8.0.2161\"] === undefined) {\n    msg.payload[\"8.0.2161\"] = 'n.d.';\n}\nif (msg.payload[\"14.125.85\"] === undefined) {\n    msg.payload[\"14.125.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.121.85\"] === undefined) {\n    msg.payload[\"14.121.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.140.85\"] === undefined) {\n    msg.payload[\"14.140.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.109.85\"] === undefined) {\n    msg.payload[\"14.109.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.4.85\"] === undefined) {\n    msg.payload[\"14.4.85\"] = 'n.d.';\n}\nif (msg.payload[\"13.96.85\"] === undefined) {\n    msg.payload[\"13.96.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.51.85\"] === undefined) {\n    msg.payload[\"4.51.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.20.85\"] === undefined) {\n    msg.payload[\"14.20.85\"] = 'n.d.';\n}\nif (msg.payload[\"8.0.2327\"] === undefined) {\n    msg.payload[\"8.0.2327\"] = 'n.d.';\n}\nif (msg.payload[\"4.55.85\"] === undefined) {\n    msg.payload[\"4.55.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.112.85\"] === undefined) {\n    msg.payload[\"14.112.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.76.85\"] === undefined) {\n    msg.payload[\"14.76.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.116.85\"] === undefined) {\n    msg.payload[\"14.116.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.118.85\"] === undefined) {\n    msg.payload[\"14.118.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.89.85\"] === undefined) {\n    msg.payload[\"4.89.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.11.85\"] === undefined) {\n    msg.payload[\"14.11.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.58.85\"] === undefined) {\n    msg.payload[\"4.58.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.108.85\"] === undefined) {\n    msg.payload[\"14.108.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.126.85\"] === undefined) {\n    msg.payload[\"14.126.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.105.85\"] === undefined) {\n    msg.payload[\"14.105.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.122.85\"] === undefined) {\n    msg.payload[\"14.122.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.75.85\"] === undefined) {\n    msg.payload[\"4.75.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.50.85\"] === undefined) {\n    msg.payload[\"4.50.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.54.85\"] === undefined) {\n    msg.payload[\"4.54.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.21.85\"] === undefined) {\n    msg.payload[\"14.21.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.136.85\"] === undefined) {\n    msg.payload[\"14.136.85\"] = 'n.d.';\n}\nif (msg.payload[\"8.0.2032\"] === undefined) {\n    msg.payload[\"8.0.2032\"] = 'n.d.';\n}\nif (msg.payload[\"14.115.85\"] === undefined) {\n    msg.payload[\"14.115.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.77.85\"] === undefined) {\n    msg.payload[\"14.77.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.111.85\"] === undefined) {\n    msg.payload[\"14.111.85\"] = 'n.d.';\n}\nif (msg.payload[\"8.0.2158\"] === undefined) {\n    msg.payload[\"8.0.2158\"] = 'n.d.';\n}\nif (msg.payload[\"14.73.85\"] === undefined) {\n    msg.payload[\"14.73.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.90.85\"] === undefined) {\n    msg.payload[\"14.90.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.117.85\"] === undefined) {\n    msg.payload[\"14.117.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.151.85\"] === undefined) {\n    msg.payload[\"4.151.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.63.85\"] === undefined) {\n    msg.payload[\"4.63.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.57.85\"] === undefined) {\n    msg.payload[\"4.57.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.146.85\"] === undefined) {\n    msg.payload[\"14.146.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.104.85\"] === undefined) {\n    msg.payload[\"14.104.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.107.85\"] === undefined) {\n    msg.payload[\"14.107.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.123.85\"] === undefined) {\n    msg.payload[\"14.123.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.67.85\"] === undefined) {\n    msg.payload[\"14.67.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.76.85\"] === undefined) {\n    msg.payload[\"4.76.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.99.85\"] === undefined) {\n    msg.payload[\"4.99.85\"] = 'n.d.';\n}\nif (msg.payload[\"8.0.2108\"] === undefined) {\n    msg.payload[\"8.0.2108\"] = 'n.d.';\n}\nif (msg.payload[\"4.48.85\"] === undefined) {\n    msg.payload[\"4.48.85\"] = 'n.d.';\n}\nif (msg.payload[\"4.53.85\"] === undefined) {\n    msg.payload[\"4.53.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.88.701\"] === undefined) {\n    msg.payload[\"14.88.701\"] = 'n.d.';\n}\nif (msg.payload[\"14.137.85\"] === undefined) {\n    msg.payload[\"14.137.85\"] = 'n.d.';\n}\nif (msg.payload[\"14.34.85\"] === undefined) {\n    msg.payload[\"14.34.85\"] = 'n.d.';\n} \n\n\nif (!msg.payload[\"13.25.85\"]) {\n    msg.payload[\"13.25.85\"] = {};  // Inizializza come oggetto\n}\n\nif (!msg.payload[\"13.25.85\"].value) {\n    msg.payload[\"13.25.85\"].value = {};  // Inizializza la chiave \"value\"\n}\n\nif (msg.payload[\"13.25.85\"].value.freesize === undefined) {\n    msg.payload[\"13.25.85\"].value.freesize = 'n.d.';\n}\nif (msg.payload[\"13.25.85\"].value.totalsize === undefined) {\n    msg.payload[\"13.25.85\"].value.totalsize = 'n.d.';\n}\n\nreturn msg;\n\n",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 2660,
+        "wires": [["d3fe52264b3a0f2d"]]
     },
     {
         "id": "c7ab1b7d9b84a156",
