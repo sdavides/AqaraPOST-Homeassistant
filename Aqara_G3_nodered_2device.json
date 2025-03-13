@@ -4572,7 +4572,7 @@
         "reg": false,
         "x": 2150,
         "y": 7040,
-        "wires": [[]]
+        "wires": [["afda26998acd57c1"]]
     },
     {
         "id": "595b587a0ca1397f",
@@ -6443,6 +6443,50 @@
         "wires": [["af2c87bd6308f057"]]
     },
     {
+        "id": "1ebef0469df68d9f",
+        "type": "ha-button",
+        "z": "15043fc595493276",
+        "name": "Aqara My Device_2",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "ea2a81b7ed38848d",
+        "outputProperties": [{ "property": "lastchecked", "propertyType": "msg", "value": "", "valueType": "date" }],
+        "x": 550,
+        "y": 7160,
+        "wires": [["ba63d9a002690d3b"]]
+    },
+    {
+        "id": "afda26998acd57c1",
+        "type": "ha-sensor",
+        "z": "15043fc595493276",
+        "name": "Aqara MyDevice_2",
+        "entityConfig": "7437894a790226a0",
+        "version": 0,
+        "state": "Aqara MyDevice_2",
+        "stateType": "str",
+        "attributes": [
+            { "property": "did", "value": "msg.payload.mylumi.did", "valueType": "msg" },
+            { "property": "deviceName", "value": "msg.payload.mylumi.deviceName", "valueType": "msg" },
+            { "property": "originalName", "value": "msg.payload.mylumi.originalName", "valueType": "msg" },
+            { "property": "model", "value": "msg.payload.mylumi.model", "valueType": "msg" },
+            { "property": "state", "value": "payload.mylumi.state", "valueType": "msg" },
+            { "property": "positionName", "value": "payload.mylumi.positionName", "valueType": "msg" },
+            { "property": "firmwareVersion", "value": "payload.mylumi.firmwareVersion", "valueType": "msg" },
+            { "property": "real1", "value": "payload.mylumi.real1", "valueType": "msg" },
+            { "property": "real2", "value": "payload.mylumi.real2", "valueType": "msg" },
+            { "property": "positionId", "value": "payload.mylumi.positionId", "valueType": "msg" },
+            { "property": "lowBatteryFlag", "value": "payload.mylumi.lowBatteryFlag", "valueType": "msg" },
+            { "property": "categoryNames", "value": "payload.mylumi.categoryNames", "valueType": "msg" },
+            { "property": "supportHomeKit", "value": "payload.mylumi.supportHomeKit", "valueType": "msg" }
+        ],
+        "inputOverride": "allow",
+        "outputProperties": [],
+        "x": 2430,
+        "y": 7160,
+        "wires": [[]]
+    },
+    {
         "id": "f99e763ac183de8c",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
@@ -7919,6 +7963,44 @@
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "ea2a81b7ed38848d",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Aqara My Device_2",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Aqara My Device_2" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "7437894a790226a0",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Aqara MyDevice_2",
+        "version": "6",
+        "entityType": "sensor",
+        "haConfig": [
+            { "property": "name", "value": "Aqara MyDevice_2" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" },
+            { "property": "unit_of_measurement", "value": "" },
+            { "property": "state_class", "value": "" }
         ],
         "resend": false,
         "debugEnabled": false
