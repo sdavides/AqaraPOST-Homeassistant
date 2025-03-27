@@ -43,7 +43,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 	* Import flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
 	* Replace your value "config" node 
 	* Deploy
-		* note: you can use the script to generate your NoderRed json
+		* note: you can use the script to generate your flow json with values
 		* [generatejson](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md)
     
  * Method 3 RestFul (without NodeRed - few functions):
