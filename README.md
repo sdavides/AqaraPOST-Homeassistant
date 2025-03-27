@@ -2,9 +2,10 @@
 ----
 #  AqaraPOST-Homeassistant addon #
 
-Add-on HomeAssistant with automatic config scripts!!
+Add-on for camera G3 with automatic config scripts!!
  
  * only Username/Password Aqara required
+ 	* the values ​​in the "config" node will be generated from the username and password if valid
  
  * [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
 
