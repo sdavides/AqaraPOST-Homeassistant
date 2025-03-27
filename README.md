@@ -37,9 +37,10 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 * Method 1 NodeRed (recommended, required NodeCompanion):
 	* Install Add-on
               [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
+   		* NodeRed will be installed in parallel with the flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
 
 * Method 2 NodeRed (recommended, required NodeCompanion):
-	* Import flow Aqara_G3_nodered.json 
+	* Import flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
 	* Replace your value "config" node 
 	* Deploy
 		* note: you can use the script to generate your NoderRed json
