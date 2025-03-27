@@ -1,8 +1,5 @@
-# AqaraPost_[Node-RED] addon HomeAssistant
-
-  AqaraPost_[Node-RED] - NodeRed mod for AqaraPost-Homeassistant.
-
-  *Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera.*
+# AqaraPost_[Node-RED] HomeAssistant
+  * Parallel container NodeRed with scripts AqaraPost-Homeassistant for integration Aqara G3 Camera.
 
 
 ## Requires
@@ -45,6 +42,7 @@ Add custom component remote repository:
     
     ![immagine](https://github.com/user-attachments/assets/ab2c21f0-0a85-4398-9d29-bfe4e29df13c)
 
-    ![immagine](https://github.com/user-attachments/assets/c48aaefd-cd6c-45d9-b927-bd6129b839af)
 
-
+## Entity NodeCompanion ##
+![immagine](https://github.com/user-attachments/assets/15e8632f-5c92-42f1-886b-96bec0633c43)
+![immagine](https://github.com/user-attachments/assets/bb125094-8d71-403e-beff-2b323a461370)
