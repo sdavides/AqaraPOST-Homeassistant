@@ -31,7 +31,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
   * aqara url ( rpc-ger.aqara.com ) *host*
     * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
   * timezone ( it-IT ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
-  * userid *( automatic, enter manual if not work )*
+  * userid *( automatic, required for Aqara_G3_without_nodered.txt )*
 	
 ## Method ##
 * Method 1 NodeRed (recommended, required NodeCompanion):
