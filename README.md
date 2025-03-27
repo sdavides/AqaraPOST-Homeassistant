@@ -37,6 +37,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 * Method 1 NodeRed (recommended, required NodeCompanion):
 	* Install Add-on
               [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
+   		* only Username/Password Aqara required
    		* NodeRed will be installed in parallel with the flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
 
 * Method 2 NodeRed (recommended, required NodeCompanion):
@@ -53,10 +54,8 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
    
 ## Find your Values ##
 * Method 1 Python script:
-
 	Insert username and password Aqara account
-	 * [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)
-  
+	 * [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)  
           *thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)*
 
 * Method 2 Use BurpSuite or ZAP or similar:
@@ -89,7 +88,6 @@ AqaraHome apk mod includes acceptance of the user-installed certificate, (to see
 
 ## Update data ##
 * add automation every 1 minute:
-
 	  
 		description: Update Aqara G3
 		mode: single
@@ -122,7 +120,6 @@ for a successful update of the existing flow without changing the entities in Ho
   * deploy  
 !! do not deploy without deleting the old !!
 
-
 ---
 
 ## TIPS Hub G3 ##
@@ -132,7 +129,6 @@ for a successful update of the existing flow without changing the entities in Ho
       
       ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/555c0f99-d010-4323-b365-070d26e4ad7f)
 
- 
 ---
 
 * HomeKit alarm function HomeAssistant:
@@ -200,8 +196,6 @@ command_line:
 ```
 
  ![immagine](https://github.com/user-attachments/assets/1712abb3-1867-47ff-b352-063665389d68)
-
-
 
 ---
 
