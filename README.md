@@ -26,7 +26,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 * Your value from POST Request Aqara app:
   * appid  ( XXXXXXAPPIDXXXXXXXXXXX )
   * token ( XXXXXXTOKENXXXXXXXXXXX )
-  * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-ADDRESS*
+  * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-ADDRESS device*
   * aqara url ( rpc-ger.aqara.com ) *host*
     * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
   * timezone ( it-IT ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
@@ -78,9 +78,9 @@ You can delete AqaraHome_mod app it without logging out, otherwise the token val
 AqaraHome apk mod includes acceptance of the user-installed certificate, (to see the http requests in burp).
 
 
-## Install ##
+## Import flow NodeRed ##
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/a7c093f9-c383-451d-b452-828d5d4b03af)
-
+## Entity NodeCompanion ##
 ![immagine](https://github.com/user-attachments/assets/15e8632f-5c92-42f1-886b-96bec0633c43)
 
 
@@ -210,9 +210,9 @@ command_line:
 
 ## See also ##
 
-[AqaraG3-armv7-binary](https://github.com/sdavides/AqaraG3-armv7-binary) AqaraG3 extra command
+[AqaraG3-armv7-binary](https://github.com/sdavides/AqaraG3-armv7-binary) AqaraG3 extra commands
 
-[AqaraCameraHubfw](https://github.com/niceboygithub/AqaraCameraHubfw) HACK 
+[AqaraCameraHubfw](https://github.com/niceboygithub/AqaraCameraHubfw) Firmware 
 
 [m3u8-HLS-Homeassistant](https://github.com/sdavides/m3u8-HLS-Homeassistant) Player m3u,mpd,mp4 playlist
 
