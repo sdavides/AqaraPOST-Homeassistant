@@ -44,18 +44,18 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 	* Replace your value "config" node 
 	* Deploy
 		* note: you can use the script to generate your flow json with values
-		* [generatejson](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md)
+		* [generatejson](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-flow-json-with-your-values)
     
  * Method 3 RestFul (without NodeRed - few functions):
 	* Replace your value Aqara_G3_without_nodered.txt
 	* Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
 	* Restart HomeAssistant
    
-## Find your Value ##
+## Find your Values ##
 * Method 1 Python script:
 
 	Insert username and password Aqara account
-	 * [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/generatejson#generate-token-from-username-and-password)
+	 * [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)
   
           *thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)*
 
