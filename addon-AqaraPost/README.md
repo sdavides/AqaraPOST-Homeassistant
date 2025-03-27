@@ -28,7 +28,7 @@ Add custom component remote repository:
    ![immagine](https://github.com/user-attachments/assets/3d648c88-2b7d-4580-8e38-9d9ba3edfe7f)
 
 
-## Update/Apply new config / update flow
+## Update flow - Apply config
 
   * Delete file "flow.json"
     
