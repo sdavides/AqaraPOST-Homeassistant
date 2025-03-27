@@ -8,9 +8,10 @@
 ## Requires
 NodeRed-Companion *( install from HACS )*
 
-Username/Password Aqara account
-
 MAC-ADDRESS Camera G3 *( lumi1.XXXXXX )*
+
+Username/Password Aqara account
+  * the values ​​in the "config" node will be generated from the username and password if valid
 
 
 ## Installation
