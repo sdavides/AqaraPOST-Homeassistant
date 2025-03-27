@@ -77,7 +77,7 @@ This is the beauty of it: no modifications to the device are necessary.
 
 You can delete AqaraHome_mod app it without logging out, otherwise the token values ​​​​are expired.
 
-AqaraHome apk mod includes acceptance of the user-installed certificate, (to see the http requests in burp).
+AqaraHome apk mod includes acceptance of the user-installed certificate, (to see the http requests on burp/zap).
 
 
 ## Import flow NodeRed ##
