@@ -4,14 +4,13 @@
 
   *Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera.*
 
-05/01/2025 🚨 Drop support for ARMv7 ([#2016](https://github.com/hassio-addons/addon-node-red/pull/2016))
 
 ## Requires
 NodeRed-Companion *( install from HACS )*
 
 Username/Password Aqara account
 
-MAC address Camera G3 *( lumi1.XXXXXX )*
+MAC-ADDRESS Camera G3 *( lumi1.XXXXXX )*
 
 
 ## Installation
@@ -24,12 +23,12 @@ Add custom component remote repository:
    ![immagine](https://github.com/user-attachments/assets/1f100850-d7db-40ca-a036-97254154b408)
 
 
-## Setting
+## Settings
 
    ![immagine](https://github.com/user-attachments/assets/3d648c88-2b7d-4580-8e38-9d9ba3edfe7f)
 
 
-## Update/Apply new config
+## Update/Apply new config / update flow
 
   * Delete file "flow.json"
     
@@ -41,7 +40,7 @@ Add custom component remote repository:
 
 ## Verify install
 
-  * Verify value into "config" node
+  * Verify values into "config" node
     
     ![immagine](https://github.com/user-attachments/assets/ab2c21f0-0a85-4398-9d29-bfe4e29df13c)
 
