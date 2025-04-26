@@ -346,6 +346,7 @@
         "name": "parameter",
         "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"up_always\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
+        "timeout": "",
         "noerr": 0,
         "initialize": "",
         "finalize": "",
@@ -2049,7 +2050,7 @@
         "type": "http request",
         "z": "95f0a9b0b9102f70",
         "name": "",
-        "method": "GET",
+        "method": "POST",
         "ret": "obj",
         "paytoqs": "ignore",
         "url": "",
@@ -2063,7 +2064,7 @@
             { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
             { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
         ],
-        "x": 2560,
+        "x": 2710,
         "y": 6320,
         "wires": [[]]
     },
@@ -2077,7 +2078,7 @@
         "outputs": 1,
         "entityConfig": "5a7499966593d12c",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 1970,
+        "x": 1960,
         "y": 6200,
         "wires": [["53a29ce841ae2b49"]]
     },
@@ -2086,7 +2087,7 @@
         "type": "function",
         "z": "95f0a9b0b9102f70",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\nvar posId = '&posId=38269'\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/devex/camera/ptz/position/run?did=\" + subjectId + posId;\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"up_always\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2095,7 +2096,7 @@
         "libs": [],
         "x": 2220,
         "y": 6200,
-        "wires": [["ae9f68ea9531607a"]]
+        "wires": [["c22dfe6bde1fbae9"]]
     },
     {
         "id": "0e3ed0aec9da0fc0",
@@ -2107,7 +2108,7 @@
         "outputs": 1,
         "entityConfig": "f4c623b28c9d06ef",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 1980,
+        "x": 1970,
         "y": 6260,
         "wires": [["437f1043567f3c5a"]]
     },
@@ -2121,7 +2122,7 @@
         "outputs": 1,
         "entityConfig": "fa43a635a96a9ca9",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 1980,
+        "x": 1970,
         "y": 6320,
         "wires": [["8c4926dcd7105e6b"]]
     },
@@ -2135,7 +2136,7 @@
         "outputs": 1,
         "entityConfig": "af31515f6d84fa05",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 1980,
+        "x": 1970,
         "y": 6380,
         "wires": [["6ef7d67f0129932b"]]
     },
@@ -2149,16 +2150,16 @@
         "outputs": 1,
         "entityConfig": "9ec51de383db5e90",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
-        "x": 1970,
-        "y": 6440,
-        "wires": [["7dce62e83cd49725"]]
+        "x": 1960,
+        "y": 6520,
+        "wires": [["2ab15e8fed28330e"]]
     },
     {
         "id": "437f1043567f3c5a",
         "type": "function",
         "z": "95f0a9b0b9102f70",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\nvar posId = '&posId=38270'\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/devex/camera/ptz/position/run?did=\" + subjectId + posId;\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"down_always\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2167,14 +2168,14 @@
         "libs": [],
         "x": 2220,
         "y": 6260,
-        "wires": [["ae9f68ea9531607a"]]
+        "wires": [["c22dfe6bde1fbae9"]]
     },
     {
         "id": "8c4926dcd7105e6b",
         "type": "function",
         "z": "95f0a9b0b9102f70",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\nvar posId = '&posId=38267'\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/devex/camera/ptz/position/run?did=\" + subjectId + posId;\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"left_always\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2183,14 +2184,14 @@
         "libs": [],
         "x": 2220,
         "y": 6320,
-        "wires": [["ae9f68ea9531607a"]]
+        "wires": [["c22dfe6bde1fbae9"]]
     },
     {
         "id": "6ef7d67f0129932b",
         "type": "function",
         "z": "95f0a9b0b9102f70",
         "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\nvar posId = '&posId=38268'\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/devex/camera/ptz/position/run?did=\" + subjectId + posId;\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"right_always\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -2199,23 +2200,7 @@
         "libs": [],
         "x": 2220,
         "y": 6380,
-        "wires": [["ae9f68ea9531607a"]]
-    },
-    {
-        "id": "7dce62e83cd49725",
-        "type": "function",
-        "z": "95f0a9b0b9102f70",
-        "name": "parameter",
-        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\nvar posId = '&posId=38271'\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/devex/camera/ptz/position/run?did=\" + subjectId + posId;\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2220,
-        "y": 6440,
-        "wires": [["ae9f68ea9531607a"]]
+        "wires": [["c22dfe6bde1fbae9"]]
     },
     {
         "id": "9a2acba4821d3f66",
@@ -6469,6 +6454,91 @@
         "wires": [["d3fe52264b3a0f2d"]]
     },
     {
+        "id": "c22dfe6bde1fbae9",
+        "type": "function",
+        "z": "95f0a9b0b9102f70",
+        "name": "parameter",
+        "func": "var aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/devex/camera/operate\";\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2530,
+        "y": 6320,
+        "wires": [["ae9f68ea9531607a"]]
+    },
+    {
+        "id": "c6ede6d40b68de7f",
+        "type": "http request",
+        "z": "95f0a9b0b9102f70",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            { "keyType": "other", "keyValue": "Sys-Type", "valueType": "other", "valueValue": "1" },
+            { "keyType": "other", "keyValue": "Content-Type", "valueType": "other", "valueValue": "application/json; charset=utf-8" }
+        ],
+        "x": 2510,
+        "y": 6520,
+        "wires": [[]]
+    },
+    {
+        "id": "2ab15e8fed28330e",
+        "type": "function",
+        "z": "95f0a9b0b9102f70",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\nvar posId = '&posId=38271'\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/devex/camera/ptz/position/run?did=\" + subjectId + posId;\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2210,
+        "y": 6520,
+        "wires": [["c6ede6d40b68de7f"]]
+    },
+    {
+        "id": "b63cad9c416f7b3c",
+        "type": "ha-button",
+        "z": "95f0a9b0b9102f70",
+        "name": "Camera G3 PTZ Stop",
+        "version": 0,
+        "debugenabled": false,
+        "outputs": 1,
+        "entityConfig": "1422e226a6fd3495",
+        "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
+        "x": 1960,
+        "y": 6440,
+        "wires": [["67a40301b60eebd2"]]
+    },
+    {
+        "id": "67a40301b60eebd2",
+        "type": "function",
+        "z": "95f0a9b0b9102f70",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId\");\nvar token = global.get(\"token\");\nvar appid = global.get(\"appid\");\n\nmsg.payload = {\n    \"did\": subjectId, \"method\": \"ctrl_ptz\", \"params\": { \"action\": \"stop\" }\n};\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2210,
+        "y": 6440,
+        "wires": [["c22dfe6bde1fbae9"]]
+    },
+    {
         "id": "c7ab1b7d9b84a156",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
@@ -7965,6 +8035,24 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 person_push" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "1422e226a6fd3495",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 PTZ Stop",
+        "version": "6",
+        "entityType": "button",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 PTZ Stop" },
             { "property": "icon", "value": "" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
