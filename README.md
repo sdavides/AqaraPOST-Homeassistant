@@ -27,7 +27,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 * Your value from POST Request Aqara app:
   * appid  ( XXXXXXAPPIDXXXXXXXXXXX )
   * token ( XXXXXXTOKENXXXXXXXXXXX )
-  * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-ADDRESS device*
+  * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-address device* [lumi1.*1a2b3c4d5c*]
   * aqara url ( rpc-ger.aqara.com ) *host*
     * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
   * timezone ( it-IT ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
