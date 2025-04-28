@@ -1552,7 +1552,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 5060,
+        "y": 5120,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1566,7 +1566,7 @@
         "entityConfig": "4cf0024dc3119f50",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1350,
-        "y": 5060,
+        "y": 5120,
         "wires": [["1103ac451076d3d8"]]
     },
     {
@@ -1582,7 +1582,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 5120,
+        "y": 5180,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1596,7 +1596,7 @@
         "entityConfig": "f635be93c5ef33c5",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1340,
-        "y": 5120,
+        "y": 5180,
         "wires": [["55c94312e3d134c2"]]
     },
     {
@@ -1610,7 +1610,7 @@
         "entityConfig": "e1be84f5539ac0d4",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 5180,
+        "y": 5240,
         "wires": [["26e613be025c6b59"]]
     },
     {
@@ -1626,7 +1626,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 5180,
+        "y": 5240,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1642,7 +1642,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 5240,
+        "y": 5300,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1658,7 +1658,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 5300,
+        "y": 5360,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1672,7 +1672,7 @@
         "entityConfig": "e582ac0488cf9b54",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1360,
-        "y": 5240,
+        "y": 5300,
         "wires": [["3e5e340ff8962856"]]
     },
     {
@@ -1686,7 +1686,7 @@
         "entityConfig": "9fb0a4d2354989e4",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1360,
-        "y": 5300,
+        "y": 5360,
         "wires": [["f1327731d7ba164b"]]
     },
     {
@@ -1840,7 +1840,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 5000,
+        "y": 5060,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1856,7 +1856,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4940,
+        "y": 5000,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1872,7 +1872,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4880,
+        "y": 4940,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -1886,7 +1886,7 @@
         "entityConfig": "3bcf5e284e063be9",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 4880,
+        "y": 4940,
         "wires": [["237b27231d9a2a80"]]
     },
     {
@@ -1900,7 +1900,7 @@
         "entityConfig": "151e17a3db64c515",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1390,
-        "y": 4940,
+        "y": 5000,
         "wires": [["03416da13714f5f3"]]
     },
     {
@@ -1914,7 +1914,7 @@
         "entityConfig": "cc508fe7324326af",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1380,
-        "y": 5000,
+        "y": 5060,
         "wires": [["c659c1ae940d9fbb"]]
     },
     {
@@ -3216,7 +3216,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4760,
+        "y": 4820,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -3232,7 +3232,7 @@
         "finalize": "",
         "libs": [],
         "x": 1910,
-        "y": 4820,
+        "y": 4880,
         "wires": [["c65eb1eae90970fd"]]
     },
     {
@@ -3246,7 +3246,7 @@
         "entityConfig": "a942ec481ed3235e",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 4760,
+        "y": 4820,
         "wires": [["fa403c81babdce41"]]
     },
     {
@@ -3260,7 +3260,7 @@
         "entityConfig": "e6757360e27f27b8",
         "outputProperties": [{ "property": "payload", "propertyType": "msg", "value": "", "valueType": "str" }],
         "x": 1370,
-        "y": 4820,
+        "y": 4880,
         "wires": [["6541989f0a3023ac"]]
     },
     {
@@ -3585,7 +3585,8 @@
                 "99562126cb59e456",
                 "6249737328d90653",
                 "30b867ce249a824a",
-                "42431a1c22e60e41"
+                "42431a1c22e60e41",
+                "d2def512e9761a4b"
             ]
         ]
     },
@@ -6556,6 +6557,91 @@
         "wires": [["f11d789265c8436a"]]
     },
     {
+        "id": "7be991bf1270a0e6",
+        "type": "change",
+        "z": "15043fc595493276",
+        "name": "",
+        "rules": [{ "t": "move", "p": "payload.sleep_mode.value", "pt": "msg", "to": "enable", "tot": "msg" }],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 930,
+        "y": 4740,
+        "wires": [["cf9c5dc22a4aef3f"]]
+    },
+    {
+        "id": "d2def512e9761a4b",
+        "type": "change",
+        "z": "15043fc595493276",
+        "name": "change resourceId",
+        "rules": [
+            { "t": "change", "p": "payload.sleep_mode.value", "pt": "msg", "from": "1", "fromt": "str", "to": "true", "tot": "bool" },
+            { "t": "change", "p": "payload.sleep_mode.value", "pt": "msg", "from": "0", "fromt": "str", "to": "false", "tot": "bool" }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 4740,
+        "wires": [["7be991bf1270a0e6"]]
+    },
+    {
+        "id": "7919be5012e04c7d",
+        "type": "function",
+        "z": "15043fc595493276",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId_2\");\nvar token = global.get(\"token_2\");\nvar appid = global.get(\"appid_2\");\nmsg.payload = {\n    \"data\": { \"14.125.85\":\"0\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.53\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 4760,
+        "wires": [["c65eb1eae90970fd"]]
+    },
+    {
+        "id": "2d4065a2c63d0b96",
+        "type": "function",
+        "z": "15043fc595493276",
+        "name": "parameter",
+        "func": "var subjectId = global.get(\"subjectId_2\");\nvar token = global.get(\"token_2\");\nvar appid = global.get(\"appid_2\");\nmsg.payload = {\n    \"data\": { \"14.125.85\":\"1\" }, \"options\": \"\", \"subjectId\": subjectId, \"version\":\"6.53\", \"viewId\": \"detail\" };\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1910,
+        "y": 4720,
+        "wires": [["c65eb1eae90970fd"]]
+    },
+    {
+        "id": "cf9c5dc22a4aef3f",
+        "type": "ha-switch",
+        "z": "15043fc595493276",
+        "name": "Camera G3 sleep_mode_2",
+        "version": 0,
+        "debugenabled": false,
+        "inputs": 1,
+        "outputs": 2,
+        "entityConfig": "9770f58de6af570b",
+        "enableInput": true,
+        "outputOnStateChange": true,
+        "outputProperties": [
+            { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
+            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+        ],
+        "x": 1350,
+        "y": 4740,
+        "wires": [["2d4065a2c63d0b96"], ["7919be5012e04c7d"]]
+    },
+    {
         "id": "f99e763ac183de8c",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
@@ -8084,6 +8170,24 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ Stop_2" },
+            { "property": "icon", "value": "" },
+            { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "" },
+            { "property": "device_class", "value": "" }
+        ],
+        "resend": false,
+        "debugEnabled": false
+    },
+    {
+        "id": "9770f58de6af570b",
+        "type": "ha-entity-config",
+        "server": "2b77899a.ed9b86",
+        "deviceConfig": "",
+        "name": "Camera G3 sleep_mode_2",
+        "version": "6",
+        "entityType": "switch",
+        "haConfig": [
+            { "property": "name", "value": "Camera G3 sleep_mode_2" },
             { "property": "icon", "value": "" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
