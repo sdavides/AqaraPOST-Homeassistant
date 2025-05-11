@@ -3459,7 +3459,7 @@
             { "property": "Gesture Need Face", "value": "payload.gestneedface.value", "valueType": "msg" },
             { "property": "Hand gesture", "value": "payload.one_both_hand.value", "valueType": "msg" },
             { "property": "Sleep_mode", "value": "payload.sleep_mode.value", "valueType": "msg" },
-            { "property": "Last checked", "value": "lastcheck", "valueType": "str" }
+            { "property": "Last checked", "value": "lastcheck", "valueType": "msg" }
         ],
         "inputOverride": "allow",
         "outputProperties": [],
