@@ -13,7 +13,7 @@
     "bcryptjs": "3.0.2",
     "js-yaml": "4.1.0",
     "node-red": "4.0.9",
-    "node-red-contrib-home-assistant-websocket": "0.76.0",
+    "node-red-contrib-home-assistant-websocket": "0.77.0",
     "node-red-contrib-config": "1.2.1",
     "node-red-dashboard": "3.6.5",
     "@node-red-contrib-themes/theme-collection": "4.0.11",
