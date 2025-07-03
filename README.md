@@ -168,6 +168,15 @@ for a successful update of the existing flow without changing the entities in Ho
 
 	 	 rtsp://USER:PASS@192.168.1.4:8554/360p (/720p /1080p /1296p)
 
+	 	 last ver. 4.3.4 change path:
+
+		rtsp://192.168.1.4:8554/ch3
+
+		"360p": "/ch3"
+		"720p": "/ch2"
+		"1296p":"/ch1"
+
+
     ```bash
     command_line:
       - sensor:
