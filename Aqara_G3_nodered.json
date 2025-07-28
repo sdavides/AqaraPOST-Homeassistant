@@ -3329,7 +3329,7 @@
         "type": "function",
         "z": "8d2a9bf467b0d174",
         "name": "parameter",
-        "func": "var token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/user/desensitize/info\";\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nreturn msg",
+        "func": "var token = global.get(\"token\");\nvar appid = global.get(\"appid\");\nvar aqara_url = global.get(\"aqara_url\");\n\nmsg.url = \"https://\" + aqara_url + \"/app/v1.0/lumi/user/desensitize/info\";\n\nmsg.headers = {\n    \"Token\": token,\n    \"Appid\": appid\n};\n\nif (aqara_url === \"\") {\n    node.error( \" \", msg);\n    node.error( \"aqara_url or password incorrect \", msg);\n    node.error(\" \", msg);\n}\n\nreturn msg",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -3354,7 +3354,7 @@
         "libs": [],
         "x": 910,
         "y": 420,
-        "wires": [["59a2b380e0aa6a32"]]
+        "wires": [["dbce61e302f34f5d"]]
     },
     { "id": "5992f7fcf7c91cb5", "type": "comment", "z": "8d2a9bf467b0d174", "name": "UserID autoconfig", "info": "UserID autoconfig\n\nInsert manual UserID \ninto config node if not work", "x": 890, "y": 260, "wires": [] },
     {
@@ -3395,7 +3395,7 @@
         "y": 520,
         "wires": [[]]
     },
-    { "id": "019c094655ab8023", "type": "json", "z": "8d2a9bf467b0d174", "name": "", "property": "payload.sdcard_status.value", "action": "obj", "pretty": false, "x": 2430, "y": 820, "wires": [["05a7e035afc582de"]] },
+    { "id": "019c094655ab8023", "type": "json", "z": "8d2a9bf467b0d174", "name": "", "property": "payload.sdcard_status.value", "action": "obj", "pretty": false, "x": 2430, "y": 820, "wires": [["494b6df1569034de"]] },
     {
         "id": "c94033e2b777c3f9",
         "type": "ha-sensor",
@@ -6642,6 +6642,38 @@
         "x": 1450,
         "y": 2640,
         "wires": [["967f390448c0f4c0"]]
+    },
+    {
+        "id": "dbce61e302f34f5d",
+        "type": "function",
+        "z": "8d2a9bf467b0d174",
+        "name": "Error UserID",
+        "func": "if (msg.payload.message != \"Success\") {\n    node.error( \" \", msg);\n    node.error(msg.payload.message + \" \" + msg.payload.msgDetails, msg);\n    node.error(\"Verify config node\", msg);\n    node.error(\" \", msg);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 870,
+        "y": 460,
+        "wires": [["59a2b380e0aa6a32"]]
+    },
+    {
+        "id": "494b6df1569034de",
+        "type": "function",
+        "z": "8d2a9bf467b0d174",
+        "name": "Error Config",
+        "func": "if (msg.payload.message != \"Success\") {\n    node.error( \" \", msg);\n    node.error(msg.payload.message + \" \" + msg.payload.msgDetails, msg);\n    node.error(\"Verify config node\", msg);\n    node.error(\" \", msg);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 800,
+        "wires": [["05a7e035afc582de"]]
     },
     {
         "id": "c7ab1b7d9b84a156",
