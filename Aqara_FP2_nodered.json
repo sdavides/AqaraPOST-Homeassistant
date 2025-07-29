@@ -144,7 +144,7 @@
         "libs": [],
         "x": 750,
         "y": 460,
-        "wires": [["934eaa35798a4c9a"]]
+        "wires": [["1862d77f79dc1c27"]]
     },
     { "id": "ecdc78efdcee6829", "type": "comment", "z": "3590a173e184ae82", "name": "UserID autoconfig", "info": "UserID autoconfig\n\nInsert manual UserID \ninto config node if not work", "x": 730, "y": 300, "wires": [] },
     {
@@ -267,7 +267,7 @@
         ],
         "inputOverride": "allow",
         "outputProperties": [],
-        "x": 3010,
+        "x": 3050,
         "y": 940,
         "wires": [[]]
     },
@@ -1099,7 +1099,7 @@
         "reg": false,
         "x": 2790,
         "y": 940,
-        "wires": [["f05a9a7e454ed4e2"]]
+        "wires": [["a8c2f8bcd670638d"]]
     },
     {
         "id": "0a361296f22677ed",
@@ -1764,7 +1764,7 @@
         "type": "function",
         "z": "3590a173e184ae82",
         "name": "Fix not found",
-        "func": "if (msg.payload.sleep_state === undefined) {\n    msg.payload.sleep_state = 'n.d';\n}\nif (msg.payload.heartrate_value === undefined) {\n    msg.payload.heartrate_value = 'n.d.';\n}\nif (msg.payload.view_zoom === undefined) {\n    msg.payload.view_zoom = 'n.d';\n}\nif (msg.payload.device_offline_status === undefined) {\n    msg.payload.device_offline_status = 'n.d.';\n}\nif (msg.payload.soundtrigger_enable === undefined) {\n    msg.payload.soundtrigger_enable = 'n.d.';\n}\nif (msg.payload.ptz_cruise_enable === undefined) {\n    msg.payload.ptz_cruise_enable = 'n.d';\n}\nif (msg.payload.gesture_detect_enable === undefined) {\n    msg.payload.gesture_detect_enable = 'n.d.';\n}\nif (msg.payload.pets_track_enable === undefined) {\n    msg.payload.pets_track_enable = 'n.d.';\n}\nif (msg.payload.set_video === undefined) {\n    msg.payload.set_video = 'n.d';\n}\nif (msg.payload.cloud_small_video === undefined) {\n    msg.payload.cloud_small_video = 'n.d.';\n}\nif (msg.payload.alarm_bell_index === undefined) {\n    msg.payload.alarm_bell_index = 'n.d.';\n}\n\nif (msg.payload.alarm_bell_volume === undefined) {\n    msg.payload.alarm_bell_volume = 'n.d';\n}\nif (msg.payload.alarm_status === undefined) {\n    msg.payload.alarm_status = 'n.d.';\n}\nif (msg.payload.system_volume === undefined) {\n    msg.payload.system_volume = 'n.d.';\n}\nif (msg.payload.device_night_tip_light === undefined) {\n    msg.payload.device_night_tip_light = 'n.d';\n}\nif (msg.payload.sdcard_status === undefined) {\n    msg.payload.sdcard_status = 'n.d.';\n}\nif (msg.payload.device_wifi_rssi === undefined) {\n    msg.payload.device_wifi_rssi = 'n.d.';\n}\nif (msg.payload.gateway_deletion_setting === undefined) {\n    msg.payload.gateway_deletion_setting = 'n.d';\n} \n\nreturn msg;",
+        "func": "if (msg.payload.sleep_state) {\n    msg.payload.sleep_state = {};\n}\n\nif (msg.payload.heartrate_value) {\n    msg.payload.heartrate_value = {};\n}\n\nif (msg.payload.view_zoom) {\n    msg.payload.view_zoom = {};\n}\n\nif (!msg.payload.device_offline_status) {\n    msg.payload.device_offline_status = {};\n}\n\nif (!msg.payload.soundtrigger_enable) {\n    msg.payload.soundtrigger_enable = {};\n}\n\nif (!msg.payload.ptz_cruise_enable) {\n    msg.payload.ptz_cruise_enable = {};\n}\n\nif (!msg.payload.gesture_detect_enable) {\n    msg.payload.gesture_detect_enable = {};\n}\n\nif (!msg.payload.pets_track_enable) {\n    msg.payload.pets_track_enable = {};\n}\n\nif (!msg.payload.set_video) {\n    msg.payload.set_video = {};\n}\n\nif (!msg.payload.cloud_small_video) {\n    msg.payload.cloud_small_video = {};\n}\n\nif (!msg.payload.alarm_bell_index) {\n    msg.payload.alarm_bell_index = {};\n}\n\nif (!msg.payload.alarm_bell_volume) {\n    msg.payload.alarm_bell_volume = {};\n}\n\nif (!msg.payload.alarm_status) {\n    msg.payload.alarm_status = {};\n}\n\nif (!msg.payload.system_volume) {\n    msg.payload.system_volume = {};\n}\n\nif (!msg.payload.device_night_tip_light) {\n    msg.payload.device_night_tip_light = {};\n}\n\nif (!msg.payload.sdcard_status) {\n    msg.payload.sdcard_status = {};\n}\n\nif (!msg.payload.device_wifi_rssi) {\n    msg.payload.device_wifi_rssi = {};\n}\n\nif (!msg.payload.gateway_deletion_setting) {\n    msg.payload.gateway_deletion_setting = {};\n} \n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -1774,6 +1774,38 @@
         "x": 2310,
         "y": 860,
         "wires": [["454c5088ea4a5399"]]
+    },
+    {
+        "id": "1862d77f79dc1c27",
+        "type": "function",
+        "z": "3590a173e184ae82",
+        "name": "Error UserID_fp2",
+        "func": "if (msg.payload.message != \"Success\") {\n    node.error( \" \", msg);\n    node.error(msg.payload.message + \" \" + msg.payload.msgDetails, msg);\n    node.error(\"Verify config node\", msg);\n    node.error(\" \", msg);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 500,
+        "wires": [["934eaa35798a4c9a"]]
+    },
+    {
+        "id": "a8c2f8bcd670638d",
+        "type": "function",
+        "z": "3590a173e184ae82",
+        "name": "Error Config fp2",
+        "func": "if (msg.payload.message != \"Success\") {\n    node.error( \" \", msg);\n    node.error(msg.payload.message + \" \" + msg.payload.msgDetails, msg);\n    node.error(\"Verify config node\", msg);\n    node.error(\" \", msg);\n}\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 3040,
+        "y": 900,
+        "wires": [["f05a9a7e454ed4e2"]]
     },
     {
         "id": "b240909b2886f7ba",
