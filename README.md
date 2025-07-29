@@ -20,8 +20,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
   * note: 
 	* this flow is example and was developed for Aqara Hub G3 camera *( lumi1.xxxx )*
-  		* for FP2 Sensor import [Aqara_FP2_nodered.json](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Aqara_FP2_nodered.json) 
-  		* or without NodeRed (few functions) see [Darafei Praliaskouski page](https://www.patreon.com/posts/connecting-fp2-107200167)
+  		* for FP2 Sensor import [Aqara_FP2_nodered.json](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Aqara_FP2_nodered.json), without NodeRed (few functions)  [Darafei Praliaskouski page](https://www.patreon.com/posts/connecting-fp2-107200167)
 
 ## Requirement ##
 * Your value from POST Request Aqara app:
@@ -48,7 +47,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 		* [generatejson](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-flow-json-with-your-values)
     
  * Method 3 RestFul (without NodeRed - few functions):
-	* Replace your value Aqara_G3_without_nodered.txt
+	* Replace your value [Aqara_G3_without_nodered.txt](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_without_nodered.txt)
 	* Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
 	* Restart HomeAssistant
    
