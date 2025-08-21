@@ -1,6 +1,6 @@
 ---
 name: AqaraPost_[Node-RED]
-version: dev
+version: 2.0
 slug: nodered_aqara
 description: NodeRed mod for AqaraPost-Homeassistant
 url: https://github.com/sdavides/AqaraPOST-Homeassistant
@@ -38,6 +38,7 @@ options:
   serverAqara: EU
   lumi1Aqara: lumi1.a1b2c3e4f5
   timezoneAqara: it-IT
+  deviceType: G3
   theme: default
   http_node:
     username: ""
@@ -57,6 +58,7 @@ schema:
   serverAqara: str
   lumi1Aqara: str
   timezoneAqara: str
+  deviceType: list(G3|FP2)?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
   theme: list(default|aurora|cobalt2|dark|dracula|espresso-libre|github-dark|github-dark-default|github-dark-dimmed|midnight-red|monoindustrial|monokai|monokai-dimmed|night-owl|noctis|noctis-azureus|noctis-bordo|noctis-minimus|noctis-obscuro|noctis-sereno|noctis-uva|noctis-viola|oceanic-next|oled|one-dark-pro|one-dark-pro-darker|railscasts-extended|selenized-dark|selenized-light|solarized-dark|solarized-light|tokyo-night|tokyo-night-light|tokyo-night-storm|totallyinformation|zenburn|zendesk-garden)?
