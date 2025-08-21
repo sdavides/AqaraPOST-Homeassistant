@@ -17,13 +17,26 @@ else
 	apk add python3 && apk add py3-pip && pip install requests && pip install pycryptodome && pip install requests-toolbelt  && bashio::log.info "Install python3/pycryptodome complete"|| bashio::log.info "install python3 error"
 	bashio::log.info "......."
 	
-	#AqaraPost
+	#AqaraPost FP2
 	bashio::log.info "......."
 	bashio::log.info "Starting AqaraPost-Homeassistant download flow ..."
-	bashio::log.info "Download flow Aqara G3 Camera from GitHub"
+	
+	# Check device type configuration
+	DEVICE_TYPE=$(bashio::config 'deviceType' 'FP2')
+	
+	if [ "$DEVICE_TYPE" = "FP2" ]; then
+		bashio::log.info "Download flow Aqara FP2 Presence Sensor from GitHub"
+		FLOW_URL="https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_FP2_nodered.json"
+		FLOW_NAME="Aqara_FP2_nodered.json"
+	else
+		bashio::log.info "Download flow Aqara G3 Camera from GitHub"  
+		FLOW_URL="https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_G3_nodered.json"
+		FLOW_NAME="Aqara_G3_nodered.json"
+	fi
+	
 	rm -rf /config/* && bashio::log.info "/config/flows.json not found, clean all and reset flow" || bashio::log.info "......."
 	touch /etc/node-red/flows.json || bashio::log.info "...."
-	wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_G3_nodered.json --output-document=/etc/node-red/flows.json && bashio::log.info "Download AqaraPost json complete..." || bashio::log.info "Error download AqaraPost flow json"
+	wget -q "$FLOW_URL" --output-document=/etc/node-red/flows.json && bashio::log.info "Download AqaraPost $DEVICE_TYPE json complete..." || bashio::log.info "Error download AqaraPost flow json"
 	bashio::log.info "......."
 	bashio::log.info "End AqaraPost-Homeassistant download flow ..."
 		
@@ -40,9 +53,31 @@ else
 	bashio::log.info "Insert value ..."
 	wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-Homeassistant.sh --output-document=/tmp/AqaraPOST-Homeassistant.sh || bashio::log.info "error download AqaraPOST-Homeassistant.sh ......."
 	chmod +x /tmp/AqaraPOST-Homeassistant.sh || bashio::log.info "error AqaraPOST-Homeassistant.sh chmod ......."
-	( echo $(cat /tmp/AqaraPOST-tokenGenerator.token) ; echo $(bashio::config 'lumi1Aqara'); echo $(cat /tmp/AqaraPOST-tokenGenerator.appid) ; echo $(cat /tmp/AqaraPOST-tokenGenerator.server) ; echo $(bashio::config 'timezoneAqara') ) | /tmp/AqaraPOST-Homeassistant.sh|| bashio::log.info "error AqaraPOST-Homeassistant.sh ......."
-	dos2unix /tmp/Aqara_G3_nodered.json
-	mv /tmp/Aqara_G3_nodered.json /etc/node-red/flows.json &&  bashio::log.info "import flow with value OK! > /etc/node-red/flows.json = complete" ||  bashio::log.info "copy AqaraPost flow > /etc/node-red/flows.json = error"
+	# Generate flow with tokens based on device type
+	if [ "$DEVICE_TYPE" = "FP2" ]; then
+		# For FP2, we need a custom script or modify the existing one
+		bashio::log.info "Configuring FP2 flow with tokens..."
+		# Create a simple token replacement for FP2 (since original script is for G3)
+		TOKEN=$(cat /tmp/AqaraPOST-tokenGenerator.token | tr -d '\n\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+		APPID=$(cat /tmp/AqaraPOST-tokenGenerator.appid | tr -d '\n\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+		SERVER=$(cat /tmp/AqaraPOST-tokenGenerator.server | tr -d '\n\r' | sed 's/^[[:space:]]*//;s/[[:space:]]*$//')
+		LUMI1=$(bashio::config 'lumi1Aqara')
+		TIMEZONE=$(bashio::config 'timezoneAqara')
+		
+		# Replace placeholder values in the FP2 flow
+		sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/flows.json
+		sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/flows.json  
+		sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI1/g" /etc/node-red/flows.json
+		sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/flows.json
+		sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/flows.json
+		
+		bashio::log.info "FP2 flow configured with tokens"
+	else
+		# Use original G3 script
+		( echo $(cat /tmp/AqaraPOST-tokenGenerator.token) ; echo $(bashio::config 'lumi1Aqara'); echo $(cat /tmp/AqaraPOST-tokenGenerator.appid) ; echo $(cat /tmp/AqaraPOST-tokenGenerator.server) ; echo $(bashio::config 'timezoneAqara') ) | /tmp/AqaraPOST-Homeassistant.sh|| bashio::log.info "error AqaraPOST-Homeassistant.sh ......."
+		dos2unix /tmp/Aqara_G3_nodered.json
+		mv /tmp/Aqara_G3_nodered.json /etc/node-red/flows.json &&  bashio::log.info "import flow with value OK! > /etc/node-red/flows.json = complete" ||  bashio::log.info "copy AqaraPost flow > /etc/node-red/flows.json = error"
+	fi
         rm -rf /tmp/AqaraPOST*
 	bashio::log.info "End AqaraPost-Homeassistant json value ..." 
 	bashio::log.info "......."

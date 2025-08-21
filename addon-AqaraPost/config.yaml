@@ -1,9 +1,9 @@
 ---
-name: AqaraPost_[Node-RED]
-version: dev
-slug: nodered_aqara
-description: NodeRed mod for AqaraPost-Homeassistant
-url: https://github.com/sdavides/AqaraPOST-Homeassistant
+name: AqaraPost_FP2_[Node-RED]
+version: fp2-1.0
+slug: nodered_aqara_fp2
+description: NodeRed mod for AqaraPost-Homeassistant with FP2 Presence Sensor support
+url: https://github.com/your-username/AqaraPOST-Homeassistant
 codenotary: codenotary@frenck.dev
 ingress: true
 ingress_port: 0
@@ -37,7 +37,8 @@ options:
   passwordAqara: []
   serverAqara: EU
   lumi1Aqara: lumi1.a1b2c3e4f5
-  timezoneAqara: it-IT
+  timezoneAqara: sv-SE
+  deviceType: FP2
   theme: default
   http_node:
     username: ""
@@ -57,6 +58,7 @@ schema:
   serverAqara: str
   lumi1Aqara: str
   timezoneAqara: str
+  deviceType: list(FP2|G3)?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
   theme: list(default|aurora|cobalt2|dark|dracula|espresso-libre|github-dark|github-dark-default|github-dark-dimmed|midnight-red|monoindustrial|monokai|monokai-dimmed|night-owl|noctis|noctis-azureus|noctis-bordo|noctis-minimus|noctis-obscuro|noctis-sereno|noctis-uva|noctis-viola|oceanic-next|oled|one-dark-pro|one-dark-pro-darker|railscasts-extended|selenized-dark|selenized-light|solarized-dark|solarized-light|tokyo-night|tokyo-night-light|tokyo-night-storm|totallyinformation|zenburn|zendesk-garden)?

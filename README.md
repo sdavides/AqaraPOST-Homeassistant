@@ -1,50 +1,82 @@
 ----
 ----
-#  AqaraPOST-Homeassistant addon #
+#  AqaraPOST-Homeassistant FP2 Fork #
 
-Add-on for camera G3 with automatic config scripts!!
+🎯 **Primary Device: Aqara FP2 Presence Sensor**
+
+Add-on for **FP2 Presence Sensor** with automatic config scripts! Also supports G3 Camera.
  
  * only Username/Password Aqara required
  	* the values ​​in the "config" node will be generated from the username and password if valid
  
- * [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
+ * [AqaraPost_FP2_[Node-RED]](https://github.com/your-username/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
 
 
 ----
 
 ----
 
-#  AqaraPOST-Homeassistant #
+#  AqaraPOST-Homeassistant FP2 Fork #
 
-Goal: Replace Post request "Aqara Home" app on HomeAssistant
+**🎯 Goal**: Replace POST requests from "Aqara Home" app on HomeAssistant with focus on **FP2 Presence Sensor**
 
-  * note: 
-	* this flow is example and was developed for Aqara Hub G3 camera *( lumi1.xxxx )*
-  		* for FP2 Sensor import [Aqara_FP2_nodered.json](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Aqara_FP2_nodered.json), without NodeRed (few functions)  [Darafei Praliaskouski page](https://www.patreon.com/posts/connecting-fp2-107200167)
+## 🚀 This Fork's Focus
 
-## Requirement ##
-* Your value from POST Request Aqara app:
-  * appid  ( XXXXXXAPPIDXXXXXXXXXXX )
-  * token ( XXXXXXTOKENXXXXXXXXXXX )
-  * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-address device* [lumi1.*1a2b3c4d5c*]
-  * aqara url ( rpc-ger.aqara.com ) *host*
-    * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
-  * timezone ( it-IT ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
-  * userid *( automatic, required for Aqara_G3_without_nodered.txt )*
+**Primary Device: Aqara FP2 Presence Sensor** *( lumi1.xxxx )*
+- ✅ **Method 1 Add-on** - One-click FP2 setup with username/password
+- ✅ **Auto-token refresh** - Never manually update tokens again
+- ✅ **Swedish locale support** - sv-SE and other European locales
+- ✅ **Backward compatible** - Still supports G3 cameras
+
+**Secondary Support: Aqara G3 Camera** *( lumi1.xxxx )*
+- 🔄 Legacy support maintained for existing G3 users
+
+## 🚀 Quick Start for FP2 Users
+
+1. **Add this repository** to Home Assistant Add-on Store
+2. **Install** "AqaraPost_FP2_[Node-RED]" add-on  
+3. **Configure** with your Aqara credentials and FP2 device ID
+4. **Start** the add-on - everything is automated!
+5. **Enjoy** presence detection in Home Assistant
+
+## Requirements ##
+
+### 🎯 For Method 1 (FP2 Add-on) - Recommended
+**Only need these - everything else is automatic!**
+* ✅ **Aqara account credentials** (username/password)  
+* ✅ **FP2 Device ID** ( lumi1.XXXXXXXXXXXX ) *usually MAC-address*
+* ✅ **Your region** (EU, US, CN, etc.)
+
+### 📋 For Method 2 (Manual Setup) - Advanced
+**Need to extract these values from POST Request Aqara app:**
+* appid  ( XXXXXXAPPIDXXXXXXXXXXX )
+* token ( XXXXXXTOKENXXXXXXXXXXX ) 
+* subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-address device* [lumi1.*1a2b3c4d5c*]
+* aqara url ( rpc-ger.aqara.com ) *host*
+  * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
+* timezone ( sv-SE ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
+* userid *( automatic, required for Aqara_G3_without_nodered.txt )*
 	
-## Method ##
-* Method 1 NodeRed (recommended, required NodeCompanion):
-	* Install Add-on
-              [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
-   		* only Username/Password Aqara required
-   		* NodeRed will be installed in parallel with the flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
+## 🛠️ Installation Methods ##
 
-* Method 2 NodeRed (recommended, required NodeCompanion):
-	* Import flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
-	* Replace your value "config" node 
-	* Deploy
-		* note: you can use the script to generate your flow json with values
-		* [generatejson](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-flow-json-with-your-values)
+### 🎯 Method 1: FP2 Add-on (Recommended - One-Click Setup)
+* **Primary for FP2**: Install Modified Add-on
+  * [AqaraPost_FP2_[Node-RED]](https://github.com/your-username/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
+  * ✅ **Only Username/Password required** - No token management needed
+  * ✅ **Automatic FP2 flow setup** - Downloads and configures [Aqara_FP2_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_FP2_nodered.json)
+  * ✅ **Swedish locale support** - sv-SE default
+  * ✅ **Auto-refresh tokens** - Set and forget
+  * 🔄 **G3 Compatible** - Set deviceType: G3 for cameras
+
+### 📋 Method 2: Manual NodeRed (Advanced Users)
+* **FP2**: Import flow [Aqara_FP2_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_FP2_nodered.json)
+  * Replace tokens manually in flow 
+  * Deploy and configure presence sensors
+  * Use [token generation tools](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-flow-json-with-your-values)
+
+* **G3 Legacy**: Import flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
+  * Replace your value "config" node 
+  * Deploy for camera functions
     
  * Method 3 RestFul (without NodeRed - few functions):
 	* Replace your value [Aqara_G3_without_nodered.txt](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_without_nodered.txt)
