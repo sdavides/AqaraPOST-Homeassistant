@@ -37,7 +37,7 @@ options:
   passwordAqara: []
   serverAqara: EU
   lumi1Aqara: lumi1.a1b2c3e4f5
-  timezoneAqara: sv-SE
+  timezoneAqara: it-IT
   deviceType: FP2
   theme: default
   http_node:

@@ -25,7 +25,7 @@ Add-on for **FP2 Presence Sensor** with automatic config scripts! Also supports 
 **Primary Device: Aqara FP2 Presence Sensor** *( lumi1.xxxx )*
 - ✅ **Method 1 Add-on** - One-click FP2 setup with username/password
 - ✅ **Auto-token refresh** - Never manually update tokens again
-- ✅ **Swedish locale support** - sv-SE and other European locales
+- ✅ **Swedish locale support** - sv-SE available alongside existing locales
 - ✅ **Backward compatible** - Still supports G3 cameras
 
 **Secondary Support: Aqara G3 Camera** *( lumi1.xxxx )*
@@ -54,7 +54,7 @@ Add-on for **FP2 Presence Sensor** with automatic config scripts! Also supports 
 * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-address device* [lumi1.*1a2b3c4d5c*]
 * aqara url ( rpc-ger.aqara.com ) *host*
   * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
-* timezone ( sv-SE ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
+* timezone ( it-IT ) *-> es-ES/en-UK/de-DE/sv-SE/pt-PT/en-US...*
 * userid *( automatic, required for Aqara_G3_without_nodered.txt )*
 	
 ## 🛠️ Installation Methods ##
@@ -64,7 +64,7 @@ Add-on for **FP2 Presence Sensor** with automatic config scripts! Also supports 
   * [AqaraPost_FP2_[Node-RED]](https://github.com/your-username/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
   * ✅ **Only Username/Password required** - No token management needed
   * ✅ **Automatic FP2 flow setup** - Downloads and configures [Aqara_FP2_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_FP2_nodered.json)
-  * ✅ **Swedish locale support** - sv-SE default
+  * ✅ **Swedish locale support** - sv-SE available
   * ✅ **Auto-refresh tokens** - Set and forget
   * 🔄 **G3 Compatible** - Set deviceType: G3 for cameras
 

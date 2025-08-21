@@ -5,7 +5,7 @@
 ### 🎉 New Features
 - **FP2 Support**: Add-on now defaults to FP2 Presence Sensor instead of G3 Camera
 - **Device Type Selection**: Choose between FP2 and G3 in configuration
-- **Swedish Locale**: Added sv-SE timezone support
+- **Swedish Locale**: Added sv-SE timezone support (alongside existing locales)
 - **Smart Token Replacement**: Custom logic for FP2 flow token injection
 - **Simplified Setup**: Removed manual token refresh complexity - add-on handles everything
 
@@ -13,13 +13,13 @@
 - **Default Device**: Changed from G3 Camera to FP2 Presence Sensor
 - **Add-on Name**: Updated to `AqaraPost_FP2_[Node-RED]`
 - **Configuration**: Added `deviceType` option (FP2/G3)
-- **Default Timezone**: Changed from it-IT to sv-SE
+- **Swedish Locale**: Added sv-SE to supported timezone options (default remains it-IT)
 - **Flow Download**: Automatically downloads correct flow based on device type
 
 ### 🛠️ Technical Updates
 - Modified `/addon-AqaraPost/config.yaml`:
   - Added `deviceType: FP2` option
-  - Updated default timezone to `sv-SE`
+  - Added `sv-SE` to supported timezones (default remains `it-IT`)
   - Changed addon name and description
   
 - Updated `/addon-AqaraPost/rootfs/etc/s6-overlay/s6-rc.d/init-nodered/run`:
