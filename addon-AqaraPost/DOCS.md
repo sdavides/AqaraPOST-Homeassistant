@@ -46,3 +46,22 @@ Add custom component remote repository:
 
     ![immagine](https://github.com/user-attachments/assets/c48aaefd-cd6c-45d9-b927-bd6129b839af)
 
+## Update data ##
+* add automation every 1 minute:
+	  
+		description: Update Aqara G3
+		mode: single
+		trigger:
+ 		 - platform: time_pattern
+ 		   minutes: /1
+		condition: []
+		action:
+		  - service: button.press
+		    metadata: {}
+		    data: {}
+		    target:
+		      entity_id: button.camera_g3_log
+	  
+	or change inject node:
+
+	![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/ebf6ebad-bdb0-427e-add6-d8a3dcb8caa6)
