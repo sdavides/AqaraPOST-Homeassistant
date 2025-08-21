@@ -2,15 +2,16 @@
 
   AqaraPost_[Node-RED] - NodeRed mod for AqaraPost-Homeassistant.
 
-  *Parallel container NodeRed with script AqaraPost-Homeassistant for integration Aqara G3 Camera.*
+  *Parallel container NodeRed with script AqaraPost-Homeassistant for Aqara G3 Camera or FP2 Sensor.*
 
 ## Requires
 NodeRed-Companion *( install from HACS )*
 
 Username/Password Aqara account
 
-MAC address Camera G3 *( lumi1-XXXXXX )*
+MAC address device G3 camera/FP2 sensor *( lumi1-XXXXXX )*
 
+server Aqara *[list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)*
 
 ## Installation
 
@@ -23,7 +24,8 @@ Add custom component remote repository:
 
 ## Setting
 
-   ![immagine](https://github.com/user-attachments/assets/3d648c88-2b7d-4580-8e38-9d9ba3edfe7f)
+   <img width="1097" height="649" alt="immagine" src="https://github.com/user-attachments/assets/69eeb4cb-aad2-4cc7-9de6-60ee5338131f" />
+
 
 
 ## Update/Apply new config
