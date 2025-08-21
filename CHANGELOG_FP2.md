@@ -7,6 +7,7 @@
 - **Device Type Selection**: Choose between FP2 and G3 in configuration
 - **Swedish Locale**: Added sv-SE timezone support
 - **Smart Token Replacement**: Custom logic for FP2 flow token injection
+- **Simplified Setup**: Removed manual token refresh complexity - add-on handles everything
 
 ### 🔄 Changes  
 - **Default Device**: Changed from G3 Camera to FP2 Presence Sensor

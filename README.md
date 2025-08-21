@@ -68,10 +68,10 @@ Add-on for **FP2 Presence Sensor** with automatic config scripts! Also supports 
   * ✅ **Auto-refresh tokens** - Set and forget
   * 🔄 **G3 Compatible** - Set deviceType: G3 for cameras
 
-### 📋 Method 2: Manual NodeRed (Advanced Users)
+### 📋 Method 2: Manual NodeRed (Advanced Users - Not Recommended)
 * **FP2**: Import flow [Aqara_FP2_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_FP2_nodered.json)
-  * Replace tokens manually in flow 
-  * Deploy and configure presence sensors
+  * ⚠️ **Manual token management required** - tokens expire every 24-48 hours
+  * Replace tokens manually in flow configuration
   * Use [token generation tools](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-flow-json-with-your-values)
 
 * **G3 Legacy**: Import flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
