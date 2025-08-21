@@ -2,7 +2,7 @@
 ----
 #  AqaraPOST-Homeassistant addon #
 
-Add-on for camera G3 with automatic config scripts!!
+Add-on for G3 camera or FP2 sensor with automatic config scripts!!
  
  * only Username/Password Aqara required
  	* the values ​​in the "config" node will be generated from the username and password if valid
@@ -19,8 +19,7 @@ Add-on for camera G3 with automatic config scripts!!
 Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
   * note: 
-	* this flow is example and was developed for Aqara Hub G3 camera *( lumi1.xxxx )*
-  		* for FP2 Sensor import [Aqara_FP2_nodered.json](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Aqara_FP2_nodered.json), without NodeRed (few functions)  [Darafei Praliaskouski page](https://www.patreon.com/posts/connecting-fp2-107200167)
+	* this flow is example and was developed for Aqara G3 camera or FP2 sensor *( lumi1.xxxx )*
 
 ## Requirement ##
 * Your value from POST Request Aqara app:
@@ -37,7 +36,7 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 	* Install Add-on
               [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
    		* only Username/Password Aqara required
-   		* NodeRed will be installed in parallel with the flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
+   		* NodeRed will be installed in parallel with the flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json) or [Aqara_FP2_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_FP2_nodered.json)
 
 * Method 2 NodeRed (recommended, required NodeCompanion):
 	* Import flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
