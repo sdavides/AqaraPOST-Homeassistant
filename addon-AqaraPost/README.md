@@ -1,34 +1,36 @@
-# AqaraPost_[Node-RED] HomeAssistant
-  * Parallel container NodeRed with scripts AqaraPost-Homeassistant for integration Aqara G3 Camera.
+# AqaraPost_[Node-RED] addon HomeAssistant
 
+  AqaraPost_[Node-RED] - NodeRed mod for AqaraPost-Homeassistant.
+
+  *Parallel container NodeRed with script AqaraPost-Homeassistant for Aqara G3 Camera or FP2 Sensor.*
 
 ## Requires
 NodeRed-Companion *( install from HACS )*
 
-MAC-ADDRESS Camera G3 *( lumi1.XXXXXX )*
-
 Username/Password Aqara account
-  * the values ​​in the "config" node will be generated from the username and password if valid
 
+MAC address device G3 camera/FP2 sensor *( lumi1-XXXXXX )*
+
+server Aqara *[list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)*
 
 ## Installation
 
 Add custom component remote repository:
-
 "https://github.com/sdavides/AqaraPOST-Homeassistant"
 
 
    ![immagine](https://github.com/user-attachments/assets/1f100850-d7db-40ca-a036-97254154b408)
 
 
-## Settings
+## Setting
 
-   ![immagine](https://github.com/user-attachments/assets/3d648c88-2b7d-4580-8e38-9d9ba3edfe7f)
+   <img width="1097" height="649" alt="immagine" src="https://github.com/user-attachments/assets/69eeb4cb-aad2-4cc7-9de6-60ee5338131f" />
 
 
-## Update flow - Apply config
 
-  * Delete file "flows.json"
+## Update/Apply new config
+
+  * Delete "flow.json"
     
     * ( usually into "/addon_configs/797fde71_nodered_aqara/" from SAMBA )
 
@@ -38,11 +40,9 @@ Add custom component remote repository:
 
 ## Verify install
 
-  * Verify values into "config" node
+  * Verify value into "config" node
     
     ![immagine](https://github.com/user-attachments/assets/ab2c21f0-0a85-4398-9d29-bfe4e29df13c)
 
+    ![immagine](https://github.com/user-attachments/assets/c48aaefd-cd6c-45d9-b927-bd6129b839af)
 
-## Entity NodeCompanion ##
-![immagine](https://github.com/user-attachments/assets/15e8632f-5c92-42f1-886b-96bec0633c43)
-![immagine](https://github.com/user-attachments/assets/bb125094-8d71-403e-beff-2b323a461370)
