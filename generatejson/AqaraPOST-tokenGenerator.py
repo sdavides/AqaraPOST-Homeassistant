@@ -23,6 +23,8 @@ username = input("Enter your username: [example@example.com] \n")
 password = input("Enter your password: [password] \n")
 area = input("Enter your area: [EU],[CN],[US],[HMT],[OTHER],[AF],[RU],[AU],[ME],[KR],[JP]\n")
 
+print ('\nUsername:' + username )
+print ('\nServer:' + area )
 
 if username == '' :
         username = sys.argv[1]
