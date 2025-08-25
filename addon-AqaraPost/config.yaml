@@ -1,6 +1,6 @@
 ---
 name: AqaraPost_[Node-RED]
-version: 2.0
+version: 2.1
 slug: nodered_aqara
 description: NodeRed mod for AqaraPost-Homeassistant
 url: https://github.com/sdavides/AqaraPOST-Homeassistant
@@ -58,6 +58,7 @@ schema:
   serverAqara: str
   lumi1Aqara: str
   timezoneAqara: str
+  serverAqara: list(EU|CN|RU|KR|JP|AF|US|OT|US|HM|AU|ME)?
   deviceType: list(G3|FP2)?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
