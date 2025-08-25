@@ -24,7 +24,7 @@ password = input("Enter your password: [password] \n")
 area = input("Enter your area: [EU],[CN],[US],[HMT],[OTHER],[AF],[RU],[AU],[ME],[KR],[JP]\n")
 
 print ('\nUsername:' + username )
-print ('Server:' + area )
+print ('Area:' + area )
 
 if username == '' :
         username = sys.argv[1]
