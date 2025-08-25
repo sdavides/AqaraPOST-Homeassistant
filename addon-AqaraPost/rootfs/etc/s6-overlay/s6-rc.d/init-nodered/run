@@ -51,7 +51,9 @@ else
 	bashio::log.info "......."
 	bashio::log.info "Starting AqaraPost-Homeassistant tokenGenerator ..."
 	wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-tokenGenerator.py --output-document=/tmp/AqaraPOST-tokenGenerator.py  && chmod +x /tmp/AqaraPOST-tokenGenerator.py && ( echo $(bashio::config 'usernameAqara') ; echo $(bashio::config 'passwordAqara'); echo $(bashio::config 'serverAqara') )  | /tmp/AqaraPOST-tokenGenerator.py > /tmp/AqaraPOST-tokenGenerator.json || bashio::log.info "error......."
-	TOKEN=$(cat /tmp/AqaraPOST-tokenGenerator.json | grep Token: | sed 's/Token://') || bashio::log.info "error Token ......."
+	cat /tmp/AqaraPOST-tokenGenerator.json | grep Username
+	cat /tmp/AqaraPOST-tokenGenerator.json | grep Server
+    TOKEN=$(cat /tmp/AqaraPOST-tokenGenerator.json | grep Token: | sed 's/Token://') || bashio::log.info "error Token ......."
 	APPID=$(cat /tmp/AqaraPOST-tokenGenerator.json | grep AppID: | sed 's/AppID://') || bashio::log.info "error AppID ......."
 	SERVER=$(cat /tmp/AqaraPOST-tokenGenerator.json | grep Server: | sed 's/Server://') || bashio::log.info "error Server ......."
 	LUMI1=$(bashio::config 'lumi1Aqara') || bashio::log.info "error lumi1Aqara ......."
