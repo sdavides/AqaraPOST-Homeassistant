@@ -59,6 +59,7 @@ schema:
   lumi1Aqara: str
   timezoneAqara: str
   serverAqara: list(EU|CN|RU|KR|JP|AF|USA|OTHER|US|HMT|AU|ME)?
+  timezoneAqara: list(it-IT|en-GB|en-US|fr-FR|de-DE|es-ES|pt-PT|sv-SE|nl-NL|pl-PL|da-DK|fi-FI|el-GR|cs-CZ|hu-HU|no-NO|sk-SK|en-US|es-MX|pt-BR|fr-CA|en-CA|es-US|es-CO|es-AR|es-CL|ja-JP|zh-CN|zh-TW|ko-KR|ar-SA|hi-IN|bn-IN|pa-IN|th-TH|vi-VN|he-IL|ar-EG|zu-ZA|af-ZA|sw-KE|so-SO|en-AU|en-NZ|mi-NZ)?
   deviceType: list(G3|FP2)?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
