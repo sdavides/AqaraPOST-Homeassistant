@@ -58,7 +58,7 @@ schema:
   serverAqara: str
   lumi1Aqara: str
   timezoneAqara: str
-  serverAqara: list(EU|CN|RU|KR|JP|AF|US|OT|US|HM|AU|ME)?
+  serverAqara: list(EU|CN|RU|KR|JP|AF|USA|OTHER|US|HMT|AU|ME)?
   deviceType: list(G3|FP2)?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
