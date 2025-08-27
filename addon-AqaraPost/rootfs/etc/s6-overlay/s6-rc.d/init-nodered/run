@@ -54,13 +54,29 @@ else
 	cat /tmp/AqaraPOST-tokenGenerator.json | grep Username || bashio::log.info "Username Token error......."
 	cat /tmp/AqaraPOST-tokenGenerator.json | grep Area || bashio::log.info "Area Token error......."
 	cat /tmp/AqaraPOST-tokenGenerator.json | grep Server || bashio::log.info "Server Token error......."
-    TOKEN=$(cat /tmp/AqaraPOST-tokenGenerator.json | grep Token: | sed 's/Token://') || bashio::log.info "error Token ......."
-	APPID=$(cat /tmp/AqaraPOST-tokenGenerator.json | grep AppID: | sed 's/AppID://') || bashio::log.info "error AppID ......."
-	SERVER=$(cat /tmp/AqaraPOST-tokenGenerator.json | grep Server: | sed 's/Server://') || bashio::log.info "error Server ......."
+
+    if grep -q "Token:" /tmp/AqaraPOST-tokenGenerator.json; then
+    TOKEN=$(grep "Token:" /tmp/AqaraPOST-tokenGenerator.json | sed 's/Token://')
+    else
+    bashio::log.warning "error Token..."
+    fi
+
+    if grep -q "AppID:" /tmp/AqaraPOST-tokenGenerator.json; then
+    TOKEN=$(grep "AppID:" /tmp/AqaraPOST-tokenGenerator.json | sed 's/Token://')
+    else
+    bashio::log.warning "error AppID..."
+    fi
+
+    if grep -q "Server:" /tmp/AqaraPOST-tokenGenerator.json; then
+    TOKEN=$(grep "Server:" /tmp/AqaraPOST-tokenGenerator.json | sed 's/Token://')
+    else
+    bashio::log.warning "error Server..."
+    fi
+
 	LUMI1=$(bashio::config 'lumi1Aqara') || bashio::log.info "error lumi1Aqara ......."
 	TIMEZONE=$(bashio::config 'timezoneAqara') || bashio::log.info "error timezoneAqara ......."
 	
-	sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/flows.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/flows.json  && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI1/g" /etc/node-red/flows.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/flows.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/flows.json	&& 	bashio::log.info "tokenGenerator Insert value complete." || 	bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
+	sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/flows.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/flows.json  && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI1/g" /etc/node-red/flows.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/flows.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/flows.json	&& 	bashio::log.info "tokenGenerator Insert value complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
 	rm -rf /tmp/AqaraPOST-tokenGenerator.py || bashio::log.info "......."
 	rm -rf /tmp/AqaraPOST-tokenGenerator.json || bashio::log.info "......."
 	
