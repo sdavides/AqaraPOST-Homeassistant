@@ -246,3 +246,4 @@ if aqara.login(username, password):
     print ('\n')
 else:
     print('Login Failed!')
+	exit(0)
