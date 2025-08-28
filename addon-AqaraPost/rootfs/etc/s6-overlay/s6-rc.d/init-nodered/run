@@ -49,19 +49,19 @@ else
 	TIMEZONE=$(bashio::config 'timezoneAqara') || bashio::log.info "error timezoneAqara ......."
 	
     if [ "$LUMI1" = "" ]; then	
-	bashio::log.warning "G3 lumi not set"
+	bashio::log.warning "G3 lumi1 not set"
 	else
 	wget -q "$FLOW_URL1" --output-document=/etc/node-red/$FLOW_NAME1.json && bashio::log.info "Download AqaraPost $FLOW_NAME1.json complete..." || bashio::log.info "Error download AqaraPost $deviceType1 flow json"
 	fi
 	
     if [ "$LUMI2" = "" ]; then
-	bashio::log.warning "FP2 lumi not set"
+	bashio::log.warning "FP2 lumi1 not set"
 	else		
 	wget -q "$FLOW_URL2" --output-document=/etc/node-red/$FLOW_NAME2.json && bashio::log.info "Download AqaraPost $FLOW_NAME2.json complete..." || bashio::log.info "Error download AqaraPost $deviceType2 flow json"
 	fi
 
     if [ "$LUMI3" = "" ]; then	
-	bashio::log.warning "G3_2 lumi not set"
+	bashio::log.warning "G3_2 lumi1 not set"
 	else
 	wget -q "$FLOW_URL3" --output-document=/etc/node-red/$FLOW_NAME3.json && bashio::log.info "Download AqaraPost $FLOW_NAME3.json complete..." || bashio::log.info "Error download AqaraPost $deviceType3 flow json"
 	fi
