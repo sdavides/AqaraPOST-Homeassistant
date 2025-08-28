@@ -24,7 +24,7 @@ Add custom component remote repository:
 
 ## Setting
 
-   <img width="1097" height="649" alt="immagine" src="https://github.com/user-attachments/assets/69eeb4cb-aad2-4cc7-9de6-60ee5338131f" />
+<img width="1330" height="896" alt="immagine" src="https://github.com/user-attachments/assets/fadd159d-2e40-4e0e-a936-96a9fa9bb463" />
 
 
 
