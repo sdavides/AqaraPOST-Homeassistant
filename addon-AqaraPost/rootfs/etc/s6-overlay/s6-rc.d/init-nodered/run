@@ -107,7 +107,7 @@ else
 	sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME3.json  && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI3/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME3.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME3.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
 	fi
 	
-	jq -s 'add' /etc/node-red/Aqara_*json > /etc/node-red/flows.json && bashio::log.info "flows.json created"
+	jq -s 'add' /etc/node-red/Aqara_*json > /etc/node-red/flows.json && rm -rf /etc/node-red/Aqara_*json && bashio::log.info "flows.json created" || bashio::log.info "......." 
 	rm -rf /tmp/AqaraPOST-tokenGenerator.py || bashio::log.info "......."
 	rm -rf /tmp/AqaraPOST-tokenGenerator.json || bashio::log.info "......."
 	
