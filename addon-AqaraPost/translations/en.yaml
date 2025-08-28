@@ -1,0 +1,20 @@
+---
+configuration:
+  lumi1Aqara: 
+    name: Lumi1Aqara
+    description: >-
+      MAC ADDRESS: lumi1.1a2b3c4d5e
+  deviceType: 
+    name: deviceType
+    description: >-
+      G3 camera or FP2 sensor flow.json
+  renew_flow:
+    name: renew_flow
+    description: >-
+      Delete, renew token and download last /config/flows.json on boot:
+      
+  serverAqara:
+    name: serverAqara
+    description: >-
+      EU AF: rpc-ger.aqara.com - CN: aiot-rpc.aqara.cn - US HMT OTHER: aiot-rpc-usa.aqara.com
+      RU: rpc-ru.aqara.com - AU ME: rpc-au.aqara.com - KR JP: rpc-kr.aqara.com 
