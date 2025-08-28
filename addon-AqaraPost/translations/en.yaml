@@ -3,15 +3,15 @@ configuration:
   lumi1Aqara: 
     name: Lumi1Aqara G3 camera
     description: >-
-      G3 camera MAC ADDRESS (leave blank if not use)
+      G3 camera MAC ADDRESS (leave blank if not use G3)
   lumi1Aqara2: 
     name: Lumi1Aqara FP2 sensor
     description: >-
-      FP2 sensor MAC ADDRESS (leave blank if not use)
+      FP2 sensor MAC ADDRESS (leave blank if not use FP2)
   lumi1Aqara3: 
     name: Lumi1Aqara G3_2 camera
     description: >-
-      G3_2 camera MAC ADDRESS (leave blank if not use)
+      G3_2 camera MAC ADDRESS (leave blank if not use G3_2device)
   renew_flow:
     name: renew_flow
     description: >-
@@ -22,3 +22,4 @@ configuration:
     description: >-
       EU AF: rpc-ger.aqara.com - CN: aiot-rpc.aqara.cn - US HMT OTHER: aiot-rpc-usa.aqara.com
       RU: rpc-ru.aqara.com - AU ME: rpc-au.aqara.com - KR JP: rpc-kr.aqara.com 
+
