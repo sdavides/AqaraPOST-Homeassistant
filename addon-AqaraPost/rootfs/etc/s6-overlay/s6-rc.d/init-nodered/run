@@ -6,7 +6,13 @@
 # ==============================================================================
 declare port
 
+if bashio::config.true 'renew_flow'; then
+	bashio::log.info "renew_flow true"
+    rm /config/flows.json && 	bashio::log.info "/config/flows.json deleted"|| bashio::log.info "/config/flows.json not deleted"
 
+	else
+	bashio::log.info "renew_flow false"
+fi
 
 if  bashio::fs.file_exists '/config/flows.json'; then
 	bashio::log.info "......."
