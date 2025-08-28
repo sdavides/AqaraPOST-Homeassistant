@@ -1,18 +1,22 @@
 ---
 configuration:
   lumi1Aqara: 
-    name: Lumi1Aqara
+    name: Lumi1Aqara G3 camera
     description: >-
-      MAC ADDRESS: lumi1.1a2b3c4d5e
-  deviceType: 
-    name: deviceType
+      G3 camera MAC ADDRESS (leave blank if not use)
+  lumi1Aqara2: 
+    name: Lumi1Aqara FP2 sensor
     description: >-
-      G3 camera or FP2 sensor flow.json
+      FP2 sensor MAC ADDRESS (leave blank if not use)
+  lumi1Aqara3: 
+    name: Lumi1Aqara G3_2 camera
+    description: >-
+      G3_2 camera MAC ADDRESS (leave blank if not use)
   renew_flow:
     name: renew_flow
     description: >-
-      Delete, renew token and download last /config/flows.json on boot:
-      
+      Delete, renew token and download last /config/flows.json on boot 
+          - TIPS: Disable after first successful start
   serverAqara:
     name: serverAqara
     description: >-
