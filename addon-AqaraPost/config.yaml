@@ -1,6 +1,6 @@
 ---
 name: AqaraPost_[Node-RED]
-version: 2.5
+version: 3.0
 slug: nodered_aqara
 description: NodeRed mod for AqaraPost-Homeassistant
 url: https://github.com/sdavides/AqaraPOST-Homeassistant
@@ -35,9 +35,10 @@ options:
   usernameAqara: example@gmail.com
   passwordAqara: []
   serverAqara: EU
-  lumi1Aqara: lumi1.a1b2c3e4f5
   timezoneAqara: it-IT
-  deviceType: G3
+  lumi1Aqara: lumi1.a1b2c3e4f5
+  lumi1Aqara2: ""
+  lumi1Aqara3: ""
   renew_flow: false
   theme: default
   http_node:
@@ -55,11 +56,11 @@ options:
 schema:
   usernameAqara: str
   passwordAqara: password
-  serverAqara: str
   lumi1Aqara: str
+  lumi1Aqara2: str
+  lumi1Aqara3: str
   serverAqara: list(EU|CN|RU|KR|JP|AF|USA|OTHER|US|HMT|AU|ME)?
   timezoneAqara: list(it-IT|en-GB|en-US|fr-FR|de-DE|es-ES|pt-PT|sv-SE|nl-NL|pl-PL|da-DK|fi-FI|el-GR|cs-CZ|hu-HU|no-NO|sk-SK|es-MX|pt-BR|fr-CA|en-CA|es-US|es-CO|es-AR|es-CL|ja-JP|zh-CN|zh-TW|ko-KR|ar-SA|hi-IN|bn-IN|pa-IN|th-TH|vi-VN|he-IL|ar-EG|zu-ZA|af-ZA|sw-KE|so-SO|en-AU|en-NZ|mi-NZ|id-ID|ms-MY|ta-IN|te-IN|ur-PK|sr-RS|hr-HR|lt-LT|lv-LV)?
-  deviceType: list(G3|FP2)?
   renew_flow: bool?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
