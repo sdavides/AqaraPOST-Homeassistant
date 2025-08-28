@@ -46,6 +46,11 @@ else
 	LUMI1=$(bashio::config 'lumi1Aqara') || bashio::log.info "error lumi1Aqara ......."
 	LUMI2=$(bashio::config 'lumi1Aqara2') || bashio::log.info "error lumi1Aqara2 ......."
 	LUMI3=$(bashio::config 'lumi1Aqara3') || bashio::log.info "error lumi1Aqara3 ......."
+	
+	LUMI1=$(echo "$LUMI1" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
+	LUMI2=$(echo "$LUMI2" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
+	LUMI3=$(echo "$LUMI3" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
+	
 	TIMEZONE=$(bashio::config 'timezoneAqara') || bashio::log.info "error timezoneAqara ......."
 	
     if [ "$LUMI1" = "" ]; then	
