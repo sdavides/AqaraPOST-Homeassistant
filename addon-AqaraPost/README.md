@@ -9,7 +9,7 @@ NodeRed-Companion *( install from HACS )*
 
 Username/Password Aqara account
 
-G3 camera/FP2 sensor MAC Address [ lumi1.*1a2b3c4d5c*]
+G3 camera/FP2 sensor MAC Address [ lumi1.*1a2b3c4d5c* ]
 
 server Aqara *[list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)*
 
