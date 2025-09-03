@@ -1810,7 +1810,7 @@
     {
         "id": "e2851df5750a41d0",
         "type": "ha-device-config",
-        "name": "Aqara G3",
+        "name": "Aqara_FP2",
         "hwVersion": "",
         "manufacturer": "Node-RED",
         "model": "",
