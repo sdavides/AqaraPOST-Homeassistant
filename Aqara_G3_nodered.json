@@ -6976,8 +6976,8 @@
         "haConfig": [
             { "property": "name", "value": "Camera G3 Human Detection" },
             { "property": "icon", "value": "mdi:motion-sensor" },
-            { "property": "entity_category", "value": "config" },
             { "property": "entity_picture", "value": "" },
+            { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
         ],
         "resend": false,
@@ -8239,5 +8239,5 @@
         "enableGlobalContextStore": false
     },
     { "id": "e2851df5750a41d2", "type": "ha-device-config", "name": "Aqara G3", "hwVersion": "", "manufacturer": "Node-RED", "model": "CH-H03", "swVersion": "" },
-    { "id": "9c8f628cf9f52daf", "type": "global-config", "env": [], "modules": { "node-red-contrib-home-assistant-websocket": "0.77.2", "node-red-contrib-config": "1.2.1" } }
+    { "id": "5917ab5af294aaf2", "type": "global-config", "env": [], "modules": { "node-red-contrib-home-assistant-websocket": "0.77.2", "node-red-contrib-config": "1.2.1" } }
 ]
