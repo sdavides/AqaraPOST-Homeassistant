@@ -6759,7 +6759,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ left_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-left" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -6777,7 +6777,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ right_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-right" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -6795,7 +6795,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ up_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-up" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -6813,7 +6813,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ down_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-down" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -6831,7 +6831,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 video active_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:cctv" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6849,7 +6849,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Human tracking_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:motion-sensor" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6867,7 +6867,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Pets tracking_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:paw" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6885,7 +6885,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Face Detection_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:face-recognition" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6903,7 +6903,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Gesture Identification_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:gesture-pinch" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6921,7 +6921,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Motion Detection_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:motion-outline" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6939,7 +6939,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Suond Detection_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:speaker-wireless" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6957,7 +6957,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Human Detection_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:motion-sensor" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6975,7 +6975,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Pets detection_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:paw" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -6993,7 +6993,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Timestamp_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:clock-time-eight-outline" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -7011,7 +7011,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Frame_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:artboard" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -7029,7 +7029,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Horizontal_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-expand-up" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "" }
@@ -7047,7 +7047,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Upside_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-expand-down" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "" }
@@ -7065,7 +7065,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Night Video Auto_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:lightbulb-auto-outline" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "" }
@@ -7083,7 +7083,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Night Video Off_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:lightbulb-off" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "" }
@@ -7101,7 +7101,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Night Video On_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:lightbulb-night" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "" }
@@ -7119,7 +7119,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Mute audio rec_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:volume-off" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -7137,7 +7137,7 @@
         "entityType": "switch",
         "haConfig": [
             { "property": "name", "value": "Camera G3 Gesture Need Face_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:shield-check" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "config" },
             { "property": "device_class", "value": "switch" }
@@ -7247,7 +7247,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ allUP_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-collapse-up" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -7265,7 +7265,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ allDOWN_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-collapse-down" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -7283,7 +7283,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ allLEFT_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-collapse-left" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -7301,7 +7301,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ allRIGHT_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-collapse-right" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -8184,7 +8184,7 @@
         "entityType": "button",
         "haConfig": [
             { "property": "name", "value": "Camera G3 PTZ Center_2" },
-            { "property": "icon", "value": "" },
+            { "property": "icon", "value": "mdi:arrow-collapse-all" },
             { "property": "entity_picture", "value": "" },
             { "property": "entity_category", "value": "" },
             { "property": "device_class", "value": "" }
@@ -8244,5 +8244,5 @@
         "enableGlobalContextStore": false
     },
     { "id": "e2851df5750a41d1", "type": "ha-device-config", "name": "Aqara G3 2", "hwVersion": "", "manufacturer": "Node-RED", "model": "CH-H03", "swVersion": "" },
-    { "id": "fc715694c79f3fe7", "type": "global-config", "env": [], "modules": { "node-red-contrib-home-assistant-websocket": "0.77.2", "node-red-contrib-config": "1.2.1" } }
+    { "id": "5b1c50cf6a197681", "type": "global-config", "env": [], "modules": { "node-red-contrib-home-assistant-websocket": "0.77.2", "node-red-contrib-config": "1.2.1" } }
 ]
