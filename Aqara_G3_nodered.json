@@ -2812,7 +2812,7 @@
         "name": "change eventlog",
         "rules": [
             { "t": "change", "p": "payload.result.data.0.eventlog", "pt": "msg", "from": "13.95.85", "fromt": "str", "to": "face", "tot": "str" },
-            { "t": "change", "p": "payload.result.data.0.eventlog", "pt": "msg", "from": "13.97.85", "fromt": "str", "to": 'human', "tot": "str" },
+            { "t": "change", "p": "payload.result.data.0.eventlog", "pt": "msg", "from": "13.97.85", "fromt": "str", "to": "human", "tot": "str" },
             { "t": "change", "p": "payload.result.data.0.eventlog", "pt": "msg", "from": "13.98.85", "fromt": "str", "to": "dog/cat", "tot": "str" },
             { "t": "change", "p": "payload.result.data.0.eventlog", "pt": "msg", "from": "3.21.85", "fromt": "str", "to": "movement", "tot": "str" },
             { "t": "change", "p": "payload.result.data.0.eventlog", "pt": "msg", "from": "3.22.85", "fromt": "str", "to": "sound detected", "tot": "str" },
@@ -2839,7 +2839,7 @@
         "name": "change eventlog",
         "rules": [
             { "t": "change", "p": "payload.result.data.1.eventlog", "pt": "msg", "from": "13.95.85", "fromt": "str", "to": "face", "tot": "str" },
-            { "t": "change", "p": "payload.result.data.1.eventlog", "pt": "msg", "from": "13.97.85", "fromt": "str", "to": 'human', "tot": "str" },
+            { "t": "change", "p": "payload.result.data.1.eventlog", "pt": "msg", "from": "13.97.85", "fromt": "str", "to": "human", "tot": "str" },
             { "t": "change", "p": "payload.result.data.1.eventlog", "pt": "msg", "from": "13.98.85", "fromt": "str", "to": "dog/cat", "tot": "str" },
             { "t": "change", "p": "payload.result.data.1.eventlog", "pt": "msg", "from": "3.21.85", "fromt": "str", "to": "movement", "tot": "str" },
             { "t": "change", "p": "payload.result.data.1.eventlog", "pt": "msg", "from": "3.22.85", "fromt": "str", "to": "sound detected", "tot": "str" },
@@ -2866,7 +2866,7 @@
         "name": "change eventlog",
         "rules": [
             { "t": "change", "p": "payload.result.data.2.eventlog", "pt": "msg", "from": "13.95.85", "fromt": "str", "to": "face", "tot": "str" },
-            { "t": "change", "p": "payload.result.data.2.eventlog", "pt": "msg", "from": "13.97.85", "fromt": "str", "to": 'human', "tot": "str" },
+            { "t": "change", "p": "payload.result.data.2.eventlog", "pt": "msg", "from": "13.97.85", "fromt": "str", "to": "human", "tot": "str" },
             { "t": "change", "p": "payload.result.data.2.eventlog", "pt": "msg", "from": "13.98.85", "fromt": "str", "to": "dog/cat", "tot": "str" },
             { "t": "change", "p": "payload.result.data.2.eventlog", "pt": "msg", "from": "3.21.85", "fromt": "str", "to": "movement", "tot": "str" },
             { "t": "change", "p": "payload.result.data.2.eventlog", "pt": "msg", "from": "3.22.85", "fromt": "str", "to": "sound detected", "tot": "str" },
