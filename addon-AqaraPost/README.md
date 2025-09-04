@@ -19,12 +19,14 @@ Add custom component remote repository:
 "https://github.com/sdavides/AqaraPOST-Homeassistant"
 
 
-   ![immagine](https://github.com/user-attachments/assets/1f100850-d7db-40ca-a036-97254154b408)
+   <img width="852" height="446" alt="immagine" src="https://github.com/user-attachments/assets/a75d5dff-c3a1-4253-9340-f5936e0aaecd" />
+
 
 
 ## Setting
 
-<img width="1330" height="896" alt="immagine" src="https://github.com/user-attachments/assets/fadd159d-2e40-4e0e-a936-96a9fa9bb463" />
+<img width="872" height="588" alt="immagine" src="https://github.com/user-attachments/assets/2de84ed5-0a72-4658-9075-ee80fa137f9d" />
+
 
 
 
@@ -40,11 +42,13 @@ Add custom component remote repository:
 
 ## Verify install
 
-  * Verify value into "config" node
+  * Check the value in the "config" node
     
-    ![immagine](https://github.com/user-attachments/assets/ab2c21f0-0a85-4398-9d29-bfe4e29df13c)
+    <img width="809" height="468" alt="immagine" src="https://github.com/user-attachments/assets/413bcbe6-668e-4379-9810-d814235c1f1c" />
 
-    ![immagine](https://github.com/user-attachments/assets/c48aaefd-cd6c-45d9-b927-bd6129b839af)
+
+    <img width="838" height="558" alt="immagine" src="https://github.com/user-attachments/assets/27acc03b-9dcc-4bda-a508-750663d91338" />
+
 
 ## Update data ##
 * add automation every 1 minute:
