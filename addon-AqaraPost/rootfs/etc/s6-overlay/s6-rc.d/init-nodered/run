@@ -52,21 +52,21 @@ else
 	bashio::log.warning "G3 lumi1 not set"
 	else
 	LUMI1=$(echo "$LUMI1" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
-	wget -q "$FLOW_URL1" --output-document=/etc/node-red/$FLOW_NAME1.json && bashio::log.info "Download AqaraPost $FLOW_NAME1.json complete..." || bashio::log.info "Error download AqaraPost $deviceType1 flow json"
+	wget -q "$FLOW_URL1" --output-document=/etc/node-red/$FLOW_NAME1.json && bashio::log.info "Download AqaraPost $FLOW_NAME1.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME1 flow json"
 	fi
 	
     if [ "$LUMI2" = "" ]; then
 	bashio::log.warning "FP2 lumi1 not set"
 	else		
 	LUMI2=$(echo "$LUMI2" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
-	wget -q "$FLOW_URL2" --output-document=/etc/node-red/$FLOW_NAME2.json && bashio::log.info "Download AqaraPost $FLOW_NAME2.json complete..." || bashio::log.info "Error download AqaraPost $deviceType2 flow json"
+	wget -q "$FLOW_URL2" --output-document=/etc/node-red/$FLOW_NAME2.json && bashio::log.info "Download AqaraPost $FLOW_NAME2.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME2 flow json"
 	fi
 
     if [ "$LUMI3" = "" ]; then	
 	bashio::log.warning "G3_2 lumi1 not set"
 	else
 	LUMI3=$(echo "$LUMI3" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
-	wget -q "$FLOW_URL3" --output-document=/etc/node-red/$FLOW_NAME3.json && bashio::log.info "Download AqaraPost $FLOW_NAME3.json complete..." || bashio::log.info "Error download AqaraPost $deviceType3 flow json"
+	wget -q "$FLOW_URL3" --output-document=/etc/node-red/$FLOW_NAME3.json && bashio::log.info "Download AqaraPost $FLOW_NAME3.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME3 flow json"
 	fi
 	
 	ls /etc/node-red/Aqara_*.json || bashio::log.info "...."
