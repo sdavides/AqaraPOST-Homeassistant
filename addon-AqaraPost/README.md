@@ -69,3 +69,6 @@ Add custom component remote repository:
 	or change inject node:
 
 	![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/ebf6ebad-bdb0-427e-add6-d8a3dcb8caa6)
+
+<img width="1913" height="2099" alt="404530946-15e8632f-5c92-42f1-886b-96bec0633c43" src="https://github.com/user-attachments/assets/ab7a6374-6d80-4423-ad39-4af6751af7c0" />
+
