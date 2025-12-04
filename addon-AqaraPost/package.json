@@ -16,7 +16,7 @@
     "node-red-contrib-home-assistant-websocket": "0.80.3",
     "node-red-contrib-config": "1.2.1",
     "node-red-dashboard": "3.6.6",
-    "@node-red-contrib-themes/theme-collection": "4.1.0",
+    "@node-red-contrib-themes/theme-collection": "4.1.1",
     "line-by-line": "0.1.6",
     "source-map-support": "0.5.21"
   },
