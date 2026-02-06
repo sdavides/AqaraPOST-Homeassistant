@@ -2,8 +2,8 @@ server {
     {{ if not .ssl }}
     listen {{ .port }} default_server;
     {{ else }}
-    listen {{ .port }} default_server ssl http2;
-    {{ end }}
+    listen {{ .port }} default_server ssl;
+    http2 on;
 
     include /etc/nginx/includes/server_params.conf;
     include /etc/nginx/includes/proxy_params.conf;
