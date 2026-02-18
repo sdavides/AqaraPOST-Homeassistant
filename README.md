@@ -80,8 +80,10 @@ AqaraHome apk mod includes acceptance of the user-installed certificate, (to see
 ## Import flow NodeRed ##
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/a7c093f9-c383-451d-b452-828d5d4b03af)
 ## Entity NodeCompanion ##
-![immagine](https://github.com/user-attachments/assets/15e8632f-5c92-42f1-886b-96bec0633c43)
-![immagine](https://github.com/user-attachments/assets/bb125094-8d71-403e-beff-2b323a461370)
+<img width="1346" height="1548" alt="immagine" src="https://github.com/user-attachments/assets/0b920251-d507-4bcf-bfda-5e7af7825387" />
+<img width="427" height="213" alt="immagine" src="https://github.com/user-attachments/assets/c652e340-05a9-4a99-899d-f7f45109794c" />
+
+
 
 
 ## Update data ##
