@@ -232,7 +232,7 @@ if aqara.login(username, password):
     print ('\n')
 
     print ('#### request post-login success ####')
-    #params = {'firmwareVersion': '3.3.2', 'model': 'lumi.camera.gwpagl01'}
+    params = {'firmwareVersion': '3.3.2', 'model': 'lumi.camera.gwpagl01'}
     #params = {'firmwareVersion': '0.0.0_0021', 'model': 'lumi.airrtc.agl001'}
     #params = {'firmwareVersion': '1.0.24', 'model': 'lumi.vibration.agl01'}
 
