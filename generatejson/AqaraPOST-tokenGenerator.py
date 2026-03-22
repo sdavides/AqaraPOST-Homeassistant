@@ -38,63 +38,63 @@ class pyAqara():
     areas = {
         "CN": {
             "server": "https://aiot-rpc.aqara.cn",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "EU": {
             "server": "https://rpc-ger.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "7be1984f0556276133336839",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "RU":{
             "server": "https://rpc-ru.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "euGhPe2rcmxwculATNj45eEtnd50zp0I"
         },
         "KR":{
             "server": "https://rpc-kr.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "euGhPe2rcmxwculATNj45eEtnd50zp0I"
         },
         "JP":{
             "server": "https://rpc-kr.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "euGhPe2rcmxwculATNj45eEtnd50zp0I"
         },
         "AF":{
             "server": "https://rpc-ger.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "7be1984f0556276133336839",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "USA": {
             "server" : "https://aiot-rpc-usa.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "OTHER": {
             "server" : "https://aiot-rpc-usa.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "US": {
             "server" : "https://aiot-rpc-usa.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "HMT": {
             "server" : "https://aiot-rpc-usa.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "AU": {
             "server" : "https://rpc-au.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         },
         "ME": {
             "server" : "https://rpc-au.aqara.com",
-            "appid": "444c476ef7135e53330f46e7",
-            "appkey": "NULL"
+            "appid": "94549908487478b220992a70",
+            "appkey": "Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3"
         }
     }
 
