@@ -238,7 +238,7 @@ if aqara.login(username, password):
 
     # device query
     print ('\n #### device query ####')
-    req = aqara.request('GET', f'{aqara.server}/app/v1.0/lumi/app/position/device/query', params='')
+    req = aqara.request('GET', f'{aqara.server}/app/v1.0/lumi/ota/query/firmware/online', params=params)
     print(json.dumps(req.json(), indent=4, sort_keys=True))
     #print(dump.dump_all(req).decode("utf-8"))
 
