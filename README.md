@@ -1,3 +1,5 @@
+#  19/03/2026 end support... #
+
 ----
 ----
 #  AqaraPOST-Homeassistant addon #
