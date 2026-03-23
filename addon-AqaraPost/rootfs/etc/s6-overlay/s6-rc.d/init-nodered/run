@@ -14,6 +14,16 @@ if bashio::config.true 'renew_flow'; then
 	bashio::log.info "renew_flow false"
 fi
 
+	#Install node-forge
+	bashio::log.info "......."
+	bashio::log.info "Install node-forge ..."
+    cd /opt/node_modules && npm install node-forge
+
+	#Install cryptojs
+	bashio::log.info "......."
+	bashio::log.info "Install cryptojs ..."
+    cd /opt/node_modules && npm install cryptojs
+
 if  bashio::fs.file_exists '/config/flows.json'; then
 	bashio::log.info "......."
     bashio::log.info "flows.json already exist, the file will not be updated from config"
