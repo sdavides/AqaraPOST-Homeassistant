@@ -154,6 +154,8 @@ module.exports = {
     // os:require('os'),
     // jfive:require("johnny-five"),
     // j5board:require("johnny-five").Board({repl:false})
+      crypto: require('crypto'),
+      forge: require('node-forge')
   },
 
   // The following property can be used to order the categories in the editor
