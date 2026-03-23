@@ -18,7 +18,9 @@
     "node-red-dashboard": "3.6.6",
     "@node-red-contrib-themes/theme-collection": "4.1.1",
     "line-by-line": "0.1.6",
-    "source-map-support": "0.5.21"
+    "source-map-support": "0.5.21",
+    "node-red-contrib-crypto-js": "0.1.1",
+    "node-red-contrib-fips-rsa-crypto": "1.1.14"
   },
   "engines": {
     "node": ">=16"
