@@ -7900,7 +7900,7 @@
         "z": "b12a8dc2ec1b275d",
         "d": true,
         "name": "Prepare + Encrypt Password",
-        "func": "// Config\nconst crypto = global.get('crypto');\nconst forge = global.get('forge');\n\nconst username = \"user_aqara\";\nconst password = \"password_aqara\";\nconst subjectId = \"lumi1.XXXXXXXXXXXX\"\nconst area = \"EU\";\nconst country = \"it-IT\"\n\nglobal.set('area', area);\nglobal.set('subjectId', subjectId);\nglobal.set('country', country);\n\nconst areas = {\n    EU: {\n        server: \"rpc-ger.aqara.com\",\n        appid: \"7be1984f0556276133336839\",\n        appkey: \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    }\n};\n\nconst pubkey = `-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCG46slB57013JJs4Vvj5cVyMpR\n9b+B2F+YJU6qhBEYbiEmIdWpFPpOuBikDs2FcPS19MiWq1IrmxJtkICGurqImRUt\n4lP688IWlEmqHfSxSRf2+aH0cH8VWZ2OaZn5DWSIHIPBF2kxM71q8stmoYiV0oZs\nrZzBHsMuBwA4LQdxBwIDAQAB\n-----END PUBLIC KEY-----`;\n\nconst config = areas[area];\n\n// Salva appkey globalmente\nglobal.set('appid', config.appid);\nglobal.set('appkey', config.appkey);\nglobal.set('aqara_url', config.server);\n\n// MD5 + RSA\nconst md5 = crypto.createHash('md5').update(password).digest('hex');\nconst publicKey = forge.pki.publicKeyFromPem(pubkey);\nconst encrypted = publicKey.encrypt(md5, 'RSAES-PKCS1-V1_5');\nconst encryptedPassword = forge.util.encode64(encrypted);\n\nmsg.aqara = { ...config, area };\nmsg.payload = {\n    account: username,\n    encryptType: 2,\n    password: encryptedPassword\n};\n\nreturn msg;",
+        "func": "// Config\nconst crypto = global.get('crypto');\nconst forge = global.get('forge');\n\nconst username = \"user_aqara\";\nconst password = \"password_aqara\";\nconst subjectId = \"lumi1.54ef443a120c\"\nconst area = \"EU\";\nconst country = \"it-IT\"\n\nglobal.set('area', area);\nglobal.set('subjectId', subjectId);\nglobal.set('country', country);\n\nconst areas = {\n    EU: {\n        server: \"rpc-ger.aqara.com\",\n        appid: \"7be1984f0556276133336839\",\n        appkey: \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    }\n};\n\nconst pubkey = `-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCG46slB57013JJs4Vvj5cVyMpR\n9b+B2F+YJU6qhBEYbiEmIdWpFPpOuBikDs2FcPS19MiWq1IrmxJtkICGurqImRUt\n4lP688IWlEmqHfSxSRf2+aH0cH8VWZ2OaZn5DWSIHIPBF2kxM71q8stmoYiV0oZs\nrZzBHsMuBwA4LQdxBwIDAQAB\n-----END PUBLIC KEY-----`;\n\nconst config = areas[area];\n\n// Salva appkey globalmente\nglobal.set('appid', config.appid);\nglobal.set('appkey', config.appkey);\nglobal.set('aqara_url', config.server);\n\n// MD5 + RSA\nconst md5 = crypto.createHash('md5').update(password).digest('hex');\nconst publicKey = forge.pki.publicKeyFromPem(pubkey);\nconst encrypted = publicKey.encrypt(md5, 'RSAES-PKCS1-V1_5');\nconst encryptedPassword = forge.util.encode64(encrypted);\n\nmsg.aqara = { ...config, area };\nmsg.payload = {\n    account: username,\n    encryptType: 2,\n    password: encryptedPassword\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -9796,7 +9796,7 @@
         "swVersion": ""
     },
     {
-        "id": "231e701a92a443a8",
+        "id": "ed7e945cfd32c37a",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-config": "1.2.1" }
