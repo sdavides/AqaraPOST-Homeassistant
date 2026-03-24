@@ -9685,7 +9685,7 @@
         "swVersion": ""
     },
     {
-        "id": "3fdbd32f723bae81",
+        "id": "0eb10b8a78169dda",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-config": "1.2.1" }
