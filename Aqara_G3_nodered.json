@@ -3311,12 +3311,12 @@
         "id": "c80171c47caa67bf",
         "type": "inject",
         "z": "fcf6a6ccd813fd6f",
-        "name": "Autostart on boot +10s",
+        "name": "Autostart on boot +11s",
         "props": [{ "p": "lastchecked", "v": "", "vt": "date" }],
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "10",
+        "onceDelay": "11",
         "topic": "",
         "x": 440,
         "y": 2240,
@@ -4012,12 +4012,12 @@
         "id": "d0609861f77b6fd3",
         "type": "inject",
         "z": "fcf6a6ccd813fd6f",
-        "name": "Autostart on boot +11s",
+        "name": "Autostart on boot +13s",
         "props": [{ "p": "lastchecked", "v": "", "vt": "date" }],
         "repeat": "",
         "crontab": "",
         "once": true,
-        "onceDelay": "11",
+        "onceDelay": "14",
         "topic": "",
         "x": 490,
         "y": 2840,
@@ -8044,7 +8044,7 @@
         "headers": [],
         "x": 870,
         "y": 380,
-        "wires": [["c43364c35c650dc4"]]
+        "wires": [["e81a8d8230a5b565"]]
     },
     {
         "id": "fae526a7bdaf0fe1",
@@ -8235,22 +8235,6 @@
         "wires": [["b89651d92da75a75"]]
     },
     {
-        "id": "c43364c35c650dc4",
-        "type": "function",
-        "z": "fcf6a6ccd813fd6f",
-        "name": "Set UserID global variable",
-        "func": "  var userid = msg.payload.result.userId\n  global.set(\"userid\", userid)\n\nreturn msg;",
-        "outputs": 1,
-        "timeout": "",
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 910,
-        "y": 420,
-        "wires": [["e81a8d8230a5b565"]]
-    },
-    {
         "id": "5c4825c8afe7c248",
         "type": "config",
         "z": "fcf6a6ccd813fd6f",
@@ -8261,11 +8245,28 @@
             { "p": "aqara_url", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
             { "p": "subjectId", "pt": "global", "to": "lumi1.XXXXXXXXXXXX", "tot": "str" },
             { "p": "country", "pt": "global", "to": "it-IT", "tot": "str" },
-            { "p": "area", "pt": "global", "to": "EU", "tot": "str" }
+            { "p": "area", "pt": "global", "to": "EU", "tot": "str" },
+            { "p": "userid", "pt": "global", "to": "XXXXXXUSERIDXXXXXXXXXXX", "tot": "str" }
         ],
         "active": true,
-        "x": 850,
+        "x": 870,
         "y": 180,
+        "wires": []
+    },
+    {
+        "id": "a0bc5f042fa8a7ef",
+        "type": "debug",
+        "z": "fcf6a6ccd813fd6f",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 2860,
         "wires": []
     },
     {
@@ -9803,7 +9804,7 @@
         "swVersion": ""
     },
     {
-        "id": "75e5a279e4eefc9b",
+        "id": "97ee0619bc2eaa31",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-config": "1.2.1" }
