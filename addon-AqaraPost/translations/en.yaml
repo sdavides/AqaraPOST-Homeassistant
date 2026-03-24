@@ -20,6 +20,6 @@ configuration:
   serverAqara:
     name: serverAqara
     description: >-
-      EU AF: rpc-ger.aqara.com - CN: aiot-rpc.aqara.cn - US HMT OTHER: aiot-rpc-usa.aqara.com
-      RU: rpc-ru.aqara.com - AU ME: rpc-au.aqara.com - KR JP: rpc-kr.aqara.com 
+      EU AF: rpc-ger.aqara.com -- CN: aiot-rpc.aqara.cn -- US HMT OTHER: aiot-rpc-usa.aqara.com --
+      RU: rpc-ru.aqara.com -- AU ME: rpc-au.aqara.com -- KR JP: rpc-kr.aqara.com 
 
