@@ -1,7 +1,7 @@
 
 #  AqaraPOST-Homeassistant addon #
 
-Add-on for G3 camera or FP2 sensor with automatic config scripts!!
+Add-on for G3 camera or FP2 sensor
  
  * only Username/Password Aqara required
  	* the values ​​in the "config" node will be generated from the username and password if valid
