@@ -20,50 +20,10 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
   * note: 
 	* this flow is example and was developed for Aqara G3 camera or FP2 sensor *( lumi1.xxxx )*
 
-## Requirement ##
-* Your value from POST Request Aqara app:
-  * appid  ( XXXXXXAPPIDXXXXXXXXXXX )
-  * token ( XXXXXXTOKENXXXXXXXXXXX )
-  * subjectId ( lumi1.XXXXXXXXXXXX ) *usually MAC-address device* [lumi1.*1a2b3c4d5c*]
-  * aqara url ( rpc-ger.aqara.com ) *host*
-    * [list aqara url](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/list_aqara_url.txt)
-  * timezone ( it-IT ) *-> es-ES/en-UK/de-DE/it-IT/pt-PT/en-US...*
-  * userid *( automatic, required for Aqara_G3_without_nodered.txt )*
-	
-## Method ##
-* Method 1 NodeRed (recommended, required NodeCompanion):
-	* Install Add-on
-              [AqaraPost_[Node-RED]](https://github.com/sdavides/AqaraPOST-Homeassistant/tree/main/addon-AqaraPost/README.md)
-   		* only Username/Password Aqara required
-   		* NodeRed will be installed in parallel with the flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json) or [Aqara_FP2_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_FP2_nodered.json)
-
-* Method 2 NodeRed (recommended, required NodeCompanion):
-	* Import flow [Aqara_G3_nodered.json](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_nodered.json)
-	* Replace your value "config" node 
-	* Deploy
-		* note: you can use the script to generate your flow json with values
-		* [generatejson](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-flow-json-with-your-values)
-    
- * Method 3 RestFul (without NodeRed - few functions):
-	* Replace your value [Aqara_G3_without_nodered.txt](https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/refs/heads/main/Aqara_G3_without_nodered.txt)
-	* Copy and paste Aqara_G3_without_nodered.txt on configuration.yaml
-	* Restart HomeAssistant
-   
-## Find your Values ##
-* Method 1 Python script:
-	Insert username and password Aqara account
-	 * [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)  
+## GenerateToken ##
+Insert username and password Aqara account
+	 [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)  
           *thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)*
-
-* Method 2 Use BurpSuite or ZAP or similar:
-	* Follow [BurpSuite Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/Burp%20Suite%20Guide.pdf)
- 	* Follow [ZAP Guide](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/ZAP%20Guide.pdf)
-         * [free dowload](https://www.zaproxy.org/download)
-	* Download AqaraHome apk mod:
- 		* [AqaraHome 3.0.6](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/apk/Aqara%203.0.6_mod_network.apk) (old Android)
- 		* [AqaraHome 4.0.2](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/apk/Aqara%204.0.2_mod_network.apk)
-   		* [AqaraHome 5.1.5](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/apk/AqaraHome5.1.5.zip) (split apk, install with [SAI](https://play.google.com/store/apps/details?id=com.mtv.sai&hl=en))
-   
  
 ## Why? ##
 I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the homekit connection I only have the alarm function.
@@ -104,20 +64,6 @@ AqaraHome apk mod includes acceptance of the user-installed certificate, (to see
 	or change inject node:
 
 	![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/ebf6ebad-bdb0-427e-add6-d8a3dcb8caa6)
-
-## Update flow ##
-
-for a successful update of the existing flow without changing the entities in HomeAssistant, follow the steps:
-  * import new json
-    
-    ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/75ce29e0-e829-417c-bd2c-0db5ced8199a)
-
-  * delete old flow (complete flow card)
-
-    ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/b7db7bc7-5a7a-4fc9-bd1b-1899e8977b5a)
-
-  * deploy  
-!! do not deploy without deleting the old !!
 
 ---
 
