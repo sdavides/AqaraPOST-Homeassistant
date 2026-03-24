@@ -3523,16 +3523,6 @@
         "wires": [["c874581a0a7189c2"]]
     },
     {
-        "id": "dd6778ee300036df",
-        "type": "comment",
-        "z": "fcf6a6ccd813fd6f",
-        "name": "UserID autoconfig",
-        "info": "UserID autoconfig\n\nInsert manual UserID \ninto config node if not work",
-        "x": 890,
-        "y": 260,
-        "wires": []
-    },
-    {
         "id": "4691770fdc9c3787",
         "type": "inject",
         "z": "fcf6a6ccd813fd6f",
@@ -7909,7 +7899,7 @@
         "z": "fcf6a6ccd813fd6f",
         "d": true,
         "name": "Prepare + Encrypt Password",
-        "func": "// Config\nconst crypto = global.get('crypto');\nconst forge = global.get('forge');\n\nconst username = \"user_aqara\";\nconst password = \"password_aqara\";\nconst subjectId = \"lumi1.XXXXXXXXXXXX\"\nconst area = \"EU\";\nconst country = \"it-IT\"\n\nglobal.set('area', area);\nglobal.set('subjectId', subjectId);\nglobal.set('country', country);\n\nconst areas = {\n    EU: {\n        server: \"rpc-ger.aqara.com\",\n        appid: \"7be1984f0556276133336839\",\n        appkey: \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    }\n};\n\nconst pubkey = `-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCG46slB57013JJs4Vvj5cVyMpR\n9b+B2F+YJU6qhBEYbiEmIdWpFPpOuBikDs2FcPS19MiWq1IrmxJtkICGurqImRUt\n4lP688IWlEmqHfSxSRf2+aH0cH8VWZ2OaZn5DWSIHIPBF2kxM71q8stmoYiV0oZs\nrZzBHsMuBwA4LQdxBwIDAQAB\n-----END PUBLIC KEY-----`;\n\nconst config = areas[area];\n\n// Salva appkey globalmente\nglobal.set('appid', config.appid);\nglobal.set('appkey', config.appkey);\nglobal.set('aqara_url', config.server);\n\n// MD5 + RSA\nconst md5 = crypto.createHash('md5').update(password).digest('hex');\nconst publicKey = forge.pki.publicKeyFromPem(pubkey);\nconst encrypted = publicKey.encrypt(md5, 'RSAES-PKCS1-V1_5');\nconst encryptedPassword = forge.util.encode64(encrypted);\n\nmsg.aqara = { ...config, area };\nmsg.payload = {\n    account: username,\n    encryptType: 2,\n    password: encryptedPassword\n};\n\nreturn msg;",
+        "func": "// Config\nconst crypto = global.get('crypto');\nconst forge = global.get('forge');\n\nconst username = \"user_aqara\";\nconst password = \"password_aqara\";\nconst subjectId = \"lumi1.54ef443a120c\"\nconst area = \"EU\";\nconst country = \"it-IT\"\n\nglobal.set('area', area);\nglobal.set('subjectId', subjectId);\nglobal.set('country', country);\n\nconst areas = {\n    EU: {\n        server: \"rpc-ger.aqara.com\",\n        appid: \"7be1984f0556276133336839\",\n        appkey: \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    }\n};\n\nconst pubkey = `-----BEGIN PUBLIC KEY-----\nMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCG46slB57013JJs4Vvj5cVyMpR\n9b+B2F+YJU6qhBEYbiEmIdWpFPpOuBikDs2FcPS19MiWq1IrmxJtkICGurqImRUt\n4lP688IWlEmqHfSxSRf2+aH0cH8VWZ2OaZn5DWSIHIPBF2kxM71q8stmoYiV0oZs\nrZzBHsMuBwA4LQdxBwIDAQAB\n-----END PUBLIC KEY-----`;\n\nconst config = areas[area];\n\n// Salva appkey globalmente\nglobal.set('appid', config.appid);\nglobal.set('appkey', config.appkey);\nglobal.set('aqara_url', config.server);\n\n// MD5 + RSA\nconst md5 = crypto.createHash('md5').update(password).digest('hex');\nconst publicKey = forge.pki.publicKeyFromPem(pubkey);\nconst encrypted = publicKey.encrypt(md5, 'RSAES-PKCS1-V1_5');\nconst encryptedPassword = forge.util.encode64(encrypted);\n\nmsg.aqara = { ...config, area };\nmsg.payload = {\n    account: username,\n    encryptType: 2,\n    password: encryptedPassword\n};\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -8015,7 +8005,7 @@
         "type": "function",
         "z": "fcf6a6ccd813fd6f",
         "name": "desensitize (use token)",
-        "func": "const crypto = global.get('crypto');\n\nconst token = global.get(\"token\");\nconst appid = global.get(\"appid\");\nconst appkey = global.get(\"appkey\");\nconst aqara_url = global.get(\"aqara_url\");\nconst area = global.get(\"area\");\n\nconst areas = {\n    EU: {\n        server: \"rpc-ger.aqara.com\",\n        appid: \"7be1984f0556276133336839\",\n        appkey: \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    }\n};\n\nconst config = areas[area];\n\n// Salva appkey globalmente\nglobal.set('appid', config.appid);\nglobal.set('appkey', config.appkey);\nglobal.set('aqara_url', config.server);\n\n// Nonce\nconst uuid = crypto.randomUUID();\nconst nonce = crypto.createHash('md5').update(uuid).digest('hex');\n\n// Time\nconst time = Date.now().toString();\n\n// Firma IDENTICA al Python\nconst signString = `Appid=${appid}&Nonce=${nonce}&Time=${time}&Token=${token}&${appkey}`;\nconst sign = crypto.createHash('md5').update(signString).digest('hex');\n\n// Headers\nmsg.headers = {\n    Appid: appid,\n    Token: token,\n    Nonce: nonce,\n    Time: time,\n    Sign: sign,\n    Area: area\n};\n\n// URL (stessa query string)\nmsg.url = `https://${aqara_url}/app/v1.0/lumi/user/desensitize/info`;\nmsg.method = 'GET';\n\nreturn msg;",
+        "func": "const crypto = global.get('crypto');\n\nconst token = global.get(\"token\");\nconst appid = global.get(\"appid\");\nconst appkey = global.get(\"appkey\");\nconst aqara_url = global.get(\"aqara_url\");\nconst area = global.get(\"area\");\n\nconst areas = {\n    \"CN\": {\n        \"server\": \"https://aiot-rpc.aqara.cn\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"EU\": {\n        \"server\": \"https://rpc-ger.aqara.com\",\n        \"appid\": \"7be1984f0556276133336839\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"RU\":{\n        \"server\": \"https://rpc-ru.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"euGhPe2rcmxwculATNj45eEtnd50zp0I\"\n    },\n    \"KR\":{\n        \"server\": \"https://rpc-kr.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"euGhPe2rcmxwculATNj45eEtnd50zp0I\"\n    },\n    \"JP\":{\n        \"server\": \"https://rpc-kr.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"euGhPe2rcmxwculATNj45eEtnd50zp0I\"\n    },\n    \"AF\":{\n        \"server\": \"https://rpc-ger.aqara.com\",\n        \"appid\": \"7be1984f0556276133336839\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"USA\": {\n        \"server\" : \"https://aiot-rpc-usa.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"OTHER\": {\n        \"server\" : \"https://aiot-rpc-usa.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"US\": {\n        \"server\" : \"https://aiot-rpc-usa.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"HMT\": {\n        \"server\" : \"https://aiot-rpc-usa.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"AU\": {\n        \"server\" : \"https://rpc-au.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    },\n    \"ME\": {\n        \"server\" : \"https://rpc-au.aqara.com\",\n        \"appid\": \"94549908487478b220992a70\",\n        \"appkey\": \"Jddz01kIORDYrBzqGYgpUXKBnIHfW8E3\"\n    }\n};\n\nconst config = areas[area];\n\n// Salva appkey globalmente\nglobal.set('appid', config.appid);\nglobal.set('appkey', config.appkey);\nglobal.set('aqara_url', config.server);\n\n// Nonce\nconst uuid = crypto.randomUUID();\nconst nonce = crypto.createHash('md5').update(uuid).digest('hex');\n\n// Time\nconst time = Date.now().toString();\n\n// Firma IDENTICA al Python\nconst signString = `Appid=${appid}&Nonce=${nonce}&Time=${time}&Token=${token}&${appkey}`;\nconst sign = crypto.createHash('md5').update(signString).digest('hex');\n\n// Headers\nmsg.headers = {\n    Appid: appid,\n    Token: token,\n    Nonce: nonce,\n    Time: time,\n    Sign: sign,\n    Area: area\n};\n\n// URL (stessa query string)\nmsg.url = `https://${aqara_url}/app/v1.0/lumi/user/desensitize/info`;\nmsg.method = 'GET';\n\nreturn msg;",
         "outputs": 1,
         "timeout": "",
         "noerr": 0,
@@ -9804,7 +9794,7 @@
         "swVersion": ""
     },
     {
-        "id": "97ee0619bc2eaa31",
+        "id": "a7b17ea9dc3d4b79",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-config": "1.2.1" }
