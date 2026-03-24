@@ -20,16 +20,18 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
   * note: 
 	* this flow is example and was developed for Aqara G3 camera or FP2 sensor *( lumi1.xxxx )*
 
-## GenerateToken ##
-Insert username and password Aqara account
+## Flow NodeRed ##
 
-   1. [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)  
-          	*thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)*
+   1. [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)  username/password Aqara
+      
+        *thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)*
 
-   2. Enter the values ​​in the "config" node Node-Red:
+   3. Import JSON on Node-Red
+            
+   4. Enter your values ​​in the "config" node:
       
       *Token, AppId, UserId, Lumi1, Area*
- 
+
 ## Why? ##
 I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the homekit connection I only have the alarm function.
 
