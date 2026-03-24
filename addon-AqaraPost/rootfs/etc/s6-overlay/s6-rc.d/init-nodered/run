@@ -72,7 +72,7 @@ else
 	else		
 	LUMI2=$(echo "$LUMI2" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
 	wget -q "$FLOW_URL2" --output-document=/etc/node-red/$FLOW_NAME2.json && bashio::log.info "Download AqaraPost $FLOW_NAME2.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME2 flow json"
-	fi
+	fi	
 	
 	if [ "$LUMI3" = "" ]; then	
 	bashio::log.warning "G3_2 lumi1 not set"
@@ -81,18 +81,6 @@ else
 	wget -q "$FLOW_URL3" --output-document=/etc/node-red/$FLOW_NAME3.json && bashio::log.info "Download AqaraPost $FLOW_NAME3.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME3 flow json"
 	fi
 	
-	if  bashio::fs.file_exists '/etc/node-red/'$FLOW_NAME1'.json'; then
-	sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI1/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME1.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME1.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
-	fi
-		
-	if  bashio::fs.file_exists '/etc/node-red/'$FLOW_NAME2'.json'; then
-	sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME2.json  && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI2/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME2.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME2.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
-	fi
-	
-	if  bashio::fs.file_exists '/etc/node-red/'$FLOW_NAME3'.json'; then
-	sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME3.json  && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI3/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME3.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME3.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
-	fi
-		
 	ls /etc/node-red/Aqara_*.json || bashio::log.info "...."
 		
 	bashio::log.info "Starting AqaraPost-Homeassistant tokenGenerator ..."
@@ -130,17 +118,17 @@ else
     fi
 	
 	if  bashio::fs.file_exists '/etc/node-red/'$FLOW_NAME1'.json'; then
-	sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME1.json  && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI1/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME1.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME1.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
+	sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI1/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME1.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME1.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME1.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
 	fi
-	
+		
 	if  bashio::fs.file_exists '/etc/node-red/'$FLOW_NAME2'.json'; then
-	sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME2.json  && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI2/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME2.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME2.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
+	sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME2.json  && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI2/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME2.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME2.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME2.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
 	fi
 	
 	if  bashio::fs.file_exists '/etc/node-red/'$FLOW_NAME3'.json'; then
-	sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME3.json  && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI3/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME3.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME3.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
+	sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME3.json  && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI3/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME3.json && bashio::log.info "tokenGenerator Insert value $FLOW_NAME3.json complete." || bashio::log.info "Error AqaraPost-Homeassistant tokenGenerator ..."
 	fi
-	
+		
 	jq -s 'add' /etc/node-red/Aqara_*json > /etc/node-red/flows.json && rm -rf /etc/node-red/Aqara_*json && bashio::log.info "flows.json created" || bashio::log.info "......." 
 	rm -rf /tmp/AqaraPOST-tokenGenerator.py || bashio::log.info "......."
 	rm -rf /tmp/AqaraPOST-tokenGenerator.json || bashio::log.info "......."
