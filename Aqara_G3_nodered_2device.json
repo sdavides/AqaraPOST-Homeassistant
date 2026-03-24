@@ -1608,13 +1608,13 @@
         "z": "c1938d3b2302e46d",
         "name": "config_2",
         "properties": [
-            { "p": "token_2", "pt": "global", "to": "0155b20d058d1045b708c6c06e9e22b1754a", "tot": "str" },
-            { "p": "appid_2", "pt": "global", "to": "7be1984f0556276133336839", "tot": "str" },
+            { "p": "token_2", "pt": "global", "to": "XXXXXXTOKENXXXXXXXXXXX", "tot": "str" },
+            { "p": "appid_2", "pt": "global", "to": "XXXXXXAPPIDXXXXXXXXXXX", "tot": "str" },
             { "p": "aqara_url_2", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
-            { "p": "subjectId_2", "pt": "global", "to": "lumi1.54ef443a120c", "tot": "str" },
+            { "p": "subjectId_2", "pt": "global", "to": "lumi1.XXXXXXXXXXXX", "tot": "str" },
             { "p": "country_2", "pt": "global", "to": "it-IT", "tot": "str" },
-            { "p": "area_2", "pt": "global", "to": "EU", "tot": "str" },
-            { "p": "userid_2", "pt": "global", "to": "020435c692a531e.1015022079354732545", "tot": "str" }
+            { "p": "area_2", "pt": "global", "to": "XXXXXXAREAXXXXXXXXXXX", "tot": "str" },
+            { "p": "userid_2", "pt": "global", "to": "XXXXXXUSERIDXXXXXXXXXXX", "tot": "str" }
         ],
         "active": true,
         "x": 800,
@@ -9685,7 +9685,7 @@
         "swVersion": ""
     },
     {
-        "id": "21770188bb5540a4",
+        "id": "3fdbd32f723bae81",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-config": "1.2.1" }
