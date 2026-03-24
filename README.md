@@ -22,27 +22,25 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
 
 ## GenerateToken ##
 Insert username and password Aqara account
-	 [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)  
-          *thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)*
+
+   1. [GenerateToken](https://github.com/sdavides/AqaraPOST-Homeassistant/blob/main/generatejson/README.md#generate-token-from-username-and-password)  
+          	*thank you [Wh1terat](https://gist.github.com/Wh1terat/c4a4c665d692af461796e5eee9f5461d)*
+
+   2. Enter the values ​​in the "config" node Node-Red:
+      
+      *Token, AppId, UserId, Lumi1, Area*
  
 ## Why? ##
 I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the homekit connection I only have the alarm function.
 
 ## Info ##
-This is the beauty of it: no modifications to the device are necessary.
-
-You can delete AqaraHome_mod app it without logging out, otherwise the token values ​​​​are expired.
-
-AqaraHome apk mod includes acceptance of the user-installed certificate, (to see the http requests on burp/zap).
-
+No modification to your device is required.
 
 ## Import flow NodeRed ##
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/a7c093f9-c383-451d-b452-828d5d4b03af)
 ## Entity NodeCompanion ##
 <img width="1346" height="1548" alt="immagine" src="https://github.com/user-attachments/assets/0b920251-d507-4bcf-bfda-5e7af7825387" />
 <img width="838" height="558" alt="immagine" src="https://github.com/user-attachments/assets/27acc03b-9dcc-4bda-a508-750663d91338" />
-
-
 
 
 ## Update data ##
