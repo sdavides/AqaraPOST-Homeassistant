@@ -1,7 +1,4 @@
-#  19/03/2026 end support... #
 
-----
-----
 #  AqaraPOST-Homeassistant addon #
 
 Add-on for G3 camera or FP2 sensor with automatic config scripts!!
