@@ -1,21 +1,6 @@
 [
     { "id": "c1938d3b2302e46d", "type": "tab", "label": "Aqara Cam G3_2", "disabled": false, "info": "", "env": [] },
     {
-        "id": "97cfb7e60a324fa2",
-        "type": "inject",
-        "z": "c1938d3b2302e46d",
-        "name": "Autostart on boot +14s",
-        "props": [{ "p": "lastchecked", "v": "", "vt": "date" }],
-        "repeat": "",
-        "crontab": "",
-        "once": true,
-        "onceDelay": "14",
-        "topic": "",
-        "x": 620,
-        "y": 2180,
-        "wires": [[]]
-    },
-    {
         "id": "6baa07cee399780b",
         "type": "ha-button",
         "z": "c1938d3b2302e46d",
@@ -102,7 +87,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1150,
         "y": 1020,
@@ -122,7 +107,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1160,
         "y": 1100,
@@ -142,7 +127,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1160,
         "y": 1180,
@@ -162,7 +147,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1170,
         "y": 1340,
@@ -182,7 +167,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1190,
         "y": 1420,
@@ -202,7 +187,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1170,
         "y": 1500,
@@ -222,7 +207,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1170,
         "y": 1580,
@@ -242,7 +227,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1170,
         "y": 1660,
@@ -262,7 +247,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1160,
         "y": 1260,
@@ -282,7 +267,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1210,
         "y": 1720,
@@ -723,7 +708,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1590,
         "y": 3080,
@@ -743,7 +728,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1600,
         "y": 3180,
@@ -833,7 +818,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1620,
         "y": 3260,
@@ -853,7 +838,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1640,
         "y": 3340,
@@ -943,7 +928,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1660,
         "y": 3440,
@@ -963,7 +948,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 3520,
@@ -983,7 +968,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1640,
         "y": 3600,
@@ -1003,7 +988,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1640,
         "y": 3680,
@@ -1023,7 +1008,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1620,
         "y": 3740,
@@ -1043,7 +1028,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 3820,
@@ -1063,7 +1048,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 3900,
@@ -1083,7 +1068,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1620,
         "y": 3980,
@@ -1103,7 +1088,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 4060,
@@ -1123,7 +1108,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 4140,
@@ -1143,7 +1128,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1600,
         "y": 4220,
@@ -1163,7 +1148,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 4300,
@@ -1183,7 +1168,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 4380,
@@ -1203,7 +1188,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1620,
         "y": 4540,
@@ -1223,7 +1208,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 4620,
@@ -1243,7 +1228,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1620,
         "y": 4460,
@@ -1263,7 +1248,7 @@
         "outputOnStateChange": true,
         "outputProperties": [
             { "property": "outputType", "propertyType": "msg", "value": "state change", "valueType": "str" },
-            { "property": "payload", "propertyType": "msg", "value": "", "valueType": "entityState" }
+            { "property": "payload", "propertyType": "msg", "value": "string", "valueType": "entityState" }
         ],
         "x": 1610,
         "y": 4700,
@@ -1623,13 +1608,13 @@
         "z": "c1938d3b2302e46d",
         "name": "config_2",
         "properties": [
-            { "p": "token_2", "pt": "global", "to": "XXXXXXTOKENXXXXXXXXXXX", "tot": "str" },
-            { "p": "appid_2", "pt": "global", "to": "XXXXXXAPPIDXXXXXXXXXXX", "tot": "str" },
+            { "p": "token_2", "pt": "global", "to": "0155b20d058d1045b708c6c06e9e22b1754a", "tot": "str" },
+            { "p": "appid_2", "pt": "global", "to": "7be1984f0556276133336839", "tot": "str" },
             { "p": "aqara_url_2", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
-            { "p": "subjectId_2", "pt": "global", "to": "lumi1.XXXXXXXXXXXX", "tot": "str" },
+            { "p": "subjectId_2", "pt": "global", "to": "lumi1.54ef443a120c", "tot": "str" },
             { "p": "country_2", "pt": "global", "to": "it-IT", "tot": "str" },
-            { "p": "area_2", "pt": "global", "to": "XXXXXXAREAXXXXXXXXXXX", "tot": "str" },
-            { "p": "userid_2", "pt": "global", "to": "XXXXXXUSERIDXXXXXXXXXXX", "tot": "str" }
+            { "p": "area_2", "pt": "global", "to": "EU", "tot": "str" },
+            { "p": "userid_2", "pt": "global", "to": "020435c692a531e.1015022079354732545", "tot": "str" }
         ],
         "active": true,
         "x": 800,
@@ -8162,7 +8147,7 @@
         "id": "24d997c5adcd6229",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 config_2",
         "version": "6",
         "entityType": "button",
@@ -8180,7 +8165,7 @@
         "id": "05af16a5b0f207b4",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 config_2",
         "version": "6",
         "entityType": "sensor",
@@ -8200,7 +8185,7 @@
         "id": "88f0865db9f1b421",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 video active_2",
         "version": "6",
         "entityType": "switch",
@@ -8218,7 +8203,7 @@
         "id": "a3439fc2e45caf22",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Human tracking_2",
         "version": "6",
         "entityType": "switch",
@@ -8236,7 +8221,7 @@
         "id": "8799448b181760e6",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Pets tracking_2",
         "version": "6",
         "entityType": "switch",
@@ -8254,7 +8239,7 @@
         "id": "e0baed8e0c292c98",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Face Detection_2",
         "version": "6",
         "entityType": "switch",
@@ -8272,7 +8257,7 @@
         "id": "ca8bb62e2cc97b88",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Gesture Identification_2",
         "version": "6",
         "entityType": "switch",
@@ -8290,7 +8275,7 @@
         "id": "1282b4b985636c6f",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Motion Detection_2",
         "version": "6",
         "entityType": "switch",
@@ -8308,7 +8293,7 @@
         "id": "bff0af582767b49b",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Suond Detection_2",
         "version": "6",
         "entityType": "switch",
@@ -8326,7 +8311,7 @@
         "id": "a76889d57db2b660",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Human Detection_2",
         "version": "6",
         "entityType": "switch",
@@ -8344,7 +8329,7 @@
         "id": "fc9b5ffa9a351a05",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Pets detection_2",
         "version": "6",
         "entityType": "switch",
@@ -8362,7 +8347,7 @@
         "id": "2fa316fecb96a122",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Gateway Deletion Prevention_2",
         "version": "6",
         "entityType": "switch",
@@ -8380,7 +8365,7 @@
         "id": "2baee70a4e19ce1b",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 log_2",
         "version": "6",
         "entityType": "button",
@@ -8398,7 +8383,7 @@
         "id": "1e20c159b737733d",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 log_2",
         "version": "6",
         "entityType": "sensor",
@@ -8418,7 +8403,7 @@
         "id": "574089ba0242b3b4",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 log last1_2",
         "version": "6",
         "entityType": "sensor",
@@ -8438,7 +8423,7 @@
         "id": "cffacac80fb5f652",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 log last2_2",
         "version": "6",
         "entityType": "sensor",
@@ -8458,7 +8443,7 @@
         "id": "632605293b7e88cc",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 log last3_2",
         "version": "6",
         "entityType": "sensor",
@@ -8478,7 +8463,7 @@
         "id": "1b170c5b731681af",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Info_2",
         "version": "6",
         "entityType": "sensor",
@@ -8498,7 +8483,7 @@
         "id": "6ffaded827082575",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Info_2",
         "version": "6",
         "entityType": "button",
@@ -8516,7 +8501,7 @@
         "id": "8f05b017f256d5c3",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Suond medium_2",
         "version": "6",
         "entityType": "button",
@@ -8534,7 +8519,7 @@
         "id": "0b63b8f7e8fb4297",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Suond hight_2",
         "version": "6",
         "entityType": "button",
@@ -8552,7 +8537,7 @@
         "id": "05106f5b47002f52",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 reboot_2",
         "version": "6",
         "entityType": "button",
@@ -8570,7 +8555,7 @@
         "id": "1731b609d18845d4",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ calibration_2",
         "version": "6",
         "entityType": "button",
@@ -8588,7 +8573,7 @@
         "id": "288cf9e5c18366db",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Human low_2",
         "version": "6",
         "entityType": "button",
@@ -8606,7 +8591,7 @@
         "id": "7a854cafdb1c6713",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Human medium_2",
         "version": "6",
         "entityType": "button",
@@ -8624,7 +8609,7 @@
         "id": "629a07b9842a70bb",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Human hight_2",
         "version": "6",
         "entityType": "button",
@@ -8642,7 +8627,7 @@
         "id": "61f5db0cba7ad84b",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor CatDog low_2",
         "version": "6",
         "entityType": "button",
@@ -8660,7 +8645,7 @@
         "id": "9fe660a5fde22591",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor CatDog medium_2",
         "version": "6",
         "entityType": "button",
@@ -8678,7 +8663,7 @@
         "id": "4da316d014b3a21b",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor CatDog hight_2",
         "version": "6",
         "entityType": "button",
@@ -8696,7 +8681,7 @@
         "id": "9c4a1c24e11f1c08",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Face low_2",
         "version": "6",
         "entityType": "button",
@@ -8714,7 +8699,7 @@
         "id": "8171cace4cf85889",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Face medium_2",
         "version": "6",
         "entityType": "button",
@@ -8732,7 +8717,7 @@
         "id": "10d828951c437237",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Face hight_2",
         "version": "6",
         "entityType": "button",
@@ -8750,7 +8735,7 @@
         "id": "19223e4dc33f1064",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Hand One_2",
         "version": "6",
         "entityType": "button",
@@ -8768,7 +8753,7 @@
         "id": "6b152dc6c4fc12cc",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Hand Both_2",
         "version": "6",
         "entityType": "button",
@@ -8786,7 +8771,7 @@
         "id": "c5d009813e9ca71f",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Suond low_2",
         "version": "6",
         "entityType": "button",
@@ -8804,7 +8789,7 @@
         "id": "8df4574340270adb",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Timestamp_2",
         "version": "6",
         "entityType": "switch",
@@ -8822,7 +8807,7 @@
         "id": "5f76422bda0ee363",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Frame_2",
         "version": "6",
         "entityType": "switch",
@@ -8840,7 +8825,7 @@
         "id": "ee8566c6c347ea78",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Horizontal_2",
         "version": "6",
         "entityType": "button",
@@ -8858,7 +8843,7 @@
         "id": "668063c271fa231f",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Upside_2",
         "version": "6",
         "entityType": "button",
@@ -8876,7 +8861,7 @@
         "id": "2abf76963aeec4f5",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Night Video Auto_2",
         "version": "6",
         "entityType": "button",
@@ -8894,7 +8879,7 @@
         "id": "aaaa39e6bd5016a1",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Night Video Off_2",
         "version": "6",
         "entityType": "button",
@@ -8912,7 +8897,7 @@
         "id": "95c1b848767379fb",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Night Video On_2",
         "version": "6",
         "entityType": "button",
@@ -8930,7 +8915,7 @@
         "id": "10823aef3a2843c5",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Mute audio rec_2",
         "version": "6",
         "entityType": "switch",
@@ -8948,7 +8933,7 @@
         "id": "fcf45f466bc86d2e",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Gesture Need Face_2",
         "version": "6",
         "entityType": "switch",
@@ -8966,7 +8951,7 @@
         "id": "50b6a2b5f15e18eb",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Motion low_2",
         "version": "6",
         "entityType": "button",
@@ -8984,7 +8969,7 @@
         "id": "0433c8d0c00b9ded",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Motion medium_2",
         "version": "6",
         "entityType": "button",
@@ -9002,7 +8987,7 @@
         "id": "51dc4835be78e3c4",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Sensor Motion hight_2",
         "version": "6",
         "entityType": "button",
@@ -9020,7 +9005,7 @@
         "id": "59c976cd9ff4176a",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Indicator light ON_2",
         "version": "6",
         "entityType": "button",
@@ -9038,7 +9023,7 @@
         "id": "381e8d40b8270aa4",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Indicator light OFF_2",
         "version": "6",
         "entityType": "button",
@@ -9056,7 +9041,7 @@
         "id": "56401ec0c725e094",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Device Offline Notification_2",
         "version": "6",
         "entityType": "switch",
@@ -9074,7 +9059,7 @@
         "id": "2c683439e2ce88a2",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Ark Mode_2",
         "version": "6",
         "entityType": "switch",
@@ -9092,7 +9077,7 @@
         "id": "3b73472a060ded5b",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Automatic Unlocking_2",
         "version": "6",
         "entityType": "switch",
@@ -9110,7 +9095,7 @@
         "id": "cfb37166756fdb69",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Power-off ptz-memory_2",
         "version": "6",
         "entityType": "switch",
@@ -9128,7 +9113,7 @@
         "id": "87d12587d8dea512",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 anti-theft-lock_2",
         "version": "6",
         "entityType": "switch",
@@ -9146,7 +9131,7 @@
         "id": "8048a49a31a946d0",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 anti-lost-not_2",
         "version": "6",
         "entityType": "switch",
@@ -9164,7 +9149,7 @@
         "id": "1a0b2a619e37220b",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 motion_rec_2",
         "version": "6",
         "entityType": "switch",
@@ -9182,7 +9167,7 @@
         "id": "e5947eafa6d4a29c",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 motion_push_2",
         "version": "6",
         "entityType": "switch",
@@ -9200,7 +9185,7 @@
         "id": "108bd97dcd8d8cb0",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 suond_rec_2",
         "version": "6",
         "entityType": "switch",
@@ -9218,7 +9203,7 @@
         "id": "4e89e91bad8f5374",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 suond_push_2",
         "version": "6",
         "entityType": "switch",
@@ -9236,7 +9221,7 @@
         "id": "52da3f9da8676d7f",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 face_rec_2",
         "version": "6",
         "entityType": "switch",
@@ -9254,7 +9239,7 @@
         "id": "3fdbb8f3c8d9f045",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 face_push_2",
         "version": "6",
         "entityType": "switch",
@@ -9272,7 +9257,7 @@
         "id": "32976408a0991c79",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 person_rec_2",
         "version": "6",
         "entityType": "switch",
@@ -9290,7 +9275,7 @@
         "id": "fbe5d87b21e3bceb",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 animal_push_2",
         "version": "6",
         "entityType": "switch",
@@ -9308,7 +9293,7 @@
         "id": "9ad599483abed7ac",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 animal_rec_2",
         "version": "6",
         "entityType": "switch",
@@ -9326,7 +9311,7 @@
         "id": "177c613245bb9235",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 person_push_2",
         "version": "6",
         "entityType": "switch",
@@ -9344,7 +9329,7 @@
         "id": "ac899fb97c9525d8",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 sleep_mode_2",
         "version": "6",
         "entityType": "switch",
@@ -9362,7 +9347,7 @@
         "id": "4b07918d122f5452",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Aqara Smart log Autom_2",
         "version": "6",
         "entityType": "sensor",
@@ -9382,7 +9367,7 @@
         "id": "a3bf1fd36c446325",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Aqara Smart log Autom_2",
         "version": "6",
         "entityType": "button",
@@ -9400,7 +9385,7 @@
         "id": "c431a1391a7c6099",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Face Know_2",
         "version": "6",
         "entityType": "button",
@@ -9418,7 +9403,7 @@
         "id": "3324303fe47d19fa",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 Face Know_2",
         "version": "6",
         "entityType": "sensor",
@@ -9438,7 +9423,7 @@
         "id": "cd11cc6e57cb55c3",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ left_2",
         "version": "6",
         "entityType": "button",
@@ -9456,7 +9441,7 @@
         "id": "cb4de3fb2a9c9c31",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ right_2",
         "version": "6",
         "entityType": "button",
@@ -9474,7 +9459,7 @@
         "id": "7992f163e5b36ce4",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ up_2",
         "version": "6",
         "entityType": "button",
@@ -9492,7 +9477,7 @@
         "id": "c05d26aa372751ac",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ down_2",
         "version": "6",
         "entityType": "button",
@@ -9510,7 +9495,7 @@
         "id": "b85d7ab6c898f196",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ allUP_2",
         "version": "6",
         "entityType": "button",
@@ -9528,7 +9513,7 @@
         "id": "289c967d6a263502",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ allDOWN_2",
         "version": "6",
         "entityType": "button",
@@ -9546,7 +9531,7 @@
         "id": "f51536fb0ab76325",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ allLEFT_2",
         "version": "6",
         "entityType": "button",
@@ -9564,7 +9549,7 @@
         "id": "65ab95d127a24393",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ allRIGHT_2",
         "version": "6",
         "entityType": "button",
@@ -9582,7 +9567,7 @@
         "id": "2ab30dad651e7929",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ Center_2",
         "version": "6",
         "entityType": "button",
@@ -9600,7 +9585,7 @@
         "id": "33a097116ee59cfa",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 PTZ Stop_2",
         "version": "6",
         "entityType": "button",
@@ -9618,7 +9603,7 @@
         "id": "1c69832c90155a3b",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 resourceID query_2",
         "version": "6",
         "entityType": "sensor",
@@ -9638,7 +9623,7 @@
         "id": "6246a434be90c688",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Camera G3 resourceID query_2",
         "version": "6",
         "entityType": "text",
@@ -9659,7 +9644,7 @@
         "id": "8f6de19ead30a30a",
         "type": "ha-entity-config",
         "server": "2b77899a.ed9b86",
-        "deviceConfig": "fa0a01a999988004",
+        "deviceConfig": "2729da9981dd777c",
         "name": "Aqara UserID_2",
         "version": "6",
         "entityType": "sensor",
@@ -9691,7 +9676,16 @@
         "enableGlobalContextStore": false
     },
     {
-        "id": "1db8fde7dcbd09e6",
+        "id": "2729da9981dd777c",
+        "type": "ha-device-config",
+        "name": "Aqara G3_2",
+        "hwVersion": "",
+        "manufacturer": "Node-RED",
+        "model": "CH-H03",
+        "swVersion": ""
+    },
+    {
+        "id": "21770188bb5540a4",
         "type": "global-config",
         "env": [],
         "modules": { "node-red-contrib-home-assistant-websocket": "0.80.3", "node-red-contrib-config": "1.2.1" }
