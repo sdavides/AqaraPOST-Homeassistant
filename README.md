@@ -32,6 +32,8 @@ Goal: Replace Post request "Aqara Home" app on HomeAssistant
       
       *Token, AppId, UserId, Lumi1, Area*
 
+( require crypto on nodered [https://github.com/sdavides/AqaraPOST-Homeassistant/issues/28] )
+
 ## Why? ##
 I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the homekit connection I only have the alarm function.
 
