@@ -32,13 +32,18 @@ Add custom component remote repository:
 
 ## Update/Apply new config
 
-  * Delete "flows.json"
-    
-    * ( usually into "/addon_configs/XXX_nodered_aqara/" from SAMBA )
+  * Update the add-on config
 
-  * Update config
+  * Enable `renew_flow`
 
-  * Restart addon
+  * Restart the add-on
+
+  * Disable `renew_flow` after the restart finishes
+
+The add-on keeps the existing `/config/flows.json` when Home Assistant only
+provides masked `preconfigured` credentials or when token generation fails. Do
+not delete `flows.json` manually unless you have the Aqara username and password
+available and you are ready to recreate the flow from scratch.
 
 ## Test flows from another repository
 
