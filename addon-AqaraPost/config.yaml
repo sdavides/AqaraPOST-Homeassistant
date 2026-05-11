@@ -40,6 +40,7 @@ options:
   lumi1Aqara2: ""
   lumi1Aqara3: ""
   renew_flow: false
+  flow_source_base_url: https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main
   theme: default
   http_node:
     username: ""
@@ -62,6 +63,7 @@ schema:
   serverAqara: list(EU|CN|RU|KR|JP|AF|USA|OTHER|US|HMT|AU|ME)?
   timezoneAqara: list(it-IT|en-GB|en-US|fr-FR|de-DE|es-ES|pt-PT|sv-SE|nl-NL|pl-PL|da-DK|fi-FI|el-GR|cs-CZ|hu-HU|no-NO|sk-SK|es-MX|pt-BR|fr-CA|en-CA|es-US|es-CO|es-AR|es-CL|ja-JP|zh-CN|zh-TW|ko-KR|ar-SA|hi-IN|bn-IN|pa-IN|th-TH|vi-VN|he-IL|ar-EG|zu-ZA|af-ZA|sw-KE|so-SO|en-AU|en-NZ|mi-NZ|id-ID|ms-MY|ta-IN|te-IN|ur-PK|sr-RS|hr-HR|lt-LT|lv-LV)?
   renew_flow: bool?
+  flow_source_base_url: str?
   log_level: list(trace|debug|info|notice|warning|error|fatal)?
   credential_secret: password?
   theme: list(default|aurora|cobalt2|dark|dracula|espresso-libre|github-dark|github-dark-default|github-dark-dimmed|midnight-red|monoindustrial|monokai|monokai-dimmed|night-owl|noctis|noctis-azureus|noctis-bordo|noctis-minimus|noctis-obscuro|noctis-sereno|noctis-uva|noctis-viola|oceanic-next|oled|one-dark-pro|one-dark-pro-darker|railscasts-extended|selenized-dark|selenized-light|solarized-dark|solarized-light|tokyo-night|tokyo-night-light|tokyo-night-storm|totallyinformation|zenburn|zendesk-garden)?

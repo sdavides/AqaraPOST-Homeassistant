@@ -42,14 +42,21 @@ else
 	bashio::log.info "Download json Aqara from GitHub"
 	touch /etc/node-red/flows.json || bashio::log.info "...."
 	bashio::log.info "......."
-	
-	FLOW_URL1="https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_G3_nodered.json"
+
+	FLOW_SOURCE_BASE_URL=$(bashio::config 'flow_source_base_url') || bashio::log.info "error flow_source_base_url ......."
+	if [ "$FLOW_SOURCE_BASE_URL" = "" ]; then
+	FLOW_SOURCE_BASE_URL="https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main"
+	fi
+	FLOW_SOURCE_BASE_URL="${FLOW_SOURCE_BASE_URL%/}"
+	bashio::log.info "Download AqaraPost flow files from $FLOW_SOURCE_BASE_URL"
+
+	FLOW_URL1="$FLOW_SOURCE_BASE_URL/Aqara_G3_nodered.json"
 	FLOW_NAME1="Aqara_G3_nodered"
 
-	FLOW_URL2="https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_FP2_nodered.json"
+	FLOW_URL2="$FLOW_SOURCE_BASE_URL/Aqara_FP2_nodered.json"
 	FLOW_NAME2="Aqara_FP2_nodered"
 
-	FLOW_URL3="https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/Aqara_G3_nodered_2device.json"
+	FLOW_URL3="$FLOW_SOURCE_BASE_URL/Aqara_G3_nodered_2device.json"
 	FLOW_NAME3="Aqara_G3_nodered_2device"
 
 	LUMI1=$(bashio::config 'lumi1Aqara') || bashio::log.info "error lumi1Aqara ......."
