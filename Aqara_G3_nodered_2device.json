@@ -1610,6 +1610,7 @@
         "properties": [
             { "p": "token_2", "pt": "global", "to": "XXXXXXTOKENXXXXXXXXXXX", "tot": "str" },
             { "p": "appid_2", "pt": "global", "to": "XXXXXXAPPIDXXXXXXXXXXX", "tot": "str" },
+            { "p": "appkey_2", "pt": "global", "to": "XXXXXXAPPKEYXXXXXXXXXXX", "tot": "str" },
             { "p": "aqara_url_2", "pt": "global", "to": "rpc-ger.aqara.com", "tot": "str" },
             { "p": "subjectId_2", "pt": "global", "to": "lumi1.XXXXXXXXXXXX", "tot": "str" },
             { "p": "country_2", "pt": "global", "to": "it-IT", "tot": "str" },
