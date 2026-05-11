@@ -5,6 +5,41 @@
 # Configures Node-RED before running
 # ==============================================================================
 declare port
+declare -r AQARAPOST_BUNDLED_DIR="/etc/node-red/aqarapost"
+
+install_aqarapost_flow() {
+    local flow_name="$1"
+    local flow_url="$2"
+    local bundled_flow="${AQARAPOST_BUNDLED_DIR}/${flow_name}.json"
+    local target_flow="/etc/node-red/${flow_name}.json"
+
+    if bashio::fs.file_exists "${bundled_flow}"; then
+        cp "${bundled_flow}" "${target_flow}" \
+            && bashio::log.info "Install bundled AqaraPost ${flow_name}.json complete..." \
+            || bashio::log.info "Error installing bundled AqaraPost ${flow_name} flow json"
+    else
+        wget -q "${flow_url}" --output-document="${target_flow}" \
+            && bashio::log.info "Download AqaraPost ${flow_name}.json complete..." \
+            || bashio::log.info "Error download AqaraPost ${flow_name} flow json"
+    fi
+}
+
+install_aqarapost_token_generator() {
+    local bundled_generator="${AQARAPOST_BUNDLED_DIR}/AqaraPOST-tokenGenerator.py"
+    local target_generator="/tmp/AqaraPOST-tokenGenerator.py"
+
+    if bashio::fs.file_exists "${bundled_generator}"; then
+        cp "${bundled_generator}" "${target_generator}" \
+            && chmod +x "${target_generator}" \
+            && bashio::log.info "Install bundled AqaraPost tokenGenerator complete..." \
+            || bashio::log.info "Error installing bundled AqaraPost tokenGenerator"
+    else
+        wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-tokenGenerator.py --output-document="${target_generator}" \
+            && chmod +x "${target_generator}" \
+            && bashio::log.info "Download AqaraPost tokenGenerator complete..." \
+            || bashio::log.info "Error download AqaraPost tokenGenerator"
+    fi
+}
 
 if bashio::config.true 'renew_flow'; then
 	bashio::log.info "renew_flow true"
@@ -39,7 +74,7 @@ else
 	rm -rf /config/* && bashio::log.info "/config/flows.json not found, delete all folder and reset flow..." || bashio::log.info "......."
 	bashio::log.info "......."
 	
-	bashio::log.info "Download json Aqara from GitHub"
+	bashio::log.info "Prepare AqaraPost flow templates"
 	touch /etc/node-red/flows.json || bashio::log.info "...."
 	bashio::log.info "......."
 	
@@ -64,27 +99,28 @@ else
 	bashio::log.warning "G3 lumi1 not set"
 	else
 	LUMI1=$(echo "$LUMI1" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
-	wget -q "$FLOW_URL1" --output-document=/etc/node-red/$FLOW_NAME1.json && bashio::log.info "Download AqaraPost $FLOW_NAME1.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME1 flow json"
+	install_aqarapost_flow "$FLOW_NAME1" "$FLOW_URL1"
 	fi
 	
     if [ "$LUMI2" = "" ]; then
 	bashio::log.warning "FP2 lumi1 not set"
 	else		
 	LUMI2=$(echo "$LUMI2" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
-	wget -q "$FLOW_URL2" --output-document=/etc/node-red/$FLOW_NAME2.json && bashio::log.info "Download AqaraPost $FLOW_NAME2.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME2 flow json"
+	install_aqarapost_flow "$FLOW_NAME2" "$FLOW_URL2"
 	fi	
 	
 	if [ "$LUMI3" = "" ]; then	
 	bashio::log.warning "G3_2 lumi1 not set"
 	else
 	LUMI3=$(echo "$LUMI3" | tr '[:upper:]' '[:lower:]' | sed -E 's/-//g; /^lumi1\./!s/^/lumi1./')
-	wget -q "$FLOW_URL3" --output-document=/etc/node-red/$FLOW_NAME3.json && bashio::log.info "Download AqaraPost $FLOW_NAME3.json complete..." || bashio::log.info "Error download AqaraPost $FLOW_NAME3 flow json"
+	install_aqarapost_flow "$FLOW_NAME3" "$FLOW_URL3"
 	fi
 	
 	ls /etc/node-red/Aqara_*.json || bashio::log.info "...."
 		
 	bashio::log.info "Starting AqaraPost-Homeassistant tokenGenerator ..."
-	wget -q https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main/generatejson/AqaraPOST-tokenGenerator.py --output-document=/tmp/AqaraPOST-tokenGenerator.py  && chmod +x /tmp/AqaraPOST-tokenGenerator.py && ( echo $(bashio::config 'usernameAqara') ; echo $(bashio::config 'passwordAqara'); echo $(bashio::config 'serverAqara') )  | /tmp/AqaraPOST-tokenGenerator.py > /tmp/AqaraPOST-tokenGenerator.json || bashio::log.info "error......."
+	install_aqarapost_token_generator
+	( echo $(bashio::config 'usernameAqara') ; echo $(bashio::config 'passwordAqara'); echo $(bashio::config 'serverAqara') )  | /tmp/AqaraPOST-tokenGenerator.py > /tmp/AqaraPOST-tokenGenerator.json || bashio::log.info "error......."
 	cat /tmp/AqaraPOST-tokenGenerator.json | grep Username || bashio::log.info "Username Token error......."
 	cat /tmp/AqaraPOST-tokenGenerator.json | grep Area || bashio::log.info "Area Token error......."
 

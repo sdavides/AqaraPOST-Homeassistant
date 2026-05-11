@@ -40,6 +40,13 @@ Add custom component remote repository:
 
   * Restart addon
 
+## Offline first start
+
+The add-on includes the Aqara flow JSON files and token generator in the
+container image. On first start, the bundled files are used before falling back
+to GitHub downloads, so a released add-on version keeps using the matching flow
+templates even if the `main` branch changes later.
+
 ## Verify install
 
   * Check the value in the "config" node
@@ -70,5 +77,4 @@ Add custom component remote repository:
 	or change inject node:
 
 	![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/ebf6ebad-bdb0-427e-add6-d8a3dcb8caa6)
-
 
