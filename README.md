@@ -40,6 +40,35 @@ I have an Aqara Hub G3 camera on HomeAssistant but I can't control it, with the 
 ## Info ##
 No modification to your device is required.
 
+## FP2 sleep metrics ##
+
+The FP2 flow queries `/app/v1.0/lumi/res/query` for the private sleep-monitor
+resources exposed by the Aqara Home app:
+
+These sleep-monitor values are only populated when the FP2 is configured in
+Sleep Monitoring / bed mode (`set_device_mode4 = 9`). In other FP2 modes, such
+as Zone Detection or Fall Detection, the same resources may be missing or empty.
+
+| Resource | Meaning |
+| --- | --- |
+| `heartrate_value` | Heart rate, bpm |
+| `respiration_rate_value` | Respiratory rate, breaths per minute |
+| `sleep_state` | Sleep phase/state reported by Aqara |
+| `body_movement_value` | Body movement level |
+| `lux` | Illuminance |
+| `device_offline_status` | Device online/offline status |
+
+Known `sleep_state` values observed from the app/API:
+
+| Value | State |
+| --- | --- |
+| `0` | Out of bed |
+| `1` | In bed |
+| `2` | Fully awake |
+| `3` | REM sleep |
+| `4` | Light sleep |
+| `5` | Deep sleep |
+
 ## Import flow NodeRed ##
 ![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/a7c093f9-c383-451d-b452-828d5d4b03af)
 ## Entity NodeCompanion ##
