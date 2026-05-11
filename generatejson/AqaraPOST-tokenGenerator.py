@@ -174,13 +174,14 @@ class pyAqara():
             self._token = res['result']['token']
             print ('\n #### Account info: #### \n')
             print ('\nToken:' + self._token )
-							   
-								
+
+
             print ('\nServer:' + (self.server).replace('https://','') )
             print ('\nAppID:' + self.appid )
-							  
+            print ('\nAppKey:' + self.appkey )
+
             print ('\nUserID:' + self._userid )
-								
+
             return True
         return False
 
