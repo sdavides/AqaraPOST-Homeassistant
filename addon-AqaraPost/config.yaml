@@ -16,7 +16,7 @@ arch:
 ports:
   80/tcp: 
 ports_description:
-  80/tcp: Web interface Nginx external port
+  80/tcp: Web interface NodeRed, Nginx port additonal (direct port)
 hassio_api: true
 hassio_role: manager
 homeassistant_api: true
