@@ -4,7 +4,6 @@ FROM ${BUILD_FROM}
 
 # Copy Node-RED package.json
 COPY package.json /opt/
-COPY node-red-dashboard-show-dashboard.patch /tmp/
 
 # Set workdir
 WORKDIR /opt
