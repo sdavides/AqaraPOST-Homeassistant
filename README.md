@@ -140,17 +140,13 @@ Known `sleep_state` values observed from the app/API:
 	  	![immagine](https://github.com/sdavides/AqaraPOST-Homeassistant/assets/31100253/f4a401f3-f9f0-4fd3-a9f8-ea8605c8bba9)
 
 
-	 	 rtsp://192.168.1.4:8554/360p (/720p /1080p /1296p)
-
-	 	 rtsp://USER:PASS@192.168.1.4:8554/360p (/720p /1080p /1296p)
-
-	 	 last ver. 4.3.4 change path:
-
+        rtsp://USER:PASS@192.168.1.4:8554/ch3
+       
 		rtsp://192.168.1.4:8554/ch3
 
-		"360p": "/ch3"
-		"720p": "/ch2"
-		"1296p":"/ch1"
+		["360p": "/ch3"] -
+		["720p": "/ch2"] - 
+		["1296p":"/ch1"]
 
 
     ```bash
