@@ -1,6 +1,7 @@
 Go2RTC setting:
 
-<img width="625" height="475" alt="Immagine 2026-06-20 082354" src="https://github.com/user-attachments/assets/00b24cd4-36d6-422e-96fb-896602dc20f3" />
+<img width="628" height="486" alt="immagine" src="https://github.com/user-attachments/assets/d059be16-9421-445f-b83e-20d2d1ff0c66" />
 
-<img width="506" height="346" alt="Immagine 2026-06-20 082430" src="https://github.com/user-attachments/assets/9aed9c65-afc3-4b48-9340-d679691d0944" />
+<img width="490" height="356" alt="immagine" src="https://github.com/user-attachments/assets/0363080c-5d5a-41a1-8f99-75f7d3ce83ab" />
+
 
