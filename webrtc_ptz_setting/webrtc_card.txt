@@ -1,5 +1,5 @@
 type: custom:webrtc-camera
-url: rtsp://localhost:8554/aqara_g3_720rtsp?mp4 # setting go2rtc g3 url
+url: rtsp://localhost:8554/aqara_g3_360rtsp?mp4 # setting go2rtc g3 url
 mode: webrtc
 ui: true
 muted: true
