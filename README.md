@@ -131,6 +131,10 @@ Known `sleep_state` values observed from the app/API:
         ```
 		killall -9 rtsp && rtsp >/dev/null 2>&1 &
 		```
+		
+        ```
+		killall -9 rtsp && rtsp -a -u 'user' -p 'password' >/dev/null 2>&1 &
+		```
           or you can see rtsp user/pass (change every boot)
 
           from telnet command:
