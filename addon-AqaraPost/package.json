@@ -23,6 +23,6 @@
     "node-red-node-forge": "0.0.7"
   },
   "engines": {
-    "node": ">=16"
+    "node": ">=18.5"
   }
 }
