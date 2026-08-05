@@ -40,25 +40,6 @@ Add custom component remote repository:
 
   * Disable `renew_flow` after the restart finishes
 
-The add-on keeps the existing `/config/flows.json` when Home Assistant only
-provides masked `preconfigured` credentials or when token generation fails. Do
-not delete `flows.json` manually unless you have the Aqara username and password
-available and you are ready to recreate the flow from scratch.
-
-## Test flows from another repository
-
-The add-on downloads flow JSON files from `flow_source_base_url`.
-Keep the default value for the latest upstream files, or set it to a fork,
-branch, tag, or commit raw URL before renewing the flow.
-The token generator script stays pinned to the upstream repository because it
-receives your Aqara account credentials.
-
-Example:
-
-```yaml
-flow_source_base_url: https://raw.githubusercontent.com/Komzpa/AqaraPOST-Homeassistant/my-branch
-renew_flow: true
-```
 
 ## Verify install
 
