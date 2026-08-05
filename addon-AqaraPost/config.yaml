@@ -24,7 +24,7 @@ host_network: true
 auth_api: true
 uart: true
 map:
-  - addon_config:rw
+  - app_config:rw
   - homeassistant_config:rw
   - media:rw
   - share:rw
@@ -40,7 +40,6 @@ options:
   lumi1Aqara2: ""
   lumi1Aqara3: ""
   renew_flow: false
-  flow_source_base_url: https://raw.githubusercontent.com/sdavides/AqaraPOST-Homeassistant/main
   theme: default
   http_node:
     username: ""

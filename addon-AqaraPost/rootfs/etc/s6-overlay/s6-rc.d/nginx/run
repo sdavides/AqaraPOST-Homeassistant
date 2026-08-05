@@ -1,11 +1,13 @@
 #!/command/with-contenv bashio
+# shellcheck shell=bash
 # ==============================================================================
-# Home Assistant Community Add-on: Node-RED
+# Home Assistant Community App: Node-RED
 # Runs the Nginx daemon
 # ==============================================================================
 
 # Wait for Node-RED to become available
-bashio::net.wait_for 46837 localhost 301
+bashio::net.wait_for 46837 localhost 300
 
 bashio::log.info "Starting NGinx..."
 exec nginx
+

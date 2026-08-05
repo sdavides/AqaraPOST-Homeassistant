@@ -15,7 +15,7 @@ configuration:
   renew_flow:
     name: renew_flow
     description: >-
-      Delete, renew token and download last /config/flows.json on boot 
+      Delete, renew token and download last flows from git on boot 
           - TIPS: Disable after first successful start
   serverAqara:
     name: serverAqara

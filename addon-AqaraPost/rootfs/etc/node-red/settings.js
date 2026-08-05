@@ -18,26 +18,26 @@
  * PLEASE NOTE! IMPORTANT! READ!
  *
  * This is a modified version of the settings file. Some parts of the
- * settings are actually controlled by the Home Assistant add-on.
+ * settings are actually controlled by the Home Assistant app.
  *
  * Parts that are handled by it, are removed from this settings template.
- * The following configuration keys are controlled by the add-on and removed.
+ * The following configuration keys are controlled by the app and removed.
  *
- * - uiPort (port setting in the add-on log)
- * - uiHost (no need to manually configure this in the add-on)
- * - debugUseColors (disabled, won't work in the add-on)
+ * - uiPort (port setting in the app log)
+ * - uiHost (no need to manually configure this in the app)
+ * - debugUseColors (disabled, won't work in the app)
  * - flowFile (fixed to flows.json)
- * - credentialSecret (credentials_secret in the add-on configuration)
+ * - credentialSecret (credentials_secret in the app configuration)
  * - userDir (is set fixed to `/config`)
  * - nodesDir (is set fixed to `/config/nodes`)
- * - adminAuth (known as users in the add-on configuration)
- * - https (ssl settings in the add-on configuration)
- * - logging.console.level (log_level in the add-on configuration)
- * - httpNodeAuth (http_node settings in the add-on configuration)
- * - httpStaticAuth (http_static settings in the add-on configuration)
+ * - adminAuth (known as users in the app configuration)
+ * - https (ssl settings in the app configuration)
+ * - logging.console.level (log_level in the app configuration)
+ * - httpNodeAuth (http_node settings in the app configuration)
+ * - httpStaticAuth (http_static settings in the app configuration)
  * - httpNodeRoot (set fixed to `/endpoint` )
  *
- * If you like to change those settings, some are available via the add-on
+ * If you like to change those settings, some are available via the app
  * settings/option in the Supervisor panel in Home Assistant.
  */
 
@@ -71,7 +71,7 @@ module.exports = {
   //  node, set this to true
   //tlsConfigDisableLocalFiles: true,
 
-  // By default, the Node-RED UI is available at http://localhost:1881/
+  // By default, the Node-RED UI is available at http://localhost:1880/
   // The following property can be used to specify a different root path.
   // If set to false, this is disabled.
   //httpAdminRoot: '/admin',
@@ -82,7 +82,7 @@ module.exports = {
 
   // When httpAdminRoot is used to move the UI to a different root path, the
   // following property can be used to identify a directory of static content
-  // that should be served at http://localhost:1881/.
+  // that should be served at http://localhost:1880/.
   //httpStatic: '/home/nol/node-red-static/',
 
   // The maximum size of HTTP request that will be accepted by the runtime api.
@@ -155,7 +155,7 @@ module.exports = {
     // jfive:require("johnny-five"),
     // j5board:require("johnny-five").Board({repl:false})
       crypto: require('crypto'),
-      forge: require('node-forge')
+      forge: require('node-forge')				  
   },
 
   // The following property can be used to order the categories in the editor
