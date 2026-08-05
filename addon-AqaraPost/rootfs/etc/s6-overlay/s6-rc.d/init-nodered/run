@@ -198,13 +198,8 @@ fi
 port=$(bashio::app.port 80)
 
 if ! bashio::var.has_value "${port}"; then
-    bashio::log.warning
-    bashio::log.warning "Direct access mode is disabled, Node-RED Dashboard"
-    bashio::log.warning "will not work!"
-    bashio::log.warning
-    bashio::log.warning "Please assign a port in the Network section of this"
-    bashio::log.warning "add-on configuration."
-    bashio::log.warning
+    bashio::log.warning "External port not set"
+    bashio::log.warning "Node-RED Dashboard http direct link is disabled"
 fi
 															   
 # The "dark" theme was renamed to "dark-modern" in theme-collection v5.
