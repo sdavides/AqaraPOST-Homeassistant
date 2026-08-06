@@ -32,13 +32,14 @@ Add custom component remote repository:
 
 ## Update/Apply new config
 
-  * Delete "flows.json"
+  * Update the add-on config
+
+  * Enable `renew_flow`
+
+  * Restart the add-on
+
+  * Disable `renew_flow` after the restart finishes
     
-    * ( usually into "/addon_configs/XXX_nodered_aqara/" from SAMBA )
-
-  * Update config
-
-  * Restart addon
 
 ## Verify install
 
