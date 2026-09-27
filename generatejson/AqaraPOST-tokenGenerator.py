@@ -27,11 +27,13 @@ print ('\nUsername:' + username )
 print ('Area:' + area )
 
 if username == '' :
-        username = sys.argv[1]
+        print('Username cannot be empty!')
+        exit(1)
 if password == '' :
-        password = sys.argv[2]
+        print('Password cannot be empty!')
+        exit(1)
 if area == '' :
-        area = sys.argv[3]
+        area = sys.argv[1]
 
 
 class pyAqara():
