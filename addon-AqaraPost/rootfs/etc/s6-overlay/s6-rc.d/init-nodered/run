@@ -189,11 +189,11 @@ if ! bashio::fs.file_exists '/config/settings.js'; then
         || bashio::exit.nok "Failed to create node-red configuration directory"
 
     # Copy in template files & Create random flow id
-    id=$(node -e "console.log((2+Math.random()*4294967295).toString(26));")
-	bashio::log.info "cp /etc/node-red/flows.json /config/ ......."
-    cp /etc/node-red/flows.json /config/ && sed -i "s/%%ID%%/${id}/" "/config/flows.json" || bashio::log.error "Failed cp /etc/node-red/flows.json /config/ template"
+    #id=$(node -e "console.log((2+Math.random()*4294967295).toString(26));")
+	#bashio::log.info "cp /etc/node-red/flows.json /config/ ......."
+    #cp /etc/node-red/flows.json /config/ && sed -i "s/%%ID%%/${id}/" "/config/flows.json" || bashio::log.error "Failed cp /etc/node-red/flows.json /config/ template"
 	bashio::log.info "cp /etc/node-red/settings.js /config/ ......."
-    cp /etc/node-red/settings.js /config/ || bashio::log.error "Failed cp /etc/node-red/settings.js /config/ template"
+    cp /etc/node-red/settings.js /config/ || bashio::log.error "Failed cp /etc/node-red/settings.js /config/"
 fi
 
 	bashio::log.info "......."
