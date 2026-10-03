@@ -159,7 +159,7 @@ else
 	sed -i "s/XXXXXXAPPKEYXXXXXXXXXXX/$APPKEY/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME3.json  && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI3/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME3.json || bashio::log.error "Error AqaraPost-Homeassistant tokenGenerator ..."
 	fi
 		
-	jq -s 'add' /etc/node-red/Aqara_*json > /etc/node-red/flows.json && mv /etc/node-red/flows.json /config/flows.json && bashio::log.info "/config/flows.json created" && rm -rf /etc/node-red/Aqara_*json && bashio::log.info "tmp Aqara_*json delete" || bashio::log.error " /config/flows.json error..." 
+	jq -s 'add' /etc/node-red/Aqara_*json > /etc/node-red/flows.json && cp /etc/node-red/flows.json /config/flows.json && bashio::log.info "/config/flows.json created" && rm -rf /etc/node-red/Aqara_*json && bashio::log.info "tmp Aqara_*json delete" || bashio::log.error " /config/flows.json error..." 
 		
 	rm -rf /tmp/AqaraPOST-tokenGenerator.py 
 	rm -rf /tmp/AqaraPOST-tokenGenerator.json
@@ -184,14 +184,6 @@ fi
 if ! bashio::fs.file_exists '/config/settings.js'; then
     mkdir -p /config/nodes \
         || bashio::exit.nok "Failed to create node-red configuration directory"
-
-    # Copy in template files
-    cp /etc/node-red/flows.json /config/
-    cp /etc/node-red/settings.js /config/
-
-    # Create random flow id
-    id=$(node -e "console.log((1+Math.random()*4294967295).toString(16));")
-    sed -i "s/%%ID%%/${id}/" "/config/flows.json"
 fi
 
 	bashio::log.info "......."
