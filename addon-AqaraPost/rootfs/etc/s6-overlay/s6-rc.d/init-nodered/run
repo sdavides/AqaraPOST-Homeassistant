@@ -159,7 +159,7 @@ else
 	sed -i "s/XXXXXXAPPKEYXXXXXXXXXXX/$APPKEY/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAREAXXXXXXXXXXX/$AREA/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXTOKENXXXXXXXXXXX/$TOKEN/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/XXXXXXAPPIDXXXXXXXXXXX/$APPID/g" /etc/node-red/$FLOW_NAME3.json  && sed -i "s/XXXXXXUSERIDXXXXXXXXXXX/$USERID/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/lumi1.XXXXXXXXXXXX/$LUMI3/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/rpc-ger.aqara.com/$SERVER/g" /etc/node-red/$FLOW_NAME3.json && sed -i "s/it-IT/$TIMEZONE/g" /etc/node-red/$FLOW_NAME3.json || bashio::log.error "Error AqaraPost-Homeassistant tokenGenerator ..."
 	fi
 		
-	jq -s 'add' /etc/node-red/Aqara_*json > /etc/node-red/flows.json && cp /etc/node-red/flows.json /config/flows.json && bashio::log.info "/config/flows.json created" && rm -rf /etc/node-red/Aqara_*json && bashio::log.info "tmp Aqara_*json delete" || bashio::log.error " /config/flows.json error..." 
+	jq -s 'add' /etc/node-red/Aqara_*json > /etc/node-red/flows.json && mv /etc/node-red/flows.json /config/flows.json && bashio::log.info "/config/flows.json created" && rm -rf /etc/node-red/Aqara_*json && bashio::log.info "tmp Aqara_*json delete" || bashio::log.error " /config/flows.json error..." 
 		
 	rm -rf /tmp/AqaraPOST-tokenGenerator.py 
 	rm -rf /tmp/AqaraPOST-tokenGenerator.json
@@ -171,8 +171,9 @@ else
 	bashio::log.info "......."
 
 fi
-# Migrate app data from the Home Assistant config folder,
-# to the app configuration folder.
+
+# Migrate add-on data from the Home Assistant config folder,
+# to the add-on configuration folder.
 if ! bashio::fs.file_exists '/config/settings.js' \
     && bashio::fs.file_exists '/homeassistant/node-red/settings.js'; then
     shopt -s dotglob
@@ -184,6 +185,11 @@ fi
 if ! bashio::fs.file_exists '/config/settings.js'; then
     mkdir -p /config/nodes \
         || bashio::exit.nok "Failed to create node-red configuration directory"
+
+    # Copy in template files & Create random flow id
+    id=$(node -e "console.log((2+Math.random()*4294967295).toString(26));")
+    cp /etc/node-red/flows.json /config/ && sed -i "s/%%ID%%/${id}/" "/config/flows.json" || bashio::log.error "Failed cp /etc/node-red/flows.json /config/ template"
+    cp /etc/node-red/settings.js /config/ || bashio::log.error "Failed cp /etc/node-red/settings.js /config/ template"
 fi
 
 	bashio::log.info "......."
